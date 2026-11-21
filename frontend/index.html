@@ -1370,10 +1370,17 @@ function graphV(el, focusId){
   const container = $("#g-canvas-wrap", el);
   const card = $("#g-card", el);
 
+  // no WebGL (no GPU, virtual machine, remote desktop, policy) → the same graph in 2D
+  const hasGL = !window.__krNoWebGL && (() => { try { const c = document.createElement("canvas"); return !!(c.getContext("webgl2") || c.getContext("webgl")); } catch (e) { return false; } })();
+  if (!hasGL && window.graph2D) { window.__krNoWebGL = true; return window.graph2D(el, container, card, focusId); }
   if (!window.THREE) {
+    graphV._wait = (graphV._wait || 0) + 1;
+    if (graphV._wait > 8 && window.graph2D) return window.graph2D(el, container, card, focusId);
     container.innerHTML = `<div style="padding:40px;text-align:center"><h3 style="font-family:var(--serif);font-size:24px">Three.js Loading...</h3><p class="mono">Initializing 3D WebGL renderer</p></div>`;
+    setTimeout(() => { if (/^#graph/.test(location.hash) && el.isConnected) route(); }, 700);
     return;
   }
+  graphV._wait = 0;
 
   const THREE = window.THREE;
   const width = container.clientWidth || window.innerWidth;
@@ -1387,7 +1394,9 @@ function graphV(el, focusId){
   const camera = new THREE.PerspectiveCamera(55, width / height, 0.1, 1000);
   camera.position.set(0, 45, 310);
 
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); }
+  catch (e) { window.__krNoWebGL = true; if (window.graph2D) return window.graph2D(el, container, card, focusId); throw e; }
   renderer.setSize(width, height);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   container.appendChild(renderer.domElement);
@@ -2273,14 +2282,21 @@ if($("#av")) $("#av").onclick = window.openSettings;
       const pId = h.split("/")[1];
       const p = PERS.find(x => x.id === pId) || { n: pId };
       b.textContent = cLang === "hi" ? `संदर्भ: डोजियर ${pId} (${p.n})` : cLang === "gu" ? `સંદર્ભ: પ્રોફાઇલ ${pId} (${p.n})` : `Active Context: Dossier ${pId} (${p.n})`;
-    } else if (h === "graph") {
+    } else if (h.startsWith("graph/") && window.KR && KR.live) {
+      const f = decodeURIComponent(h.split("/")[1]);
+      b.textContent = cLang === "hi" ? `संदर्भ: ${f} के आसपास 3D नेटवर्क` : cLang === "gu" ? `સંદર્ભ: ${f} આસપાસ 3D નેટવર્ક` : `Active Context: 3D network around ${f}`;
+    } else if (h.startsWith("graph")) {
       b.textContent = cLang === "hi" ? "संदर्भ: 3D संबंध टोपोलॉजी (सिंडिकेट मास्टर नेटवर्क)" : cLang === "gu" ? "સંદર્ભ: 3D સંબંધ ટોપોલોજી (સિન્ડિકેટ માસ્ટર નેટવર્ક)" : "Active Context: 3D Relationship Topology (Master Syndicate Network)";
     } else if (h === "dash") {
       b.textContent = cLang === "hi" ? "संदर्भ: अन्वेषण एवं संदिग्ध स्प्लिट डैशबोर्ड" : cLang === "gu" ? "સંદર્ભ: તપાસ અને શંકાસ્પદો સ્પ્લિટ ડેશબોર્ડ" : "Active Context: Investigations & Persons Split Dashboard";
     } else if (h.startsWith("case/") || h === "case") {
-      b.textContent = cLang === "hi" ? "संदर्भ: प्रमुख मामला KRONOS-2024-001 (जाफर सादिक बहु-एजेंसी जांच)" : cLang === "gu" ? "સંદર્ભ: મુખ્ય કેસ KRONOS-2024-001 (જાફર સાદિક મલ્ટી-એજન્સી તપાસ)" : "Active Context: Featured Case KRONOS-2024-001 (Jaffer Sadiq Multi-Agency Investigation)";
+      const cid = decodeURIComponent(h.split("/")[1] || (CASES[0] || {}).id || "");
+      const C = CASES.find(x => x.id === cid) || CASES[0] || { id: cid, t: "" };
+      b.textContent = cLang === "hi" ? `संदर्भ: केस ${C.id} (${C.t})` : cLang === "gu" ? `સંદર્ભ: કેસ ${C.id} (${C.t})` : cLang === "pa" ? `ਸੰਦਰਭ: ਕੇਸ ${C.id} (${C.t})` : `Active Context: Case ${C.id} (${C.t})`;
     } else {
-      b.textContent = cLang === "hi" ? "संदर्भ: क्रोनोस केंद्रीय फोरेंसिक मास्टर इंजन" : cLang === "gu" ? "સંદર્ભ: ક્રોનોસ સેન્ટ્રલ ફોરેન્સિક માસ્ટર એન્જિન" : "Active Context: Consolidated Master Engine (Featured Case KRONOS-2024-001)";
+      const live = window.KR && KR.live;
+      b.textContent = live ? (cLang === "hi" ? `संदर्भ: सभी ${CASES.length} मामले और रिकॉर्ड` : cLang === "gu" ? `સંદર્ભ: તમામ ${CASES.length} કેસ અને રેકોર્ડ` : cLang === "pa" ? `ਸੰਦਰਭ: ਸਾਰੇ ${CASES.length} ਕੇਸ ਅਤੇ ਰਿਕਾਰਡ` : `Active Context: All ${CASES.length} cases and records`)
+        : (cLang === "hi" ? "संदर्भ: क्रोनोस केंद्रीय फोरेंसिक मास्टर इंजन" : cLang === "gu" ? "સંદર્ભ: ક્રોનોસ સેન્ટ્રલ ફોરેન્સિક માસ્ટર એન્જિન" : "Active Context: Consolidated Master Engine (Featured Case: KRONOS-2024-001)");
     }
   }
   addEventListener("hashchange", updateContextBanner);
@@ -3015,9 +3031,10 @@ You can ask about "Summarise Jaffer Sadiq drug cartel investigation", "50kg seiz
                                                              "Commands are executed directly; questions are answered from cited evidence"] }];
     }
     renderCopilotUI();
+    updateContextBanner();
   };
 
-  window._krLangChanged = () => renderCopilotUI();
+  window._krLangChanged = () => { renderCopilotUI(); updateContextBanner(); };
 
   // Event Listeners
   $("#copilot-btn").onclick = () => {
@@ -3078,5 +3095,6 @@ You can ask about "Summarise Jaffer Sadiq drug cartel investigation", "50kg seiz
 </script>
 <script src="/kronos-premium.js"></script>
 <script src="/kronos-temporal.js"></script>
+<script src="/kronos-graph2d.js"></script>
 <script src="/kronos-intake.js"></script>
 <script src="/kronos-responsive.js"></script></body></html>

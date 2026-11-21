@@ -95,7 +95,7 @@
 
   /* ------------------------------------------------------------ 5. three.js hero: armillary rings + evidence orbit */
   function hero3D(stage) {
-    if (!window.THREE || stage.querySelector(".kp-3d")) return;
+    if (!window.THREE || window.__krNoWebGL || stage.querySelector(".kp-3d")) return;
     const T = window.THREE;
     const canvas = document.createElement("canvas");
     canvas.className = "kp-3d";
@@ -103,7 +103,7 @@
     stage.insertBefore(canvas, stage.querySelector(".hg") || stage.firstChild);
     let renderer;
     try { renderer = new T.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: "low-power" }); }
-    catch (e) { canvas.remove(); return; }
+    catch (e) { canvas.remove(); window.__krNoWebGL = true; return; }   // no WebGL: skip the 3D decoration (once, not every frame)
     renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 1.5));
     renderer.setClearColor(0x000000, 0);
     const scene = new T.Scene();
