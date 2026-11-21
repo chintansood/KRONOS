@@ -1,0 +1,49 @@
+{
+ "source": "Indian High Court Judgments open dataset (AWS Open Data; Dattam Labs; eCourts) \u2014 CC-BY-4.0",
+ "court": "High Court of Punjab and Haryana",
+ "selection": "CRM-M petitions (bail / quashing) by private parties vs State of Punjab/Haryana/UT Chandigarh, decided 2024-2025, random order",
+ "fetch": {
+  "fetched": 250,
+  "unreadable_needs_ocr": 144,
+  "no_fir_particulars": 49,
+  "excluded": 17,
+  "excluded: kidnapping / abduction (BNS 87/96/137/139)": 2,
+  "excluded: sexual offence / modesty of a woman": 9,
+  "excluded: matrimonial / dowry matter": 11,
+  "excluded: SC/ST Act (caste-related)": 2,
+  "excluded: sexual offence (BNS 63-79)": 1,
+  "excluded: child sexual offence (POCSO)": 4,
+  "included": 40,
+  "byCategory": {
+   "Murder / Attempt to Murder": 9,
+   "Theft & Burglary": 4,
+   "Robbery & Dacoity": 2,
+   "Cheating, Fraud & Forgery": 9,
+   "Hurt, Rioting & Intimidation": 4,
+   "Narcotics (NDPS Act)": 9,
+   "Cyber Fraud (IT Act)": 1,
+   "Other Criminal Matter": 1,
+   "Extortion & Criminal Intimidation": 1
+  }
+ },
+ "dataset": {
+  "cases": 40,
+  "persons": 57,
+  "antecedentRecords": 0,
+  "pseudonymisation": {
+   "names": 75,
+   "identifiers": 8,
+   "residual": 44,
+   "labels": 49
+  }
+ },
+ "piiAudit": {
+  "method": "local Llama 3.1 8B asked to list any remaining personal names in each pseudonymised narrative",
+  "records": 40,
+  "flagged": 5,
+  "genuineLeftoverNames": 1,
+  "genuine": "first name of a trial-court judge after 'Ms .' (PDF spacing) \u2014 fixed in the pseudonymisation rules (honorifics), records rebuilt",
+  "falsePositives": "4: role words (petitioner, complainant, Brother) and a police-station name \u2014 not applied",
+  "afterFix": "0 known leftover names"
+ }
+}

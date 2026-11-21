@@ -1,0 +1,401 @@
+[
+ {
+  "person_id": "P90001",
+  "display_name": "Accused A1 \u00b7 CASE901",
+  "role_label": "Accused A1",
+  "case_id": "CASE901",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90002",
+  "display_name": "Accused A2 \u00b7 CASE901",
+  "role_label": "Accused A2",
+  "case_id": "CASE901",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90003",
+  "display_name": "Accused A1 \u00b7 CASE902",
+  "role_label": "Accused A1",
+  "case_id": "CASE902",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90004",
+  "display_name": "Accused A1 \u00b7 CASE903",
+  "role_label": "Accused A1",
+  "case_id": "CASE903",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90005",
+  "display_name": "Accused A1 \u00b7 CASE904",
+  "role_label": "Accused A1",
+  "case_id": "CASE904",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90006",
+  "display_name": "Accused A1 \u00b7 CASE905",
+  "role_label": "Accused A1",
+  "case_id": "CASE905",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90007",
+  "display_name": "Accused A2 \u00b7 CASE905",
+  "role_label": "Accused A2",
+  "case_id": "CASE905",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90008",
+  "display_name": "Complainant C1 \u00b7 CASE905",
+  "role_label": "Complainant C1",
+  "case_id": "CASE905",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90009",
+  "display_name": "Accused A1 \u00b7 CASE906",
+  "role_label": "Accused A1",
+  "case_id": "CASE906",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90010",
+  "display_name": "Accused A1 \u00b7 CASE907",
+  "role_label": "Accused A1",
+  "case_id": "CASE907",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90011",
+  "display_name": "Accused A1 \u00b7 CASE908",
+  "role_label": "Accused A1",
+  "case_id": "CASE908",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90012",
+  "display_name": "Accused A2 \u00b7 CASE908",
+  "role_label": "Accused A2",
+  "case_id": "CASE908",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90013",
+  "display_name": "Accused A1 \u00b7 CASE909",
+  "role_label": "Accused A1",
+  "case_id": "CASE909",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90014",
+  "display_name": "Accused A1 \u00b7 CASE910",
+  "role_label": "Accused A1",
+  "case_id": "CASE910",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90015",
+  "display_name": "Accused A2 \u00b7 CASE910",
+  "role_label": "Accused A2",
+  "case_id": "CASE910",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90016",
+  "display_name": "Accused A1 \u00b7 CASE911",
+  "role_label": "Accused A1",
+  "case_id": "CASE911",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90017",
+  "display_name": "Accused A1 \u00b7 CASE912",
+  "role_label": "Accused A1",
+  "case_id": "CASE912",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90018",
+  "display_name": "Accused A2 \u00b7 CASE912",
+  "role_label": "Accused A2",
+  "case_id": "CASE912",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90019",
+  "display_name": "Accused A1 \u00b7 CASE913",
+  "role_label": "Accused A1",
+  "case_id": "CASE913",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90020",
+  "display_name": "Accused A2 \u00b7 CASE913",
+  "role_label": "Accused A2",
+  "case_id": "CASE913",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90021",
+  "display_name": "Accused A1 \u00b7 CASE914",
+  "role_label": "Accused A1",
+  "case_id": "CASE914",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90022",
+  "display_name": "Accused A2 \u00b7 CASE914",
+  "role_label": "Accused A2",
+  "case_id": "CASE914",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90023",
+  "display_name": "Accused A1 \u00b7 CASE915",
+  "role_label": "Accused A1",
+  "case_id": "CASE915",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90024",
+  "display_name": "Accused A2 \u00b7 CASE915",
+  "role_label": "Accused A2",
+  "case_id": "CASE915",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90025",
+  "display_name": "Accused A1 \u00b7 CASE916",
+  "role_label": "Accused A1",
+  "case_id": "CASE916",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90026",
+  "display_name": "Accused A2 \u00b7 CASE916",
+  "role_label": "Accused A2",
+  "case_id": "CASE916",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90027",
+  "display_name": "Accused A1 \u00b7 CASE917",
+  "role_label": "Accused A1",
+  "case_id": "CASE917",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90028",
+  "display_name": "Accused A2 \u00b7 CASE917",
+  "role_label": "Accused A2",
+  "case_id": "CASE917",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90029",
+  "display_name": "Complainant C1 \u00b7 CASE917",
+  "role_label": "Complainant C1",
+  "case_id": "CASE917",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90030",
+  "display_name": "Accused A1 \u00b7 CASE918",
+  "role_label": "Accused A1",
+  "case_id": "CASE918",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90031",
+  "display_name": "Accused A1 \u00b7 CASE919",
+  "role_label": "Accused A1",
+  "case_id": "CASE919",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90032",
+  "display_name": "Accused A2 \u00b7 CASE919",
+  "role_label": "Accused A2",
+  "case_id": "CASE919",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90033",
+  "display_name": "Accused A1 \u00b7 CASE920",
+  "role_label": "Accused A1",
+  "case_id": "CASE920",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90034",
+  "display_name": "Accused A1 \u00b7 CASE921",
+  "role_label": "Accused A1",
+  "case_id": "CASE921",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90035",
+  "display_name": "Accused A1 \u00b7 CASE922",
+  "role_label": "Accused A1",
+  "case_id": "CASE922",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90036",
+  "display_name": "Accused A1 \u00b7 CASE923",
+  "role_label": "Accused A1",
+  "case_id": "CASE923",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90037",
+  "display_name": "Accused A1 \u00b7 CASE924",
+  "role_label": "Accused A1",
+  "case_id": "CASE924",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90038",
+  "display_name": "Accused A1 \u00b7 CASE925",
+  "role_label": "Accused A1",
+  "case_id": "CASE925",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90039",
+  "display_name": "Accused A1 \u00b7 CASE926",
+  "role_label": "Accused A1",
+  "case_id": "CASE926",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90040",
+  "display_name": "Accused A2 \u00b7 CASE926",
+  "role_label": "Accused A2",
+  "case_id": "CASE926",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90041",
+  "display_name": "Accused A1 \u00b7 CASE927",
+  "role_label": "Accused A1",
+  "case_id": "CASE927",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90042",
+  "display_name": "Accused A1 \u00b7 CASE928",
+  "role_label": "Accused A1",
+  "case_id": "CASE928",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90043",
+  "display_name": "Accused A2 \u00b7 CASE928",
+  "role_label": "Accused A2",
+  "case_id": "CASE928",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90044",
+  "display_name": "Accused A1 \u00b7 CASE929",
+  "role_label": "Accused A1",
+  "case_id": "CASE929",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90045",
+  "display_name": "Accused A1 \u00b7 CASE930",
+  "role_label": "Accused A1",
+  "case_id": "CASE930",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90046",
+  "display_name": "Accused A1 \u00b7 CASE931",
+  "role_label": "Accused A1",
+  "case_id": "CASE931",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90047",
+  "display_name": "Accused A2 \u00b7 CASE931",
+  "role_label": "Accused A2",
+  "case_id": "CASE931",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90048",
+  "display_name": "Accused A1 \u00b7 CASE932",
+  "role_label": "Accused A1",
+  "case_id": "CASE932",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90049",
+  "display_name": "Accused A1 \u00b7 CASE933",
+  "role_label": "Accused A1",
+  "case_id": "CASE933",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90050",
+  "display_name": "Accused A1 \u00b7 CASE934",
+  "role_label": "Accused A1",
+  "case_id": "CASE934",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90051",
+  "display_name": "Accused A1 \u00b7 CASE935",
+  "role_label": "Accused A1",
+  "case_id": "CASE935",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90052",
+  "display_name": "Accused A1 \u00b7 CASE936",
+  "role_label": "Accused A1",
+  "case_id": "CASE936",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90053",
+  "display_name": "Accused A2 \u00b7 CASE936",
+  "role_label": "Accused A2",
+  "case_id": "CASE936",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90054",
+  "display_name": "Accused A1 \u00b7 CASE937",
+  "role_label": "Accused A1",
+  "case_id": "CASE937",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90055",
+  "display_name": "Accused A1 \u00b7 CASE938",
+  "role_label": "Accused A1",
+  "case_id": "CASE938",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90056",
+  "display_name": "Accused A1 \u00b7 CASE939",
+  "role_label": "Accused A1",
+  "case_id": "CASE939",
+  "origin": "PUBLIC_RECORD"
+ },
+ {
+  "person_id": "P90057",
+  "display_name": "Accused A1 \u00b7 CASE940",
+  "role_label": "Accused A1",
+  "case_id": "CASE940",
+  "origin": "PUBLIC_RECORD"
+ }
+]

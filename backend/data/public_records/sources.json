@@ -1,0 +1,1262 @@
+{
+ "CASE901": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-61649-2023",
+  "cnr": "PHHC011579172023",
+  "decisionDate": "2024-02-29",
+  "disposal": "ALLOWED",
+  "petitionType": "ANTICIPATORY_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2024/court=3_22/bench=phhc/PHHC011579172023_1_2024-02-29.pdf",
+  "sha256": "31081216b9ebf250236839fd36364045b61d9f9355a77da04c54a17f7669c6d6",
+  "fetchedAt": "2026-11-20T06:42:26+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 2,
+  "firFormat": "prose",
+  "evidenceMentioned": [
+   "Medical (MLR / post-mortem)",
+   "Disclosure statement"
+  ],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000001",
+  "personIds": [
+   "P90001",
+   "P90002"
+  ]
+ },
+ "CASE902": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-18034-2024",
+  "cnr": "PHHC010469992024",
+  "decisionDate": "2024-05-10",
+  "disposal": "DISMISSED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2024/court=3_22/bench=phhc/PHHC010469992024_1_2024-05-10.pdf",
+  "sha256": "3a2217add060c077d627a721d599bb54598342b0a2ed0f5d940611608bf19128",
+  "fetchedAt": "2026-11-20T06:42:59+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 2,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000002",
+  "personIds": [
+   "P90003"
+  ]
+ },
+ "CASE903": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-33801-2024",
+  "cnr": "PHHC010890182024",
+  "decisionDate": "2024-07-23",
+  "disposal": "DISMISSED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2024/court=3_22/bench=phhc/PHHC010890182024_1_2024-07-23.pdf",
+  "sha256": "f332fec38894a3c995a1b60a6967d9ff388e3b7d73aa89a14094b8bbb12125c7",
+  "fetchedAt": "2026-11-20T06:42:58+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 1,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000003",
+  "personIds": [
+   "P90004"
+  ]
+ },
+ "CASE904": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-30710-2024",
+  "cnr": "PHHC010814972024",
+  "decisionDate": "2024-07-30",
+  "disposal": "ALLOWED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2024/court=3_22/bench=phhc/PHHC010814972024_1_2024-07-30.pdf",
+  "sha256": "565122d5060bd23ceb9e0fcdafded7de4530d0469275494d9d1952e939902350",
+  "fetchedAt": "2026-11-20T06:40:59+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 4,
+  "firFormat": "table",
+  "evidenceMentioned": [
+   "Chats / social media",
+   "Recovery / seizure memo",
+   "Medical (MLR / post-mortem)"
+  ],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": "2024-04-05",
+  "antecedents": "NONE",
+  "pseudonymisation": {
+   "names": 1,
+   "identifiers": 0,
+   "residual": 2,
+   "labels": 2
+  },
+  "evidenceId": "EVD-PUB000004",
+  "personIds": [
+   "P90005"
+  ]
+ },
+ "CASE905": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-41864-2024",
+  "cnr": "PHHC011111092024",
+  "decisionDate": "2024-09-03",
+  "disposal": "ALLOWED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2024/court=3_22/bench=phhc/PHHC011111092024_1_2024-09-03.pdf",
+  "sha256": "4fbb46cf6fee24728d7923812f7f89cc0588fab6ce38d0072eafd44a8c825a21",
+  "fetchedAt": "2026-11-20T06:39:22+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 7,
+  "firFormat": "prose",
+  "evidenceMentioned": [
+   "Disclosure statement"
+  ],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NONE",
+  "pseudonymisation": {
+   "names": 15,
+   "identifiers": 1,
+   "residual": 7,
+   "labels": 11
+  },
+  "evidenceId": "EVD-PUB000005",
+  "personIds": [
+   "P90006",
+   "P90007",
+   "P90008"
+  ]
+ },
+ "CASE906": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-48555-2018",
+  "cnr": "PHHC010628342018",
+  "decisionDate": "2024-09-24",
+  "disposal": "DISMISSED",
+  "petitionType": "QUASHING",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2024/court=3_22/bench=phhc/PHHC010628342018_1_2024-09-24.pdf",
+  "sha256": "f4c5cf467f617705171c938680eee4d98c11a39324019b18bc88671e0d6aa53a",
+  "fetchedAt": "2026-11-20T06:39:28+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 2,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000006",
+  "personIds": [
+   "P90009"
+  ]
+ },
+ "CASE907": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-49219-2024",
+  "cnr": "PHHC011308902024",
+  "decisionDate": "2024-10-14",
+  "disposal": "ALLOWED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2024/court=3_22/bench=phhc/PHHC011308902024_1_2024-10-14.pdf",
+  "sha256": "5886da20f39ebdd6006c2117e1223af59dd971ce02d010262c1ef960661cd142",
+  "fetchedAt": "2026-11-20T06:40:17+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 4,
+  "firFormat": "prose",
+  "evidenceMentioned": [
+   "Recovery / seizure memo"
+  ],
+  "recoveries": [
+   "15 grams heroin",
+   "1150 tablets"
+  ],
+  "amountsRs": [
+   32000.0
+  ],
+  "custodySince": "2022-05-27",
+  "antecedents": "MENTIONED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000007",
+  "personIds": [
+   "P90010"
+  ]
+ },
+ "CASE908": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-3449-2025",
+  "cnr": "PHHC010097382025",
+  "decisionDate": "2025-02-21",
+  "disposal": "DISPOSED OF",
+  "petitionType": "ANTICIPATORY_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010097382025_1_2025-02-21.pdf",
+  "sha256": "4819ee267e8394df8a143a5cc3956ece7257e8c8b180f986fef285ed9e18c3cf",
+  "fetchedAt": "2026-11-20T06:39:03+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 3,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [
+   2010.0
+  ],
+  "custodySince": null,
+  "antecedents": "NONE",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0,
+   "labels": 2
+  },
+  "evidenceId": "EVD-PUB000008",
+  "personIds": [
+   "P90011",
+   "P90012"
+  ]
+ },
+ "CASE909": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-9546-2025",
+  "cnr": "PHHC010259912025",
+  "decisionDate": "2025-02-24",
+  "disposal": "ALLOWED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010259912025_1_2025-02-24.pdf",
+  "sha256": "62cb3118553e23f065108be407049af9e84e4e3aa98380244fe4ced8419bcad7",
+  "fetchedAt": "2026-11-20T06:38:31+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 5,
+  "firFormat": "prose",
+  "evidenceMentioned": [
+   "Medical (MLR / post-mortem)"
+  ],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 10,
+   "identifiers": 1,
+   "residual": 15,
+   "labels": 5
+  },
+  "evidenceId": "EVD-PUB000009",
+  "personIds": [
+   "P90013"
+  ]
+ },
+ "CASE910": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-13019-2025",
+  "cnr": "PHHC010365152025",
+  "decisionDate": "2025-03-20",
+  "disposal": "DISPOSED OF",
+  "petitionType": "QUASHING",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010365152025_1_2025-03-20.pdf",
+  "sha256": "7688203c3fccdb9ce7492f6cf8b934797cf7433af0c5b088d07045b13732bad1",
+  "fetchedAt": "2026-11-20T06:42:53+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 3,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [
+   5000.0,
+   5000.0
+  ],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000010",
+  "personIds": [
+   "P90014",
+   "P90015"
+  ]
+ },
+ "CASE911": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-57064-2024",
+  "cnr": "PHHC011564122024",
+  "decisionDate": "2025-03-24",
+  "disposal": "ALLOWED",
+  "petitionType": "QUASHING",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011564122024_1_2025-03-24.pdf",
+  "sha256": "df7c18858b9e4835301bcc1d9284527e8c5c85afc69fb3bd5b1461975a42df92",
+  "fetchedAt": "2026-11-20T06:40:44+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 3,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000011",
+  "personIds": [
+   "P90016"
+  ]
+ },
+ "CASE912": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-12741-2025",
+  "cnr": "PHHC010361272025",
+  "decisionDate": "2025-04-01",
+  "disposal": "ALLOWED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010361272025_1_2025-04-01.pdf",
+  "sha256": "cb1ad6f76523e85c188b94dd28e76ce06a02f1e1b89187627c620ad31422f653",
+  "fetchedAt": "2026-11-20T06:38:08+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 4,
+  "firFormat": "prose",
+  "evidenceMentioned": [
+   "Medical (MLR / post-mortem)"
+  ],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000012",
+  "personIds": [
+   "P90017",
+   "P90018"
+  ]
+ },
+ "CASE913": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-61530-2024",
+  "cnr": "PHHC011702452024",
+  "decisionDate": "2025-04-30",
+  "disposal": "ALLOWED",
+  "petitionType": "ANTICIPATORY_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011702452024_1_2025-04-30.pdf",
+  "sha256": "e7571142d984961003c7bdcd695d867c6382f19997a2eda24f73dd8c7ee91b36",
+  "fetchedAt": "2026-11-20T06:41:25+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 1,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000013",
+  "personIds": [
+   "P90019",
+   "P90020"
+  ]
+ },
+ "CASE914": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-63195-2024",
+  "cnr": "PHHC011746722024",
+  "decisionDate": "2025-05-05",
+  "disposal": "DISPOSED OF",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011746722024_1_2025-05-05.pdf",
+  "sha256": "cce6e41e09052960025794fdd0543579ed19a2a4e8f04d48c5485a8f2b69d63c",
+  "fetchedAt": "2026-11-20T06:40:29+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 2,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000014",
+  "personIds": [
+   "P90021",
+   "P90022"
+  ]
+ },
+ "CASE915": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-9504-2025",
+  "cnr": "PHHC010269682025",
+  "decisionDate": "2025-05-12",
+  "disposal": "ALLOWED",
+  "petitionType": "ANTICIPATORY_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010269682025_1_2025-05-12.pdf",
+  "sha256": "95baaa013a9572442f388d84d0f248ae8bd1369f73b7c2ce439ea394080813d9",
+  "fetchedAt": "2026-11-20T06:41:36+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 3,
+  "firFormat": "table",
+  "evidenceMentioned": [
+   "Medical (MLR / post-mortem)"
+  ],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000015",
+  "personIds": [
+   "P90023",
+   "P90024"
+  ]
+ },
+ "CASE916": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-25670-2025",
+  "cnr": "PHHC010737502025",
+  "decisionDate": "2025-05-15",
+  "disposal": "DISMISSED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010737502025_1_2025-05-15.pdf",
+  "sha256": "6361a35bb43122abaec1f6211e7fe02f9c3ec28a4dd647ffafaf8771ca42954c",
+  "fetchedAt": "2026-11-20T06:39:20+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 1,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000016",
+  "personIds": [
+   "P90025",
+   "P90026"
+  ]
+ },
+ "CASE917": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-60009-2024",
+  "cnr": "PHHC011665292024",
+  "decisionDate": "2025-05-19",
+  "disposal": "ALLOWED",
+  "petitionType": "ANTICIPATORY_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011665292024_1_2025-05-19.pdf",
+  "sha256": "a27605e7f857257404205f2690ce9fe1f54514ba73c5dd296fb5233822de90d2",
+  "fetchedAt": "2026-11-20T06:43:23+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 6,
+  "firFormat": "table",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [
+   1000000.0,
+   2000000.0,
+   2000000.0,
+   1000000.0,
+   1000000.0,
+   2000000.0,
+   1000000.0,
+   3000000.0
+  ],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 12,
+   "identifiers": 4,
+   "residual": 4,
+   "labels": 7
+  },
+  "evidenceId": "EVD-PUB000017",
+  "personIds": [
+   "P90027",
+   "P90028",
+   "P90029"
+  ]
+ },
+ "CASE918": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-11487-2025",
+  "cnr": "PHHC010311022025",
+  "decisionDate": "2025-05-20",
+  "disposal": "ALLOWED",
+  "petitionType": "ANTICIPATORY_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010311022025_1_2025-05-20.pdf",
+  "sha256": "262cb5adeb506de5d7a3650f613a0ca62367faeec1a3dc994ff43722e3aaffe9",
+  "fetchedAt": "2026-11-20T06:42:07+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 1,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000018",
+  "personIds": [
+   "P90030"
+  ]
+ },
+ "CASE919": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-27429-2025",
+  "cnr": "PHHC010799002025",
+  "decisionDate": "2025-05-20",
+  "disposal": "ALLOWED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010799002025_1_2025-05-20.pdf",
+  "sha256": "ecef90be75be3b6bb4b34545e3efa43a7cecf5b77d40709173d34e983a40669c",
+  "fetchedAt": "2026-11-20T06:53:12+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 2,
+  "firFormat": "table",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000019",
+  "personIds": [
+   "P90031",
+   "P90032"
+  ]
+ },
+ "CASE920": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-15148-2025",
+  "cnr": "PHHC010421882025",
+  "decisionDate": "2025-05-21",
+  "disposal": "ALLOWED",
+  "petitionType": "QUASHING",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010421882025_1_2025-05-21.pdf",
+  "sha256": "7df28597217826ed58e4b491b7b3411211d98c4eb8fe85084414f876df5ee9b2",
+  "fetchedAt": "2026-11-20T06:42:36+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 2,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000020",
+  "personIds": [
+   "P90033"
+  ]
+ },
+ "CASE921": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-31776-2025",
+  "cnr": "PHHC010930902025",
+  "decisionDate": "2025-06-12",
+  "disposal": "ALLOWED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010930902025_1_2025-06-12.pdf",
+  "sha256": "f6a3014d300177f128e28537f61f333a1c5cb6eaf040d2919c35d8452bafb007",
+  "fetchedAt": "2026-11-20T06:40:39+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 2,
+  "firFormat": "prose",
+  "evidenceMentioned": [
+   "Recovery / seizure memo",
+   "Disclosure statement"
+  ],
+  "recoveries": [
+   "2.600 kilograms opium"
+  ],
+  "amountsRs": [],
+  "custodySince": "2025-04-10",
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000021",
+  "personIds": [
+   "P90034"
+  ]
+ },
+ "CASE922": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-29929-2025",
+  "cnr": "PHHC010854872025",
+  "decisionDate": "2025-06-20",
+  "disposal": "DISMISSED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010854872025_1_2025-06-20.pdf",
+  "sha256": "2a6a27dbb5bdeccbe8f9144c6a892aa0638abbf8ef0b387aa9dd3be9409e8ec9",
+  "fetchedAt": "2026-11-20T06:42:54+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 1,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000022",
+  "personIds": [
+   "P90035"
+  ]
+ },
+ "CASE923": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-55872-2024",
+  "cnr": "PHHC011549402024",
+  "decisionDate": "2025-07-08",
+  "disposal": "ALLOWED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011549402024_1_2025-07-08.pdf",
+  "sha256": "7063928ed284aac0abbafe6632e908692f06e72b40850c39e00f50f878ef9ca4",
+  "fetchedAt": "2026-11-20T06:42:33+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 5,
+  "firFormat": "prose",
+  "evidenceMentioned": [
+   "Recovery / seizure memo",
+   "Disclosure statement"
+  ],
+  "recoveries": [
+   "500 grams heroin"
+  ],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 7,
+   "identifiers": 0,
+   "residual": 4,
+   "labels": 6
+  },
+  "evidenceId": "EVD-PUB000023",
+  "personIds": [
+   "P90036"
+  ]
+ },
+ "CASE924": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-14019-2025",
+  "cnr": "PHHC010400242025",
+  "decisionDate": "2025-07-21",
+  "disposal": "ALLOWED",
+  "petitionType": "QUASHING",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010400242025_1_2025-07-21.pdf",
+  "sha256": "ce62a7c8b1b57fe148f15ad243c96e4beba81d37e4ce18fba954ba1df69960e8",
+  "fetchedAt": "2026-11-20T06:39:35+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 3,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000024",
+  "personIds": [
+   "P90037"
+  ]
+ },
+ "CASE925": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-54577-2023",
+  "cnr": "PHHC011378602023",
+  "decisionDate": "2025-07-22",
+  "disposal": "ALLOWED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011378602023_1_2025-07-22.pdf",
+  "sha256": "75cdfec7307e2ef56a508611bcbf61c5f788e85b58396f0ad0c73039309a66d5",
+  "fetchedAt": "2026-11-20T06:39:49+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 4,
+  "firFormat": "prose",
+  "evidenceMentioned": [
+   "Medical (MLR / post-mortem)"
+  ],
+  "recoveries": [],
+  "amountsRs": [
+   50000.0
+  ],
+  "custodySince": "2020-10-18",
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000025",
+  "personIds": [
+   "P90038"
+  ]
+ },
+ "CASE926": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-33017-2025",
+  "cnr": "PHHC010964242025",
+  "decisionDate": "2025-07-28",
+  "disposal": "DISMISSED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010964242025_1_2025-07-28.pdf",
+  "sha256": "40f96a844edcf7e63538c78286499660e9449ae2680311e250dc8b2632e5fb38",
+  "fetchedAt": "2026-11-20T06:42:48+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 1,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000026",
+  "personIds": [
+   "P90039",
+   "P90040"
+  ]
+ },
+ "CASE927": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-39990-2025",
+  "cnr": "PHHC011153062025",
+  "decisionDate": "2025-07-28",
+  "disposal": "ALLOWED",
+  "petitionType": "ANTICIPATORY_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011153062025_1_2025-07-28.pdf",
+  "sha256": "1d2166f64c3c2560769dce8cf44cdc02141a5f530420c5a9561708ae6713beeb",
+  "fetchedAt": "2026-11-20T06:38:58+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 3,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000027",
+  "personIds": [
+   "P90041"
+  ]
+ },
+ "CASE928": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-21596-2025",
+  "cnr": "PHHC010595652025",
+  "decisionDate": "2025-07-31",
+  "disposal": "DISMISSED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010595652025_1_2025-07-31.pdf",
+  "sha256": "ccdb2da5d8582cd4fe8ef31d3c0325fbdb81ffbbd7dbe4ed5945aed98218e55b",
+  "fetchedAt": "2026-11-20T06:38:56+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 4,
+  "firFormat": "table",
+  "evidenceMentioned": [
+   "CCTV footage",
+   "Recovery / seizure memo",
+   "Medical (MLR / post-mortem)"
+  ],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "MENTIONED",
+  "pseudonymisation": {
+   "names": 17,
+   "identifiers": 0,
+   "residual": 3,
+   "labels": 5
+  },
+  "evidenceId": "EVD-PUB000028",
+  "personIds": [
+   "P90042",
+   "P90043"
+  ]
+ },
+ "CASE929": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-43113-2025",
+  "cnr": "PHHC011241972025",
+  "decisionDate": "2025-08-13",
+  "disposal": "ALLOWED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011241972025_1_2025-08-13.pdf",
+  "sha256": "f3a9c9864156df5afc56b3b356251046a10f3328a3a539e083f088ccff9f25ad",
+  "fetchedAt": "2026-11-20T06:42:01+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 2,
+  "firFormat": "prose",
+  "evidenceMentioned": [
+   "Disclosure statement"
+  ],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": "2025-04-22",
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000029",
+  "personIds": [
+   "P90044"
+  ]
+ },
+ "CASE930": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-15319-2025",
+  "cnr": "PHHC010421302025",
+  "decisionDate": "2025-08-18",
+  "disposal": "DISPOSED OF",
+  "petitionType": "ANTICIPATORY_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010421302025_1_2025-08-18.pdf",
+  "sha256": "c319de5f7efdf1c8c9481329e28968935eaf69278576eeeb996143a6efc75ebe",
+  "fetchedAt": "2026-11-20T06:41:27+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 2,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000030",
+  "personIds": [
+   "P90045"
+  ]
+ },
+ "CASE931": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-31895-2025",
+  "cnr": "PHHC010936522025",
+  "decisionDate": "2025-08-18",
+  "disposal": "DISMISSED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010936522025_1_2025-08-18.pdf",
+  "sha256": "db4f7c15e4f3b40b493bd3ab11576e0fdb0e8ed217087db871985627bae17415",
+  "fetchedAt": "2026-11-20T06:41:22+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 1,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000031",
+  "personIds": [
+   "P90046",
+   "P90047"
+  ]
+ },
+ "CASE932": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-35843-2025",
+  "cnr": "PHHC011032742025",
+  "decisionDate": "2025-08-21",
+  "disposal": "ALLOWED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011032742025_1_2025-08-21.pdf",
+  "sha256": "dd9f82cd9166343966d6e900231370e1e29983aaeabbf469964e9ef07125dfc7",
+  "fetchedAt": "2026-11-20T06:41:20+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 4,
+  "firFormat": "prose",
+  "evidenceMentioned": [
+   "Medical (MLR / post-mortem)"
+  ],
+  "recoveries": [],
+  "amountsRs": [
+   50000.0
+  ],
+  "custodySince": "2023-10-07",
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000032",
+  "personIds": [
+   "P90048"
+  ]
+ },
+ "CASE933": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-65423-2023",
+  "cnr": "PHHC011673572023",
+  "decisionDate": "2025-08-22",
+  "disposal": "DISPOSED OF",
+  "petitionType": "OTHER",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011673572023_1_2025-08-22.pdf",
+  "sha256": "242de6617091f277b6ef38db39806b4054691dc722ed3ed4860d4bfeb25d8f68",
+  "fetchedAt": "2026-11-20T06:41:24+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 2,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000033",
+  "personIds": [
+   "P90049"
+  ]
+ },
+ "CASE934": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-26459-2025",
+  "cnr": "PHHC010774842025",
+  "decisionDate": "2025-08-28",
+  "disposal": "ALLOWED",
+  "petitionType": "ANTICIPATORY_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010774842025_1_2025-08-28.pdf",
+  "sha256": "a2c45213176b40bc0eb9fc92deb7b36842136f923d780e2df99fd98c8c7c49fb",
+  "fetchedAt": "2026-11-20T06:38:26+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 3,
+  "firFormat": "table",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [
+   20000.0,
+   2000.0
+  ],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 12,
+   "identifiers": 2,
+   "residual": 6,
+   "labels": 10
+  },
+  "evidenceId": "EVD-PUB000034",
+  "personIds": [
+   "P90050"
+  ]
+ },
+ "CASE935": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-38874-2025",
+  "cnr": "PHHC011133072025",
+  "decisionDate": "2025-09-02",
+  "disposal": "ALLOWED",
+  "petitionType": "ANTICIPATORY_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011133072025_1_2025-09-02.pdf",
+  "sha256": "13f21ca51d8601d2309da8ad8d060db927bc3adcbb5456426f2948a876fa6f95",
+  "fetchedAt": "2026-11-20T06:40:19+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 3,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [
+   29717.0,
+   31500.0,
+   2440.0,
+   29713.0,
+   2440.0,
+   31500.0,
+   15000.0,
+   8000.0,
+   31500.0,
+   61213.0
+  ],
+  "custodySince": null,
+  "antecedents": "MENTIONED",
+  "pseudonymisation": {
+   "names": 1,
+   "identifiers": 0,
+   "residual": 3,
+   "labels": 1
+  },
+  "evidenceId": "EVD-PUB000035",
+  "personIds": [
+   "P90051"
+  ]
+ },
+ "CASE936": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-35055-2025",
+  "cnr": "PHHC011009802025",
+  "decisionDate": "2025-09-04",
+  "disposal": "ALLOWED",
+  "petitionType": "QUASHING",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011009802025_1_2025-09-04.pdf",
+  "sha256": "d9114a2e5222bcf6d0095018e305552fc2369d195353ccbeec39231b642bbb25",
+  "fetchedAt": "2026-11-20T06:39:48+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 3,
+  "firFormat": "table",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000036",
+  "personIds": [
+   "P90052",
+   "P90053"
+  ]
+ },
+ "CASE937": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-48105-2025",
+  "cnr": "PHHC011360182025",
+  "decisionDate": "2025-09-04",
+  "disposal": "ALLOWED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011360182025_1_2025-09-04.pdf",
+  "sha256": "b0866c663a8d63584a53d4117c566d6a7dd08a6d4891075cdeab178f24cfd0bf",
+  "fetchedAt": "2026-11-20T06:42:22+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 2,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": "2025-05-23",
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000037",
+  "personIds": [
+   "P90054"
+  ]
+ },
+ "CASE938": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-49437-2025",
+  "cnr": "PHHC011421462025",
+  "decisionDate": "2025-09-10",
+  "disposal": "DISMISSED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC011421462025_1_2025-09-10.pdf",
+  "sha256": "0f1cae1b3565f4cb92b82141e95e5f974086d0689789e61ec13d66260ff83e1f",
+  "fetchedAt": "2026-11-20T06:40:23+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 1,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000038",
+  "personIds": [
+   "P90055"
+  ]
+ },
+ "CASE939": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-22769-2025",
+  "cnr": "PHHC010640432025",
+  "decisionDate": "2025-09-15",
+  "disposal": "DISMISSED",
+  "petitionType": "REGULAR_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010640432025_1_2025-09-15.pdf",
+  "sha256": "acbd875cf9f1c01585eafe6c6450c523b99caa884c5496b64b762d021b706934",
+  "fetchedAt": "2026-11-20T06:53:26+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 2,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000039",
+  "personIds": [
+   "P90056"
+  ]
+ },
+ "CASE940": {
+  "court": "High Court of Punjab and Haryana",
+  "caseNumber": "CRM-M-32475-2025",
+  "cnr": "PHHC010942992025",
+  "decisionDate": "2025-09-24",
+  "disposal": "DISPOSED OF",
+  "petitionType": "ANTICIPATORY_BAIL",
+  "url": "https://indian-high-court-judgments.s3.amazonaws.com/data/pdf/year=2025/court=3_22/bench=phhc/PHHC010942992025_1_2025-09-24.pdf",
+  "sha256": "59bc2445f694872d898f990375e806e3fca268c147393c2fff89de73b3ac3247",
+  "fetchedAt": "2026-11-20T06:39:04+00:00",
+  "license": "CC-BY-4.0 \u00b7 Indian High Court Judgments open dataset (Dattam Labs), documents from eCourts",
+  "datasetUrl": "https://registry.opendata.aws/indian-high-court-judgments/",
+  "pages": 2,
+  "firFormat": "prose",
+  "evidenceMentioned": [],
+  "recoveries": [],
+  "amountsRs": [],
+  "custodySince": null,
+  "antecedents": "NOT_STATED",
+  "pseudonymisation": {
+   "names": 0,
+   "identifiers": 0,
+   "residual": 0
+  },
+  "evidenceId": "EVD-PUB000040",
+  "personIds": [
+   "P90057"
+  ]
+ }
+}
