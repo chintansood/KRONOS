@@ -16,7 +16,7 @@
   const cap = s => s ? s[0] + s.slice(1).toLowerCase() : "Medium";
   const inr = n => "₹" + Number(n || 0).toLocaleString("en-IN", { maximumFractionDigits: 0 });
 
-  async function j(path, opt = {}, timeout = 15000) {
+  async function j(path, opt = {}, timeout = 60000) {   // generous: right after new data, engines recompute on slower machines
     const ctl = new AbortController();
     const t = setTimeout(() => ctl.abort(), timeout);
     try {
@@ -114,23 +114,27 @@
 
   /* ------------------------------------------------------------------ loaders */
   async function loadPerson(pid) {
-    try {
-      const [tl, ids, feas, hist] = await Promise.all([j(`/persons/${pid}/timeline?limit=600`), j(`/persons/${pid}/identity-candidates`),
-        j(`/persons/${pid}/feasibility`).catch(() => null), j(`/persons/${pid}/history`).catch(() => null)]);
-      upsertEvents(tl.map(e => mapTimelineEvent(e, pid)));
-      const P = PERS.find(p => p.id === pid);
-      const mainCase = P && P._api ? (P._api.primarySuspectCases[0] || P._api.casesMentioned[0]) : null;
-      st.personData[pid] = { identity: ids, feas, hist, nbe: mainCase ? await j(`/cases/${mainCase}/next-evidence`).catch(() => []) : [], mainCase };
-    } catch (e) { console.warn("KRONOS: person load failed", e); }
+    // each part loads independently: a slow or failed part must not blank the rest of the dossier
+    const P = PERS.find(p => p.id === pid);
+    const mainCase = P && P._api ? (P._api.primarySuspectCases[0] || P._api.casesMentioned[0]) : null;
+    const [tl, ids, feas, hist, nbe] = await Promise.allSettled([j(`/persons/${pid}/timeline?limit=600`, {}, 120000),
+      j(`/persons/${pid}/identity-candidates`), j(`/persons/${pid}/feasibility`, {}, 120000), j(`/persons/${pid}/history`),
+      mainCase ? j(`/cases/${mainCase}/next-evidence`, {}, 120000) : Promise.resolve([])]);
+    const val = (r, d) => r.status === "fulfilled" ? r.value : (console.warn(`KRONOS: part of ${pid}'s dossier did not load`, r.reason), d);
+    try { upsertEvents((val(tl, []) || []).map(e => mapTimelineEvent(e, pid))); } catch (e) { console.warn("KRONOS: timeline mapping failed", e); }
+    st.personData[pid] = { identity: val(ids, []), feas: val(feas, null), hist: val(hist, null), nbe: val(nbe, []), mainCase };
     st.persons.add(pid);
   }
   async function loadCase(cid) {
-    try {
-      const [ev, summary, nbe, hyp, prio] = await Promise.all([j(`/cases/${cid}/evidence`), j(`/cases/${cid}/summary`),
-        j(`/cases/${cid}/next-evidence`), j(`/cases/${cid}/hypotheses`), j(`/cases/${cid}/priority`)]);
-      upsertEvents(ev.map(mapEvidence));
-      st.caseData[cid] = { summary, nbe, hyp, prio, evCount: ev.length, diary: await j(`/cases/${cid}/diary`).catch(() => null) };
-    } catch (e) { console.warn("KRONOS: case load failed", e); st.caseData[cid] = {}; }
+    // each part loads independently (and generously): one slow engine must not blank the whole workspace
+    const T = 180000;
+    const [ev, summary, nbe, hyp, prio, diary] = await Promise.allSettled([j(`/cases/${cid}/evidence`, {}, T), j(`/cases/${cid}/summary`, {}, T),
+      j(`/cases/${cid}/next-evidence`, {}, T), j(`/cases/${cid}/hypotheses`, {}, T), j(`/cases/${cid}/priority`, {}, T), j(`/cases/${cid}/diary`, {}, T)]);
+    const val = (r, d) => r.status === "fulfilled" ? r.value : (console.warn(`KRONOS: part of ${cid} did not load`, r.reason), d);
+    const evs = val(ev, []) || [];
+    try { upsertEvents(evs.map(mapEvidence)); } catch (e) { console.warn("KRONOS: evidence mapping failed", e); }
+    st.caseData[cid] = { summary: val(summary, {}), nbe: val(nbe, []), hyp: val(hyp, { hypotheses: [] }), prio: val(prio, { ranking: [] }),
+                         evCount: evs.length, diary: val(diary, null) };
     st.cases.add(cid);
   }
   async function fetchEvidence(id) {
@@ -770,7 +774,7 @@
     chips, welcome,
     // after a case is registered or withdrawn: reload the case and person lists and drop cached views
     refresh: async () => {
-      const [cs, ps] = await Promise.all([j("/cases", {}, 30000), j("/persons", {}, 30000)]);
+      const [cs, ps] = await Promise.all([j("/cases", {}, 120000), j("/persons", {}, 120000)]);
       CASES.splice(0, CASES.length, ...cs.map(mapCase));
       PERS.splice(0, PERS.length, ...ps.map(mapPerson));
       st.cases.clear(); st.persons.clear(); st.caseData = {}; st.personData = {}; st.graphFocus = undefined;
@@ -789,7 +793,7 @@
 
   async function bootstrap() {
     st.health = await j("/health", {}, 8000);
-    const [cs, ps] = await Promise.all([j("/cases", {}, 30000), j("/persons", {}, 30000)]);
+    const [cs, ps] = await Promise.all([j("/cases", {}, 120000), j("/persons", {}, 120000)]);
     if (!cs.length) throw new Error("no cases in backend");
     CASES.splice(0, CASES.length, ...cs.map(mapCase));
     PERS.splice(0, PERS.length, ...ps.map(mapPerson));
