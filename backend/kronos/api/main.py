@@ -79,6 +79,46 @@ def list_cases():
     return S.cases()
 
 
+# ------------------------------------------------------------------ new-case intake (form, Copilot and home chat)
+from ..ingestion import intake as _intake   # noqa: E402
+
+
+@app.get("/api/intake/options")
+def intake_options():
+    """Stations, districts, state units, offence categories (with usual sections), known places with coordinates."""
+    return _intake.options()
+
+
+@app.post("/api/intake/check")
+def intake_check(payload: dict):
+    """Validation, people already on record, identifiers already seen in other cases, delay — before registering."""
+    return _intake.check(payload)
+
+
+@app.get("/api/intake/next-fir")
+def intake_next_fir(station: str, year: int | None = None):
+    return {"firNumber": _intake.next_fir_number(station, year)}
+
+
+@app.post("/api/cases")
+async def register_case(payload: dict):
+    """Register a new case. It goes through the same FIR loader, hashing, ledger, NER, identity and summary engines."""
+    try:
+        return await run_in_threadpool(_intake.register, payload)
+    except _intake.IntakeError as e:
+        return JSONResponse({"detail": "intake validation failed", "errors": e.errors}, status_code=422)
+
+
+@app.delete("/api/cases/{case_id}")
+def withdraw_case(case_id: str, reason: str = ""):
+    """Withdraw a case registered through intake (synthetic and court-record cases cannot be withdrawn).
+    The ledger keeps the original blocks and records the withdrawal."""
+    try:
+        return _intake.withdraw(case_id.upper(), reason)
+    except _intake.IntakeError as e:
+        return JSONResponse({"detail": "cannot withdraw", "errors": e.errors}, status_code=400)
+
+
 @app.get("/api/cases/{case_id}")
 def get_case(case_id: str):
     c = next((c for c in S.cases() if c["id"] == case_id.upper()), None)
@@ -98,8 +138,7 @@ class CaseIn(BaseModel):
     leadInvestigator: str | None = None
 
 
-@app.post("/api/cases")
-@app.put("/api/cases/{case_id}")
+@app.put("/api/cases/{case_id}")   # edit case details (new cases are registered through intake: POST /api/cases)
 def upsert_case(body: CaseIn, case_id: str | None = None):
     cid = (case_id or body.id or "").upper()
     exists = cid and db.query_one("SELECT case_id FROM cases WHERE case_id=%s", (cid,))
@@ -573,9 +612,18 @@ button{margin-top:14px;width:100%;padding:13px;border:0;border-radius:999px;colo
 <div class="note">Investigation prototype · synthetic and pseudonymised data · local AI</div></form></body></html>"""
 
 
+def _is_local(request: _Request) -> bool:
+    """A request from this machine itself (dev site on :5173, or :8000 opened locally). Anything that came through the
+    Cloudflare tunnel carries cf-ray / cf-connecting-ip headers (set by Cloudflare, not removable by the visitor), and the
+    API listens on 127.0.0.1 only — so the LAN cannot reach it directly."""
+    if request.headers.get("cf-ray") or request.headers.get("cf-connecting-ip"):
+        return False
+    return (request.client.host if request.client else "") in ("127.0.0.1", "::1", "localhost")
+
+
 @app.middleware("http")
 async def _access_gate(request: _Request, call_next):
-    if not _ACCESS_TOKEN or request.url.path in _OPEN_PATHS:
+    if not _ACCESS_TOKEN or request.url.path in _OPEN_PATHS or _is_local(request):
         return await call_next(request)
     if _hmac.compare_digest(request.cookies.get("kronos_access", ""), _ACCESS_TOKEN):
         return await call_next(request)

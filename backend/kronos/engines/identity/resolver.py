@@ -354,6 +354,44 @@ def generate_candidates() -> list[dict]:
     return out
 
 
+def candidates_for(pids: list[str], ctx: "Ctx | None" = None) -> list[dict]:
+    """Identity candidates for newly registered people only (case intake), using the same blocking and scoring as
+    the full run. Existing candidates and review decisions are left untouched; nothing is merged."""
+    ctx = ctx or Ctx()
+    persons, new = ctx.persons, [p for p in pids if p in ctx.persons]
+    pairs = set()
+    for a in new:
+        na = persons[a]["display_name"]
+        fa = _norm(na)[:1]
+        for b in persons:
+            if b == a:
+                continue
+            nb = persons[b]["display_name"]
+            fb = _norm(nb)[:1]
+            if fuzz.token_set_ratio(na, nb) >= 85 or (fa and fb and _first_variants(fa[0]) & _first_variants(fb[0]) and
+                                                      (len(_norm(na)) == 1 or len(_norm(nb)) == 1 or _norm(na)[-1] == _norm(nb)[-1])):
+                pairs.add(tuple(sorted((a, b))))
+            for col in ("phones", "devices", "sims", "accounts"):
+                if set(persons[a][col] or []) & set(persons[b][col] or []):
+                    pairs.add(tuple(sorted((a, b))))
+            fa_, fb_ = ctx.father.get(a, set()), ctx.father.get(b, set())
+            if fa_ and fb_ and {x.lower() for x in fa_} & {x.lower() for x in fb_}:
+                pairs.add(tuple(sorted((a, b))))
+    out = [score_pair(a, b, ctx) for a, b in sorted(pairs)]
+    out = [c for c in out if c["score"] > 0.05 or c["features"]["name"] >= 0.85 or any(c["features"][k] for k in HARD)
+           or c["band"] != "INSUFFICIENT_EVIDENCE"]
+    if out:
+        db.execute_values("INSERT INTO identity_candidates (candidate_id, person_a, person_b, score, band, features, supporting, "
+                          "contradicting, reasons, status) VALUES %s ON CONFLICT (candidate_id) DO UPDATE SET score=EXCLUDED.score, "
+                          "band=EXCLUDED.band, features=EXCLUDED.features, supporting=EXCLUDED.supporting, "
+                          "contradicting=EXCLUDED.contradicting, reasons=EXCLUDED.reasons, updated_at=now()",
+                          [(c["candidateId"], c["personA"], c["personB"], c["score"], c["band"],
+                            db.Json({"features": c["features"], "contributions": c["contributions"], "penalty": c["penalty"],
+                                     "basis": c["basis"]}),
+                            db.Json(c["supporting"]), db.Json(c["contradicting"]), db.Json(c["reasons"]), "PENDING") for c in out])
+    return out
+
+
 def _row(r) -> dict:
     names = {p["person_id"]: p["display_name"] for p in db.query("SELECT person_id, display_name FROM persons WHERE person_id IN (%s,%s)",
                                                                   (r["person_a"], r["person_b"]))}

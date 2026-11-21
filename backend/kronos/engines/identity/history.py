@@ -52,8 +52,9 @@ def _band(score: float, f: dict) -> str:
     return "INSUFFICIENT_EVIDENCE"
 
 
-def link_all() -> dict:
-    ctx = Ctx()
+def link_all(only: set | None = None, ctx: "Ctx | None" = None) -> dict:
+    """Prior-record candidates for every person, or (case intake) only for `only`, leaving all other links as they are."""
+    ctx = ctx or Ctx()
     hist = db.query("SELECT * FROM criminal_history WHERE coalesce(source_system, '') <> 'COURT_ORDER'")   # court-stated links are fixed
     night_place = {}
     for pid, c in ctx.places.items():
@@ -64,6 +65,8 @@ def link_all() -> dict:
         hnames = [h["full_name"]] + list(h["alias_names"] or [])
         hcity = _city(h["address"])
         for pid, p in persons.items():
+            if only is not None and pid not in only:
+                continue
             pnames = p["names"] or [p["display_name"]]
             phone = bool(h["phone_at_record"] and h["phone_at_record"] in (p["phones"] or []))
             best, why = max((name_similarity(x, y) for x in hnames for y in pnames), key=lambda t: t[0])
@@ -107,11 +110,15 @@ def link_all() -> dict:
             rows.append((f"HL-{h['history_id']}-{pid}", h["history_id"], pid, round(score, 3), band,
                          db.Json(f), db.Json(reasons), db.Json(contra)))
     existing = {r["link_id"]: r["status"] for r in db.query("SELECT link_id, status FROM history_links")}
-    db.execute("DELETE FROM history_links WHERE status='PENDING'")
-    db.execute_values("INSERT INTO history_links (link_id, history_id, person_id, score, band, features, reasons, contradicting, status) "
-                      "VALUES %s ON CONFLICT (link_id) DO UPDATE SET score=EXCLUDED.score, band=EXCLUDED.band, "
-                      "features=EXCLUDED.features, reasons=EXCLUDED.reasons, contradicting=EXCLUDED.contradicting, updated_at=now()",
-                      [r + (existing.get(r[0], "PENDING"),) for r in rows])
+    if only is None:
+        db.execute("DELETE FROM history_links WHERE status='PENDING'")
+    else:
+        db.execute("DELETE FROM history_links WHERE status='PENDING' AND person_id = ANY(%s)", (list(only),))
+    if rows:
+        db.execute_values("INSERT INTO history_links (link_id, history_id, person_id, score, band, features, reasons, contradicting, status) "
+                          "VALUES %s ON CONFLICT (link_id) DO UPDATE SET score=EXCLUDED.score, band=EXCLUDED.band, "
+                          "features=EXCLUDED.features, reasons=EXCLUDED.reasons, contradicting=EXCLUDED.contradicting, updated_at=now()",
+                          [r + (existing.get(r[0], "PENDING"),) for r in rows])
     return {"historyRecords": len(hist), "candidateLinks": len(rows)}
 
 

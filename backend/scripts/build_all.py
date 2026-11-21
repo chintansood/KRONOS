@@ -38,6 +38,8 @@ step(f"case summaries ({len(cases)})", lambda: [summarizer.generate_case_summary
 if a.public_records:
     from kronos.ingestion.public_records import ingest_public_records
     step("real public records (pseudonymised court orders)", lambda: print(ingest_public_records(index=False)))
+from kronos.ingestion import intake
+step("cases registered through intake (replayed)", lambda: print(intake.replay_all()))
 from kronos.engines.llm import retrieval
 step("retrieval index", lambda: print(retrieval.build_index(embed=not a.no_embed)))
 step("GNN training/evaluation", lambda: print(gnn.train()["comparison"]))
