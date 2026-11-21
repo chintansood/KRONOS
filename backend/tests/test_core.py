@@ -217,6 +217,29 @@ def test_confidence_scores_are_bounded_and_explained():
         assert -1 < h["confidence"]["evidentialBalance"] < 1 and "not a probability" in h["confidence"]["note"]
 
 
+
+@needs_db
+def test_alternate_hypotheses_test_both_sides():
+    """Every line of inquiry is set against alternates (why the person may NOT have been involved), each grounded in records."""
+    from kronos.engines.intelligence import hypothesis
+    from kronos.engines.intelligence.alternates import SPEC
+    h = hypothesis.analyse("CASE006", "P00371")["hypotheses"][0]
+    assert "presumption of innocence" in h["framing"]["note"].lower()
+    alts = h["alternateHypotheses"]
+    assert alts and alts[0]["code"] == "A1" and alts[0]["label"] == "Strong"          # recorded 278 km away at the time
+    assert h["comparison"]["favours"] == "ALTERNATE"
+    codes = {a["code"] for a in alts} | {a["code"] for a in h["alternatesConsideredNotSupported"]}
+    assert codes == set(SPEC)                                                          # every alternate considered
+    for a in alts:
+        assert 0 < a["strength"] < 1 and a["evidence"] and a["test"]
+        assert all(x["text"] for x in a["evidence"])
+    for s in h["supporting"]:
+        assert set(s.get("explainedBy", [])) <= {a["code"] for a in alts}
+    for case in ("CASE013", "CASE019"):
+        for h in hypothesis.analyse(case)["hypotheses"]:
+            assert 0 <= h["lineOfInquiryStrength"] < 1 and h["comparison"]["verdict"]
+
+
 # ------------------------------------------------------------------ PS5 deliverables
 def test_language_detection_and_identifier_protection():
     from kronos.engines.llm import language as L
@@ -263,3 +286,40 @@ def test_case_diary_and_draft_report():
     html_ = case_report.render_html(case_report.build(case))
     assert html_.count("<h2>") == 10 and "not a final report" in html_
     db.execute("DELETE FROM case_diary_entries WHERE author='pytest'")
+
+
+@needs_db
+def test_case_intake_register_and_withdraw():
+    """A case registered through intake goes through hashing, ledger, roles, NER and summary, and can be withdrawn
+    without touching existing records; the ledger stays valid and records the withdrawal."""
+    import copy
+    from kronos import db
+    from kronos.engines.provenance import ledger
+    from kronos.ingestion import intake as I
+    p = {"registration": {"policeStation": "PS Karol Bagh", "district": "New Delhi", "agencyId": "AGY-DL", "registeredAt": "2025-04-02T10:00",
+                          "firNumber": I.next_fir_number("PS Karol Bagh", 2025)},
+         "offence": {"category": "Cheating", "sections": "BNS 318(4)", "priority": "MEDIUM", "title": "Test intake — Karol Bagh"},
+         "occurrence": {"from": "2025-04-01T18:00", "place": "Karol Bagh Market, Delhi"},
+         "complainant": {"name": "Testcase Complainant Alpha", "phone": "9000000001", "isVictim": True},
+         "accused": [{"name": "Gurpreet Singh Dhillon", "phone": "+91-8137098593", "relative": "Mahinder Dhillon", "linkTo": "P00023"},
+                     {"unknown": True, "description": "a second man on a motorcycle"}],
+         "narrative": "The complainant stated that the accused took Rs 50,000 on the promise of a job and stopped responding thereafter."}
+    before = db.query_one("SELECT names, phones FROM persons WHERE person_id='P00023'")
+    bad = copy.deepcopy(p); bad["offence"]["category"] = "Kidnapping"
+    assert not I.check(bad)["ok"]                                        # protected categories are refused
+    c = I.check(p)
+    assert c["ok"] and any(m["ref"] == "accused.0" and m["candidates"][0]["personId"] in ("P00023", "P00024") for m in c["matches"])
+    r = I.register(p, warm=False, save=False)
+    cid = r["caseId"]
+    try:
+        roles = {(x["personId"], x["role"]) for x in r["roles"]}
+        assert ("P00023", "PRINCIPAL_ACCUSED") in roles and r["entities"]["total"] > 0
+        assert ledger.verify_evidence(r["evidenceId"])["result"] == "VERIFIED"
+        assert db.query_one("SELECT origin, is_custom FROM cases WHERE case_id=%s", (cid,)) == {"origin": "INTAKE", "is_custom": True}
+        assert db.query_one("SELECT names, phones FROM persons WHERE person_id='P00023'") == before     # linked record untouched
+    finally:
+        w = I.withdraw(cid, "test")
+    assert w["withdrawn"] and not db.query_one("SELECT 1 FROM events WHERE case_id=%s", (cid,))
+    assert not db.query_one("SELECT 1 FROM persons p WHERE origin='INTAKE' AND NOT EXISTS "
+                            "(SELECT 1 FROM person_case_roles r WHERE r.person_id=p.person_id)")      # no orphaned people
+    assert ledger.verify_chain()["valid"]
