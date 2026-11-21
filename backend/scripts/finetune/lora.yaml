@@ -1,0 +1,30 @@
+# QLoRA fine-tune of Llama 3.1 8B Instruct (4-bit MLX weights) for the KRONOS assistant behaviours.
+model: data/external/hf/Meta-Llama-3.1-8B-Instruct-4bit
+train: true
+data: data/finetune
+fine_tune_type: lora
+optimizer: adamw
+seed: 7
+num_layers: 8             # LoRA on the last 8 of 32 transformer blocks (16 GB laptop budget)
+batch_size: 1
+grad_accumulation_steps: 2
+iters: 220
+val_batches: 6
+learning_rate: 1.5e-4
+lr_schedule:
+  name: cosine_decay
+  warmup: 10
+  warmup_init: 1.0e-6
+  arguments: [1.5e-4, 110, 1.5e-5]
+steps_per_report: 10
+steps_per_eval: 110
+save_every: 55
+adapter_path: data/finetune/adapters
+max_seq_length: 3584
+grad_checkpoint: true
+mask_prompt: true         # loss on the answer only
+lora_parameters:
+  keys: [self_attn.q_proj, self_attn.k_proj, self_attn.v_proj, self_attn.o_proj, mlp.gate_proj, mlp.up_proj, mlp.down_proj]
+  rank: 16
+  scale: 2.0
+  dropout: 0.05
