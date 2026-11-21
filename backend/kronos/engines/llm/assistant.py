@@ -41,11 +41,14 @@ INTENTS = {
     "IDENTITY": r"same person|alias|identity|also known|duplicate|nickname",
     "EVIDENCE": r"evidence|support|record|prove|source",
     "PRIORITY": r"priority|further investigation|warrant|focus|rank|most important|who should",
-    "HYPOTHESIS": r"hypothes|involv|contradict|exculpat|alternative|against|innocent|guilt|culprit|\bthe criminal\b|committed|"
+    "HYPOTHESIS": r"hypothes|involv|contradict|exculpat|alternat|against|innocent|guilt|culprit|\bthe criminal\b|committed|why not|"
                   r"\bcommit\b|mastermind|\barrest",
     "NEXT": r"next|additional evidence|obtain|what else|missing|gap|recommend",
     "PATTERN": r"pattern|unusual|anomal|suspicious|connection|link|network|related",
 }
+
+EXCULPATORY = re.compile(r"not\s+(be\s+|been\s+)?(guilty|involved|the culprit)|innocen|alternat|exculpat|why not|"
+                         r"defen[cs]e|explain (it )?away|other explanation", re.I)
 
 SYS_ASSIST = """You are KRONOS ASSISTANCE, a factual assistant for police investigators.
 Rules:
@@ -105,6 +108,16 @@ def _rel_min(m) -> str:
     except (TypeError, ValueError):
         return "time relative to the incident unknown"
     return "at the incident time" if m == 0 else f"{abs(m)} min {'before' if m < 0 else 'after'} the incident"
+
+
+def _add_alternates(E, h: dict, score: float):
+    """Each alternate hypothesis (why the person may NOT have been involved) as its own cited evidence item."""
+    for al in (h.get("alternateHypotheses") or [])[:3]:
+        E.add(f"Alternate hypothesis {al['code']} for {h['personId']} — {al['title']} ({al['label']}, strength {al['strength']}): "
+              f"{al['statement']} Evidence: " + "; ".join(x["text"] for x in al["evidence"][:2]) + f". Test that would settle it: {al['test']}",
+              [i for x in al["evidence"][:2] for i in x["evidenceIds"][:1]], score, "ALTERNATE")
+    if h.get("comparison"):
+        E.add(f"Line of inquiry vs alternates for {h['personId']}: {h['comparison']['verdict']}", [h["personId"]], score, "ALTERNATE")
 
 
 def _fmt_ev(r) -> str:
@@ -251,6 +264,7 @@ def _collect(q: str, mode: str, case_id: str | None, person_id: str | None, moda
                           f"{h['confidence']['completeness']}; not a probability of guilt).",
                           [e for s in h["supporting"][:3] for e in s["evidenceIds"][:1]] + [e for s in h["contradicting"][:3] for e in s["evidenceIds"][:1]],
                           8 + 2 * ("HYPOTHESIS" in intents), "HYPOTHESIS")
+                    _add_alternates(E, h, 7 + 2 * ("HYPOTHESIS" in intents))
                 for r in next_evidence.recommend(case_id)[:5]:
                     E.add(f"Recommended evidence {r['id']} [{r['priority']}, value score {r['valueScore']}, status {r['status']}]: {r['evidenceType']} — {r['reason']}. "
                           f"Action: {r['verificationAction']}", [r["id"]] + r["basisEvidenceIds"][:2], 5 + 3 * ("NEXT" in intents), "NEXT")
@@ -263,6 +277,7 @@ def _collect(q: str, mode: str, case_id: str | None, person_id: str | None, moda
                       f"Verification: {'; '.join(h['verificationSteps'][:3])}",
                       [e for s in h["supporting"][:3] for e in s["evidenceIds"][:1]] + [e for s in h["contradicting"][:3] for e in s["evidenceIds"][:1]] + [cid],
                       9, "HYPOTHESIS")
+                _add_alternates(E, h, 8)
     # ---------------- global questions (no scope)
     if not case_id and not person_id:
         if intents & {"PATTERN", "PRIORITY", "CASES"}:
@@ -389,6 +404,12 @@ def prepare(query: str, mode: str = "ASSISTANCE", case_id: str | None = None, pe
     q = standalone
     intents = _intents(q, mode)
     E = _collect(q, mode, case_id, person_id, modality, intents, ctx_ids)
+    # "why may this person NOT be guilty?": the alternate hypotheses lead the evidence, and the model is told to answer from them
+    exculpatory = bool(EXCULPATORY.search(q))
+    if exculpatory:
+        for it in E.items:
+            if it["source"] == "ALTERNATE":
+                it["score"] += 4
     items = sorted(E.items, key=lambda x: -x["score"])
     all_batches = _batches(items, budget or settings.llm_evidence_budget_tokens)
     # the first batch always goes in; further batches only if they still hold highly relevant evidence
@@ -396,6 +417,10 @@ def prepare(query: str, mode: str = "ASSISTANCE", case_id: str | None = None, pe
     batches = all_batches[:1] + [b for b in all_batches[1:] if max(it["score"] for it in b) >= 6][: settings.llm_max_batches - 1]
     used = [it for b in batches for it in b]
     scope = f"Scope: case {case_id or 'any'}, person {person_id or 'any'}" + (f", modality filter {modality}" if modality and modality != "ALL" else "")
+    if exculpatory and any(it["source"] == "ALTERNATE" for it in used):
+        scope += ("\nThe question asks why this person may NOT have been involved. Answer from the 'Alternate hypothesis' "
+                  "evidence items, strongest first: for each, give its evidence and the test that would settle it. Then give "
+                  "the 'Line of inquiry vs alternates' verdict. Do not call anyone guilty or innocent.")
     if hist_txt:
         scope += "\nConversation so far (for resolving references only — every fact must come from the evidence):\n" + hist_txt
     return dict(mode=mode, q_orig=q_orig, q_lang=q_lang, target=target, q=q, case_id=case_id, person_id=person_id,
