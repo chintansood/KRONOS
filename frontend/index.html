@@ -826,7 +826,9 @@ body[data-v="p"] .copilot-btn {
 }
 </style>
 <link rel="stylesheet" href="/kronos-premium.css">
-<link rel="stylesheet" href="/kronos-temporal.css"></head>
+<link rel="stylesheet" href="/kronos-temporal.css">
+<link rel="stylesheet" href="/kronos-intake.css">
+<link rel="stylesheet" href="/kronos-responsive.css"></head>
 <body>
 <div id="kp-loader" role="status" aria-label="Loading KRONOS"><div class="kp-mark">KR<svg viewBox="0 0 100 100" fill="none" stroke="#A86F45"><circle cx="50" cy="50" r="46" stroke-width="3"/><circle cx="50" cy="50" r="38" stroke-width="1"/><path d="M50 2v96M2 50h96" stroke-width="1.2"/><circle cx="50" cy="50" r="3" fill="#B96D50" stroke="none"/></svg>NOS</div><div class="kp-bar"><i></i></div><div class="kp-meta"><span>CONNECTING EVIDENCE</span><span class="kp-num">000</span></div></div>
 <nav><span class="wm">KRONOS</span><div class="links"><a href="#home" data-n="home">HOME</a><a href="#dash" data-n="dash">INVESTIGATIONS</a><a href="#p/P-JS01" data-n="p">INTELLIGENCE</a><a href="#graph" data-n="graph">NETWORK GRAPH</a><a href="#case/KRONOS-2024-001" data-n="case">EVIDENCE</a><a href="#p/P-JS01">TIMELINE</a></div><div class="rt"><a href="#case/KRONOS-2024-001" class="demo" style="background:rgba(185,109,80,0.15);color:var(--terra);border-color:rgba(185,109,80,0.3);text-decoration:none;cursor:pointer">CASE DEMO • KRONOS-2024-001</a><button class="ib" id="bell" aria-label="Notifications">&#128276;</button><button class="ib av" id="av" aria-label="Profile and settings">&#9679;</button></div></nav>
@@ -1090,7 +1092,7 @@ function homeV(el){const rm=matchMedia("(prefers-reduced-motion:reduce)").matche
   try { hHist = JSON.parse(localStorage.getItem(key) || "[]"); } catch(e){}
 
   const H_SUG = (window.KR && KR.live) ? {
-    A: ["Summarise the investigations with the most flagged findings", "Which persons appear in more than one case?", "Which cases involve structured cash deposits?", "List recorded impossible-travel inconsistencies"],
+    A: ["Register a new case", "Summarise the investigations with the most flagged findings", "Which persons appear in more than one case?", "Which cases involve structured cash deposits?", "List recorded impossible-travel inconsistencies"],
     D: ["Which people warrant further investigation across cases?", "What cross-case connections exist?", "Which patterns look unusual in the financial records?", "What additional evidence should be obtained first?"]
   } : {
     A: [
@@ -1179,6 +1181,12 @@ function homeV(el){const rm=matchMedia("(prefers-reduced-motion:reduce)").matche
     hHist.push({ r: "a", t: "…" });
     drawHomeChat();
 
+    if (window.KRintake && KRintake.wants("home", q)) {
+      const at = hHist.length - 1;
+      KRintake.chat("home", q, html => { hHist[at].t = html; hOpen = true; localStorage.setItem(key, JSON.stringify(hHist.slice(-20))); drawHomeChat(); });
+      return;
+    }
+
     // navigation commands ("explore the intelligence network", "open CASE012", "show timeline") run instantly — no LLM call
     const cmd = window.KRcmd && KRcmd.parse(q);
     if (cmd) {
@@ -1209,6 +1217,7 @@ function homeV(el){const rm=matchMedia("(prefers-reduced-motion:reduce)").matche
     }, 450);
   }
 
+  (window._krSend = window._krSend || {}).home = t => askHome(t);
   $("#hsend", el).onclick = () => askHome($("#hq", el).value);
   $("#hq", el).addEventListener("focus", () => { if (hHist.length && !hOpen) { hOpen = true; drawHomeChat(); } });
   const collapseHome = e => { if (!document.body.contains(el)) { document.removeEventListener("pointerdown", collapseHome); document.removeEventListener("keydown", collapseHome); return; }
@@ -1682,9 +1691,9 @@ function caseV(el, caseId){
 
   function render(){
     el.innerHTML = `
-    <div style="max-width:1280px;margin:0 auto;padding:16px 20px 80px">
+    <div class="kr-case" style="max-width:1280px;margin:0 auto;padding:16px 20px 80px">
       <!-- Header Navigation & Provenance Notice -->
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px">
+      <div class="kr-actions" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px">
         <button class="go" style="margin:0;padding:7px 16px;font-size:12px;cursor:pointer" onclick="location.hash='#dash'">← Back to Investigations</button>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
           <button class="go" style="margin:0;padding:7px 16px;font-size:12px;cursor:pointer" onclick="location.hash='#p/P-JS01'">Inspect Jaffer Sadiq Dossier →</button>
@@ -1720,7 +1729,7 @@ function caseV(el, caseId){
       </div>
 
       <!-- Navigation Tabs -->
-      <div style="display:flex;gap:16px;margin:24px 0 16px;border-bottom:1px solid rgba(198,154,85,0.3);padding-bottom:0;flex-wrap:wrap">
+      <div class="kr-tabs" style="display:flex;gap:16px;margin:24px 0 16px;border-bottom:1px solid rgba(198,154,85,0.3);padding-bottom:0;flex-wrap:wrap">
         <button type="button" onclick="window.setCaseTab('summary')" style="background:none;border:none;font-family:var(--serif);font-size:16px;font-weight:700;cursor:pointer;color:${activeTab==='summary'?'var(--terra)':'var(--ink)'};border-bottom:${activeTab==='summary'?'3px solid var(--terra)':'3px solid transparent'};padding:8px 14px;transition:all .2s ease">1. Investigation Summary & Chronology</button>
         <button type="button" onclick="window.setCaseTab('nbe')" style="background:none;border:none;font-family:var(--serif);font-size:16px;font-weight:700;cursor:pointer;color:${activeTab==='nbe'?'var(--terra)':'var(--ink)'};border-bottom:${activeTab==='nbe'?'3px solid var(--terra)':'3px solid transparent'};padding:8px 14px;transition:all .2s ease">2. Next Best Evidence & Hypotheses (AI Engine)</button>
         <button type="button" onclick="window.setCaseTab('evidence')" style="background:none;border:none;font-family:var(--serif);font-size:16px;font-weight:700;cursor:pointer;color:${activeTab==='evidence'?'var(--terra)':'var(--ink)'};border-bottom:${activeTab==='evidence'?'3px solid var(--terra)':'3px solid transparent'};padding:8px 14px;transition:all .2s ease">3. Evidence Records & Provenance Ledger (${caseEvents.length})</button>
@@ -2277,6 +2286,7 @@ if($("#av")) $("#av").onclick = window.openSettings;
   addEventListener("hashchange", updateContextBanner);
 
   // Dynamic Natural Language & Action Parser (NO HARDCODING)
+  window.processCopilotQuery = processCopilotQuery;   // the offline dossier chat uses the same engine (it lives outside this block)
   function processCopilotQuery(rawQ, lang) {
     const q = rawQ.toLowerCase().trim();
     let answerText = "";
@@ -2919,6 +2929,7 @@ You can ask about "Summarise Jaffer Sadiq drug cartel investigation", "50kg seiz
     renderCopilotStream();
   }
 
+  (window._krSend = window._krSend || {}).copilot = t => askCopilot(t);
   function askCopilot(text){
     text = (text || "").trim();
     if (!text) return;
@@ -2926,6 +2937,19 @@ You can ask about "Summarise Jaffer Sadiq drug cartel investigation", "50kg seiz
     cHist.push({ role: "user", text: text.replace(/</g, "&lt;") });
     renderCopilotStream();
     $("#c-input").value = "";
+
+    // "add a new case" (and every answer while a case intake is in progress) goes to the guided intake
+    if (window.KRintake && KRintake.wants("copilot", text)) {
+      cHist.push({ role: "bot", text: "…", reasoning: [] });
+      const at = cHist.length - 1;
+      renderCopilotStream();
+      KRintake.chat("copilot", text, html => {
+        cHist[at] = { role: "bot", text: html, reasoning: [] };
+        localStorage.setItem("kr_copilot_hist", JSON.stringify(cHist.slice(-25)));
+        renderCopilotStream();
+      });
+      return;
+    }
 
     // Navigation commands ("open investigations", "open timeline", "open CASE005", "डैशबोर्ड खोलो", …) are executed
     // directly — in both live and offline mode — and every resolution step is reported.
@@ -3053,4 +3077,6 @@ You can ask about "Summarise Jaffer Sadiq drug cartel investigation", "50kg seiz
 
 </script>
 <script src="/kronos-premium.js"></script>
-<script src="/kronos-temporal.js"></script></body></html>
+<script src="/kronos-temporal.js"></script>
+<script src="/kronos-intake.js"></script>
+<script src="/kronos-responsive.js"></script></body></html>
