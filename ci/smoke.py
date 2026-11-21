@@ -8,6 +8,7 @@ chain), search, federated learning, case intake (check → register → withdraw
 local AI assistant. Exits 1 if anything fails.
 """
 import json
+import os
 import sys
 import time
 import urllib.error
@@ -37,6 +38,8 @@ def check(name, fn):
         results.append((False, name, msg, time.time() - t))
     ok, _, note, dt = results[-1]
     print(f"{'PASS' if ok else 'FAIL'}  {name:<46} {dt:6.1f}s  {note}", flush=True)
+    if not ok and os.environ.get("GITHUB_ACTIONS"):      # failures become public annotations on the run
+        print(f"::error title=API check failed: {name}::{str(note).replace(chr(10), ' ').replace('%', ' ')[:300]}", flush=True)
 
 
 def need(cond, msg):

@@ -60,11 +60,13 @@ jobs:
           node ui_smoke.js http://localhost:8000
       - name: Container logs
         if: always()
-        run: docker compose logs --tail=120 app
+        run: |
+          docker compose logs --tail=150 app
+          docker compose logs app 2>&1 | grep -E "Traceback|Error|error" | tail -8 | sed 's/^/::warning title=app log::/' || true
 
   macos:
     name: macOS (Homebrew) — setup.sh
-    runs-on: macos-14
+    runs-on: macos-latest
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4

@@ -7,7 +7,11 @@ const results = [];
 const check = async (name, fn) => {
   const t = Date.now();
   try { const note = await fn(); results.push([true, name]); console.log(`PASS  ${name.padEnd(46)} ${((Date.now() - t) / 1000).toFixed(1)}s  ${note || ""}`); }
-  catch (e) { results.push([false, name]); console.log(`FAIL  ${name.padEnd(46)} ${((Date.now() - t) / 1000).toFixed(1)}s  ${String(e.message || e).split("\n")[0].slice(0, 200)}`); }
+  catch (e) {
+    const msg = String(e.message || e).split("\n")[0].slice(0, 300);
+    results.push([false, name]); console.log(`FAIL  ${name.padEnd(46)} ${((Date.now() - t) / 1000).toFixed(1)}s  ${msg}`);
+    if (process.env.GITHUB_ACTIONS) console.log(`::error title=Browser check failed: ${name}::${msg.replace(/[\r\n%]/g, " ")}`);
+  }
 };
 (async () => {
   const browser = await chromium.launch();
@@ -75,6 +79,17 @@ const check = async (name, fn) => {
     if (over > 1) throw new Error(`content is ${over}px wider than the screen`);
   });
   await check("no JavaScript errors", async () => { if (errors.length) throw new Error(errors.slice(0, 3).join(" | ")); });
+  // machines without WebGL (no GPU, VMs, remote desktops): the network graph must fall back to 2D, without errors
+  const b2 = await chromium.launch({ args: ["--disable-webgl", "--disable-3d-apis"] });
+  await check("network graph without WebGL (2D fallback)", async () => {
+    const q = await (await b2.newContext({ viewport: { width: 1280, height: 800 } })).newPage();
+    const errs = []; q.on("pageerror", e => errs.push(e.message.slice(0, 160)));
+    await q.goto(BASE + "#graph/P00023", { waitUntil: "domcontentloaded" });
+    await q.waitForFunction(() => window.KR && window.KR.live, null, { timeout: 120000 });
+    await q.waitForSelector(".graph-view canvas.g2d", { timeout: 60000 });
+    if (errs.length) throw new Error(errs.join(" | "));
+  });
+  await b2.close();
   await browser.close();
   const bad = results.filter(r => !r[0]).length;
   console.log(`\n${results.length - bad}/${results.length} checks passed`);
