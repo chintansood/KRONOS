@@ -1,6 +1,6 @@
 # KRONOS — Connecting Evidence. Reconstructing Truth.
 
-**AI-assisted digital investigation platform** · Smart India Hackathon — Problem Statement 5 · Team Nexora
+**AI-assisted digital investigation platform** Problem Statement 5 · Team Nexora
 
 [![clean-machine checks](https://github.com/chintansood/KRONOS/actions/workflows/ci.yml/badge.svg)](https://github.com/chintansood/KRONOS/actions/workflows/ci.yml) — every push is installed from scratch on Linux (= Windows WSL2), Docker and macOS, and every feature is tested end to end.
 
