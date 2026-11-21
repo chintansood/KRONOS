@@ -1,0 +1,91 @@
+# Clean-machine checks: every push installs KRONOS from scratch, exactly as the README tells a new user to,
+# and tests every feature end to end (API smoke test + browser smoke test).
+#   linux  — Ubuntu 24.04, the same system Windows users get inside WSL2; includes the local AI (Ollama, CPU)
+#   docker — docker compose up --build (the Windows / macOS / Linux container route)
+#   macos  — Homebrew route on Apple Silicon (without the AI models, to keep the run short)
+name: clean-machine checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  linux:
+    name: Linux / Windows WSL2 (Ubuntu 24.04) — setup.sh + AI
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Free disk space on the runner
+        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL && df -h /
+      - name: Prerequisites (the README's Ubuntu / WSL2 commands)
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q python3.12-venv postgresql postgresql-16-pgvector nodejs npm
+          curl -fsSL https://ollama.com/install.sh | sh
+      - name: ./setup.sh
+        run: ./setup.sh
+      - name: Backend tests
+        run: cd backend && .venv/bin/python -m pytest -q tests
+      - name: ./run.sh + API smoke test (with the local AI)
+        run: |
+          ./run.sh > /tmp/run.log 2>&1 &
+          python3 ci/smoke.py http://localhost:8000 --wait 180 --llm
+      - name: Browser smoke test
+        run: |
+          cd ci && npm init -y > /dev/null && npm install --no-audit --no-fund playwright@1 > /dev/null
+          npx playwright install --with-deps chromium > /dev/null
+          node ui_smoke.js http://localhost:8000
+      - name: Server log
+        if: always()
+        run: tail -n 80 /tmp/run.log || true
+
+  docker:
+    name: Docker (docker compose up --build)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 100
+    steps:
+      - uses: actions/checkout@v4
+      - name: Free disk space on the runner
+        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL && df -h /
+      - name: docker compose up --build
+        run: docker compose up --build -d
+      - name: First start (models, dataset, engines) + API smoke test
+        run: python3 ci/smoke.py http://localhost:8000 --wait 3600
+      - name: Browser smoke test
+        run: |
+          cd ci && npm init -y > /dev/null && npm install --no-audit --no-fund playwright@1 > /dev/null
+          npx playwright install --with-deps chromium > /dev/null
+          node ui_smoke.js http://localhost:8000
+      - name: Container logs
+        if: always()
+        run: docker compose logs --tail=120 app
+
+  macos:
+    name: macOS (Homebrew) — setup.sh
+    runs-on: macos-14
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prerequisites (the README's Homebrew commands)
+        run: |
+          brew install postgresql@18 pgvector
+          brew services start postgresql@18
+          sleep 5          # psql is deliberately not put on PATH: setup.sh must find Homebrew's keg-only PostgreSQL itself
+      - name: ./setup.sh
+        run: ./setup.sh
+      - name: Backend tests
+        run: cd backend && .venv/bin/python -m pytest -q tests
+      - name: ./run.sh + API smoke test
+        run: |
+          ./run.sh > /tmp/run.log 2>&1 &
+          python3 ci/smoke.py http://localhost:8000 --wait 180
+      - name: Browser smoke test
+        run: |
+          cd ci && npm init -y > /dev/null && npm install --no-audit --no-fund playwright@1 > /dev/null
+          npx playwright install chromium > /dev/null
+          node ui_smoke.js http://localhost:8000
+      - name: Server log
+        if: always()
+        run: tail -n 80 /tmp/run.log || true
