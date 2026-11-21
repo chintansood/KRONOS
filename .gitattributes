@@ -1,0 +1,13 @@
+# Keep Unix line endings everywhere, so setup.sh / run.sh work even when the repo is cloned with Git for Windows.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.parquet binary
+*.gz binary
+*.zip binary
+*.safetensors binary
