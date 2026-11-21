@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.env
+data/generated/
+data/summaries/
+data/models/
+data/evaluation_report.json
+.pytest_cache/
+data/keys/
+data/external/
+data/train_world/
+data/finetune/adapters_probe/
+.venv-ft/
+data/host_*

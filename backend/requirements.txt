@@ -1,0 +1,17 @@
+# KRONOS backend — tested on Python 3.14 (macOS arm64). torch is optional-heavy: install the wheel for your platform.
+fastapi>=0.115
+uvicorn>=0.30
+pydantic>=2.7
+psycopg2-binary>=2.9
+python-dotenv>=1.0
+httpx>=0.27
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.5
+networkx>=3.3
+rapidfuzz>=3.9
+torch>=2.4
+cryptography>=42          # Ed25519 agency signatures on the evidence ledger
+pyarrow>=15               # real court records: open-data metadata
+pypdf>=4                  # real court records: order text
+pytest>=8.3
