@@ -1,0 +1,7 @@
+# Optional: let the local AI use an NVIDIA GPU (Docker Desktop with WSL2 on Windows, or nvidia-container-toolkit on Linux).
+services:
+  ollama:
+    deploy:
+      resources:
+        reservations:
+          devices: [ { driver: nvidia, count: all, capabilities: [gpu] } ]

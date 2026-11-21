@@ -1,0 +1,27 @@
+# KRONOS with Docker — the same on Windows, macOS and Linux:
+#   docker compose up --build        then open http://localhost:8000
+# The first start generates the dataset, runs every engine and downloads the AI models (~5 GB): allow 10–20 minutes.
+# Later starts take seconds. With an NVIDIA GPU:  docker compose -f docker-compose.yml -f docker-compose.gpu.yml up --build
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment: { POSTGRES_USER: kronos, POSTGRES_PASSWORD: kronos, POSTGRES_DB: kronos }
+    volumes: [ "db:/var/lib/postgresql/data" ]
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U kronos -d kronos"], interval: 3s, timeout: 3s, retries: 60 }
+    restart: unless-stopped
+  ollama:
+    image: ollama/ollama:latest
+    volumes: [ "ollama:/root/.ollama" ]
+    restart: unless-stopped
+  app:
+    build: .
+    depends_on:
+      db: { condition: service_healthy }
+      ollama: { condition: service_started }
+    environment:
+      KRONOS_DATABASE_URL: "host=db user=kronos password=kronos dbname=kronos"
+      KRONOS_OLLAMA_URL: "http://ollama:11434"
+    ports: [ "8000:8000" ]
+    volumes: [ "data:/app/backend/data" ]      # generated data, ledger signing keys, registered cases (kept across restarts)
+    restart: unless-stopped
+volumes: { db: {}, ollama: {}, data: {} }
