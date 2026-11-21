@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --bg-parchment: #F2E9DA;
+    --bg-ivory: #F8F3E9;
+    --sandstone: #DCCAB0;
+    --terracotta: #B96D50;
+    --copper: #A86F45;
+    --espresso: #30251F;
+    --charcoal: #433A32;
+    --olive: #7B8062;
+    --rose: #C58B7A;
+    --gold: #C69A55;
+    --home-paper: #FCE7CC;
+  }
+
+  body {
+    background-color: var(--bg-parchment);
+    color: var(--espresso);
+    overflow-x: hidden;
+    color-scheme: light;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Clock Dial spin */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin 60s linear infinite;
+}
+
+/* Scroll cue bobbing */
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-bob {
+  animation: bob 2s ease-in-out infinite;
+}
+
+/* Subtle archival paper texture */
+.bg-parchment-texture {
+  background-color: #F2E9DA;
+  background-image: 
+    radial-gradient(#A86F45 0.5px, transparent 0.5px),
+    radial-gradient(#DCCAB0 0.5px, #F2E9DA 0.5px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+  background-blend-mode: multiply;
+}
+
+/* Custom delicate scrollbars matching warm palette */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(220, 202, 176, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 111, 69, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(185, 109, 80, 0.7);
+}
+
+/* Delicate editorial borders */
+.border-delicate {
+  border-color: rgba(168, 111, 69, 0.25);
+}
+
+.border-delicate-gold {
+  border-color: rgba(198, 154, 85, 0.35);
+}
+
+/* Metallic warm gold/copper text gradients */
+.text-gradient-copper {
+  background: linear-gradient(135deg, #30251F 0%, #A86F45 50%, #B96D50 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #A86F45 0%, #C69A55 50%, #DCB575 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Pulse animation for live nodes */
+@keyframes warm-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+.animate-warm-pulse {
+  animation: warm-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Floating animation for orbital evidence */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtle-float 6s ease-in-out infinite;
+}
+
