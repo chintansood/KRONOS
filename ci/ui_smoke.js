@@ -48,7 +48,14 @@ const check = async (name, fn) => {
     await p.waitForFunction(() => /VERIFIED/.test((document.querySelector(".dr .kr-verify") || {}).innerText || ""), null, { timeout: 30000 });
     await p.evaluate(() => closeDr());
   });
-  await check("dossier + identity + alternates (P00023)", () => go("#p/P00023", ".kh-dossier .kh", 120000));
+  await check("dossier + identity + alternates (P00023)", async () => {
+    try { await go("#p/P00023", ".kh-dossier .kh", 240000); }
+    catch (e) {   // say what is on screen, so a failure on a remote machine can be diagnosed from the annotation
+      const s = await p.evaluate(() => ({ dossier: !!document.querySelector(".dos"), slot: (document.querySelector(".kh-dossier") || {}).innerText || "no card slot",
+        nbe: /NEXT BEST EVIDENCE TO EXAMINE/.test(document.body.innerText), hash: location.hash }));
+      throw new Error(`${e.message.split("\n")[0]} · ${JSON.stringify(s).slice(0, 220)}`);
+    }
+  });
   await check("3D network graph", () => go("#graph/P00023", ".graph-view canvas", 120000));
   await check("Copilot opens and runs a command", async () => {
     await p.click("#copilot-btn"); await p.fill("#c-input", "open investigations"); await p.click("#c-send-btn");

@@ -209,7 +209,7 @@
         slot.className = "kh-dossier";
         slot.innerHTML = `<div class="kh-muted" style="padding:10px 2px">Testing the line of inquiry against alternate hypotheses for ${esc(pid)}…</div>`;
         panel.after(slot);
-        j(`/cases/${encodeURIComponent(d.mainCase)}/hypotheses?personId=${encodeURIComponent(pid)}`, {}, 60000)
+        j(`/cases/${encodeURIComponent(d.mainCase)}/hypotheses?personId=${encodeURIComponent(pid)}`, {}, 180000)   // cold caches (e.g. right after a registration) can take a while
           .then(r => { const h = (r.hypotheses || [])[0]; slot.innerHTML = h ? `<div class="kh-dtitle">LINE OF INQUIRY vs ALTERNATE HYPOTHESES · ${esc(d.mainCase)}</div>` + hypCard(h, 0, true) : ""; })
           .catch(() => { slot.innerHTML = ""; });
       }
