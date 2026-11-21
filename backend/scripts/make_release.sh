@@ -8,12 +8,19 @@ mkdir -p "$OUT"
 COMMON=(--exclude .git --exclude .DS_Store --exclude __pycache__ --exclude .pytest_cache --exclude .env)
 rsync -a --delete "${COMMON[@]}" --exclude node_modules --exclude dist --exclude .vite kronos-app/ "$OUT/frontend/"
 rsync -a --delete "${COMMON[@]}" --exclude .venv --exclude .venv-ft --exclude release \
-  --exclude data/external --exclude data/keys --exclude 'data/host_*' --exclude data/generated --exclude data/summaries \
+  --exclude data/external --exclude data/keys --exclude 'data/host_*' --exclude data/intake --exclude data/generated --exclude data/summaries \
   --exclude data/models --exclude data/train_world --exclude 'data/finetune/adapters*' --exclude 'data/finetune/*.safetensors' \
   --exclude 'data/finetune/*.log' --exclude 'data/finetune/*.raw.json' --exclude data/finetune/examples_with_meta.jsonl \
   kronos-backend/ "$OUT/backend/"
 cp kronos-backend/release/README.md "$OUT/README.md"
 cp kronos-backend/release/setup.sh kronos-backend/release/run.sh "$OUT/"
 cp kronos-backend/release/gitignore "$OUT/.gitignore"
+cp kronos-backend/release/Dockerfile kronos-backend/release/docker-compose.yml kronos-backend/release/docker-compose.gpu.yml "$OUT/"
+cp kronos-backend/release/dockerignore "$OUT/.dockerignore"
+cp kronos-backend/release/gitattributes "$OUT/.gitattributes"
+mkdir -p "$OUT/docker" "$OUT/ci" "$OUT/.github/workflows"
+cp kronos-backend/release/docker/entrypoint.py "$OUT/docker/"
+cp kronos-backend/release/ci/smoke.py kronos-backend/release/ci/ui_smoke.js "$OUT/ci/"
+cp kronos-backend/release/github/workflows/ci.yml "$OUT/.github/workflows/"
 chmod +x "$OUT/setup.sh" "$OUT/run.sh"
 echo "release folder: $PWD/$OUT  ($(du -sh "$OUT" | cut -f1))"

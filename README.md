@@ -2,6 +2,8 @@
 
 **AI-assisted digital investigation platform** · Smart India Hackathon — Problem Statement 5 · Team Nexora
 
+[![clean-machine checks](https://github.com/chintansood/KRONOS/actions/workflows/ci.yml/badge.svg)](https://github.com/chintansood/KRONOS/actions/workflows/ci.yml) — every push is installed from scratch on Linux (= Windows WSL2), Docker and macOS, and every feature is tested end to end.
+
 KRONOS brings FIRs, call records, location data, financial transactions, social-media messages and criminal history into one
 time-ordered evidence base. It analyses them with explainable engines and answers investigators' questions with a
 **local** AI (Llama 3.1 8B), so no investigation data leaves the machine. Every statement it makes cites the evidence it rests on.
@@ -15,8 +17,9 @@ time-ordered evidence base. It analyses them with explainable engines and answer
 | Natural-language querying, conversational assistant | Local Llama 3.1 assistant: retrieval over the evidence, citations on every point, removal of invented IDs, a grounding check. Facts mode and Detective mode. Answers in English, Hindi, Gujarati and Punjabi |
 | Context-aware evidence search | Plain-language search that turns a question into explainable filters, plus full-text and vector search |
 | Case summarisation, draft reports, case diary | Case summary, a 10-section draft report and a BNSS-style case diary, printable and multilingual |
+| Registering new cases | **Case intake** as a 10-step form or a guided conversation with the Copilot ("add a new case"); before saving it shows people already on record and identifiers already seen in other cases. The FIR is hashed onto the ledger and analysed by every engine in about 10 seconds |
 | Suspicious patterns | Financial anomalies (Isolation Forest, IQR, pass-through, structuring, fan-in), impossible travel, contact bursts, co-location, cross-case links |
-| Investigative leads | Hypotheses with supporting **and** contradicting evidence, investigative priority (never a guilt score), next-best-evidence recommendations |
+| Investigative leads | Hypotheses with supporting **and** contradicting evidence, alternate hypotheses (why a person may *not* have been involved, each with the test that would settle it), investigative priority (never a guilt score), next-best-evidence recommendations |
 
 **The five novelties:**
 - **Impossible travel:** Haversine distance against time, adjusted for location accuracy.
@@ -37,25 +40,63 @@ time-ordered evidence base. It analyses them with explainable engines and answer
 
 ## Run it
 
-**Hardware:** 16 GB RAM is recommended for the AI, plus about 10 GB of free disk. Tested on macOS (Apple Silicon). Linux should work; on Windows, use WSL2 (Ubuntu).
+Three ways; all three are installed from scratch and tested automatically on every push (badge above).
 
-**Prerequisites:**
-- Python 3.11+
-- PostgreSQL with pgvector
-- Node.js 18+
-- [Ollama](https://ollama.com) (optional; without it everything works except the AI assistant)
+**Hardware:**
+- 16 GB RAM is recommended for the local AI, plus about 12 GB of free disk.
+- Without an NVIDIA or Apple-Silicon GPU, AI answers take 1–3 minutes instead of under a minute. Everything else is fast.
+- Without [Ollama](https://ollama.com), everything works except the AI assistant.
 
+### A. macOS
 ```bash
-# macOS (Homebrew):  brew install python@3.12 postgresql@16 pgvector node ollama && brew services start postgresql@16
-# Ubuntu:            sudo apt install python3.12-venv postgresql postgresql-16-pgvector nodejs npm && sudo -u postgres createuser -s $USER
+brew install python@3.12 node ollama postgresql@18 pgvector && brew services start postgresql@18
 git clone https://github.com/chintansood/KRONOS.git && cd KRONOS
-./setup.sh      # creates the environment and database, downloads the AI models (~5 GB), generates the data, builds the site (~10 min)
+./setup.sh      # environment, database, AI models (~5 GB), dataset, every engine, website (~10–15 min, once)
 ./run.sh        # → http://localhost:8000
 ```
+Use `postgresql@18`: Homebrew's `pgvector` supports PostgreSQL 18 and newer. Postgres.app also works.
 
-`setup.sh` produces a reproducible synthetic investigation world (seed 42: 40 cases, about 28,000 records across 5
-sources, plus criminal history). It runs every engine, loads the real court cases and builds the website. The tests run
-with `cd backend && .venv/bin/python -m pytest tests` (28 tests).
+### B. Windows 10/11 (WSL2) or Linux (Ubuntu 24.04)
+1. **Windows only:** open PowerShell as administrator, run the command below, restart, then open the **Ubuntu 24.04** app:
+   ```powershell
+   wsl --install -d Ubuntu-24.04
+   ```
+   Do everything else inside Ubuntu, and clone into your Ubuntu home folder (`cd ~`), not into `/mnt/c/...`.
+2. Install the prerequisites, clone, set up and run:
+   ```bash
+   sudo apt update && sudo apt install -y git python3.12-venv postgresql postgresql-16-pgvector nodejs npm
+   curl -fsSL https://ollama.com/install.sh | sh            # the local AI (optional)
+   git clone https://github.com/chintansood/KRONOS.git && cd KRONOS
+   ./setup.sh      # starts PostgreSQL and creates your database user if needed (may ask for your password)
+   ./run.sh        # → open http://localhost:8000 in your Windows (or Linux) browser
+   ```
+3. After a restart, just run `./run.sh` again. It starts PostgreSQL and Ollama if they aren't running.
+
+### C. Docker (Windows, macOS or Linux)
+With [Docker Desktop](https://www.docker.com/products/docker-desktop/) running (on Windows it uses WSL2), give it at least 8 GB of memory, then:
+```bash
+git clone https://github.com/chintansood/KRONOS.git && cd KRONOS
+docker compose up --build        # → http://localhost:8000
+```
+- **First start:** downloads the AI models, generates the data and runs every engine. Allow 15–30 minutes; progress shows in the log.
+- **Later starts:** take seconds.
+- **NVIDIA GPU:** add `-f docker-compose.yml -f docker-compose.gpu.yml` to the command.
+- **Start from scratch:** `docker compose down -v`.
+
+### Check an installation
+```bash
+python3 ci/smoke.py http://localhost:8000            # 17 end-to-end checks of the API (add --llm to include the AI)
+cd backend && .venv/bin/python -m pytest -q tests    # 30 tests (setup.sh route)
+```
+
+**Troubleshooting:**
+- **Port 8000 is busy:** use `KRONOS_PORT=8080 ./run.sh`.
+- **"PostgreSQL is not running":** macOS, `brew services start postgresql@18`; WSL/Linux, `sudo service postgresql start`.
+- **"pgvector is not available":** install the pgvector package for your PostgreSQL version (see above).
+- **Start the data over:** re-run `./setup.sh`, which rebuilds everything. Cases you registered through intake are re-applied.
+
+`setup.sh` produces a reproducible synthetic investigation world (seed 42: 40 cases, about 28,000 records across 5 sources, plus
+criminal history), runs every engine, loads the real court cases and builds the website.
 
 ## Data and privacy
 
@@ -104,6 +145,7 @@ frontend/   the KRONOS website (single-page app; kronos-live.js connects it to t
 backend/    FastAPI + PostgreSQL/pgvector + engines (ingestion, temporal, graph/GNN, identity, intelligence, LLM, ledger,
             federated, real-records pipeline, fine-tuning)  ·  docs/ has the details and screenshots
 setup.sh    one-command setup        run.sh    start on http://localhost:8000
+Dockerfile, docker-compose.yml   the container route        ci/   end-to-end smoke tests (API + browser), run on every push
 ```
 
 Every analytical output is an **investigative aid with evidence references, not a finding of guilt**.

@@ -20,4 +20,4 @@ Things to know:
 - **The Mac must stay on, plugged in and online.** If the lid closes or the Mac sleeps, the site goes down.
 - **The link changes every time `host.sh` starts a new tunnel.** For a permanent address, use a free Cloudflare account with a domain and a named tunnel (`cloudflared tunnel create kronos`).
 - **AI answers come one at a time.** Each takes about 20–60 s on a 16 GB M4 and runs on the Mac. Everything else (cases, graph, temporal engine, evidence, ledger) is instant.
-- **Local use while hosting.** Use `http://localhost:8000` and log in once. The same cookie then also works for the dev site at `localhost:5173`.
+- **Local use while hosting.** Requests from this Mac itself (the dev site at `localhost:5173`, or `localhost:8000`) need no code. Only visitors coming through the Cloudflare link see the access-code page.

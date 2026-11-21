@@ -27,7 +27,7 @@
 | Travel-feasibility line (new, dossier) | Location pairs checked, plausible / needs air travel / impossible | — | Temporal engine (Haversine, accuracy-aware) | `GET /api/persons/{id}/feasibility` |
 | Criminal-history linkage box (new, dossier) | Linked prior records (band, disposition, reasons, contradictions, Confirm/Reject link), records via possible identity, network-associated cases | — | Criminal-history linkage engine | `GET /api/persons/{id}/history`, `POST /api/history/links/{id}/review` |
 | Case workspace, tab 1 | Summary, people, financial, communication, location, observations, gaps, chronology | Hand-written text | Case summary (JSON) and case intelligence | `GET /api/cases/{id}/summary`, `?llm=true` for the LLM narrative |
-| Case workspace, tab 2 | Priority, hypotheses (both sides) with evidential balance and completeness, prior records as unscored context, next-best-evidence with value score breakdown and editable status | Hard-coded hypotheses | Priority, hypothesis and next-best-evidence engines | `/priority`, `/hypotheses`, `/next-evidence` (PATCH status) |
+| Case workspace, tab 2 | Priority, hypotheses as line of inquiry vs alternate hypotheses (why the person may not have been involved, each with evidence, strength and a settling test) with evidential balance and completeness, prior records as unscored context, next-best-evidence with value score breakdown and editable status | Hard-coded hypotheses | Priority, hypothesis and next-best-evidence engines | `/priority`, `/hypotheses`, `/next-evidence` (PATCH status) |
 | Case workspace, tab 3 | Evidence list and ledger verification | Embedded | Evidence store and ledger | `GET /api/cases/{id}/evidence`, `GET /api/ledger/verify` |
 | Case workspace, tab 4 | Live panel (new): federated results per agency node, global vs centralised model, "run" button; ledger chain status and per-file Merkle anchors with 3-of-4 signature quorum. Below it, the original static text, unchanged. | Static | Federated simulation and ledger | `GET /api/federated/report`, `POST /api/federated/run`, `GET /api/ledger/status` |
 | Evidence drawer | Record, provenance, integrity check, Merkle inclusion proof with agency signatures, chain of custody | Embedded | Events, raw records and ledger (access is logged) | `GET /api/evidence/{id}`, `POST /api/evidence/{id}/verify`, `GET /api/evidence/{id}/proof`, `GET /api/evidence/{id}/history` |
@@ -75,3 +75,14 @@ The home page has a "04 TEMPORAL ENGINE" section (`kronos-app/public/kronos-temp
 | Actions | "Open full dossier →", and "Ask KRONOS about this timeline", which sends the question to Copilot. |
 
 The section loads only when it scrolls near the screen, so the hero stays fast. In offline mode it shows a notice instead.
+
+
+## Case intake (new cases)
+
+| Entry point | What happens |
+|---|---|
+| Home section *05 Case intake*, dashboard **+ New case** | Opens the 10-step form (`kronos-intake.js`). The draft is saved in the browser as you type. |
+| Copilot or home chat: "add a new case", "register an FIR", "नया केस दर्ज करें" | The same questions one at a time, with suggested answers. `skip`, `back`, `form` (continue in the form) and `cancel` work at every step. |
+| Review step | `POST /api/intake/check`: missing or invalid particulars, reporting-delay reason, people already on record (choose *same person* or *keep as new*), identifiers already seen in other cases. |
+| Register | `POST /api/cases` → FIR loader → SHA-256 → ledger INGEST block + Merkle anchor → roles → NER → identity candidates → prior-record links → summary → retrieval index. The case list refreshes and the workspace opens with a *Registered in KRONOS* notice. |
+| Withdraw | `DELETE /api/cases/{id}` (intake cases only). It removes the case and the people created with it, appends a `WITHDRAWN` ledger block, and never reissues the case or FIR number. |
