@@ -204,6 +204,15 @@
         <div style="font-size:11px;color:var(--ink);opacity:0.85;margin-top:2px">${esc(r.reason)} — <i>${esc(r.verificationAction)}</i></div>
         <div style="margin-top:8px"><button class="go" style="margin:0;padding:4px 10px;font-size:11px" onclick="window._kr_cur_tab='nbe';location.hash='case/${esc(d.mainCase)}'">Open Case Workspace (${esc(d.mainCase)}) →</button></div>`
         : `<div style="font-size:10px;font-weight:700;color:var(--terra);text-transform:uppercase;letter-spacing:0.6px">NEXT BEST EVIDENCE TO EXAMINE</div><div style="font-size:11px;margin-top:4px">No recommendations for this person in current records.</div>`;
+      if (d.mainCase && !el.querySelector(".kh-dossier")) {
+        const slot = document.createElement("div");
+        slot.className = "kh-dossier";
+        slot.innerHTML = `<div class="kh-muted" style="padding:10px 2px">Testing the line of inquiry against alternate hypotheses for ${esc(pid)}…</div>`;
+        panel.after(slot);
+        j(`/cases/${encodeURIComponent(d.mainCase)}/hypotheses?personId=${encodeURIComponent(pid)}`, {}, 60000)
+          .then(r => { const h = (r.hypotheses || [])[0]; slot.innerHTML = h ? `<div class="kh-dtitle">LINE OF INQUIRY vs ALTERNATE HYPOTHESES · ${esc(d.mainCase)}</div>` + hypCard(h, 0, true) : ""; })
+          .catch(() => { slot.innerHTML = ""; });
+      }
       const cands = (d.identity || []).filter(c => c.band !== "INSUFFICIENT_EVIDENCE" || c.contradicting.length).slice(0, 2);
       if (cands.length) {
         const box = document.createElement("div");
@@ -263,6 +272,47 @@
   const card = (title, color, body) => `<div style="background:var(--parchment);padding:16px;border-radius:6px;border-left:3px solid var(--${color})"><b style="font-size:14px;color:var(--${color})">${title}</b><br>${body}</div>`;
   const evBtn = id => `<button class="ev2" onclick="openEv('${esc(id)}')">${esc(id)}</button>`;
   const evBtns = ids => (ids || []).filter(i => /^EVD-/.test(i)).slice(0, 6).map(evBtn).join(" ");
+  // Competing hypotheses: the line of inquiry (H) against the alternates (A1…A8, why the person may NOT have been involved)
+  const FAV = { LINE_OF_INQUIRY: "Line of inquiry better supported", ALTERNATE: "Alternate better supported",
+                OPEN: "Open — test the alternates", LINE_OF_INQUIRY_UNCONTESTED: "No alternate supported yet" };
+  function hypCard(h, i, compact) {
+    const sup = h.supporting || [], alts = h.alternateHypotheses || [], cmp = h.comparison || {}, fr = h.framing || {};
+    const P = typeof PERS !== "undefined" ? PERS.find(p => p.id === h.personId) : null, nm = h.name || (P ? P.n : h.personId);
+    const meter = (v, cls) => `<span class="kh-meter ${cls || ""}"><i style="width:${Math.round((v || 0) * 100)}%"></i></span>`;
+    const c = h.confidence || {};
+    return `<div class="kh${compact ? " compact" : ""}">
+      <div class="kh-top"><span class="kh-badge">HYPOTHESIS ${String.fromCharCode(65 + i)} · ${esc((h.investigativePriority || "").toUpperCase())}</span>
+        ${compact ? "" : `<a class="kr-a" href="#p/${esc(h.personId)}">${esc(nm)} dossier →</a>`}<span class="kh-review">Human review required</span></div>
+      <p class="kh-note">${esc(fr.note || "Neither side is a finding; strengths are not probabilities.")}</p>
+      <div class="kh-grid">
+        <div class="kh-col kh-h">
+          <div class="kh-tag">H · LINE OF INQUIRY</div>
+          <h4>${esc(fr.lineOfInquiry || h.hypothesis)}</h4>
+          <div class="kh-str">${meter(h.lineOfInquiryStrength)} <b>${(h.lineOfInquiryStrength ?? 0).toFixed(2)}</b></div>
+          <div class="kh-sub">Evidence relied on</div>
+          ${sup.map(x => `<div class="kh-ev"><span class="kh-src">${esc(x.source)}</span>${esc(x.text)} ${evBtns(x.evidenceIds)}
+              ${(x.explainedBy || []).length ? `<div class="kh-exp">could be explained by ${x.explainedBy.map(c => `<b>${esc(c)}</b>`).join(", ")}</div>`
+                : `<div class="kh-exp kh-diag">not explained by any alternate</div>`}</div>`).join("") || `<div class="kh-ev">No supporting evidence in the records.</div>`}
+          ${(h.requiresClarification || []).length ? `<div class="kh-sub">Requires clarification (neither side)</div>${h.requiresClarification.map(x => `<div class="kh-ev kh-clar">${esc(x.text)} ${evBtns(x.evidenceIds)}</div>`).join("")}` : ""}
+        </div>
+        <div class="kh-col kh-a">
+          <div class="kh-tag olive">ALTERNATE HYPOTHESES · why ${esc(nm)} may NOT have been involved</div>
+          ${alts.map(al => `<div class="kh-alt">
+              <div class="kh-alt-h"><span class="kh-code">${esc(al.code)}</span>${esc(al.title)}<span class="kh-lab ${esc(al.label.toLowerCase().replace(/\s+/g, "-"))}">${esc(al.label)}</span></div>
+              <div class="kh-str">${meter(al.strength, "olive")} <b>${al.strength.toFixed(2)}</b>${al.addressesSupportingEvidence ? "" : ` <span class="kh-muted">· does not counter the evidence relied on</span>`}</div>
+              <p class="kh-stmt">${esc(al.statement)}</p>
+              ${al.evidence.map(x => `<div class="kh-ev2">• ${esc(x.text)} ${evBtns(x.evidenceIds)}</div>`).join("")}
+              <div class="kh-test"><b>Test that would settle it:</b> ${esc(al.test)}</div></div>`).join("")
+            || `<div class="kh-alt">No alternate explanation is supported by the records currently held. That does not confirm involvement — missing records could hold one.</div>`}
+          ${(h.alternatesConsideredNotSupported || []).length ? `<div class="kh-cons">Also considered, no supporting record: ${h.alternatesConsideredNotSupported.map(x => `${esc(x.code)} ${esc(x.title.toLowerCase())}`).join(" · ")}</div>` : ""}
+        </div>
+      </div>
+      <div class="kh-verdict"><span class="kh-fav ${esc(cmp.favours || "")}">${esc(FAV[cmp.favours] || "")}</span>${esc(cmp.verdict || "")}
+        ${(cmp.settleWith || []).length ? `<div class="kh-settle"><b>What would settle it</b>${cmp.settleWith.map(t => `<div>• ${esc(t)}</div>`).join("")}</div>` : ""}
+        <div class="kh-muted" style="margin-top:6px">Evidential balance ${c.evidentialBalance > 0 ? "+" : ""}${c.evidentialBalance ?? "—"} (${esc(c.assessment || "")}, completeness ${Math.round((c.completeness || 0) * 100)}%${(c.sourcesMissing || []).length ? `, missing: ${esc(c.sourcesMissing.join(", ").toLowerCase())}` : ""}) — not a probability of guilt.
+        ${(h.contextPriorRecords || []).length ? ` Prior records (context only, not scored): ${h.contextPriorRecords.map(x => `${esc(x.text)} ${evBtns(x.evidenceIds)}`).join(" · ")}` : ""}</div>
+      </div></div>`;
+  }
   const tabBtn = (k, label, active) => `<button type="button" onclick="window.setCaseTab('${k}')" style="background:none;border:none;font-family:var(--serif);font-size:16px;font-weight:700;cursor:pointer;color:${active === k ? "var(--terra)" : "var(--ink)"};border-bottom:${active === k ? "3px solid var(--terra)" : "3px solid transparent"};padding:8px 14px;transition:all .2s ease">${label}</button>`;
   const pill = (k, label, cur, color) => `<button type="button" onclick="window.setCaseFilter('${k}')" style="margin:0;padding:6px 12px;font-size:11px;cursor:pointer;border-radius:99px;font-weight:${cur === k ? "700" : "400"};background:${cur === k ? `var(--${color})` : "#fff"};color:${cur === k ? "#fff" : "var(--ink)"};border:1px solid ${cur === k ? `var(--${color})` : "rgba(198,154,85,0.4)"}">${label}</button>`;
 
@@ -274,6 +324,16 @@
       these people are never matched against other records. Facts are <b>allegations as recorded in the order</b>, not findings. No call, location,
       financial or social-media records exist for this case. Source: ${safeUrl ? `<a class="kr-a" href="${esc(safeUrl)}" target="_blank" rel="noopener noreferrer">original order (PDF)</a>` : "original order"}
       · SHA-256 <span class="mono">${esc((S.sha256 || "").slice(0, 16))}…</span> (anchored on the evidence ledger) · ${esc(S.license || "")}.`;
+  }
+
+  function intakeNotice(S, C) {
+    const hits = S.intakeHits || [];
+    return `<b>REGISTERED THROUGH KRONOS INTAKE</b> by ${esc(S.registeredBy || "investigator")} (${esc(S.registeredVia || "form")}${S.informationType ? ", " + esc(S.informationType.toLowerCase()) : ""}).
+      The FIR was hashed (SHA-256) and anchored on the evidence ledger, and processed by the same engines as every other record. Roles are <b>as recorded</b>;
+      people were linked to existing records only where the investigator chose to.${S.delayReason ? ` Reason recorded for the reporting delay: <i>${esc(S.delayReason)}</i>.` : ""}
+      ${(S.unknownAccused || []).length ? ` Unknown accused: ${S.unknownAccused.map(x => esc(x || "not described")).join("; ")}.` : ""}
+      ${hits.length ? `<div style="margin-top:6px"><b>Intake intelligence — identifiers in this FIR already appear elsewhere:</b> ${hits.map(h => `${esc(h.kind.toLowerCase())} <span class="mono">${esc(h.value)}</span> → ${h.cases.map(c => `<a class="kr-a" href="#case/${esc(c.caseId)}">${esc(c.caseId)}</a> (${c.records})`).join(", ")}`).join(" · ")}</div>` : ""}
+      <div style="margin-top:8px"><button class="go" style="margin:0;padding:4px 12px;font-size:11px;background:transparent;color:var(--terra)" onclick="KR.withdraw('${esc(C.id)}')">Withdraw this case…</button></div>`;
   }
 
   function liveCaseV(el, caseId, original) {
@@ -384,8 +444,8 @@
     function render() {
       const evs = caseEvents.filter(e => curEvFilter === "ALL" || e.ty === curEvFilter);
       el.innerHTML = `
-    <div style="max-width:1280px;margin:0 auto;padding:16px 20px 80px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px">
+    <div class="kr-case" style="max-width:1280px;margin:0 auto;padding:16px 20px 80px">
+      <div class="kr-actions" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px">
         <button class="go" style="margin:0;padding:7px 16px;font-size:12px;cursor:pointer" onclick="location.hash='#dash'">← Back to Investigations</button>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
           ${topAccused ? `<button class="go" style="margin:0;padding:7px 16px;font-size:12px;cursor:pointer" onclick="location.hash='#p/${topAccused}'">Inspect ${esc((PERS.find(p => p.id === topAccused) || {}).n || topAccused)} Dossier →</button>` : ""}
@@ -399,12 +459,13 @@
           <span style="background:rgba(185,109,80,0.15);color:var(--terra);font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:0.6px">${esc(C.pr.toUpperCase())} PRIORITY</span>
           <span style="background:rgba(123,128,98,0.15);color:var(--olive);font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:0.6px">${esc(C.st.toUpperCase())}</span>
           ${api.origin === "PUBLIC_RECORD" ? `<span style="background:var(--olive);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:0.6px">REAL CASE · PUBLIC RECORD</span>` : ""}
+          ${api.origin === "INTAKE" ? `<span style="background:var(--esp);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:0.6px">REGISTERED IN KRONOS</span>` : ""}
           <span class="mono" style="font-size:11px;opacity:0.8;margin-left:auto">${esc([api.firNumber, (api.firNumber || "").includes(api.policeStation || "\u0000") ? (api.district || "") : [api.policeStation, api.district].filter(Boolean).join(", "), api.incidentDate ? "Incident " + api.incidentDate : ""].filter(Boolean).join(" · "))}</span>
         </div>
         <h1 style="font-family:var(--serif);font-size:32px;color:var(--ink);margin:0 0 10px;line-height:1.2">${esc(C.t)}</h1>
         <p style="margin:0;color:var(--ink);opacity:0.85;font-size:14px;line-height:1.6;max-width:980px">${fmt(S.conciseSummary || C.desc)}</p>
         <div style="margin-top:18px;background:rgba(198,154,85,0.1);border-left:4px solid var(--gold);padding:10px 14px;border-radius:0 6px 6px 0;font-size:12px;color:var(--ink)">
-          ${api.origin === "PUBLIC_RECORD" ? publicNotice(api.source || {}) : `<b>DATA PROVENANCE NOTICE:</b> Records are <b>synthetic investigation data</b> ingested from FIR, CDR, location, financial and social-media sources. Every statement cites evidence IDs; each record's SHA-256 hash is held on the KRONOS evidence ledger. Roles are <b>as recorded</b>; analytical flags and hypotheses require investigator verification and are <b>not findings of guilt</b>. Priority basis: ${esc(api.priorityBasis || "")}.`}
+          ${api.origin === "PUBLIC_RECORD" ? publicNotice(api.source || {}) : api.origin === "INTAKE" ? intakeNotice(api.source || {}, C) : `<b>DATA PROVENANCE NOTICE:</b> Records are <b>synthetic investigation data</b> ingested from FIR, CDR, location, financial and social-media sources. Every statement cites evidence IDs; each record's SHA-256 hash is held on the KRONOS evidence ledger. Roles are <b>as recorded</b>; analytical flags and hypotheses require investigator verification and are <b>not findings of guilt</b>. Priority basis: ${esc(api.priorityBasis || "")}.`}
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:14px;margin-top:20px;border-top:1px solid rgba(198,154,85,0.25);padding-top:16px">
           <div><div style="font-size:22px;font-weight:700;color:var(--terra);font-family:var(--serif)">${C.ev} Records</div><div class="mono" style="font-size:11px;opacity:0.8">Across 5 data sources</div></div>
@@ -414,7 +475,7 @@
           <div><div style="font-size:22px;font-weight:700;color:var(--ink);font-family:var(--serif)">${api.reportingDelayHours ?? "—"} h</div><div class="mono" style="font-size:11px;opacity:0.8">Reporting delay</div></div>
         </div>
       </div>
-      <div style="display:flex;gap:16px;margin:24px 0 16px;border-bottom:1px solid rgba(198,154,85,0.3);padding-bottom:0;flex-wrap:wrap">
+      <div class="kr-tabs" style="display:flex;gap:16px;margin:24px 0 16px;border-bottom:1px solid rgba(198,154,85,0.3);padding-bottom:0;flex-wrap:wrap">
         ${tabBtn("summary", "1. Investigation Summary & Chronology", activeTab)}${tabBtn("nbe", "2. Next Best Evidence & Hypotheses (AI Engine)", activeTab)}
         ${tabBtn("evidence", `3. Evidence Records & Provenance Ledger (${caseEvents.length})`, activeTab)}${tabBtn("scalability", "4. Enterprise Scalability & Anti-Corruption Audit", activeTab)}${tabBtn("diary", t("diaryTab"), activeTab)}
       </div>
@@ -452,24 +513,7 @@
               <span style="background:rgba(198,154,85,0.25);color:var(--gold);font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px">INVESTIGATIVE PRIORITY (NOT A GUILT SCORE)</span>
               <div style="font-size:13px;line-height:1.6;margin-top:8px">${((D.prio || {}).ranking || []).slice(0, 6).map(r => `<a class="kr-a" href="#p/${r.personId}">${esc(r.name)} (${r.personId})</a> — recorded ${esc(r.recordedRole.replace(/_/g, " ").toLowerCase())} · <b>${esc(r.label)}</b> <span class="mono" style="font-size:10px">score ${r.priorityScore}</span><br><span style="font-size:11px;opacity:.8">${r.factors.filter(f => f.contribution).sort((a, b) => Math.abs(b.contribution) - Math.abs(a.contribution)).slice(0, 3).map(f => `${esc(f.factor)} ${f.contribution > 0 ? "+" : ""}${f.contribution}: ${esc(f.explanation)}`).join(" · ")}</span>`).join("<br>")}</div>
             </div>
-            ${((D.hyp || {}).hypotheses || []).map((h, i) => `
-            <div style="background:var(--parchment);border:1px solid rgba(${i % 2 ? "198,154,85,0.4" : "185,109,80,0.3"});border-radius:8px;padding:18px">
-              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
-                <div><span style="background:rgba(185,109,80,0.2);color:var(--terra);font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px">HYPOTHESIS ${String.fromCharCode(65 + i)} • ${esc(h.investigativePriority.toUpperCase())}</span>
-                <h4 style="font-family:var(--serif);font-size:18px;margin:6px 0 4px">${esc(h.hypothesis)}</h4></div>
-                <span class="mono" style="font-size:11px;font-weight:700;color:var(--terra)">Human review required</span>
-              </div>
-              <p style="font-size:13px;line-height:1.5;margin:8px 0;color:var(--ink)">
-                <b>Supporting:</b><br>${h.supporting.map(s => `• [${esc(s.source)}] ${esc(s.text)} ${evBtns(s.evidenceIds)}`).join("<br>") || "• none found"}<br>
-                <b style="color:var(--olive)">Contradicting / exculpatory:</b><br>${h.contradicting.map(s => `• [${esc(s.source)}] ${esc(s.text)} ${evBtns(s.evidenceIds)}`).join("<br>")}<br>
-                ${(h.requiresClarification || []).length ? `<b>Requires clarification:</b><br>${h.requiresClarification.map(s => `• ${esc(s.text)} ${evBtns(s.evidenceIds)}`).join("<br>")}<br>` : ""}
-                <b>Alternative explanations:</b><br>${h.alternativeExplanations.map(a => `• ${esc(a)}`).join("<br>") || "• —"}<br>
-                <b>Verification steps:</b><br>${h.verificationSteps.map(v => `• ${esc(v)}`).join("<br>") || "• —"}<br>
-                <b>Assessment:</b> ${esc(h.uncertainty)}<br>
-                ${h.confidence ? `<b>Evidential balance:</b> <span class="mono">${h.confidence.evidentialBalance > 0 ? "+" : ""}${h.confidence.evidentialBalance}</span> — ${esc(h.confidence.assessment)} (support ${h.confidence.supportWeight} vs contradiction ${h.confidence.contradictionWeight}; completeness ${Math.round(h.confidence.completeness * 100)}%${h.confidence.sourcesMissing.length ? `, missing: ${esc(h.confidence.sourcesMissing.join(", ").toLowerCase())}` : ""}). <i style="opacity:.8">Not a probability of guilt.</i>` : ""}
-                ${(h.contextPriorRecords || []).length ? `<br><b>Context (not evidence, not scored):</b> ${h.contextPriorRecords.map(c => `${esc(c.text)} ${evBtns(c.evidenceIds)}`).join(" · ")}` : ""}
-              </p>
-            </div>`).join("")}
+            ${((D.hyp || {}).hypotheses || []).map((h, i) => hypCard(h, i)).join("")}
             <div style="background:var(--parchment);border:1px solid rgba(123,128,98,0.3);border-radius:8px;padding:18px">
               <span style="background:rgba(123,128,98,0.2);color:var(--olive);font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px">NEXT BEST EVIDENCE</span>
               <div style="font-size:13px;line-height:1.5;margin-top:8px">${(D.nbe || []).map(r => `<div style="margin:8px 0;padding-bottom:8px;border-bottom:1px solid rgba(198,154,85,0.25)">
@@ -697,13 +741,13 @@
   window.KRcmd = { parse: parseCommand, run: runCommand, go };
 
   const CHIPS = {
-    en: ["Open investigations dashboard", "Open timeline", "Show 3D network graph", "Which people in this case warrant further investigation?",
+    en: ["Register a new case", "Open investigations dashboard", "Open timeline", "Show 3D network graph", "Which people in this case warrant further investigation?",
          "Show evidence of cash deposits above 40,000", "Open case diary & draft report"],
-    hi: ["जांच डैशबोर्ड खोलो", "टाइमलाइन खोलो", "3D नेटवर्क ग्राफ दिखाओ", "इस मामले में किन लोगों की आगे जांच ज़रूरी है?",
+    hi: ["नया केस दर्ज करें", "जांच डैशबोर्ड खोलो", "टाइमलाइन खोलो", "3D नेटवर्क ग्राफ दिखाओ", "इस मामले में किन लोगों की आगे जांच ज़रूरी है?",
          "40,000 से अधिक नकद जमा के साक्ष्य दिखाओ", "केस डायरी और रिपोर्ट खोलो"],
-    gu: ["તપાસ ડેશબોર્ડ ખોલો", "ટાઇમલાઇન ખોલો", "3D નેટવર્ક ગ્રાફ બતાવો", "આ કેસમાં કયા લોકોની વધુ તપાસ જરૂરી છે?",
+    gu: ["નવો કેસ નોંધો", "તપાસ ડેશબોર્ડ ખોલો", "ટાઇમલાઇન ખોલો", "3D નેટવર્ક ગ્રાફ બતાવો", "આ કેસમાં કયા લોકોની વધુ તપાસ જરૂરી છે?",
          "40,000થી વધુ રોકડ જમાના પુરાવા બતાવો", "કેસ ડાયરી અને અહેવાલ ખોલો"],
-    pa: ["ਜਾਂਚ ਡੈਸ਼ਬੋਰਡ ਖੋਲ੍ਹੋ", "ਟਾਈਮਲਾਈਨ ਖੋਲ੍ਹੋ", "3D ਨੈੱਟਵਰਕ ਗ੍ਰਾਫ ਦਿਖਾਓ", "ਇਸ ਕੇਸ ਵਿੱਚ ਕਿਹੜੇ ਲੋਕਾਂ ਦੀ ਹੋਰ ਜਾਂਚ ਲੋੜੀਂਦੀ ਹੈ?",
+    pa: ["ਨਵਾਂ ਕੇਸ ਦਰਜ ਕਰੋ", "ਜਾਂਚ ਡੈਸ਼ਬੋਰਡ ਖੋਲ੍ਹੋ", "ਟਾਈਮਲਾਈਨ ਖੋਲ੍ਹੋ", "3D ਨੈੱਟਵਰਕ ਗ੍ਰਾਫ ਦਿਖਾਓ", "ਇਸ ਕੇਸ ਵਿੱਚ ਕਿਹੜੇ ਲੋਕਾਂ ਦੀ ਹੋਰ ਜਾਂਚ ਲੋੜੀਂਦੀ ਹੈ?",
          "40,000 ਤੋਂ ਵੱਧ ਨਕਦ ਜਮ੍ਹਾਂ ਦੇ ਸਬੂਤ ਦਿਖਾਓ", "ਕੇਸ ਡਾਇਰੀ ਅਤੇ ਰਿਪੋਰਟ ਖੋਲ੍ਹੋ"],
   };
   const chips = l => CHIPS[l] || CHIPS.en;
@@ -724,6 +768,23 @@
     llmSummary: async (cid, btn) => { btn.textContent = "Writing with local Llama 3.1 (≈30–60 s)…"; btn.disabled = true;
       try { const s = await j(`/cases/${cid}/summary?llm=true&regenerate=true`, {}, 240000); st.caseData[cid].summary = s; route(); } catch (e) { btn.textContent = "LLM unavailable"; } },
     chips, welcome,
+    // after a case is registered or withdrawn: reload the case and person lists and drop cached views
+    refresh: async () => {
+      const [cs, ps] = await Promise.all([j("/cases", {}, 30000), j("/persons", {}, 30000)]);
+      CASES.splice(0, CASES.length, ...cs.map(mapCase));
+      PERS.splice(0, PERS.length, ...ps.map(mapPerson));
+      st.cases.clear(); st.persons.clear(); st.caseData = {}; st.personData = {}; st.graphFocus = undefined;
+      const demo = document.querySelector("nav .demo");
+      if (demo) demo.textContent = `LIVE BACKEND • ${CASES.length} CASES`;
+      if (window._krCopilotRefresh) window._krCopilotRefresh();
+    },
+    withdraw: async cid => {
+      const why = prompt(`Withdraw ${cid}? This removes the case and the people created with it. The evidence ledger keeps the original blocks and records the withdrawal.\n\nReason:`);
+      if (why === null) return;
+      const r = await fetch(`${API}/cases/${encodeURIComponent(cid)}?reason=${encodeURIComponent(why)}`, { method: "DELETE" });
+      if (!r.ok) { toast("Could not withdraw the case"); return; }
+      await window.KR.refresh(); toast(`${cid} withdrawn — recorded on the ledger`); location.hash = "#dash";
+    },
   };
 
   async function bootstrap() {
