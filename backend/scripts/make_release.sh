@@ -14,6 +14,7 @@ rsync -a --delete "${COMMON[@]}" --exclude .venv --exclude .venv-ft --exclude re
   kronos-backend/ "$OUT/backend/"
 cp kronos-backend/release/README.md "$OUT/README.md"
 cp kronos-backend/release/setup.sh kronos-backend/release/run.sh "$OUT/"
+cp kronos-backend/release/requirements.txt "$OUT/requirements.txt"
 cp kronos-backend/release/gitignore "$OUT/.gitignore"
 cp kronos-backend/release/Dockerfile kronos-backend/release/docker-compose.yml kronos-backend/release/docker-compose.gpu.yml "$OUT/"
 cp kronos-backend/release/dockerignore "$OUT/.dockerignore"

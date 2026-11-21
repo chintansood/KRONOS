@@ -98,6 +98,35 @@ cd backend && .venv/bin/python -m pytest -q tests    # 30 tests (setup.sh route)
 `setup.sh` produces a reproducible synthetic investigation world (seed 42: 40 cases, about 28,000 records across 5 sources, plus
 criminal history), runs every engine, loads the real court cases and builds the website.
 
+## Using KRONOS
+
+Open **http://localhost:8000**. The badge at the top right reads **LIVE BACKEND • 80 CASES** when everything is connected.
+
+| Where | What to do |
+|---|---|
+| **Home** | Scroll the story. In **04 Temporal engine**, pick a person (try *Gopi Dhillon*), press **Replay**, and read *Travel feasibility*: impossible moves are flagged. In **05 Case intake**, register a case. The chat bar at the bottom answers questions and runs commands. |
+| **Investigations** | Search and filter cases and people, open a **workspace** or a **dossier**, or press **+ New case**. |
+| **Case workspace** (try `CASE002`) | 1 · Summary & chronology, with evidence IDs you can open. 2 · Next best evidence & hypotheses: priority (never a guilt score), each **line of inquiry vs alternate hypotheses**, and value-scored next steps. 3 · Evidence & provenance ledger: plain-language search; per exhibit, **Verify integrity**, **Merkle proof** and **Chain of custody**. 4 · Federated learning & ledger status. 5 · Case diary & draft report (printable, multilingual). |
+| **Dossier** (try `P00023`) | Recorded activity timeline (replayable), possible same person (**Confirm / Reject / Defer**, never merged automatically), prior records (context only), next best evidence, and alternate hypotheses for the person. |
+| **Network graph** | People, phones, accounts and cases in 3D. Filter by type, search, click a node, open its dossier. |
+| **Copilot** (button at the bottom right, or ⌘K / Ctrl+K) | Ask in English, हिंदी, ગુજરાતી or ਪੰਜਾਬੀ. **Facts** mode answers only from recorded evidence; **Detective** mode adds hypotheses. Every point cites evidence IDs, which open the exhibit. It also runs commands: *open CASE002*, *open timeline*, *show 3D network graph*, *open case diary*. |
+| **Case intake** | Form or conversation (*"add a new case"* in the Copilot or home chat). In the conversation, `skip`, `back`, `form` and `cancel` work at every step. The review shows people already on record (you choose *same person* or *keep as new*) and identifiers already seen in other cases. Registered cases can be **withdrawn** from their workspace; the ledger keeps the record. |
+| **Settings** (avatar) | Interface language. |
+
+**Questions to try:**
+- *Why may P00019 not have been involved in CASE002?*
+- *Which people in this case warrant further investigation?*
+- *Show evidence of cash deposits above 40,000*
+- *Who did P00023 communicate with most before the incident?*
+- *इस मामले में किन लोगों की आगे जांच ज़रूरी है?*
+
+**Good to know:**
+- Every flag, ranking, hypothesis and link is an **investigative aid that needs human review**, not a finding of guilt.
+- Roles are shown as recorded in the FIR.
+- Answers from the local AI take 30–60 s on a GPU or Apple Silicon, and 1–3 min on a CPU. Everything else is instant.
+- On a phone, the ☰ menu holds the navigation.
+- Without WebGL (some virtual machines, remote desktops or locked-down PCs), the network graph switches to a 2D view with the same data.
+
 ## Data and privacy
 
 - **Synthetic investigation data.** People, calls, locations, payments and messages are generated, including deliberate traps (namesakes, households sharing a phone, aliases, flights, legitimate large payments). Detectors can therefore be scored against ground truth.
@@ -145,6 +174,7 @@ frontend/   the KRONOS website (single-page app; kronos-live.js connects it to t
 backend/    FastAPI + PostgreSQL/pgvector + engines (ingestion, temporal, graph/GNN, identity, intelligence, LLM, ledger,
             federated, real-records pipeline, fine-tuning)  ·  docs/ has the details and screenshots
 setup.sh    one-command setup        run.sh    start on http://localhost:8000
+requirements.txt   software, hardware, AI models and libraries (pip install -r requirements.txt)
 Dockerfile, docker-compose.yml   the container route        ci/   end-to-end smoke tests (API + browser), run on every push
 ```
 
