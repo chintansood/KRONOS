@@ -139,10 +139,18 @@ def _person_hypothesis(case_id: str, pid: str, I: dict, prio: dict) -> dict:
     recs = [r for r in next_evidence.recommend(case_id) if r["personId"] in (pid, None)][:6]
     contra = a["contradicting"] or [{"source": "NONE", "text": "No contradicting evidence was found in the records currently held. "
                                                                "This does not mean none exists.", "evidenceIds": [], "weight": 0}]
+    from . import alternates
+    alt = alternates.build(case_id, pid, a, I)
     return {
         "hypothesisId": f"HYP-{case_id}-{pid}",
+        "framing": alt["framing"],
+        "lineOfInquiryStrength": alt["lineOfInquiryStrength"],
+        "alternateHypotheses": alt["alternates"],
+        "alternatesConsideredNotSupported": alt["consideredNotSupported"],
+        "comparison": alt["comparison"],
         "hypothesis": f"{a['name']} ({pid}) was involved in the incident recorded in {case_id}",
         "personId": pid,
+        "name": a["name"],
         "supporting": a["supporting"],
         "contradicting": contra,
         "requiresClarification": a["requiresClarification"],

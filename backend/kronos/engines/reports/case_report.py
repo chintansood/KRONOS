@@ -130,6 +130,13 @@ def render_html(R: dict) -> str:
                  + "<br>Contradicting / exculpatory: " + "; ".join(f"{E(s['text'])} {_ev(s['evidenceIds'][:2])}" for s in hy["contradicting"])
                  + f"<br>Evidential balance {c['evidentialBalance']:+.2f} — {E(c['assessment'])}; completeness {round(c['completeness'] * 100)}% "
                    "(not a probability of guilt). Human review required.</p>")
+        if hy.get("alternateHypotheses") is not None:
+            h.append("<p><b>Alternate hypotheses — why this person may not have been involved:</b></p><ul>")
+            h += [f"<li><b>{E(al['code'])} {E(al['title'])}</b> ({E(al['label'])}, {al['strength']:.2f}): {E(al['statement'])} "
+                  + "; ".join(f"{E(x['text'])} {_ev(x['evidenceIds'][:2])}" for x in al["evidence"][:3])
+                  + f"<br><span class='small'>Test that would settle it: {E(al['test'])}</span></li>" for al in hy["alternateHypotheses"]]
+            h.append("</ul>" if hy["alternateHypotheses"] else "<li>No alternate explanation is supported by the records currently held.</li></ul>")
+            h.append(f"<p><b>Line of inquiry vs alternates:</b> {E(hy['comparison']['verdict'])}</p>")
     h.append(f"<h2>7. {L('Pending investigation')}</h2><table><tr><th>Priority / value</th><th>Evidence to obtain or verify</th><th>Action</th><th>Status</th></tr>")
     h += [f"<tr><td>{E(r['priority'])} · {r['valueScore']}</td><td>{E(r['evidenceType'])}<br><span class='small'>{E(r['reason'])}</span></td>"
           f"<td>{E(r['verificationAction'])}</td><td>{E(r['status'])}</td></tr>" for r in R["pending"]]
