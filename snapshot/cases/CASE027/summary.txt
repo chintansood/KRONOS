@@ -1,0 +1,70 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE027
+Generated 2026-11-20T07:18:36  |  data hash a6f43fcaa588ced0
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE027 (FIR/SARABHANAG/2025/0027) — Vehicle Theft registered at PS Sarabha Nagar, Ludhiana. Incident recorded on 2025-04-25 11:27 at Ghumar Mandi Market, Ludhiana. FIR records 2 accused (Rahul Malhotra P00032, Yogesh Malhotra P00138) and 5 named persons in total. 684 records across 5 sources; 3 transactions flagged for review.
+
+2. NARRATIVE
+CASE027 (FIR/SARABHANAG/2025/0027) — Vehicle Theft registered at PS Sarabha Nagar, Ludhiana. Incident recorded on 2025-04-25 11:27 at Ghumar Mandi Market, Ludhiana. FIR records 2 accused (Rahul Malhotra P00032, Yogesh Malhotra P00138) and 5 named persons in total. 684 records across 5 sources; 3 transactions flagged for review. Note: P00050 has a record 294.5 km from the incident location 142 min after the incident (EVD-CDR004475), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-04-01 13:23  Flagged NEFT ₹76,000 ORG-002 → P00249  [EVD-TXN002990]
+  2025-04-01 15:56  Flagged NEFT ₹35,000 ORG-002 → P00405  [EVD-TXN003021]
+  2025-04-13 08:15  P00028 and P00405 co-located at Sarabha Nagar Residential, Ludhiana  [EVD-LOC006849, EVD-LOC006848]
+  2025-04-17 10:09  P00032 and P00178 co-located at Cyber City Offices, Gurugram  [EVD-LOC007126, EVD-LOC007124]
+  2025-04-22 07:29  P00055 and P00249 co-located at Sarabha Nagar Residential, Ludhiana  [EVD-LOC007470, EVD-LOC007469]
+  2025-04-25 11:27  Incident recorded at Ghumar Mandi Market, Ludhiana  []
+  2025-04-25 21:02  Fir FIR/SARABHANAG/2025/0027 at PS Sarabha Nagar (Ludhiana): Vehicle Theft  [EVD-FIR000050]
+  2025-04-27 20:01  Supplementary Statement FIR/SARABHANAG/2025/0027 at PS Sarabha Nagar (Ludhiana): Vehicle Theft  [EVD-FIR000051]
+  2025-04-28 11:27  Flagged UPI ₹120,000 P00050 → P00032  [EVD-TXN003909]
+  2025-05-11 06:40  Supplementary Statement FIR/SARABHANAG/2025/0027 at PS Sarabha Nagar (Ludhiana): Vehicle Theft  [EVD-FIR000061]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00032  Rahul Malhotra               PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000050, EVD-FIR000051, EVD-FIR000061]
+  P00138  Yogesh Malhotra              ACCUSED            via FIR_STRUCTURED  [EVD-FIR000050]
+  P00405  Simran Aggarwal              COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000050, EVD-FIR000051]
+  P00249  Jasleen Thakur               WITNESS            via FIR_NER  [EVD-FIR000050, EVD-FIR000061]
+  P00050  Sachin Khanna                MENTIONED          via FIR_NER  [EVD-FIR000050]
+
+5. FINANCIAL ACTIVITY
+  137 transactions, total ₹1,106,857; 3 flagged
+  - EVD-TXN003909 ₹120,000 2025-04-28 11:27: Amount ₹120,000 exceeds upper fence ₹56,019 (Q3 + 3.0·IQR, sender's own history)
+  - EVD-TXN002990 ₹76,000 2025-04-01 13:23: Isolation Forest outlier: 8 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN003021 ₹35,000 2025-04-01 15:56: Isolation Forest outlier: 10 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Rahul Malhotra ↔ Mohit Aggarwal: 36 contacts (2025-03-26 17:19 – 2025-05-22 14:43)
+  - Ravi Yadav ↔ Jasleen Thakur: 23 contacts (2025-03-31 17:14 – 2025-05-24 22:34)
+  - Yogesh Malhotra ↔ Amit Aggarwal: 18 contacts (2025-03-29 12:14 – 2025-05-23 13:29)
+  - Jasleen Thakur ↔ Karan Verma: 17 contacts (2025-03-30 14:51 – 2025-05-23 20:36)
+  - Sachin Khanna ↔ Ajay Bajwa: 16 contacts (2025-03-27 04:43 – 2025-05-20 11:34)
+  - Rahul Malhotra ↔ Yogesh Aggarwal: 14 contacts (2025-03-29 11:10 – 2025-05-21 12:02)
+  - Sachin Khanna ↔ Sakshi Chopra: 14 contacts (2025-03-30 10:06 – 2025-05-24 10:30)
+  - Lakhwinder Verma ↔ Simran Aggarwal: 12 contacts (2025-03-30 13:27 – 2025-05-23 22:46)
+  Around incident: 14 contacts (baseline ≈17.8), 0 between named persons
+
+7. LOCATION
+  - near incident: P00249 0.15 km, -116 min (EVD-LOC007683)
+  - near incident: P00138 1.1 km, -16 min (EVD-CDR004472)
+  - near incident: P00138 0.21 km, -10 min (EVD-LOC007696)
+  - near incident: P00032 0.48 km, -10 min (EVD-LOC007695)
+  - elsewhere: P00050 at Cyber City Offices, Gurugram (294.5 km away, EVD-CDR004475)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Rahul Malhotra (P00032), recorded as principal accused: record within 0.48 km of the incident location within 2 h of the incident; party to 1 flagged transaction(s) (IQR). [EVD-LOC007695, EVD-TXN003909]
+  - Jasleen Thakur (P00249), recorded as witness: record within 0.15 km of the incident location within 2 h of the incident; party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-LOC007683, EVD-TXN002990]
+  - Sachin Khanna (P00050), recorded as mentioned: record(s) 294.5 km away from the incident location within 3 h of the incident (Cyber City Offices, Gurugram); party to 1 flagged transaction(s) (IQR). [EVD-CDR004475, EVD-TXN003909]
+  - Yogesh Malhotra (P00138), recorded as accused: record within 0.21 km of the incident location within 2 h of the incident. [EVD-CDR004472, EVD-LOC007696]
+  - Simran Aggarwal (P00405), recorded as complainant: party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-TXN003021]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: timestamp — timestamp invalid
+  - 1 record(s) with data-quality issue: caller_number — unparseable phone number
+  - 1 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+  - 1 record(s) with data-quality issue: txn_datetime — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

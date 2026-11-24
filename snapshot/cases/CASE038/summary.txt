@@ -1,0 +1,63 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE038
+Generated 2026-11-20T07:18:37  |  data hash 897e2e0a13056f98
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE038 (FIR/INDUSTRIAL/2025/0038) — Extortion & Criminal Intimidation registered at PS Industrial Area, Chandigarh. Incident recorded on 2025-06-01 15:19 at Sector 17 Plaza, Chandigarh. FIR records 1 accused (Karan Singh P00169) and 3 named persons in total. 427 records across 5 sources; 4 transactions flagged for review.
+
+2. NARRATIVE
+CASE038 (FIR/INDUSTRIAL/2025/0038) — Extortion & Criminal Intimidation registered at PS Industrial Area, Chandigarh. Incident recorded on 2025-06-01 15:19 at Sector 17 Plaza, Chandigarh. FIR records 1 accused (Karan Singh P00169) and 3 named persons in total. 427 records across 5 sources; 4 transactions flagged for review. 4 transfers from P00101 to P00169 each fell just below ₹50,000 (total ₹177,500).
+
+3. CHRONOLOGY
+  2025-05-21 17:36  P00169 and P00331 co-located at Hall Bazaar, Amritsar  [EVD-LOC009548, EVD-LOC009547]
+  2025-06-01 15:19  Incident recorded at Sector 17 Plaza, Chandigarh  []
+  2025-06-01 20:59  Fir FIR/INDUSTRIAL/2025/0038 at PS Industrial Area (Chandigarh): Extortion & Criminal Intimidation  [EVD-FIR000078]
+  2025-06-02 16:39  Flagged CASH_DEPOSIT ₹49,500 P00101 → P00169  [EVD-TXN005153]
+  2025-06-03 05:54  Flagged CASH_DEPOSIT ₹40,000 P00101 → P00169  [EVD-TXN005163]
+  2025-06-03 20:37  Flagged CASH_DEPOSIT ₹48,000 P00101 → P00169  [EVD-TXN005181]
+  2025-06-04 14:29  Flagged CASH_DEPOSIT ₹40,000 P00101 → P00169  [EVD-TXN005198]
+  2025-06-13 07:51  P00271 and P00359 co-located at Sector 35 Residential, Chandigarh  [EVD-LOC010662, EVD-LOC010661]
+  2025-06-16 22:15  Supplementary Statement FIR/INDUSTRIAL/2025/0038 at PS Industrial Area (Chandigarh): Extortion & Criminal Intimidation  [EVD-FIR000090]
+  2025-06-19 03:02  Supplementary Statement FIR/INDUSTRIAL/2025/0038 at PS Industrial Area (Chandigarh): Extortion & Criminal Intimidation  [EVD-FIR000093]
+  2025-06-22 14:14  Supplementary Statement FIR/INDUSTRIAL/2025/0038 at PS Industrial Area (Chandigarh): Extortion & Criminal Intimidation  [EVD-FIR000095]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00169  Karan Singh                  PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000078, EVD-FIR000090, EVD-FIR000093, EVD-FIR000095]
+  P00101  Rohit Khan                   COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000078, EVD-FIR000093, EVD-FIR000095]
+  P00359  Abhishek Gill                WITNESS            via FIR_NER  [EVD-FIR000078, EVD-FIR000090]
+
+5. FINANCIAL ACTIVITY
+  79 transactions, total ₹463,679; 4 flagged
+  - EVD-TXN005153 ₹49,500 2025-06-02 16:39: Isolation Forest outlier: amount ≈28× this account's median; cash channel; 4 transfers P00101 → P00169 within 14 days, each just below ₹50,000 (total ₹177,500)
+  - EVD-TXN005181 ₹48,000 2025-06-03 20:37: Isolation Forest outlier: amount ≈27× this account's median; cash channel; 4 transfers P00101 → P00169 within 14 days, each just below ₹50,000 (total ₹177,500)
+  - EVD-TXN005163 ₹40,000 2025-06-03 05:54: Isolation Forest outlier: amount ≈23× this account's median; cash channel; unusual hour; 4 transfers P00101 → P00169 within 14 days, each just below ₹50,000 (total ₹177,500)
+  - EVD-TXN005198 ₹40,000 2025-06-04 14:29: Isolation Forest outlier: amount ≈23× this account's median; cash channel; 4 transfers P00101 → P00169 within 14 days, each just below ₹50,000 (total ₹177,500)
+
+6. COMMUNICATION
+  - Rohit Khan ↔ Karan Singh: 4 contacts (2025-05-26 15:07 – 2025-05-31 02:42)
+  - Rohit Khan ↔ Rahul Saini: 27 contacts (2025-05-06 22:48 – 2025-06-28 09:52)
+  - Karan Singh ↔ Aman Thakur: 24 contacts (2025-05-03 11:32 – 2025-06-30 03:07)
+  - Karan Singh ↔ Ritu Malhotra: 20 contacts (2025-05-08 01:08 – 2025-06-29 10:14)
+  - Rohit Khan ↔ Navneet Jain: 18 contacts (2025-05-05 20:50 – 2025-06-25 10:10)
+  - Manisha Kaur ↔ Abhishek Gill: 15 contacts (2025-05-03 07:19 – 2025-06-29 20:58)
+  - Rohit Khan ↔ Jaspreet Khan: 12 contacts (2025-05-02 17:26 – 2025-06-28 14:01)
+  - Karan Singh ↔ Pankaj Kumar: 11 contacts (2025-05-03 20:08 – 2025-06-30 17:12)
+  Around incident: 13 contacts (baseline ≈11.7), 1 between named persons
+  * EVD-MSG004193 2025-05-31 02:42: "Account: PUNB-87112166365. Small amounts only." — references account PUNB-87112166365 (seen in this case's transactions); exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - near incident: P00169 0.35 km, 0 min (EVD-LOC010158)
+  - near incident: P00101 0.0 km, 5 min (EVD-LOC010159)
+  - near incident: P00101 0.05 km, 17 min (EVD-MSG004230)
+  - near incident: P00101 0.14 km, 96 min (EVD-TXN005133)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Karan Singh (P00169), recorded as principal accused: record within 0.35 km of the incident location within 2 h of the incident; in contact with P00101 (4 contacts); party to 4 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-LOC010158, EVD-MSG004090, EVD-MSG004125, EVD-TXN005153]
+  - Rohit Khan (P00101), recorded as complainant: record within 0.0 km of the incident location within 2 h of the incident; in contact with P00169 (4 contacts); party to 4 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-LOC010159, EVD-MSG004230, EVD-TXN005133, EVD-MSG004090]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

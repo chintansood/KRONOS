@@ -1,0 +1,33 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE903
+Generated 2026-11-21T11:55:50  |  data hash b7c7d3b8c9ff2e86
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE903 (FIR 177/2022, PS City Rupnagar) — Narcotics (NDPS Act) registered at PS City Rupnagar, Rupnagar. Incident date not stated in the source at Rupnagar, Punjab. FIR records 1 accused (Accused A1 · CASE903 P90004) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE903 (FIR 177/2022, PS City Rupnagar) — Narcotics (NDPS Act) registered at PS City Rupnagar, Rupnagar. Incident date not stated in the source at Rupnagar, Punjab. FIR records 1 accused (Accused A1 · CASE903 P90004) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2022-09-18 00:00  Fir Extract FIR 177/2022, PS City Rupnagar at PS City Rupnagar (Rupnagar): Narcotics (NDPS Act)  [EVD-PUB000003]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90004  Accused A1 · CASE903         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000003]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90004 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

@@ -1,0 +1,33 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE924
+Generated 2026-11-21T11:55:52  |  data hash b8eda3a818e55506
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE924 (FIR 179/2024, PS Balongi) — Cheating, Fraud & Forgery registered at PS Balongi, Mohali. Incident date not stated in the source at Mohali, Punjab. FIR records 1 accused (Accused A1 · CASE924 P90037) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE924 (FIR 179/2024, PS Balongi) — Cheating, Fraud & Forgery registered at PS Balongi, Mohali. Incident date not stated in the source at Mohali, Punjab. FIR records 1 accused (Accused A1 · CASE924 P90037) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2024-08-03 00:00  Fir Extract FIR 179/2024, PS Balongi at PS Balongi (Mohali): Cheating, Fraud & Forgery  [EVD-PUB000024]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90037  Accused A1 · CASE924         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000024]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90037 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

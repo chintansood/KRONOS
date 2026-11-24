@@ -1,0 +1,35 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE934
+Generated 2026-11-21T11:55:53  |  data hash b0bdbff24b67a5bc
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE934 (FIR 93/2025, PS Sadar Sirsa) — Theft & Burglary registered at PS Sadar Sirsa, Sirsa. Incident recorded on 2025-03-06 00:00 at Sirsa, Haryana. FIR records 1 accused (Accused A1 · CASE934 P90050) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE934 (FIR 93/2025, PS Sadar Sirsa) — Theft & Burglary registered at PS Sadar Sirsa, Sirsa. Incident recorded on 2025-03-06 00:00 at Sirsa, Haryana. FIR records 1 accused (Accused A1 · CASE934 P90050) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2025-03-06 00:00  Incident recorded at Sirsa, Haryana  []
+  2025-03-16 00:00  Fir Extract FIR 93/2025, PS Sadar Sirsa at PS Sadar Sirsa (Sirsa): Theft & Burglary  [EVD-PUB000034]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90050  Accused A1 · CASE934         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000034]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+  Around incident: 0 contacts (baseline ≈0.0), 0 between named persons
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90050 no geolocated record within ±6 h of the incident
+  - P90050 no call detail records obtained
+
+10. UNCERTAINTIES
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

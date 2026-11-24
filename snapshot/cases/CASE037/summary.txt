@@ -1,0 +1,90 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE037
+Generated 2026-11-20T07:18:37  |  data hash b43cae47262e6632
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE037 (FIR/AMBALACANT/2025/0037) — Cyber Fraud (Online Investment Scam) registered at PS Ambala Cantt, Ambala. Incident recorded on 2025-05-28 11:46 at Ambala City Residential Colony. FIR records 2 accused (Meena Bansal P00176, Sandeep Sharma P00411) and 5 named persons in total. 980 records across 5 sources; 18 transactions flagged for review.
+
+2. NARRATIVE
+CASE037 (FIR/AMBALACANT/2025/0037) — Cyber Fraud (Online Investment Scam) registered at PS Ambala Cantt, Ambala. Incident recorded on 2025-05-28 11:46 at Ambala City Residential Colony. FIR records 2 accused (Meena Bansal P00176, Sandeep Sharma P00411) and 5 named persons in total. 980 records across 5 sources; 18 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN005012 → EVD-TXN005014, 15.0 min), a pattern that can indicate layering and requires verification. Account UTIB-52701713023 received funds from 4 different individuals within 14 days.
+
+3. CHRONOLOGY
+  2025-05-02 14:20  Flagged NEFT ₹120,000 ORG-007 → P00176  [EVD-TXN004094]
+  2025-05-20 11:55  P00038 and P00143 co-located at Sadar Bazaar, Ambala Cantt  [EVD-LOC009449, EVD-LOC009450]
+  2025-05-24 13:18  P00143 and P00176 co-located at Sadar Bazaar, Ambala Cantt  [EVD-LOC009713, EVD-LOC009714]
+  2025-05-28 11:46  Incident recorded at Ambala City Residential Colony  []
+  2025-05-28 14:39  Fir FIR/AMBALACANT/2025/0037 at PS Ambala Cantt (Ambala): Cyber Fraud (Online Investment Scam)  [EVD-FIR000074]
+  2025-05-28 18:31  Flagged IMPS ₹80,711 P00144 → P00176  [EVD-TXN005012]
+  2025-05-29 00:47  Flagged IMPS ₹78,430 P00010 → P00176  [EVD-TXN005019]
+  2025-05-29 05:41  Flagged IMPS ₹74,776 P00176 → P00411  [EVD-TXN005024]
+  2025-05-30 11:46  Flagged CASH_WITHDRAWAL ₹259,997 P00411 → P00411  [EVD-TXN005049]
+  2025-06-01 15:12  Flagged NEFT ₹120,000 ORG-007 → P00143  [EVD-TXN005125]
+  2025-06-10 19:26  Supplementary Statement FIR/AMBALACANT/2025/0037 at PS Ambala Cantt (Ambala): Cyber Fraud (Online Investment Scam)  [EVD-FIR000082]
+  2025-06-12 20:34  P00149 and P00411 co-located at Ambala City Residential Colony  [EVD-LOC010653, EVD-LOC010652]
+  2025-06-20 09:29  Supplementary Statement FIR/AMBALACANT/2025/0037 at PS Ambala Cantt (Ambala): Cyber Fraud (Online Investment Scam)  [EVD-FIR000094]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00176  Meena Bansal                 PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000074, EVD-FIR000094]
+  P00411  Sandeep Sharma               ACCUSED            via FIR_STRUCTURED  [EVD-FIR000082, EVD-FIR000074]
+  P00143  Yogesh Bajwa                 COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000074]
+  P00406  Shalini Gill                 VICTIM             via FIR_NER  [EVD-FIR000074, EVD-FIR000094]
+  P00419  Manpreet Chopra              VICTIM             via FIR_NER  [EVD-FIR000082, EVD-FIR000074]
+  P00010  Neha Gupta                   RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00144  Lakhwinder Sidhu             RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  212 transactions, total ₹2,562,153; 15 flagged
+  - EVD-TXN005049 ₹259,997 2025-05-30 11:46: Isolation Forest outlier: amount ≈210× this account's median; cash channel; Amount ₹259,997 exceeds upper fence ₹168,472 (Q3 + 3.0·IQR, sender's own history)
+  - EVD-TXN005024 ₹74,776 2025-05-29 05:41: Isolation Forest outlier: 5 transactions from this account within 24 h; unusual hour; ₹78,430 received by P00176 and ₹74,776 sent onward 294 min later (EVD-TXN005019 → EVD-TXN005024)
+  - EVD-TXN004094 ₹120,000 2025-05-02 14:20: Isolation Forest outlier: 8 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN005125 ₹120,000 2025-06-01 15:12: Isolation Forest outlier: 7 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN005012 ₹80,711 2025-05-28 18:31: ₹80,711 received by P00176 and ₹78,290 sent onward 15 min later (EVD-TXN005012 → EVD-TXN005014)
+  - EVD-TXN005019 ₹78,430 2025-05-29 00:47: ₹78,430 received by P00176 and ₹76,077 sent onward 45 min later (EVD-TXN005019 → EVD-TXN005020)
+  - EVD-TXN005014 ₹78,290 2025-05-28 18:46: ₹80,711 received by P00176 and ₹78,290 sent onward 15 min later (EVD-TXN005012 → EVD-TXN005014)
+  - EVD-TXN005021 ₹78,078 2025-05-29 04:47: ₹78,078 received by P00176 and ₹75,736 sent onward 45 min later (EVD-TXN005021 → EVD-TXN005023)
+  - EVD-TXN005022 ₹77,089 2025-05-29 05:11: ₹77,089 received by P00176 and ₹75,736 sent onward 21 min later (EVD-TXN005022 → EVD-TXN005023)
+  - EVD-TXN005020 ₹76,077 2025-05-29 01:32: ₹78,430 received by P00176 and ₹76,077 sent onward 45 min later (EVD-TXN005019 → EVD-TXN005020)
+  - EVD-TXN005023 ₹75,736 2025-05-29 05:32: ₹78,430 received by P00176 and ₹75,736 sent onward 285 min later (EVD-TXN005019 → EVD-TXN005023)
+  - EVD-TXN005015 ₹74,178 2025-05-28 20:19: ₹74,178 received by P00176 and ₹71,953 sent onward 37 min later (EVD-TXN005015 → EVD-TXN005016)
+  - EVD-TXN005016 ₹71,953 2025-05-28 20:56: ₹80,711 received by P00176 and ₹71,953 sent onward 145 min later (EVD-TXN005012 → EVD-TXN005016)
+  - EVD-TXN004093 ₹52,000 2025-05-02 14:20: Isolation Forest outlier: 7 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN004099 ₹35,000 2025-05-02 14:58: Isolation Forest outlier: 10 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Shalini Gill ↔ Sandeep Sharma: 9 contacts (2025-04-30 10:35 – 2025-06-26 19:37)
+  - Shalini Gill ↔ Manpreet Chopra: 7 contacts (2025-05-10 13:48 – 2025-06-21 15:31)
+  - Yogesh Bajwa ↔ Meena Bansal: 5 contacts (2025-05-19 19:08 – 2025-05-27 19:19)
+  - Meena Bansal ↔ Manpreet Chopra: 3 contacts (2025-05-17 10:44 – 2025-05-25 13:18)
+  - Meena Bansal ↔ Shalini Gill: 3 contacts (2025-05-22 20:29 – 2025-05-25 11:34)
+  - Lakhwinder Sidhu ↔ Deepak Malhotra: 25 contacts (2025-05-01 16:59 – 2025-06-25 22:17)
+  - Lakhwinder Sidhu ↔ Ajay Yadav: 22 contacts (2025-04-29 18:40 – 2025-06-22 19:19)
+  - Yogesh Bajwa ↔ Rekha Jain: 14 contacts (2025-05-06 08:26 – 2025-06-21 14:37)
+  Around incident: 31 contacts (baseline ≈25.6), 2 between named persons
+  * EVD-MSG003845 2025-05-17 10:44: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to HDF" — references an amount (₹45000); references account HDFC-75564641708 (seen in this case's transactions)
+  * EVD-MSG003903 2025-05-19 19:08: "Your returns of 18% are credited. Add Rs 24,999 more to unlock withdrawal. Transfer to ICI" — references an amount (₹24999); references account ICIC-66907826333 (seen in this case's transactions)
+  * EVD-MSG003917 2025-05-20 12:32: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹45000); references account ICIC-66907826333 (seen in this case's transactions)
+  * EVD-MSG003967 2025-05-21 19:47: "Your returns of 18% are credited. Add Rs 15,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹15000); references account ICIC-66907826333 (seen in this case's transactions)
+  * EVD-MSG003999 2025-05-22 20:29: "Your returns of 18% are credited. Add Rs 9,999 more to unlock withdrawal. Transfer to ICIC" — references an amount (₹9999); references account ICIC-66907826333 (seen in this case's transactions)
+  * EVD-MSG004002 2025-05-23 01:33: "Your returns of 18% are credited. Add Rs 30,000 more to unlock withdrawal. Transfer to HDF" — references an amount (₹30000); references account HDFC-75564641708 (seen in this case's transactions)
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Meena Bansal (P00176), recorded as principal accused: in contact with P00143 (5 contacts), P00419 (3 contacts), P00406 (3 contacts); party to 11 flagged transaction(s) (ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-MSG003903, EVD-MSG003917, EVD-MSG003845, EVD-MSG004002]
+  - Sandeep Sharma (P00411), recorded as accused: in contact with P00406 (9 contacts); party to 6 flagged transaction(s) (IQR, ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-MSG003309, EVD-CDR005100, EVD-TXN005049, EVD-TXN005024]
+  - Yogesh Bajwa (P00143), recorded as complainant: in contact with P00176 (5 contacts); party to 2 flagged transaction(s) (ISOLATION_FOREST). [EVD-MSG003903, EVD-MSG003917, EVD-TXN005125, EVD-TXN004096]
+  - Shalini Gill (P00406), recorded as victim: in contact with P00411 (9 contacts), P00419 (7 contacts), P00176 (3 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-MSG003309, EVD-CDR005100, EVD-MSG003609, EVD-MSG003986]
+  - Manpreet Chopra (P00419), recorded as victim: in contact with P00406 (7 contacts), P00176 (3 contacts). [EVD-MSG003609, EVD-MSG003986, EVD-MSG003845, EVD-MSG004002]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 3 record(s) with data-quality issue: latitude/longitude — invalid coordinate; set to NULL
+  - 3 record(s) with data-quality issue: timestamp — timestamp invalid
+  - 2 record(s) with data-quality issue: amount — invalid amount; set to NULL
+  - 1 record(s) with data-quality issue: call_date — timestamp invalid
+  - 1 record(s) with data-quality issue: caller_number — unparseable phone number
+  - 1 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

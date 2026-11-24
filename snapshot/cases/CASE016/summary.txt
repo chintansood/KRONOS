@@ -1,0 +1,74 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE016
+Generated 2026-11-20T07:18:34  |  data hash bccc6eaf735b5d83
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE016 (FIR/SECTOR5PAN/2025/0016) — Narcotics Supply (NDPS) registered at PS Sector 5 Panchkula, Panchkula. Incident recorded on 2025-03-16 20:30 at Kharar Highway Dhaba, Mohali. FIR records 2 accused (Aarti Malhotra P00211, Raju P00014) and 3 named persons in total. 585 records across 5 sources; 8 transactions flagged for review.
+
+2. NARRATIVE
+CASE016 (FIR/SECTOR5PAN/2025/0016) — Narcotics Supply (NDPS) registered at PS Sector 5 Panchkula, Panchkula. Incident recorded on 2025-03-16 20:30 at Kharar Highway Dhaba, Mohali. FIR records 2 accused (Aarti Malhotra P00211, Raju P00014) and 3 named persons in total. 585 records across 5 sources; 8 transactions flagged for review. 4 transfers from P00014 to P00211 each fell just below ₹50,000 (total ₹188,900). Communication between P00013 and P00211 spiked to 4 contacts within 3 hours on 2025-03-07. Note: P00014 has a record 23.3 km from the incident location 140 min before the incident (EVD-CDR002810), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-02-15 13:13  Flagged RTGS ₹2,100,000 P00211 → ORG-009  [EVD-TXN001177]
+  2025-02-21 13:37  P00132 and P00326 co-located at Sector 5 Market, Panchkula  [EVD-LOC002859, EVD-LOC002860]
+  2025-02-23 06:10  P00132 and P00326 co-located at Sector 20 Residential, Panchkula  [EVD-LOC003004, EVD-LOC003007]
+  2025-03-04 03:33  Flagged CASH_DEPOSIT ₹49,900 P00014 → P00211  [EVD-TXN001856]
+  2025-03-07 18:09  Communication burst P00013–P00211 (4 contacts in 3 h)  [EVD-MSG001712, EVD-CDR002379, EVD-CDR002386]
+  2025-03-08 06:37  P00132 and P00326 co-located at Sector 20 Residential, Panchkula  [EVD-LOC004112, EVD-LOC004115]
+  2025-03-08 12:00  Flagged UPI ₹22,000 P00014 → P00326  [EVD-TXN002090]
+  2025-03-13 14:50  Flagged CASH_DEPOSIT ₹48,500 P00014 → P00211  [EVD-TXN002301]
+  2025-03-13 15:56  Flagged CASH_DEPOSIT ₹48,500 P00014 → P00211  [EVD-TXN002303]
+  2025-03-14 11:45  Flagged CASH_DEPOSIT ₹42,000 P00014 → P00211  [EVD-TXN002333]
+  2025-03-15 22:41  P00014 and P00211 co-located at Kharar Highway Dhaba, Mohali  [EVD-LOC004758, EVD-LOC004757]
+  2025-03-16 20:30  Incident recorded at Kharar Highway Dhaba, Mohali  []
+  2025-03-17 01:37  Fir FIR/SECTOR5PAN/2025/0016 at PS Sector 5 Panchkula (Panchkula): Narcotics Supply (NDPS)  [EVD-FIR000030]
+  2025-03-23 11:55  P00013 and P00326 co-located at Sector 5 Market, Panchkula  [EVD-LOC005336, EVD-LOC005338]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00211  Aarti Malhotra               PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000030]
+  P00014  Raju                         ACCUSED            via FIR_STRUCTURED  [EVD-FIR000030]
+  P00326  Ashok Chopra                 MENTIONED          via FIR_NER  [EVD-FIR000030]
+  P00132  Farhan Chauhan               RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  107 transactions, total ₹2,557,105; 8 flagged
+  - EVD-TXN001177 ₹2,100,000 2025-02-15 13:13: Isolation Forest outlier: amount ≈1412× this account's median; Amount ₹2,100,000 exceeds upper fence ₹81,414 (Q3 + 3.0·IQR, sender's own history) (alt.: Stated purpose 'property booking - registered sale deed' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN001856 ₹49,900 2025-03-04 03:33: Isolation Forest outlier: amount ≈35× this account's median; cash channel; unusual hour; 4 transfers P00014 → P00211 within 14 days, each just below ₹50,000 (total ₹188,900)
+  - EVD-TXN002301 ₹48,500 2025-03-13 14:50: Isolation Forest outlier: amount ≈34× this account's median; cash channel; 4 transfers P00014 → P00211 within 14 days, each just below ₹50,000 (total ₹188,900)
+  - EVD-TXN002303 ₹48,500 2025-03-13 15:56: Isolation Forest outlier: amount ≈34× this account's median; cash channel; 4 transfers P00014 → P00211 within 14 days, each just below ₹50,000 (total ₹188,900)
+  - EVD-TXN002333 ₹42,000 2025-03-14 11:45: Isolation Forest outlier: amount ≈29× this account's median; 4 transactions from this account within 24 h; cash channel; 4 transfers P00014 → P00211 within 14 days, each just below ₹50,000 (total ₹188,900)
+  - EVD-TXN002090 ₹22,000 2025-03-08 12:00: Isolation Forest outlier: amount ≈15× this account's median; 7 transactions from this account within 24 h (alt.: Stated purpose 'house rent' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN002935 ₹2,349 2025-03-31 12:57: Isolation Forest outlier: 5 transactions from this account within 24 h
+  - EVD-TXN003446 ₹2,106 2025-04-13 12:46: Isolation Forest outlier: 4 transactions from this account within 24 h
+
+6. COMMUNICATION
+  - Raju ↔ Ashok Chopra: 48 contacts (2025-02-15 22:46 – 2025-04-15 09:04)
+  - Raju ↔ Aarti Malhotra: 1 contacts (2025-03-15 20:56 – 2025-03-15 20:56)
+  - Farhan Chauhan ↔ Ashok Chopra: 37 contacts (2025-02-15 09:43 – 2025-04-14 13:18)
+  - Farhan Grewal ↔ Aarti Malhotra: 23 contacts (2025-02-18 10:09 – 2025-04-15 07:53)
+  - Farhan Chauhan ↔ Aarti Aggarwal: 21 contacts (2025-02-15 18:27 – 2025-04-08 07:59)
+  - Imran Jain ↔ Ashok Chopra: 20 contacts (2025-02-16 09:22 – 2025-04-15 09:32)
+  - Ashok Chopra ↔ Ajay Grewal: 18 contacts (2025-02-16 15:00 – 2025-04-12 21:16)
+  - Navneet Khanna ↔ Aarti Malhotra: 17 contacts (2025-02-16 11:26 – 2025-04-15 11:43)
+  Around incident: 14 contacts (baseline ≈16.0), 3 between named persons
+  * EVD-MSG001968 2025-03-14 20:30: "Will be late tonight, eat without me." — exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG002120 2025-03-19 18:13: "Mummy is asking when you will come for dinner." — exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG002121 2025-03-19 18:50: "Did you pay the electricity bill?" — exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - elsewhere: P00014 at Sector 20 Residential, Panchkula (23.3 km away, EVD-CDR002810)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Raju (P00014), recorded as accused: record(s) 23.3 km away from the incident location within 3 h of the incident (Sector 20 Residential, Panchkula); in contact with P00326 (48 contacts), P00211 (1 contacts); party to 7 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-CDR002810, EVD-MSG001019, EVD-CDR001440, EVD-CDR002773]
+  - Aarti Malhotra (P00211), recorded as principal accused: in contact with P00014 (1 contacts); party to 5 flagged transaction(s) (IQR, ISOLATION_FOREST, STRUCTURING). [EVD-CDR002773, EVD-TXN001177, EVD-TXN001856, EVD-TXN002301]
+  - Ashok Chopra (P00326), recorded as mentioned: in contact with P00014 (48 contacts); party to 3 flagged transaction(s) (ISOLATION_FOREST). [EVD-MSG001019, EVD-CDR001440, EVD-TXN002090, EVD-TXN002935]
+
+9. MISSING INFORMATION
+  - P00211 no geolocated record within ±6 h of the incident
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: call_date — timestamp invalid
+  - 1 record(s) with data-quality issue: latitude/longitude — invalid coordinate; set to NULL
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

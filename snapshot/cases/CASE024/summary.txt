@@ -1,0 +1,57 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE024
+Generated 2026-11-20T07:18:35  |  data hash 221c82d914d206ae
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE024 (FIR/SECTOR56/2025/0024) — Cheating (Disputed Complaint) registered at PS Sector 56, Gurugram. Incident recorded on 2025-04-13 17:20 at Cyber City Offices, Gurugram. FIR records 1 accused (Divya Malhotra P00045) and 2 named persons in total. 273 records across 5 sources; 2 transactions flagged for review.
+
+2. NARRATIVE
+CASE024 (FIR/SECTOR56/2025/0024) — Cheating (Disputed Complaint) registered at PS Sector 56, Gurugram. Incident recorded on 2025-04-13 17:20 at Cyber City Offices, Gurugram. FIR records 1 accused (Divya Malhotra P00045) and 2 named persons in total. 273 records across 5 sources; 2 transactions flagged for review. Note: P00045 has a record 23.8 km from the incident location 180 min before the incident (EVD-LOC006873), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-03-29 14:29  P00018 and P00045 co-located at Cyber City Offices, Gurugram  [EVD-LOC005828, EVD-LOC005831]
+  2025-04-01 14:18  Flagged NEFT ₹28,000 ORG-004 → P00045  [EVD-TXN003002]
+  2025-04-13 17:20  Incident recorded at Cyber City Offices, Gurugram  []
+  2025-04-15 00:19  Fir FIR/SECTOR56/2025/0024 at PS Sector 56 (Gurugram): Cheating (Disputed Complaint)  [EVD-FIR000046]
+  2025-04-17 10:09  P00032 and P00178 co-located at Cyber City Offices, Gurugram  [EVD-LOC007126, EVD-LOC007124]
+  2025-04-28 07:01  Supplementary Statement FIR/SECTOR56/2025/0024 at PS Sector 56 (Gurugram): Cheating (Disputed Complaint)  [EVD-FIR000052]
+  2025-04-30 08:11  Supplementary Statement FIR/SECTOR56/2025/0024 at PS Sector 56 (Gurugram): Cheating (Disputed Complaint)  [EVD-FIR000054]
+  2025-05-01 15:59  Flagged NEFT ₹120,000 ORG-004 → P00178  [EVD-TXN004047]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00045  Divya Malhotra               PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000054, EVD-FIR000052, EVD-FIR000046]
+  P00178  Deepak Singh                 COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000054, EVD-FIR000052, EVD-FIR000046]
+
+5. FINANCIAL ACTIVITY
+  55 transactions, total ₹392,647; 2 flagged
+  - EVD-TXN004047 ₹120,000 2025-05-01 15:59: Isolation Forest outlier: 6 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN003002 ₹28,000 2025-04-01 14:18: Isolation Forest outlier: 10 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Divya Malhotra ↔ Deepak Singh: 11 contacts (2025-03-18 02:45 – 2025-05-06 16:41)
+  - Rahul Malhotra ↔ Deepak Singh: 20 contacts (2025-03-17 05:15 – 2025-05-12 14:33)
+  - Irfan Bhai ↔ Divya Malhotra: 17 contacts (2025-03-19 11:38 – 2025-05-13 14:57)
+  - Divya Malhotra ↔ Naveen Kumar: 11 contacts (2025-03-16 12:11 – 2025-05-10 15:04)
+  - Deepak Singh ↔ Pooja Dhillon: 8 contacts (2025-03-15 16:21 – 2025-04-17 16:50)
+  - Deepak Singh ↔ Komal Grewal: 8 contacts (2025-03-18 15:26 – 2025-04-28 13:19)
+  - Divya Malhotra ↔ Pooja Dhillon: 8 contacts (2025-03-18 17:44 – 2025-05-09 00:19)
+  - Divya Malhotra ↔ Sandeep Gupta: 5 contacts (2025-03-21 05:30 – 2025-04-22 16:28)
+  Around incident: 7 contacts (baseline ≈6.9), 1 between named persons
+
+7. LOCATION
+  - elsewhere: P00045 at Laxmi Nagar Residential, Delhi (23.8 km away, EVD-LOC006873)
+  - elsewhere: P00045 at Laxmi Nagar Residential, Delhi (23.8 km away, EVD-LOC006883)
+  - elsewhere: P00045 at Laxmi Nagar Residential, Delhi (23.8 km away, EVD-LOC006884)
+  - elsewhere: P00045 at Laxmi Nagar Residential, Delhi (23.8 km away, EVD-TXN003450)
+  - elsewhere: P00045 at Laxmi Nagar Residential, Delhi (23.8 km away, EVD-TXN003451)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Divya Malhotra (P00045), recorded as principal accused: record(s) 23.8 km away from the incident location within 3 h of the incident (Laxmi Nagar Residential, Delhi); in contact with P00178 (11 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-LOC006873, EVD-LOC006883, EVD-LOC006884, EVD-CDR002857]
+  - Deepak Singh (P00178), recorded as complainant: in contact with P00045 (11 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-CDR002857, EVD-CDR002923, EVD-TXN004047]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

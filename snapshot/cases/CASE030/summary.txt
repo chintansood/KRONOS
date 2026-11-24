@@ -1,0 +1,68 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE030
+Generated 2026-11-20T07:18:36  |  data hash 37918052604d2524
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE030 (FIR/DWARKASOUT/2025/0030) — Vehicle Theft registered at PS Dwarka South, New Delhi. Incident recorded on 2025-05-05 15:26 at Laxmi Nagar Residential, Delhi. FIR records 2 accused (Mukesh Saini P00034, Abhishek Chopra P00220) and 7 named persons in total. 941 records across 5 sources; 1 transactions flagged for review.
+
+2. NARRATIVE
+CASE030 (FIR/DWARKASOUT/2025/0030) — Vehicle Theft registered at PS Dwarka South, New Delhi. Incident recorded on 2025-05-05 15:26 at Laxmi Nagar Residential, Delhi. FIR records 2 accused (Mukesh Saini P00034, Abhishek Chopra P00220) and 7 named persons in total. 941 records across 5 sources; 1 transactions flagged for review. Note: P00006 has a record 193.3 km from the incident location 31 min before the incident (EVD-CDR004884), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-05-05 15:26  Incident recorded at Laxmi Nagar Residential, Delhi  []
+  2025-05-08 15:26  Flagged UPI ₹82,000 P00306 → P00034  [EVD-TXN004374]
+  2025-05-10 06:01  Fir FIR/DWARKASOUT/2025/0030 at PS Dwarka South (New Delhi): Vehicle Theft  [EVD-FIR000060]
+  2025-05-19 05:10  Witness Statement FIR/DWARKASOUT/2025/0030 at PS Dwarka South (New Delhi): Vehicle Theft  [EVD-FIR000065]
+  2025-05-22 00:31  Witness Statement FIR/DWARKASOUT/2025/0030 at PS Dwarka South (New Delhi): Vehicle Theft  [EVD-FIR000067]
+  2025-05-22 21:55  Supplementary Statement FIR/DWARKASOUT/2025/0030 at PS Dwarka South (New Delhi): Vehicle Theft  [EVD-FIR000069]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00034  Mukesh Saini                 PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000060]
+  P00220  Abhishek Chopra              ACCUSED            via FIR_STRUCTURED  [EVD-FIR000060, EVD-FIR000069]
+  P00208  Mukesh Thakur                COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000060]
+  P00004  Rahul Verma                  WITNESS            via FIR_NER  [EVD-FIR000067]
+  P00006  Pooja Singh                  WITNESS            via FIR_NER  [EVD-FIR000065]
+  P00150  Gurpreet Chauhan             WITNESS            via FIR_NER  [EVD-FIR000060, EVD-FIR000069]
+  P00306  Sandeep Gupta                MENTIONED          via FIR_NER  [EVD-FIR000060]
+
+5. FINANCIAL ACTIVITY
+  186 transactions, total ₹1,148,753; 1 flagged
+  - EVD-TXN004374 ₹82,000 2025-05-08 15:26: Amount ₹82,000 exceeds upper fence ₹63,097 (Q3 + 3.0·IQR, sender's own history)
+
+6. COMMUNICATION
+  - Mukesh Saini ↔ Mukesh Thakur: 8 contacts (2025-04-13 11:46 – 2025-05-29 10:19)
+  - Rahul Verma ↔ Mukesh Thakur: 4 contacts (2025-04-24 13:29 – 2025-05-07 20:01)
+  - Sandeep Gupta ↔ Gaurav Chauhan: 34 contacts (2025-04-06 07:00 – 2025-06-04 12:24)
+  - Gurpreet Chauhan ↔ Sunita Bhatia: 34 contacts (2025-04-06 10:29 – 2025-06-03 17:40)
+  - Sukha ↔ Abhishek Chopra: 17 contacts (2025-04-07 09:40 – 2025-06-04 12:02)
+  - Pooja Singh ↔ Gurpreet Saini: 16 contacts (2025-04-21 08:06 – 2025-05-13 20:19)
+  - Rahul Verma ↔ Sandeep Rawat: 16 contacts (2025-04-21 14:59 – 2025-05-19 20:28)
+  - Mohit Sandhu ↔ Abhishek Chopra: 14 contacts (2025-04-06 08:50 – 2025-06-02 18:47)
+  Around incident: 40 contacts (baseline ≈25.2), 3 between named persons
+  * EVD-MSG003449 2025-05-05 10:22: "Rent for this month sent, please confirm." — exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - near incident: P00220 1.23 km, -10 min (EVD-LOC008421)
+  - near incident: P00034 0.48 km, -10 min (EVD-LOC008420)
+  - elsewhere: P00006 at Sadar Bazaar, Ambala Cantt (193.3 km away, EVD-CDR004884)
+  - elsewhere: P00306 at nan (28.7 km away, EVD-MSG003459)
+  - elsewhere: P00306 at Sector 56 Residential, Gurugram (28.5 km away, EVD-TXN004240)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Mukesh Saini (P00034), recorded as principal accused: record within 0.48 km of the incident location within 2 h of the incident; in contact with P00208 (8 contacts); party to 1 flagged transaction(s) (IQR); 1 location inconsistency flag(s) (impossible). [EVD-LOC008420, EVD-MSG002854, EVD-MSG002917, EVD-TXN004374]
+  - Sandeep Gupta (P00306), recorded as mentioned: record(s) 28.7 km away from the incident location within 3 h of the incident (nan); party to 1 flagged transaction(s) (IQR). [EVD-MSG003459, EVD-TXN004240, EVD-TXN004374]
+  - Abhishek Chopra (P00220), recorded as accused: record within 1.23 km of the incident location within 2 h of the incident. [EVD-LOC008421]
+  - Mukesh Thakur (P00208), recorded as complainant: in contact with P00034 (8 contacts), P00004 (4 contacts). [EVD-MSG002854, EVD-MSG002917, EVD-CDR004440, EVD-MSG003178]
+  - Rahul Verma (P00004), recorded as witness: in contact with P00208 (4 contacts). [EVD-CDR004440, EVD-MSG003178]
+  - Pooja Singh (P00006), recorded as witness: record(s) 193.3 km away from the incident location within 3 h of the incident (Sadar Bazaar, Ambala Cantt). [EVD-CDR004884]
+  - Location inconsistency P00034: IMPOSSIBLE (EVD-LOC007085 → EVD-LOC007092, 1149.15 km in 70.0 min)
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: amount — invalid amount; set to NULL
+  - 1 record(s) with data-quality issue: call_date — timestamp invalid
+  - 1 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

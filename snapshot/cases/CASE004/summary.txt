@@ -1,0 +1,79 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE004
+Generated 2026-11-20T07:18:31  |  data hash 48698e1509dda34e
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE004 (FIR/SARABHANAG/2025/0004) — Narcotics Supply (NDPS) registered at PS Sarabha Nagar, Ludhiana. Incident recorded on 2025-02-03 17:52 at Kharar Highway Dhaba, Mohali. FIR records 3 accused (Rajesh Gill P00226, Rakesh Sharma P00021, Komal Thakur P00159) and 4 named persons in total. 853 records across 5 sources; 8 transactions flagged for review.
+
+2. NARRATIVE
+CASE004 (FIR/SARABHANAG/2025/0004) — Narcotics Supply (NDPS) registered at PS Sarabha Nagar, Ludhiana. Incident recorded on 2025-02-03 17:52 at Kharar Highway Dhaba, Mohali. FIR records 3 accused (Rajesh Gill P00226, Rakesh Sharma P00021, Komal Thakur P00159) and 4 named persons in total. 853 records across 5 sources; 8 transactions flagged for review. 7 transfers from P00021 to P00226 each fell just below ₹50,000 (total ₹333,700). Communication between P00159 and P00226 spiked to 4 contacts within 3 hours on 2025-01-29. Note: P00159 has a record 15.8 km from the incident location 39 min before the incident (EVD-LOC001456), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-01-22 07:28  Flagged CASH_DEPOSIT ₹46,000 P00021 → P00226  [EVD-TXN000300]
+  2025-01-24 11:11  Flagged CASH_DEPOSIT ₹46,000 P00021 → P00226  [EVD-TXN000360]
+  2025-01-25 18:29  P00159 and P00226 co-located at Kharar Highway Dhaba, Mohali  [EVD-LOC000922, EVD-LOC000923]
+  2025-01-26 05:43  Flagged CASH_DEPOSIT ₹49,900 P00021 → P00226  [EVD-TXN000409]
+  2025-01-26 11:16  Flagged CASH_DEPOSIT ₹49,900 P00021 → P00226  [EVD-TXN000414]
+  2025-01-26 19:07  Flagged CASH_DEPOSIT ₹46,000 P00021 → P00226  [EVD-TXN000426]
+  2025-01-29 13:10  Communication burst P00159–P00226 (4 contacts in 3 h)  [EVD-MSG000486, EVD-CDR000663, EVD-CDR000665]
+  2025-01-29 16:13  P00159 and P00226 co-located at Kharar Highway Dhaba, Mohali  [EVD-LOC001138, EVD-LOC001141]
+  2025-02-01 15:44  Flagged CASH_DEPOSIT ₹49,900 P00021 → P00226  [EVD-TXN000617]
+  2025-02-02 19:08  P00159 and P00226 co-located at Kharar Highway Dhaba, Mohali  [EVD-LOC001387, EVD-LOC001383]
+  2025-02-03 17:52  Incident recorded at Kharar Highway Dhaba, Mohali  []
+  2025-02-06 22:43  Fir FIR/SARABHANAG/2025/0004 at PS Sarabha Nagar (Ludhiana): Narcotics Supply (NDPS)  [EVD-FIR000007]
+  2025-03-01 07:27  P00053 and P00290 co-located at Sector 15 Residential, Chandigarh  [EVD-LOC003513, EVD-LOC003509]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00226  Rajesh Gill                  PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000007]
+  P00021  Rakesh Sharma                ACCUSED            via FIR_STRUCTURED  [EVD-FIR000007]
+  P00159  Komal Thakur                 ACCUSED            via FIR_STRUCTURED  [EVD-FIR000007]
+  P00282  Gurpreet Mehta               MENTIONED          via FIR_NER  [EVD-FIR000007]
+  P00043  Nisha Mehta                  RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00053  Tarun Kapoor                 RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  167 transactions, total ₹1,292,190; 8 flagged
+  - EVD-TXN000409 ₹49,900 2025-01-26 05:43: Isolation Forest outlier: amount ≈27× this account's median; cash channel; unusual hour; 7 transfers P00021 → P00226 within 14 days, each just below ₹50,000 (total ₹333,700)
+  - EVD-TXN000414 ₹49,900 2025-01-26 11:16: Isolation Forest outlier: amount ≈27× this account's median; cash channel; 7 transfers P00021 → P00226 within 14 days, each just below ₹50,000 (total ₹333,700)
+  - EVD-TXN000617 ₹49,900 2025-02-01 15:44: Isolation Forest outlier: amount ≈27× this account's median; cash channel; 7 transfers P00021 → P00226 within 14 days, each just below ₹50,000 (total ₹333,700)
+  - EVD-TXN000300 ₹46,000 2025-01-22 07:28: Isolation Forest outlier: amount ≈25× this account's median; cash channel; 7 transfers P00021 → P00226 within 14 days, each just below ₹50,000 (total ₹333,700)
+  - EVD-TXN000360 ₹46,000 2025-01-24 11:11: Isolation Forest outlier: amount ≈25× this account's median; cash channel; 7 transfers P00021 → P00226 within 14 days, each just below ₹50,000 (total ₹333,700)
+  - EVD-TXN000426 ₹46,000 2025-01-26 19:07: Isolation Forest outlier: amount ≈25× this account's median; cash channel; 7 transfers P00021 → P00226 within 14 days, each just below ₹50,000 (total ₹333,700)
+  - EVD-TXN000545 ₹46,000 2025-01-31 07:56: Isolation Forest outlier: amount ≈25× this account's median; cash channel; 7 transfers P00021 → P00226 within 14 days, each just below ₹50,000 (total ₹333,700)
+  - EVD-TXN000612 ₹76,000 2025-02-01 14:57: Isolation Forest outlier: 7 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Rakesh Sharma ↔ Gurpreet Mehta: 10 contacts (2025-01-09 08:38 – 2025-03-01 13:33)
+  - Komal Thakur ↔ Rajesh Gill: 10 contacts (2025-01-25 15:17 – 2025-02-02 16:37)
+  - Gurpreet Mehta ↔ Karan Sandhu: 36 contacts (2025-01-08 12:28 – 2025-03-02 18:39)
+  - Tarun Kapoor ↔ Kavita Sharma: 20 contacts (2025-01-06 19:01 – 2025-02-28 11:02)
+  - Yogesh Malhotra ↔ Rajesh Gill: 20 contacts (2025-01-07 11:42 – 2025-03-03 09:19)
+  - Tarun Kapoor ↔ Lakhwinder Yadav: 18 contacts (2025-01-11 13:17 – 2025-03-02 17:46)
+  - Tarun Kapoor ↔ Komal Thakur: 14 contacts (2025-01-05 19:17 – 2025-03-01 14:31)
+  - Rajesh Gill ↔ Sunil Sandhu: 14 contacts (2025-01-06 15:41 – 2025-03-05 14:27)
+  Around incident: 24 contacts (baseline ≈23.1), 4 between named persons
+  * EVD-MSG000609 2025-02-02 15:48: "Parcel ready. Same place, same time." — exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG000670 2025-02-05 14:40: "Reached home safely." — exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - elsewhere: P00159 at Sector 26 Grain Market, Chandigarh (15.8 km away, EVD-LOC001456)
+  - elsewhere: P00226 at Sarabha Nagar Residential, Ludhiana (80.9 km away, EVD-TXN000689)
+  - elsewhere: P00282 at Manimajra Housing Complex, Chandigarh (18.4 km away, EVD-LOC001460)
+  - elsewhere: P00021 at Sector 26 Grain Market, Chandigarh (15.9 km away, EVD-TXN000693)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Rajesh Gill (P00226), recorded as principal accused: record(s) 80.9 km away from the incident location within 3 h of the incident (Sarabha Nagar Residential, Ludhiana); in contact with P00159 (10 contacts); party to 7 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING); 1 location inconsistency flag(s) (requires_air_travel). [EVD-TXN000689, EVD-MSG000398, EVD-CDR000534, EVD-TXN000409]
+  - Rakesh Sharma (P00021), recorded as accused: record(s) 15.9 km away from the incident location within 3 h of the incident (Sector 26 Grain Market, Chandigarh); in contact with P00282 (10 contacts); party to 7 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-TXN000693, EVD-CDR000105, EVD-MSG000110, EVD-TXN000409]
+  - Komal Thakur (P00159), recorded as accused: record(s) 15.8 km away from the incident location within 3 h of the incident (Sector 26 Grain Market, Chandigarh); in contact with P00226 (10 contacts). [EVD-LOC001456, EVD-MSG000398, EVD-CDR000534]
+  - Gurpreet Mehta (P00282), recorded as mentioned: record(s) 18.4 km away from the incident location within 3 h of the incident (Manimajra Housing Complex, Chandigarh); in contact with P00021 (10 contacts). [EVD-LOC001460, EVD-CDR000105, EVD-MSG000110]
+  - Location inconsistency P00226: REQUIRES_AIR_TRAVEL (EVD-LOC001018 → EVD-LOC001022, 295.09 km in 43.0 min)
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+  - 1 record(s) with data-quality issue: timestamp — timestamp invalid
+  - 1 record(s) with data-quality issue: txn_datetime — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

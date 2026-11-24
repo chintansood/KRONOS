@@ -1,0 +1,57 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE025
+Generated 2026-11-20T07:18:35  |  data hash a3eb624e004bd847
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE025 (FIR/SOHANA/2025/0025) — Cheating (Disputed Complaint) registered at PS Sohana, SAS Nagar. Incident recorded on 2025-04-18 14:54 at Phase 7 Market, Mohali. FIR records 1 accused (Divya Yadav P00354) and 2 named persons in total. 286 records across 5 sources; 1 transactions flagged for review.
+
+2. NARRATIVE
+CASE025 (FIR/SOHANA/2025/0025) — Cheating (Disputed Complaint) registered at PS Sohana, SAS Nagar. Incident recorded on 2025-04-18 14:54 at Phase 7 Market, Mohali. FIR records 1 accused (Divya Yadav P00354) and 2 named persons in total. 286 records across 5 sources; 1 transactions flagged for review. Note: P00354 has a record 205.4 km from the incident location 180 min before the incident (EVD-LOC007195), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-04-01 15:44  Flagged NEFT ₹28,000 ORG-003 → P00354  [EVD-TXN003018]
+  2025-04-18 14:54  Incident recorded at Phase 7 Market, Mohali  []
+  2025-04-20 19:09  Fir FIR/SOHANA/2025/0025 at PS Sohana (SAS Nagar): Cheating (Disputed Complaint)  [EVD-FIR000048]
+  2025-05-01 03:30  Supplementary Statement FIR/SOHANA/2025/0025 at PS Sohana (SAS Nagar): Cheating (Disputed Complaint)  [EVD-FIR000055]
+  2025-05-02 17:46  Supplementary Statement FIR/SOHANA/2025/0025 at PS Sohana (SAS Nagar): Cheating (Disputed Complaint)  [EVD-FIR000057]
+  2025-05-07 06:59  Supplementary Statement FIR/SOHANA/2025/0025 at PS Sohana (SAS Nagar): Cheating (Disputed Complaint)  [EVD-FIR000058]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00354  Divya Yadav                  PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000058, EVD-FIR000048, EVD-FIR000055, EVD-FIR000057]
+  P00163  Meena Khan                   COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000058, EVD-FIR000048, EVD-FIR000055, EVD-FIR000057]
+
+5. FINANCIAL ACTIVITY
+  56 transactions, total ₹371,681; 1 flagged
+  - EVD-TXN003018 ₹28,000 2025-04-01 15:44: Isolation Forest outlier: 6 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Divya Yadav ↔ Sandeep Mehta: 16 contacts (2025-03-21 12:28 – 2025-05-16 09:34)
+  - Sunil Khan ↔ Divya Yadav: 11 contacts (2025-03-21 16:30 – 2025-05-14 12:58)
+  - Meena Khan ↔ Arjun Bhatia: 10 contacts (2025-03-21 22:58 – 2025-05-17 07:47)
+  - Meena Khan ↔ Balwinder Sharma: 10 contacts (2025-04-01 23:05 – 2025-05-17 22:14)
+  - Amit Sharma ↔ Meena Khan: 10 contacts (2025-04-14 08:32 – 2025-05-11 21:14)
+  - Varun Bansal ↔ Divya Yadav: 8 contacts (2025-03-29 17:37 – 2025-05-08 17:59)
+  - Amit Sharma ↔ Divya Yadav: 7 contacts (2025-03-27 21:49 – 2025-05-18 09:50)
+  - Ankit Qureshi ↔ Divya Yadav: 7 contacts (2025-04-10 20:39 – 2025-05-09 15:08)
+  Around incident: 9 contacts (baseline ≈7.5), 0 between named persons
+
+7. LOCATION
+  - elsewhere: P00354 at Ranjit Avenue Residential, Amritsar (205.4 km away, EVD-LOC007195)
+  - elsewhere: P00354 at Ranjit Avenue Residential, Amritsar (205.4 km away, EVD-TXN003600)
+  - elsewhere: P00354 at Ranjit Avenue Residential, Amritsar (205.4 km away, EVD-LOC007199)
+  - elsewhere: P00354 at Ranjit Avenue Residential, Amritsar (205.7 km away, EVD-TXN003608)
+  - elsewhere: P00354 at Ranjit Avenue Residential, Amritsar (205.4 km away, EVD-LOC007203)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Divya Yadav (P00354), recorded as principal accused: record(s) 205.4 km away from the incident location within 3 h of the incident (Ranjit Avenue Residential, Amritsar); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-LOC007195, EVD-TXN003600, EVD-LOC007199, EVD-TXN003018]
+  - Meena Khan (P00163), recorded as complainant: 3 location inconsistency flag(s) (requires_air_travel). [EVD-LOC007859, EVD-LOC007862]
+  - Location inconsistency P00163: REQUIRES_AIR_TRAVEL (EVD-LOC007859 → EVD-LOC007862, 256.35 km in 43.0 min)
+  - Location inconsistency P00163: IMPOSSIBLE (EVD-LOC008735 → EVD-LOC008739, 1347.09 km in 63.0 min)
+  - Location inconsistency P00163: REQUIRES_AIR_TRAVEL (EVD-LOC008739 → EVD-CDR005049, 1347.57 km in 107.0 min)
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

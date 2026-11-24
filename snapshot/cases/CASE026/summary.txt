@@ -1,0 +1,51 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE026
+Generated 2026-11-20T07:18:35  |  data hash 533f9b8e9045bfff
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE026 (FIR/CYBERCITY/2025/0026) — Cheating (Disputed Complaint) registered at PS Cyber City, Gurugram. Incident recorded on 2025-04-22 11:51 at Cyber City Offices, Gurugram. FIR records 1 accused (Sanjay Grewal P00068) and 2 named persons in total. 271 records across 5 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE026 (FIR/CYBERCITY/2025/0026) — Cheating (Disputed Complaint) registered at PS Cyber City, Gurugram. Incident recorded on 2025-04-22 11:51 at Cyber City Offices, Gurugram. FIR records 1 accused (Sanjay Grewal P00068) and 2 named persons in total. 271 records across 5 sources; 0 transactions flagged for review. Note: P00068 has a record 410.9 km from the incident location 180 min before the incident (EVD-LOC007476), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-04-22 11:51  Incident recorded at Cyber City Offices, Gurugram  []
+  2025-04-23 18:22  Fir FIR/CYBERCITY/2025/0026 at PS Cyber City (Gurugram): Cheating (Disputed Complaint)  [EVD-FIR000049]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00068  Sanjay Grewal                PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000049]
+  P00292  Mohit Aggarwal               COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000049]
+
+5. FINANCIAL ACTIVITY
+  56 transactions, total ₹400,177; 0 flagged
+
+6. COMMUNICATION
+  - Sanjay Grewal ↔ Sachin Sandhu: 16 contacts (2025-03-25 16:34 – 2025-05-13 11:13)
+  - Ashok Sandhu ↔ Mohit Aggarwal: 16 contacts (2025-03-31 07:04 – 2025-05-15 09:30)
+  - Sanjay Grewal ↔ Sandeep Gupta: 15 contacts (2025-03-24 13:33 – 2025-05-20 13:46)
+  - Anjali Khanna ↔ Mohit Aggarwal: 13 contacts (2025-03-24 12:49 – 2025-05-20 17:42)
+  - Sanjay Grewal ↔ Kavita Kaur: 11 contacts (2025-03-30 20:44 – 2025-05-19 16:45)
+  - Sachin Khanna ↔ Mohit Aggarwal: 10 contacts (2025-03-26 13:23 – 2025-05-18 18:00)
+  - Kavita Kaur ↔ Mohit Aggarwal: 7 contacts (2025-03-28 13:12 – 2025-05-15 12:57)
+  - Sanjay Grewal ↔ Gaurav Thakur: 6 contacts (2025-03-31 10:06 – 2025-05-16 15:14)
+  Around incident: 4 contacts (baseline ≈7.2), 0 between named persons
+
+7. LOCATION
+  - near incident: P00292 0.16 km, -87 min (EVD-TXN003719)
+  - elsewhere: P00068 at Ranjit Avenue Residential, Amritsar (410.9 km away, EVD-LOC007476)
+  - elsewhere: P00068 at Ranjit Avenue Residential, Amritsar (410.9 km away, EVD-LOC007480)
+  - elsewhere: P00068 at Ranjit Avenue Residential, Amritsar (411.0 km away, EVD-TXN003721)
+  - elsewhere: P00068 at Ranjit Avenue Residential, Amritsar (410.9 km away, EVD-LOC007486)
+  - elsewhere: P00068 at Ranjit Avenue Residential, Amritsar (410.9 km away, EVD-LOC007494)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Sanjay Grewal (P00068), recorded as principal accused: record(s) 410.9 km away from the incident location within 3 h of the incident (Ranjit Avenue Residential, Amritsar). [EVD-LOC007476, EVD-LOC007480, EVD-TXN003721]
+  - Mohit Aggarwal (P00292), recorded as complainant: record within 0.16 km of the incident location within 2 h of the incident. [EVD-TXN003719]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: timestamp — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

@@ -1,0 +1,62 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE005
+Generated 2026-11-20T07:18:31  |  data hash 497e8d1195901397
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE005 (FIR/SECTOR5PAN/2025/0005) — Financial Fraud & Money Laundering registered at PS Sector 5 Panchkula, Panchkula. Incident recorded on 2025-02-06 13:48 at Sector 5 Market, Panchkula. FIR records 2 accused (Mohammed Irfan P00017, Abhishek Gupta P00031) and 5 named persons in total. 705 records across 5 sources; 4 transactions flagged for review.
+
+2. NARRATIVE
+CASE005 (FIR/SECTOR5PAN/2025/0005) — Financial Fraud & Money Laundering registered at PS Sector 5 Panchkula, Panchkula. Incident recorded on 2025-02-06 13:48 at Sector 5 Market, Panchkula. FIR records 2 accused (Mohammed Irfan P00017, Abhishek Gupta P00031) and 5 named persons in total. 705 records across 5 sources; 4 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN000828 → EVD-TXN000831, 40.0 min), a pattern that can indicate layering and requires verification. Communication between P00017 and P00031 spiked to 6 contacts within 3 hours on 2025-02-05.
+
+3. CHRONOLOGY
+  2025-02-03 11:55  P00017 and P00031 co-located at Sector 20 Residential, Panchkula  [EVD-LOC001436, EVD-LOC001438]
+  2025-02-05 12:55  Communication burst P00017–P00031 (6 contacts in 3 h)  [EVD-CDR000916, EVD-CDR000919, EVD-CDR000922]
+  2025-02-06 13:48  Incident recorded at Sector 5 Market, Panchkula  []
+  2025-02-06 13:48  Flagged RTGS ₹1,850,000 ORG-001 → ORG-021  [EVD-TXN000828]
+  2025-02-06 14:28  Flagged RTGS ₹1,813,000 ORG-021 → ORG-019  [EVD-TXN000831]
+  2025-02-06 15:48  Flagged NEFT ₹555,000 ORG-019 → P00017  [EVD-TXN000837]
+  2025-02-06 16:48  Flagged NEFT ₹555,000 ORG-019 → P00031  [EVD-TXN000839]
+  2025-02-09 18:34  Fir FIR/SECTOR5PAN/2025/0005 at PS Sector 5 Panchkula (Panchkula): Financial Fraud & Money Laundering  [EVD-FIR000008]
+  2025-02-12 09:16  Supplementary Statement FIR/SECTOR5PAN/2025/0005 at PS Sector 5 Panchkula (Panchkula): Financial Fraud & Money Laundering  [EVD-FIR000010]
+  2025-02-12 22:00  P00291 and P00324 co-located at Sector 20 Residential, Panchkula  [EVD-LOC002110, EVD-LOC002113]
+  2025-02-19 19:21  Supplementary Statement FIR/SECTOR5PAN/2025/0005 at PS Sector 5 Panchkula (Panchkula): Financial Fraud & Money Laundering  [EVD-FIR000012]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00017  Mohammed Irfan               PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000008]
+  P00031  Abhishek Gupta               ACCUSED            via FIR_STRUCTURED  [EVD-FIR000008, EVD-FIR000010, EVD-FIR000012]
+  P00291  Naveen Malhotra              COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000008]
+  P00189  Ajay Thakur                  WITNESS            via FIR_NER  [EVD-FIR000008]
+  P00321  Ajay Yadav                   WITNESS            via FIR_NER  [EVD-FIR000008, EVD-FIR000010, EVD-FIR000012]
+
+5. FINANCIAL ACTIVITY
+  134 transactions, total ₹5,490,805; 4 flagged
+  - EVD-TXN000828 ₹1,850,000 2025-02-06 13:48: ₹1,850,000 received by ORG-021 and ₹1,813,000 sent onward 40 min later (EVD-TXN000828 → EVD-TXN000831)
+  - EVD-TXN000831 ₹1,813,000 2025-02-06 14:28: ₹1,850,000 received by ORG-021 and ₹1,813,000 sent onward 40 min later (EVD-TXN000828 → EVD-TXN000831)
+  - EVD-TXN000837 ₹555,000 2025-02-06 15:48: ₹1,813,000 received and 61% of it split to 2 accounts within 6 h
+  - EVD-TXN000839 ₹555,000 2025-02-06 16:48: ₹1,813,000 received and 61% of it split to 2 accounts within 6 h
+
+6. COMMUNICATION
+  - Mohammed Irfan ↔ Abhishek Gupta: 8 contacts (2025-02-05 10:59 – 2025-02-05 15:22)
+  - Ankit Verma ↔ Ajay Yadav: 40 contacts (2025-01-08 13:25 – 2025-03-07 20:37)
+  - Ajay Thakur ↔ Deepak Malhotra: 29 contacts (2025-01-09 07:49 – 2025-03-08 10:20)
+  - Abhishek Gupta ↔ Mohit Aggarwal: 28 contacts (2025-01-08 10:34 – 2025-02-27 07:31)
+  - Naveen Malhotra ↔ Ajay Grewal: 24 contacts (2025-01-08 14:45 – 2025-03-07 12:08)
+  - Ajay Thakur ↔ Ankit Verma: 20 contacts (2025-01-13 12:55 – 2025-03-05 14:26)
+  - Naveen Malhotra ↔ Priya Verma: 17 contacts (2025-01-08 16:30 – 2025-03-04 18:00)
+  - Farhan Chauhan ↔ Ajay Yadav: 15 contacts (2025-01-09 12:58 – 2025-03-04 14:39)
+  Around incident: 23 contacts (baseline ≈18.9), 8 between named persons
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Mohammed Irfan (P00017), recorded as principal accused: in contact with P00031 (8 contacts); party to 1 flagged transaction(s) (RAPID_PASS_THROUGH). [EVD-CDR000911, EVD-CDR000914, EVD-TXN000837]
+  - Abhishek Gupta (P00031), recorded as accused: in contact with P00017 (8 contacts); party to 1 flagged transaction(s) (RAPID_PASS_THROUGH). [EVD-CDR000911, EVD-CDR000914, EVD-TXN000839]
+
+9. MISSING INFORMATION
+  - P00017 no geolocated record within ±6 h of the incident
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: caller_number — unparseable phone number
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

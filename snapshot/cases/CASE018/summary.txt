@@ -1,0 +1,73 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE018
+Generated 2026-11-20T07:18:34  |  data hash 9b38fb1ea7022b23
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE018 (FIR/IFSOCYBERC/2025/0018) — Financial Fraud & Money Laundering registered at PS IFSO Cyber Cell, New Delhi. Incident recorded on 2025-03-24 20:17 at Connaught Place Offices, Delhi. FIR records 2 accused (Farhan Yadav P00376, Irfan Bhai P00018) and 5 named persons in total. 693 records across 5 sources; 5 transactions flagged for review.
+
+2. NARRATIVE
+CASE018 (FIR/IFSOCYBERC/2025/0018) — Financial Fraud & Money Laundering registered at PS IFSO Cyber Cell, New Delhi. Incident recorded on 2025-03-24 20:17 at Connaught Place Offices, Delhi. FIR records 2 accused (Farhan Yadav P00376, Irfan Bhai P00018) and 5 named persons in total. 693 records across 5 sources; 5 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN002702 → EVD-TXN002705, 40.0 min), a pattern that can indicate layering and requires verification. Communication between P00018 and P00376 spiked to 5 contacts within 3 hours on 2025-03-23. Note: P00429 has a record 16.6 km from the incident location 130 min before the incident (EVD-CDR003167), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-03-21 18:18  P00018 and P00376 co-located at Connaught Place Offices, Delhi  [EVD-LOC005203, EVD-LOC005202]
+  2025-03-23 17:17  Communication burst P00018–P00376 (5 contacts in 3 h)  [EVD-CDR003112, EVD-CDR003113, EVD-CDR003114]
+  2025-03-24 20:17  Incident recorded at Connaught Place Offices, Delhi  []
+  2025-03-24 20:17  Flagged RTGS ₹1,850,000 ORG-005 → ORG-017  [EVD-TXN002702]
+  2025-03-24 20:57  Flagged RTGS ₹1,813,000 ORG-017 → ORG-018  [EVD-TXN002705]
+  2025-03-24 22:17  Flagged NEFT ₹555,000 ORG-018 → P00376  [EVD-TXN002708]
+  2025-03-24 23:17  Flagged NEFT ₹555,000 ORG-018 → P00018  [EVD-TXN002709]
+  2025-03-27 12:07  P00018 and P00183 co-located at Cyber City Offices, Gurugram  [EVD-LOC005663, EVD-LOC005662]
+  2025-03-28 01:14  Fir FIR/IFSOCYBERC/2025/0018 at PS IFSO Cyber Cell (New Delhi): Financial Fraud & Money Laundering  [EVD-FIR000036]
+  2025-03-29 14:29  P00018 and P00045 co-located at Cyber City Offices, Gurugram  [EVD-LOC005828, EVD-LOC005831]
+  2025-04-01 14:10  Flagged NEFT ₹120,000 ORG-004 → P00018  [EVD-TXN002999]
+  2025-04-17 21:24  Supplementary Statement FIR/IFSOCYBERC/2025/0018 at PS IFSO Cyber Cell (New Delhi): Financial Fraud & Money Laundering  [EVD-FIR000047]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00376  Farhan Yadav                 PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000036]
+  P00018  Irfan Bhai                   ACCUSED            via FIR_STRUCTURED  [EVD-FIR000036, EVD-FIR000047]
+  P00166  Priya Malhotra               COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000036, EVD-FIR000047]
+  P00102  Mohit Bajwa                  WITNESS            via FIR_NER  [EVD-FIR000036]
+  P00429  Ajay Bhatia                  WITNESS            via FIR_NER  [EVD-FIR000036]
+
+5. FINANCIAL ACTIVITY
+  139 transactions, total ₹5,869,170; 5 flagged
+  - EVD-TXN002702 ₹1,850,000 2025-03-24 20:17: Isolation Forest outlier: amount ≈36× this account's median; Amount ₹1,850,000 exceeds upper fence ₹778,100 (Q3 + 3.0·IQR, sender's own history)
+  - EVD-TXN002705 ₹1,813,000 2025-03-24 20:57: Isolation Forest outlier (combination of features); ₹1,850,000 received by ORG-017 and ₹1,813,000 sent onward 40 min later (EVD-TXN002702 → EVD-TXN002705)
+  - EVD-TXN002708 ₹555,000 2025-03-24 22:17: Isolation Forest outlier (combination of features); ₹1,813,000 received and 61% of it split to 2 accounts within 6 h
+  - EVD-TXN002709 ₹555,000 2025-03-24 23:17: Isolation Forest outlier (combination of features); ₹1,813,000 received and 61% of it split to 2 accounts within 6 h
+  - EVD-TXN002999 ₹120,000 2025-04-01 14:10: Isolation Forest outlier: 8 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Irfan Bhai ↔ Farhan Yadav: 8 contacts (2025-03-23 17:17 – 2025-03-23 21:41)
+  - Priya Sandhu ↔ Ajay Bhatia: 46 contacts (2025-02-23 07:50 – 2025-04-21 14:02)
+  - Mohit Bajwa ↔ Harleen Chauhan: 16 contacts (2025-02-23 17:05 – 2025-04-20 11:37)
+  - Mohit Bajwa ↔ Dinesh Qureshi: 14 contacts (2025-03-04 10:48 – 2025-04-18 11:45)
+  - Sahil Rana ↔ Farhan Yadav: 13 contacts (2025-02-25 16:10 – 2025-04-19 16:34)
+  - Vikram Chopra ↔ Farhan Yadav: 12 contacts (2025-02-23 19:05 – 2025-04-19 08:43)
+  - Mohit Bajwa ↔ Pooja Sidhu: 12 contacts (2025-02-24 19:43 – 2025-04-12 07:07)
+  - Sahil Verma ↔ Ajay Bhatia: 11 contacts (2025-03-02 21:13 – 2025-04-22 07:29)
+  Around incident: 30 contacts (baseline ≈17.9), 8 between named persons
+
+7. LOCATION
+  - near incident: P00166 2.23 km, -85 min (EVD-CDR003169)
+  - elsewhere: P00429 at Dwarka Sector 10 Residential, Delhi (16.6 km away, EVD-CDR003167)
+  - elsewhere: P00429 at Dwarka Sector 10 Residential, Delhi (16.5 km away, EVD-TXN002698)
+  - elsewhere: P00018 at Sector 56 Residential, Gurugram (26.3 km away, EVD-CDR003174)
+  - elsewhere: P00018 at nan (25.7 km away, EVD-MSG002279)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Irfan Bhai (P00018), recorded as accused: record(s) 26.3 km away from the incident location within 3 h of the incident (Sector 56 Residential, Gurugram); in contact with P00376 (8 contacts); party to 2 flagged transaction(s) (ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-CDR003174, EVD-MSG002279, EVD-CDR003112, EVD-CDR003113]
+  - Farhan Yadav (P00376), recorded as principal accused: in contact with P00018 (8 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-CDR003112, EVD-CDR003113, EVD-TXN002708]
+  - Priya Malhotra (P00166), recorded as complainant: record within 2.23 km of the incident location within 2 h of the incident. [EVD-CDR003169]
+  - Mohit Bajwa (P00102), recorded as witness: 1 location inconsistency flag(s) (requires_air_travel). [EVD-LOC007345, EVD-LOC007351]
+  - Ajay Bhatia (P00429), recorded as witness: record(s) 16.6 km away from the incident location within 3 h of the incident (Dwarka Sector 10 Residential, Delhi). [EVD-CDR003167, EVD-TXN002698]
+  - Location inconsistency P00102: REQUIRES_AIR_TRAVEL (EVD-LOC007345 → EVD-LOC007351, 402.67 km in 56.0 min)
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: latitude/longitude — invalid coordinate; set to NULL
+  - 1 record(s) with data-quality issue: txn_datetime — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

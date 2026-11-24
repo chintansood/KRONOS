@@ -1,0 +1,35 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE923
+Generated 2026-11-21T11:55:52  |  data hash 6797df41d2680125
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE923 (FIR 45/2024, PS Chhehrata) — Narcotics (NDPS Act) registered at PS Chhehrata, Amritsar. Incident recorded on 2024-03-08 00:00 at Amritsar, Punjab. FIR records 1 accused (Accused A1 · CASE923 P90036) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE923 (FIR 45/2024, PS Chhehrata) — Narcotics (NDPS Act) registered at PS Chhehrata, Amritsar. Incident recorded on 2024-03-08 00:00 at Amritsar, Punjab. FIR records 1 accused (Accused A1 · CASE923 P90036) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2024-03-08 00:00  Incident recorded at Amritsar, Punjab  []
+  2024-03-08 00:00  Fir Extract FIR 45/2024, PS Chhehrata at PS Chhehrata (Amritsar): Narcotics (NDPS Act)  [EVD-PUB000023]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90036  Accused A1 · CASE923         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000023]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+  Around incident: 0 contacts (baseline ≈0.0), 0 between named persons
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90036 no geolocated record within ±6 h of the incident
+  - P90036 no call detail records obtained
+
+10. UNCERTAINTIES
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

@@ -1,0 +1,1 @@
+{"status":"ok","dataVersion":"RUN-PUB-20261121115541-8dccdc:27967:80:2026-11-21 11:55:41.311238+05:30","llm":{"model":"llama3.1:8b","backend":"ollama","available":false},"events":27859,"cases":80,"persons":453,"ledger_blocks":28259,"embedded_chunks":5558,"prototype":true}

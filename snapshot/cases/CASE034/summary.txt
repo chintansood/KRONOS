@@ -1,0 +1,84 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE034
+Generated 2026-11-20T07:18:37  |  data hash ee150218a989416d
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE034 (FIR/AMBALACITY/2025/0034) — Cyber Fraud (Online Investment Scam) registered at PS Ambala City, Ambala. Incident recorded on 2025-05-18 13:46 at Ambala City Residential Colony. FIR records 1 accused (Sandeep Singh P00149) and 3 named persons in total. 733 records across 5 sources; 15 transactions flagged for review.
+
+2. NARRATIVE
+CASE034 (FIR/AMBALACITY/2025/0034) — Cyber Fraud (Online Investment Scam) registered at PS Ambala City, Ambala. Incident recorded on 2025-05-18 13:46 at Ambala City Residential Colony. FIR records 1 accused (Sandeep Singh P00149) and 3 named persons in total. 733 records across 5 sources; 15 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN004725 → EVD-TXN004726, 30.0 min), a pattern that can indicate layering and requires verification. Account UTIB-52701713023 received funds from 4 different individuals within 14 days. Communication between P00149 and P00427 spiked to 4 contacts within 3 hours on 2025-05-18.
+
+3. CHRONOLOGY
+  2025-05-18 13:46  Incident recorded at Ambala City Residential Colony  []
+  2025-05-18 15:34  Flagged IMPS ₹65,822 P00109 → P00149  [EVD-TXN004725]
+  2025-05-18 16:04  Flagged IMPS ₹63,848 P00149 → P00149  [EVD-TXN004726]
+  2025-05-18 18:46  Communication burst P00149–P00427 (4 contacts in 3 h)  [EVD-CDR005410, EVD-CDR005412, EVD-CDR005417]
+  2025-05-18 19:38  Fir FIR/AMBALACITY/2025/0034 at PS Ambala City (Ambala): Cyber Fraud (Online Investment Scam)  [EVD-FIR000064]
+  2025-05-19 19:29  Flagged IMPS ₹68,582 P00109 → P00149  [EVD-TXN004766]
+  2025-05-19 19:33  Flagged IMPS ₹63,227 P00109 → P00149  [EVD-TXN004767]
+  2025-05-19 19:37  Flagged IMPS ₹66,525 P00149 → P00149  [EVD-TXN004768]
+  2025-05-20 11:55  P00038 and P00143 co-located at Sadar Bazaar, Ambala Cantt  [EVD-LOC009449, EVD-LOC009450]
+  2025-05-20 13:46  Flagged CASH_WITHDRAWAL ₹223,999 P00149 → P00149  [EVD-TXN004786]
+  2025-05-22 08:51  Supplementary Statement FIR/AMBALACITY/2025/0034 at PS Ambala City (Ambala): Cyber Fraud (Online Investment Scam)  [EVD-FIR000068]
+  2025-05-31 16:42  Supplementary Statement FIR/AMBALACITY/2025/0034 at PS Ambala City (Ambala): Cyber Fraud (Online Investment Scam)  [EVD-FIR000075]
+  2025-06-03 20:23  Supplementary Statement FIR/AMBALACITY/2025/0034 at PS Ambala City (Ambala): Cyber Fraud (Online Investment Scam)  [EVD-FIR000079]
+  2025-06-05 21:55  Supplementary Statement FIR/AMBALACITY/2025/0034 at PS Ambala City (Ambala): Cyber Fraud (Online Investment Scam)  [EVD-FIR000080]
+  2025-06-12 20:34  P00149 and P00411 co-located at Ambala City Residential Colony  [EVD-LOC010653, EVD-LOC010652]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00149  Sandeep Singh                PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000064, EVD-FIR000068, EVD-FIR000075, EVD-FIR000079]
+  P00038  Vivek Bhatia                 COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000064, EVD-FIR000068, EVD-FIR000075, EVD-FIR000079]
+  P00135  Gurpreet Saini               VICTIM             via FIR_NER  [EVD-FIR000064, EVD-FIR000080]
+  P00109  Rahul Chauhan                RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00427  Sunita Sidhu                 RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  155 transactions, total ₹1,948,585; 15 flagged
+  - EVD-TXN004786 ₹223,999 2025-05-20 13:46: Isolation Forest outlier: amount ≈115× this account's median; cash channel; Account UTIB-52701713023 received ₹981,928 from 4 different individuals within 14 days
+  - EVD-TXN004766 ₹68,582 2025-05-19 19:29: ₹68,582 received by P00149 and ₹66,525 sent onward 8 min later (EVD-TXN004766 → EVD-TXN004768); Account UTIB-52701713023 received ₹981,928 from 4 different individuals within 14 days
+  - EVD-TXN004768 ₹66,525 2025-05-19 19:37: ₹68,582 received by P00149 and ₹66,525 sent onward 8 min later (EVD-TXN004766 → EVD-TXN004768); Account UTIB-52701713023 received ₹981,928 from 4 different individuals within 14 days
+  - EVD-TXN004725 ₹65,822 2025-05-18 15:34: ₹65,822 received by P00149 and ₹63,848 sent onward 30 min later (EVD-TXN004725 → EVD-TXN004726); Account UTIB-52701713023 received ₹981,928 from 4 different individuals within 14 days
+  - EVD-TXN004726 ₹63,848 2025-05-18 16:04: ₹65,822 received by P00149 and ₹63,848 sent onward 30 min later (EVD-TXN004725 → EVD-TXN004726); Account UTIB-52701713023 received ₹981,928 from 4 different individuals within 14 days
+  - EVD-TXN004767 ₹63,227 2025-05-19 19:33: ₹63,227 received by P00149 and ₹61,330 sent onward 31 min later (EVD-TXN004767 → EVD-TXN004769); Account UTIB-52701713023 received ₹981,928 from 4 different individuals within 14 days
+  - EVD-TXN004769 ₹61,330 2025-05-19 20:04: ₹68,582 received by P00149 and ₹61,330 sent onward 35 min later (EVD-TXN004766 → EVD-TXN004769); Account UTIB-52701713023 received ₹981,928 from 4 different individuals within 14 days
+  - EVD-TXN004750 ₹60,388 2025-05-19 13:31: ₹60,388 received by P00149 and ₹58,577 sent onward 40 min later (EVD-TXN004750 → EVD-TXN004753); Account UTIB-52701713023 received ₹981,928 from 4 different individuals within 14 days
+  - EVD-TXN004734 ₹59,753 2025-05-18 19:38: ₹59,753 received by P00149 and ₹57,960 sent onward 41 min later (EVD-TXN004734 → EVD-TXN004735); Account UTIB-52701713023 received ₹981,928 from 4 different individuals within 14 days
+  - EVD-TXN004756 ₹59,536 2025-05-19 15:15: ₹59,536 received by P00149 and ₹57,750 sent onward 20 min later (EVD-TXN004756 → EVD-TXN004757); Account UTIB-52701713023 received ₹981,928 from 4 different individuals within 14 days
+  - EVD-TXN004753 ₹58,577 2025-05-19 14:11: ₹60,388 received by P00149 and ₹58,577 sent onward 40 min later (EVD-TXN004750 → EVD-TXN004753); Account UTIB-52701713023 received ₹981,928 from 4 different individuals within 14 days
+  - EVD-TXN004735 ₹57,960 2025-05-18 20:19: ₹65,822 received by P00149 and ₹57,960 sent onward 285 min later (EVD-TXN004725 → EVD-TXN004735); Account UTIB-52701713023 received ₹981,928 from 4 different individuals within 14 days
+  - EVD-TXN004757 ₹57,750 2025-05-19 15:35: ₹60,388 received by P00149 and ₹57,750 sent onward 123 min later (EVD-TXN004750 → EVD-TXN004757); Account UTIB-52701713023 received ₹981,928 from 4 different individuals within 14 days
+  - EVD-TXN005121 ₹76,000 2025-06-01 14:42: Isolation Forest outlier: 6 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN005128 ₹28,000 2025-06-01 15:35: Isolation Forest outlier: 8 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Vivek Bhatia ↔ Sandeep Singh: 24 contacts (2025-04-19 17:28 – 2025-06-16 11:13)
+  - Gurpreet Saini ↔ Sandeep Singh: 4 contacts (2025-05-11 07:44 – 2025-05-14 07:43)
+  - Gurpreet Saini ↔ Meena Bansal: 18 contacts (2025-04-22 12:12 – 2025-06-15 14:32)
+  - Kuldeep Bajwa ↔ Rahul Chauhan: 17 contacts (2025-04-20 09:35 – 2025-06-07 15:50)
+  - Nitin Malhotra ↔ Rahul Chauhan: 17 contacts (2025-04-21 09:59 – 2025-06-14 16:47)
+  - Sakshi Qureshi ↔ Gurpreet Saini: 17 contacts (2025-04-21 20:11 – 2025-06-14 15:35)
+  - Rahul Chauhan ↔ Sakshi Kumar: 16 contacts (2025-04-20 21:52 – 2025-06-12 07:16)
+  - Manpreet Chopra ↔ Sunita Sidhu: 16 contacts (2025-04-21 20:54 – 2025-06-10 19:53)
+  Around incident: 19 contacts (baseline ≈19.9), 1 between named persons
+  * EVD-MSG003598 2025-05-10 02:53: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to HDF" — references an amount (₹45000); references account HDFC-09251142625 (seen in this case's transactions)
+  * EVD-MSG003621 2025-05-11 07:44: "Your returns of 18% are credited. Add Rs 30,000 more to unlock withdrawal. Transfer to HDF" — references an amount (₹30000); references account HDFC-09251142625 (seen in this case's transactions)
+  * EVD-MSG003640 2025-05-11 16:14: "Your returns of 18% are credited. Add Rs 15,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹15000); references account ICIC-37661366280 (seen in this case's transactions)
+  * EVD-MSG003673 2025-05-12 11:35: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to HDF" — references an amount (₹45000); references account HDFC-09251142625 (seen in this case's transactions)
+  * EVD-MSG003696 2025-05-13 01:20: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to HDF" — references an amount (₹45000); references account HDFC-09251142625 (seen in this case's transactions)
+  * EVD-MSG003733 2025-05-14 07:43: "Your returns of 18% are credited. Add Rs 30,000 more to unlock withdrawal. Transfer to HDF" — references an amount (₹30000); references account HDFC-09251142625 (seen in this case's transactions)
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Sandeep Singh (P00149), recorded as principal accused: in contact with P00038 (24 contacts), P00135 (4 contacts); party to 13 flagged transaction(s) (FAN_IN, ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-CDR004223, EVD-MSG003030, EVD-MSG003621, EVD-MSG003640]
+  - Vivek Bhatia (P00038), recorded as complainant: in contact with P00149 (24 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-CDR004223, EVD-MSG003030, EVD-TXN005121]
+  - Gurpreet Saini (P00135), recorded as victim: in contact with P00149 (4 contacts). [EVD-MSG003621, EVD-MSG003640]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: amount — invalid amount; set to NULL
+  - 1 record(s) with data-quality issue: latitude/longitude — invalid coordinate; set to NULL
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

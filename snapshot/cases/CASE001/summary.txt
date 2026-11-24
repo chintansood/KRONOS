@@ -1,0 +1,94 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE001
+Generated 2026-11-20T07:18:31  |  data hash 6c58805aefd859ab
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE001 (FIR/KOTWALIAMR/2025/0001) — Cyber Fraud (Online Investment Scam) registered at PS Kotwali Amritsar, Amritsar. Incident recorded on 2025-01-22 12:53 at Ranjit Avenue Residential, Amritsar. FIR records 1 accused (Imran Khanna P00415) and 5 named persons in total. 1014 records across 5 sources; 19 transactions flagged for review.
+
+2. NARRATIVE
+CASE001 (FIR/KOTWALIAMR/2025/0001) — Cyber Fraud (Online Investment Scam) registered at PS Kotwali Amritsar, Amritsar. Incident recorded on 2025-01-22 12:53 at Ranjit Avenue Residential, Amritsar. FIR records 1 accused (Imran Khanna P00415) and 5 named persons in total. 1014 records across 5 sources; 19 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN000319 → EVD-TXN000320, 9.0 min), a pattern that can indicate layering and requires verification. Account ICIC-36915855749 received funds from 3 different individuals within 14 days. Communication between P00113 and P00415 spiked to 4 contacts within 3 hours on 2025-01-22. Note: P00007 has a record 410.9 km from the incident location 24 min after the incident (EVD-MSG000325), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-01-15 19:28  P00293 and P00415 co-located at Ranjit Avenue Residential, Amritsar  [EVD-LOC000437, EVD-LOC000436]
+  2025-01-21 10:30  P00025 and P00415 co-located at Hall Bazaar, Amritsar  [EVD-LOC000689, EVD-LOC000687]
+  2025-01-22 12:53  Incident recorded at Ranjit Avenue Residential, Amritsar  []
+  2025-01-22 16:41  Communication burst P00113–P00415 (4 contacts in 3 h)  [EVD-CDR000429, EVD-CDR000430, EVD-CDR000431]
+  2025-01-23 03:57  Flagged IMPS ₹94,555 P00111 → P00415  [EVD-TXN000321]
+  2025-01-23 04:07  Flagged IMPS ₹91,718 P00415 → P00415  [EVD-TXN000322]
+  2025-01-23 04:18  Flagged IMPS ₹98,273 P00113 → P00415  [EVD-TXN000323]
+  2025-01-23 04:51  Flagged IMPS ₹95,325 P00415 → P00415  [EVD-TXN000324]
+  2025-01-23 11:01  Flagged IMPS ₹91,443 P00113 → P00415  [EVD-TXN000329]
+  2025-01-23 16:43  P00029 and P00231 co-located at Hall Bazaar, Amritsar  [EVD-LOC000802, EVD-LOC000804]
+  2025-01-23 20:25  P00025 and P00415 co-located at Ranjit Avenue Residential, Amritsar  [EVD-LOC000816, EVD-LOC000820]
+  2025-01-24 12:53  Flagged CASH_WITHDRAWAL ₹326,397 P00415 → P00415  [EVD-TXN000361]
+  2025-01-25 17:34  Fir FIR/KOTWALIAMR/2025/0001 at PS Kotwali Amritsar (Amritsar): Cyber Fraud (Online Investment Scam)  [EVD-FIR000002]
+  2025-01-27 20:51  Witness Statement FIR/KOTWALIAMR/2025/0001 at PS Kotwali Amritsar (Amritsar): Cyber Fraud (Online Investment Scam)  [EVD-FIR000003]
+  2025-01-28 20:36  Supplementary Statement FIR/KOTWALIAMR/2025/0001 at PS Kotwali Amritsar (Amritsar): Cyber Fraud (Online Investment Scam)  [EVD-FIR000004]
+  2025-02-15 16:33  P00293 and P00415 co-located at Hall Bazaar, Amritsar  [EVD-LOC002361, EVD-LOC002364]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00415  Imran Khanna                 PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000002, EVD-FIR000004]
+  P00093  Nitin Malhotra               COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000002]
+  P00231  Lakhwinder Arora             VICTIM             via FIR_NER  [EVD-FIR000002, EVD-FIR000004]
+  P00320  Abhishek Khanna              VICTIM             via FIR_NER  [EVD-FIR000002]
+  P00007  Sunil Kumar                  WITNESS            via FIR_NER  [EVD-FIR000003]
+  P00111  Sandeep Khan                 RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00113  Neha Rana                    RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  197 transactions, total ₹2,204,920; 15 flagged
+  - EVD-TXN000361 ₹326,397 2025-01-24 12:53: Isolation Forest outlier: amount ≈258× this account's median; cash channel; Amount ₹326,397 exceeds upper fence ₹272,238 (Q3 + 3.0·IQR, sender's own history)
+  - EVD-TXN000323 ₹98,273 2025-01-23 04:18: ₹98,273 received by P00415 and ₹95,325 sent onward 33 min later (EVD-TXN000323 → EVD-TXN000324); Account ICIC-36915855749 received ₹1,233,630 from 3 different individuals within 14 days
+  - EVD-TXN000324 ₹95,325 2025-01-23 04:51: ₹94,555 received by P00415 and ₹95,325 sent onward 53 min later (EVD-TXN000321 → EVD-TXN000324); Account ICIC-36915855749 received ₹1,233,630 from 3 different individuals within 14 days
+  - EVD-TXN000321 ₹94,555 2025-01-23 03:57: ₹94,555 received by P00415 and ₹91,718 sent onward 10 min later (EVD-TXN000321 → EVD-TXN000322); Account ICIC-36915855749 received ₹1,233,630 from 3 different individuals within 14 days
+  - EVD-TXN000322 ₹91,718 2025-01-23 04:07: ₹94,555 received by P00415 and ₹91,718 sent onward 10 min later (EVD-TXN000321 → EVD-TXN000322); Account ICIC-36915855749 received ₹1,233,630 from 3 different individuals within 14 days
+  - EVD-TXN000329 ₹91,443 2025-01-23 11:01: ₹91,443 received by P00415 and ₹88,700 sent onward 47 min later (EVD-TXN000329 → EVD-TXN000330); Account ICIC-36915855749 received ₹1,233,630 from 3 different individuals within 14 days
+  - EVD-TXN000330 ₹88,700 2025-01-23 11:48: ₹88,371 received by P00415 and ₹88,700 sent onward 284 min later (EVD-TXN000326 → EVD-TXN000330); Account ICIC-36915855749 received ₹1,233,630 from 3 different individuals within 14 days
+  - EVD-TXN000326 ₹88,371 2025-01-23 07:04: ₹88,371 received by P00415 and ₹85,720 sent onward 14 min later (EVD-TXN000326 → EVD-TXN000327); Account ICIC-36915855749 received ₹1,233,630 from 3 different individuals within 14 days
+  - EVD-TXN000319 ₹87,883 2025-01-23 03:14: ₹87,883 received by P00415 and ₹85,246 sent onward 9 min later (EVD-TXN000319 → EVD-TXN000320); Account ICIC-36915855749 received ₹1,233,630 from 3 different individuals within 14 days
+  - EVD-TXN000327 ₹85,720 2025-01-23 07:18: ₹87,883 received by P00415 and ₹85,720 sent onward 244 min later (EVD-TXN000319 → EVD-TXN000327); Account ICIC-36915855749 received ₹1,233,630 from 3 different individuals within 14 days
+  - EVD-TXN000320 ₹85,246 2025-01-23 03:23: ₹87,883 received by P00415 and ₹85,246 sent onward 9 min later (EVD-TXN000319 → EVD-TXN000320); Account ICIC-36915855749 received ₹1,233,630 from 3 different individuals within 14 days
+  - EVD-TXN000150 ₹49,000 2025-01-14 14:55: Account ICIC-57788178847 received ₹273,997 from 3 different individuals within 14 days
+  - EVD-TXN000094 ₹45,000 2025-01-11 00:12: Account ICIC-57788178847 received ₹273,997 from 3 different individuals within 14 days
+  - EVD-TXN000208 ₹45,000 2025-01-17 16:51: Account ICIC-57788178847 received ₹273,997 from 3 different individuals within 14 days
+  - EVD-TXN000235 ₹45,000 2025-01-19 00:47: Account ICIC-57788178847 received ₹273,997 from 3 different individuals within 14 days
+
+6. COMMUNICATION
+  - Abhishek Khanna ↔ Imran Khanna: 5 contacts (2025-01-10 23:52 – 2025-01-20 22:02)
+  - Nitin Malhotra ↔ Imran Khanna: 4 contacts (2025-01-12 07:53 – 2025-01-17 16:31)
+  - Lakhwinder Arora ↔ Imran Khanna: 3 contacts (2025-01-12 10:05 – 2025-01-19 23:21)
+  - Sandeep Khan ↔ Lakhwinder Singh: 34 contacts (2025-01-02 13:01 – 2025-02-18 21:03)
+  - Sandeep Kapoor ↔ Imran Khanna: 28 contacts (2025-01-02 09:23 – 2025-02-20 17:11)
+  - Nitin Malhotra ↔ Neha Sharma: 28 contacts (2025-01-04 10:56 – 2025-02-20 12:46)
+  - Abhishek Khanna ↔ Sahil Bajwa: 28 contacts (2025-01-04 16:59 – 2025-02-18 19:27)
+  - Abhishek Khanna ↔ Jasleen Bhatia: 25 contacts (2025-01-10 09:57 – 2025-02-18 19:09)
+  Around incident: 50 contacts (baseline ≈32.8), 1 between named persons
+  * EVD-MSG000102 2025-01-10 23:52: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹45000); references account ICIC-57788178847 (seen in this case's transactions)
+  * EVD-MSG000103 2025-01-11 01:34: "Your returns of 18% are credited. Add Rs 9,999 more to unlock withdrawal. Transfer to ICIC" — references an amount (₹9999); references account ICIC-57788178847 (seen in this case's transactions)
+  * EVD-MSG000119 2025-01-12 07:53: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to PUN" — references an amount (₹45000); references account PUNB-23972652735 (seen in this case's transactions)
+  * EVD-MSG000125 2025-01-12 10:05: "Your returns of 18% are credited. Add Rs 24,999 more to unlock withdrawal. Transfer to ICI" — references an amount (₹24999); references account ICIC-57788178847 (seen in this case's transactions)
+  * EVD-MSG000145 2025-01-13 14:44: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to PUN" — references an amount (₹49000); references account PUNB-23972652735 (seen in this case's transactions)
+  * EVD-MSG000162 2025-01-14 14:35: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹49000); references account ICIC-57788178847 (seen in this case's transactions)
+
+7. LOCATION
+  - elsewhere: P00007 at nan (410.9 km away, EVD-MSG000325)
+  - elsewhere: P00007 at Cyber City Offices, Gurugram (410.0 km away, EVD-CDR000422)
+  - elsewhere: P00007 at Cyber City Offices, Gurugram (410.7 km away, EVD-LOC000751)
+  - elsewhere: P00007 at Cyber City Offices, Gurugram (410.4 km away, EVD-LOC000753)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Imran Khanna (P00415), recorded as principal accused: in contact with P00320 (5 contacts), P00093 (4 contacts), P00231 (3 contacts); party to 11 flagged transaction(s) (FAN_IN, IQR, ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-MSG000102, EVD-MSG000103, EVD-MSG000119, EVD-MSG000145]
+  - Nitin Malhotra (P00093), recorded as complainant: in contact with P00415 (4 contacts); party to 2 flagged transaction(s) (FAN_IN). [EVD-MSG000119, EVD-MSG000145, EVD-TXN000150, EVD-TXN000208]
+  - Lakhwinder Arora (P00231), recorded as victim: in contact with P00415 (3 contacts); party to 3 flagged transaction(s) (FAN_IN). [EVD-MSG000125, EVD-MSG000247, EVD-TXN000235, EVD-TXN000253]
+  - Abhishek Khanna (P00320), recorded as victim: in contact with P00415 (5 contacts); party to 3 flagged transaction(s) (FAN_IN). [EVD-MSG000102, EVD-MSG000103, EVD-TXN000094, EVD-TXN000256]
+  - Sunil Kumar (P00007), recorded as witness: record(s) 410.9 km away from the incident location within 3 h of the incident (nan). [EVD-MSG000325, EVD-CDR000422, EVD-LOC000751]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+  - 1 record(s) with data-quality issue: caller_number — unparseable phone number
+  - 1 record(s) with data-quality issue: txn_datetime — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

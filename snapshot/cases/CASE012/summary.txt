@@ -1,0 +1,80 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE012
+Generated 2026-11-20T07:18:33  |  data hash c13f59457df87d59
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE012 (FIR/SECTOR56/2025/0012) — Narcotics Supply (NDPS) registered at PS Sector 56, Gurugram. Incident recorded on 2025-03-03 12:43 at Kharar Highway Dhaba, Mohali. FIR records 3 accused (Ashok Sidhu P00035, Yogesh Aggarwal P00260, Komal Grewal P00394) and 4 named persons in total. 716 records across 5 sources; 9 transactions flagged for review.
+
+2. NARRATIVE
+CASE012 (FIR/SECTOR56/2025/0012) — Narcotics Supply (NDPS) registered at PS Sector 56, Gurugram. Incident recorded on 2025-03-03 12:43 at Kharar Highway Dhaba, Mohali. FIR records 3 accused (Ashok Sidhu P00035, Yogesh Aggarwal P00260, Komal Grewal P00394) and 4 named persons in total. 716 records across 5 sources; 9 transactions flagged for review. 7 transfers from P00394 to P00035 each fell just below ₹50,000 (total ₹329,400). Communication between P00035 and P00260 spiked to 4 contacts within 3 hours on 2025-02-22. Note: P00251 has a record 254.5 km from the incident location 178 min before the incident (EVD-CDR002153), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-02-17 20:18  Flagged CASH_DEPOSIT ₹48,500 P00394 → P00035  [EVD-TXN001288]
+  2025-02-18 20:53  Flagged CASH_DEPOSIT ₹48,500 P00394 → P00035  [EVD-TXN001328]
+  2025-02-20 18:40  Flagged CASH_DEPOSIT ₹46,000 P00394 → P00035  [EVD-TXN001407]
+  2025-02-22 11:33  Communication burst P00035–P00260 (4 contacts in 3 h)  [EVD-MSG001230, EVD-CDR001741, EVD-CDR001743]
+  2025-02-22 14:54  P00035 and P00260 co-located at Kharar Highway Dhaba, Mohali  [EVD-LOC002969, EVD-LOC002965]
+  2025-02-23 00:30  Flagged CASH_DEPOSIT ₹48,500 P00394 → P00035  [EVD-TXN001510]
+  2025-02-25 16:56  Flagged CASH_DEPOSIT ₹46,000 P00394 → P00035  [EVD-TXN001597]
+  2025-02-25 22:12  P00058 and P00394 co-located at Sector 56 Residential, Gurugram  [EVD-LOC003236, EVD-LOC003235]
+  2025-02-26 08:09  Communication burst P00035–P00260 (4 contacts in 3 h)  [EVD-MSG001369, EVD-CDR001902, EVD-CDR001903]
+  2025-02-26 11:18  P00035 and P00260 co-located at Kharar Highway Dhaba, Mohali  [EVD-LOC003269, EVD-LOC003272]
+  2025-02-27 10:16  P00058 and P00394 co-located at Cyber City Offices, Gurugram  [EVD-LOC003339, EVD-LOC003338]
+  2025-02-28 16:48  Flagged CASH_DEPOSIT ₹49,900 P00394 → P00035  [EVD-TXN001709]
+  2025-03-01 22:23  P00001 and P00035 co-located at Sector 70 Residential, Mohali  [EVD-LOC003577, EVD-LOC003576]
+  2025-03-02 13:23  P00035 and P00260 co-located at Kharar Highway Dhaba, Mohali  [EVD-LOC003618, EVD-LOC003619]
+  2025-03-03 12:43  Incident recorded at Kharar Highway Dhaba, Mohali  []
+  2025-03-05 17:17  Fir FIR/SECTOR56/2025/0012 at PS Sector 56 (Gurugram): Narcotics Supply (NDPS)  [EVD-FIR000018]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00035  Ashok Sidhu                  PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000018]
+  P00260  Yogesh Aggarwal              ACCUSED            via FIR_STRUCTURED  [EVD-FIR000018]
+  P00394  Komal Grewal                 ACCUSED            via FIR_STRUCTURED  [EVD-FIR000018]
+  P00251  Kavita Sidhu                 MENTIONED          via FIR_NER  [EVD-FIR000018]
+  P00058  Aman Jain                    RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  143 transactions, total ₹1,010,334; 9 flagged
+  - EVD-TXN001709 ₹49,900 2025-02-28 16:48: Isolation Forest outlier: amount ≈30× this account's median; cash channel; 7 transfers P00394 → P00035 within 14 days, each just below ₹50,000 (total ₹329,400)
+  - EVD-TXN001288 ₹48,500 2025-02-17 20:18: Isolation Forest outlier: amount ≈30× this account's median; cash channel; 7 transfers P00394 → P00035 within 14 days, each just below ₹50,000 (total ₹329,400)
+  - EVD-TXN001328 ₹48,500 2025-02-18 20:53: Isolation Forest outlier: amount ≈30× this account's median; cash channel; 7 transfers P00394 → P00035 within 14 days, each just below ₹50,000 (total ₹329,400)
+  - EVD-TXN001510 ₹48,500 2025-02-23 00:30: Isolation Forest outlier: amount ≈30× this account's median; cash channel; unusual hour; 7 transfers P00394 → P00035 within 14 days, each just below ₹50,000 (total ₹329,400)
+  - EVD-TXN001407 ₹46,000 2025-02-20 18:40: Isolation Forest outlier: amount ≈28× this account's median; cash channel; 7 transfers P00394 → P00035 within 14 days, each just below ₹50,000 (total ₹329,400)
+  - EVD-TXN001597 ₹46,000 2025-02-25 16:56: Isolation Forest outlier: amount ≈28× this account's median; cash channel; 7 transfers P00394 → P00035 within 14 days, each just below ₹50,000 (total ₹329,400)
+  - EVD-TXN001511 ₹42,000 2025-02-23 05:01: Isolation Forest outlier: amount ≈26× this account's median; 4 transactions from this account within 24 h; cash channel; unusual hour; 7 transfers P00394 → P00035 within 14 days, each just below ₹50,000 (total ₹329,400)
+  - EVD-TXN003004 ₹35,000 2025-04-01 14:20: Isolation Forest outlier: 11 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN002996 ₹28,000 2025-04-01 13:56: Isolation Forest outlier: 7 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Kavita Sidhu ↔ Komal Grewal: 34 contacts (2025-02-01 21:51 – 2025-04-01 16:59)
+  - Ashok Sidhu ↔ Yogesh Aggarwal: 10 contacts (2025-02-22 11:33 – 2025-03-02 10:44)
+  - Ashok Sidhu ↔ Varun Bansal: 32 contacts (2025-02-05 17:49 – 2025-04-01 10:11)
+  - Kavita Sidhu ↔ Rajesh Bansal: 26 contacts (2025-02-03 16:52 – 2025-03-30 13:43)
+  - Ravi Gupta ↔ Kavita Sidhu: 21 contacts (2025-02-05 20:49 – 2025-04-01 13:30)
+  - Aman Jain ↔ Aman Rawat: 19 contacts (2025-02-11 22:15 – 2025-03-30 11:54)
+  - Manoj Bansal ↔ Yogesh Aggarwal: 14 contacts (2025-02-03 08:31 – 2025-03-27 12:10)
+  - Dinesh Chopra ↔ Komal Grewal: 12 contacts (2025-02-09 12:11 – 2025-04-01 14:31)
+  Around incident: 17 contacts (baseline ≈18.8), 5 between named persons
+  * EVD-MSG001485 2025-03-01 12:43: "Will be late tonight, eat without me." — exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG001527 2025-03-02 10:16: "Parcel ready. Same place, same time." — exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG001637 2025-03-05 15:00: "Can you share the report by evening?" — exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG001643 2025-03-05 21:38: "Cricket match at 7, coming?" — exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - elsewhere: P00251 at Cyber City Offices, Gurugram (254.5 km away, EVD-CDR002153)
+  - elsewhere: P00251 at Cyber City Offices, Gurugram (253.8 km away, EVD-LOC003685)
+  - elsewhere: P00251 at Cyber City Offices, Gurugram (253.8 km away, EVD-TXN001831)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Ashok Sidhu (P00035), recorded as principal accused: in contact with P00260 (10 contacts); party to 7 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-MSG001230, EVD-CDR001741, EVD-TXN001709, EVD-TXN001288]
+  - Komal Grewal (P00394), recorded as accused: in contact with P00251 (34 contacts); party to 8 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-CDR000789, EVD-MSG000600, EVD-TXN001709, EVD-TXN001288]
+  - Kavita Sidhu (P00251), recorded as mentioned: record(s) 254.5 km away from the incident location within 3 h of the incident (Cyber City Offices, Gurugram); in contact with P00394 (34 contacts). [EVD-CDR002153, EVD-LOC003685, EVD-TXN001831, EVD-CDR000789]
+  - Yogesh Aggarwal (P00260), recorded as accused: in contact with P00035 (10 contacts). [EVD-MSG001230, EVD-CDR001741]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: amount — invalid amount; set to NULL
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

@@ -1,0 +1,60 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE039
+Generated 2026-11-20T07:18:38  |  data hash c800a5a71e0a5ccc
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE039 (FIR/IFSOCYBERC/2025/0039) — Vehicle Theft registered at PS IFSO Cyber Cell, New Delhi. Incident recorded on 2025-06-06 18:57 at Connaught Place Offices, Delhi. FIR records 1 accused (Tarun Gill P00065) and 4 named persons in total. 533 records across 5 sources; 1 transactions flagged for review.
+
+2. NARRATIVE
+CASE039 (FIR/IFSOCYBERC/2025/0039) — Vehicle Theft registered at PS IFSO Cyber Cell, New Delhi. Incident recorded on 2025-06-06 18:57 at Connaught Place Offices, Delhi. FIR records 1 accused (Tarun Gill P00065) and 4 named persons in total. 533 records across 5 sources; 1 transactions flagged for review. Note: P00047 has a record 16.6 km from the incident location 56 min after the incident (EVD-MSG004334), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-05-23 14:48  Flagged RTGS ₹2,100,000 P00241 → ORG-009  [EVD-TXN004876]
+  2025-06-06 18:57  Incident recorded at Connaught Place Offices, Delhi  []
+  2025-06-11 09:26  Fir FIR/IFSOCYBERC/2025/0039 at PS IFSO Cyber Cell (New Delhi): Vehicle Theft  [EVD-FIR000084]
+  2025-06-12 23:36  Supplementary Statement FIR/IFSOCYBERC/2025/0039 at PS IFSO Cyber Cell (New Delhi): Vehicle Theft  [EVD-FIR000086]
+  2025-06-13 18:15  Supplementary Statement FIR/IFSOCYBERC/2025/0039 at PS IFSO Cyber Cell (New Delhi): Vehicle Theft  [EVD-FIR000087]
+  2025-06-15 09:59  Supplementary Statement FIR/IFSOCYBERC/2025/0039 at PS IFSO Cyber Cell (New Delhi): Vehicle Theft  [EVD-FIR000089]
+  2025-06-18 10:58  Supplementary Statement FIR/IFSOCYBERC/2025/0039 at PS IFSO Cyber Cell (New Delhi): Vehicle Theft  [EVD-FIR000092]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00065  Tarun Gill                   PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000084, EVD-FIR000086, EVD-FIR000087, EVD-FIR000089]
+  P00145  Lakhwinder Rawat             COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000084, EVD-FIR000086, EVD-FIR000087]
+  P00047  Aarti Kumar                  WITNESS            via FIR_NER  [EVD-FIR000084, EVD-FIR000089, EVD-FIR000092]
+  P00241  Rahul Arora                  MENTIONED          via FIR_NER  [EVD-FIR000084]
+
+5. FINANCIAL ACTIVITY
+  102 transactions, total ₹2,732,234; 1 flagged
+  - EVD-TXN004876 ₹2,100,000 2025-05-23 14:48: Isolation Forest outlier: amount ≈1052× this account's median; Amount ₹2,100,000 exceeds upper fence ₹370,550 (Q3 + 3.0·IQR, sender's own history) (alt.: Stated purpose 'property booking - registered sale deed' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Vivek Khan ↔ Aarti Kumar: 21 contacts (2025-05-10 10:06 – 2025-06-30 11:37)
+  - Rohit Aggarwal ↔ Lakhwinder Rawat: 19 contacts (2025-05-13 21:24 – 2025-06-23 11:15)
+  - Lakhwinder Rawat ↔ Yogesh Gupta: 17 contacts (2025-05-13 15:28 – 2025-06-27 18:32)
+  - Aarti Kumar ↔ Mohit Bajwa: 16 contacts (2025-05-07 20:45 – 2025-06-29 13:17)
+  - Tarun Gill ↔ Vivek Arora: 13 contacts (2025-05-14 12:42 – 2025-06-15 16:34)
+  - Tarun Gill ↔ Vivek Saini: 12 contacts (2025-05-12 14:37 – 2025-06-28 15:35)
+  - Aarti Kumar ↔ Lakhwinder Singh: 11 contacts (2025-05-08 19:08 – 2025-06-27 17:22)
+  - Ravi Yadav ↔ Tarun Gill: 11 contacts (2025-05-11 19:21 – 2025-06-28 01:13)
+  Around incident: 12 contacts (baseline ≈15.7), 0 between named persons
+
+7. LOCATION
+  - near incident: P00065 0.23 km, -10 min (EVD-LOC010401)
+  - elsewhere: P00047 at nan (16.6 km away, EVD-MSG004334)
+  - elsewhere: P00047 at nan (16.6 km away, EVD-MSG004339)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Tarun Gill (P00065), recorded as principal accused: record within 0.23 km of the incident location within 2 h of the incident. [EVD-LOC010401]
+  - Lakhwinder Rawat (P00145), recorded as complainant: 1 location inconsistency flag(s) (requires_air_travel). [EVD-LOC010837, EVD-LOC010838]
+  - Aarti Kumar (P00047), recorded as witness: record(s) 16.6 km away from the incident location within 3 h of the incident (nan). [EVD-MSG004334, EVD-MSG004339]
+  - Rahul Arora (P00241), recorded as mentioned: party to 1 flagged transaction(s) (IQR, ISOLATION_FOREST). [EVD-TXN004876]
+  - Location inconsistency P00145: REQUIRES_AIR_TRAVEL (EVD-LOC010837 → EVD-LOC010838, 1135.95 km in 145.0 min)
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: call_date — timestamp invalid
+  - 1 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

@@ -1,0 +1,35 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE912
+Generated 2026-11-21T11:55:51  |  data hash 6fe32237695405b1
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE912 (FIR 249/2024, PS Kamboj) — Murder / Attempt to Murder registered at PS Kamboj, Amritsar Rural. Incident date not stated in the source at Amritsar Rural, Punjab. FIR records 2 accused (Accused A1 · CASE912 P90017, Accused A2 · CASE912 P90018) and 2 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE912 (FIR 249/2024, PS Kamboj) — Murder / Attempt to Murder registered at PS Kamboj, Amritsar Rural. Incident date not stated in the source at Amritsar Rural, Punjab. FIR records 2 accused (Accused A1 · CASE912 P90017, Accused A2 · CASE912 P90018) and 2 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2024-12-16 00:00  Fir Extract FIR 249/2024, PS Kamboj at PS Kamboj (Amritsar Rural): Murder / Attempt to Murder  [EVD-PUB000012]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90017  Accused A1 · CASE912         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000012]
+  P90018  Accused A2 · CASE912         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000012]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90018 no call detail records obtained
+  - P90017 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

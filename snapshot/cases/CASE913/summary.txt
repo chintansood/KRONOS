@@ -1,0 +1,35 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE913
+Generated 2026-11-21T11:55:51  |  data hash c1469ab26f7fbadf
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE913 (FIR 86/2024, PS Talwandi Sabo) — Murder / Attempt to Murder registered at PS Talwandi Sabo, Bathinda. Incident date not stated in the source at Bathinda, Punjab. FIR records 2 accused (Accused A1 · CASE913 P90019, Accused A2 · CASE913 P90020) and 2 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE913 (FIR 86/2024, PS Talwandi Sabo) — Murder / Attempt to Murder registered at PS Talwandi Sabo, Bathinda. Incident date not stated in the source at Bathinda, Punjab. FIR records 2 accused (Accused A1 · CASE913 P90019, Accused A2 · CASE913 P90020) and 2 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2024-06-14 00:00  Fir Extract FIR 86/2024, PS Talwandi Sabo at PS Talwandi Sabo (Bathinda): Murder / Attempt to Murder  [EVD-PUB000013]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90019  Accused A1 · CASE913         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000013]
+  P90020  Accused A2 · CASE913         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000013]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90020 no call detail records obtained
+  - P90019 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

@@ -1,0 +1,72 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE036
+Generated 2026-11-20T07:18:37  |  data hash 16ad9921064d8039
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE036 (FIR/IFSOCYBERC/2025/0036) — Financial Fraud & Money Laundering registered at PS IFSO Cyber Cell, New Delhi. Incident recorded on 2025-05-27 10:48 at Connaught Place Offices, Delhi. FIR records 3 accused (Lakhwinder Bajwa P00302, Harpreet Gill P00137, Ajay Kapoor P00420) and 6 named persons in total. 843 records across 5 sources; 8 transactions flagged for review.
+
+2. NARRATIVE
+CASE036 (FIR/IFSOCYBERC/2025/0036) — Financial Fraud & Money Laundering registered at PS IFSO Cyber Cell, New Delhi. Incident recorded on 2025-05-27 10:48 at Connaught Place Offices, Delhi. FIR records 3 accused (Lakhwinder Bajwa P00302, Harpreet Gill P00137, Ajay Kapoor P00420) and 6 named persons in total. 843 records across 5 sources; 8 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN004979 → EVD-TXN004980, 40.0 min), a pattern that can indicate layering and requires verification. Communication between P00302 and P00420 spiked to 6 contacts within 3 hours on 2025-05-26. Note: P00137 has a record 232.1 km from the incident location 135 min after the incident (EVD-TXN004984), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-05-02 15:01  Flagged NEFT ₹120,000 ORG-005 → P00089  [EVD-TXN004100]
+  2025-05-26 09:30  Communication burst P00302–P00420 (6 contacts in 3 h)  [EVD-CDR005724, EVD-CDR005725, EVD-CDR005726]
+  2025-05-27 10:48  Incident recorded at Connaught Place Offices, Delhi  []
+  2025-05-27 10:48  Flagged RTGS ₹1,850,000 ORG-001 → ORG-016  [EVD-TXN004979]
+  2025-05-27 11:28  Flagged RTGS ₹1,813,000 ORG-016 → ORG-017  [EVD-TXN004980]
+  2025-05-27 12:48  Flagged NEFT ₹555,000 ORG-017 → P00302  [EVD-TXN004982]
+  2025-05-27 13:48  Flagged NEFT ₹555,000 ORG-017 → P00420  [EVD-TXN004987]
+  2025-05-27 14:48  Flagged NEFT ₹555,000 ORG-017 → P00137  [EVD-TXN004989]
+  2025-05-28 07:27  Fir FIR/IFSOCYBERC/2025/0036 at PS IFSO Cyber Cell (New Delhi): Financial Fraud & Money Laundering  [EVD-FIR000072]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00302  Lakhwinder Bajwa             PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000072]
+  P00137  Harpreet Gill                ACCUSED            via FIR_STRUCTURED  [EVD-FIR000072]
+  P00420  Ajay Kapoor                  ACCUSED            via FIR_STRUCTURED  [EVD-FIR000072]
+  P00061  Sunil Gill                   COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000072]
+  P00089  Rohit Aggarwal               WITNESS            via FIR_NER  [EVD-FIR000072]
+  P00174  Balwinder Kumar              WITNESS            via FIR_NER  [EVD-FIR000072]
+
+5. FINANCIAL ACTIVITY
+  167 transactions, total ₹6,450,511; 8 flagged
+  - EVD-TXN004979 ₹1,850,000 2025-05-27 10:48: ₹1,850,000 received by ORG-016 and ₹1,813,000 sent onward 40 min later (EVD-TXN004979 → EVD-TXN004980)
+  - EVD-TXN004980 ₹1,813,000 2025-05-27 11:28: ₹1,850,000 received by ORG-016 and ₹1,813,000 sent onward 40 min later (EVD-TXN004979 → EVD-TXN004980)
+  - EVD-TXN004982 ₹555,000 2025-05-27 12:48: ₹1,813,000 received and 92% of it split to 3 accounts within 6 h
+  - EVD-TXN004987 ₹555,000 2025-05-27 13:48: ₹1,813,000 received and 92% of it split to 3 accounts within 6 h
+  - EVD-TXN004989 ₹555,000 2025-05-27 14:48: ₹1,813,000 received and 92% of it split to 3 accounts within 6 h
+  - EVD-TXN004100 ₹120,000 2025-05-02 15:01: Isolation Forest outlier: 6 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN004076 ₹35,000 2025-05-02 11:44: Isolation Forest outlier: 7 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN004073 ₹28,000 2025-05-02 11:28: Isolation Forest outlier: 6 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Lakhwinder Bajwa ↔ Ajay Kapoor: 6 contacts (2025-05-26 09:30 – 2025-05-26 12:21)
+  - Balwinder Kumar ↔ Ajay Kapoor: 5 contacts (2025-05-02 15:47 – 2025-06-19 18:45)
+  - Rohit Aggarwal ↔ Balwinder Kumar: 5 contacts (2025-05-08 21:58 – 2025-06-08 17:06)
+  - Harpreet Gill ↔ Ajay Thakur: 34 contacts (2025-04-29 14:58 – 2025-06-25 12:37)
+  - Sunil Gill ↔ Pankaj Sharma: 23 contacts (2025-04-29 07:34 – 2025-06-19 09:07)
+  - Sunita Sandhu ↔ Lakhwinder Bajwa: 20 contacts (2025-04-29 13:45 – 2025-06-25 07:45)
+  - Sunil Gill ↔ Nisha Arora: 20 contacts (2025-04-30 17:25 – 2025-06-24 11:48)
+  - Sandeep Rawat ↔ Ajay Kapoor: 19 contacts (2025-04-27 16:57 – 2025-06-23 08:19)
+  Around incident: 32 contacts (baseline ≈22.2), 7 between named persons
+  * EVD-MSG004120 2025-05-27 17:37: "Rent for this month sent, please confirm." — exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - near incident: P00174 1.67 km, -50 min (EVD-CDR005767)
+  - elsewhere: P00137 at Sector 5 Market, Panchkula (232.1 km away, EVD-TXN004984)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Lakhwinder Bajwa (P00302), recorded as principal accused: in contact with P00420 (6 contacts); party to 2 flagged transaction(s) (ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-CDR005724, EVD-CDR005725, EVD-TXN004982, EVD-TXN004076]
+  - Harpreet Gill (P00137), recorded as accused: record(s) 232.1 km away from the incident location within 3 h of the incident (Sector 5 Market, Panchkula); party to 1 flagged transaction(s) (RAPID_PASS_THROUGH). [EVD-TXN004984, EVD-TXN004989]
+  - Ajay Kapoor (P00420), recorded as accused: in contact with P00302 (6 contacts), P00174 (5 contacts); party to 2 flagged transaction(s) (ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-CDR005724, EVD-CDR005725, EVD-CDR004755, EVD-CDR005516]
+  - Rohit Aggarwal (P00089), recorded as witness: in contact with P00174 (5 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-CDR005018, EVD-CDR005257, EVD-TXN004100]
+  - Balwinder Kumar (P00174), recorded as witness: record within 1.67 km of the incident location within 2 h of the incident; in contact with P00420 (5 contacts), P00089 (5 contacts). [EVD-CDR005767, EVD-CDR004755, EVD-CDR005516, EVD-CDR005018]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: call_date — timestamp invalid
+  - 1 record(s) with data-quality issue: timestamp — timestamp invalid
+  - 1 record(s) with data-quality issue: txn_datetime — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

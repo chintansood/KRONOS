@@ -1,0 +1,81 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE032
+Generated 2026-11-20T07:18:36  |  data hash fdbfb34599361a35
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE032 (FIR/SOHANA/2025/0032) — Financial Fraud & Money Laundering registered at PS Sohana, SAS Nagar. Incident recorded on 2025-05-13 19:47 at Phase 7 Market, Mohali. FIR records 3 accused (Jaspreet Saini P00054, Sukha P00020, Vikram Singh P00036) and 6 named persons in total. 822 records across 5 sources; 10 transactions flagged for review.
+
+2. NARRATIVE
+CASE032 (FIR/SOHANA/2025/0032) — Financial Fraud & Money Laundering registered at PS Sohana, SAS Nagar. Incident recorded on 2025-05-13 19:47 at Phase 7 Market, Mohali. FIR records 3 accused (Jaspreet Saini P00054, Sukha P00020, Vikram Singh P00036) and 6 named persons in total. 822 records across 5 sources; 10 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN004548 → EVD-TXN004550, 40.0 min), a pattern that can indicate layering and requires verification. Communication between P00036 and P00054 spiked to 6 contacts within 3 hours on 2025-05-12.
+
+3. CHRONOLOGY
+  2025-04-20 07:58  P00054 and P00280 co-located at Sector 70 Residential, Mohali  [EVD-LOC007321, EVD-LOC007320]
+  2025-04-28 21:17  P00036 and P00202 co-located at Sector 70 Residential, Mohali  [EVD-LOC007956, EVD-LOC007957]
+  2025-05-12 15:54  P00112 and P00217 co-located at Phase 7 Market, Mohali  [EVD-LOC008927, EVD-LOC008931]
+  2025-05-12 18:47  Communication burst P00036–P00054 (6 contacts in 3 h)  [EVD-CDR005173, EVD-CDR005175, EVD-CDR005178]
+  2025-05-13 15:26  P00217 and P00269 co-located at Phase 7 Market, Mohali  [EVD-LOC009010, EVD-LOC009008]
+  2025-05-13 19:47  Incident recorded at Phase 7 Market, Mohali  []
+  2025-05-13 19:47  Flagged RTGS ₹2,400,000 ORG-003 → ORG-018  [EVD-TXN004548]
+  2025-05-13 20:27  Flagged RTGS ₹2,352,000 ORG-018 → ORG-021  [EVD-TXN004550]
+  2025-05-13 21:47  Flagged NEFT ₹720,000 ORG-021 → P00054  [EVD-TXN004555]
+  2025-05-13 22:47  Flagged NEFT ₹720,000 ORG-021 → P00036  [EVD-TXN004557]
+  2025-05-13 23:47  Flagged NEFT ₹720,000 ORG-021 → P00020  [EVD-TXN004558]
+  2025-05-17 00:02  Fir FIR/SOHANA/2025/0032 at PS Sohana (SAS Nagar): Financial Fraud & Money Laundering  [EVD-FIR000063]
+  2025-05-22 07:20  P00036 and P00202 co-located at Sector 70 Residential, Mohali  [EVD-LOC009569, EVD-LOC009570]
+  2025-05-24 02:21  Supplementary Statement FIR/SOHANA/2025/0032 at PS Sohana (SAS Nagar): Financial Fraud & Money Laundering  [EVD-FIR000070]
+  2025-05-25 23:11  P00036 and P00305 co-located at Sector 70 Residential, Mohali  [EVD-LOC009823, EVD-LOC009822]
+  2025-06-01 12:56  Flagged NEFT ₹120,000 ORG-003 → P00232  [EVD-TXN005110]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00054  Jaspreet Saini               PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000063, EVD-FIR000070]
+  P00020  Sukha                        ACCUSED            via FIR_STRUCTURED  [EVD-FIR000063]
+  P00036  Vikram Singh                 ACCUSED            via FIR_STRUCTURED  [EVD-FIR000063]
+  P00217  Arjun Gupta                  COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000063]
+  P00202  Jaspreet Mehta               WITNESS            via FIR_NER  [EVD-FIR000063]
+  P00232  Sachin Chopra                WITNESS            via FIR_NER  [EVD-FIR000063, EVD-FIR000070]
+
+5. FINANCIAL ACTIVITY
+  171 transactions, total ₹8,150,031; 10 flagged
+  - EVD-TXN004548 ₹2,400,000 2025-05-13 19:47: Isolation Forest outlier: amount ≈46× this account's median; ₹2,400,000 received by ORG-018 and ₹2,352,000 sent onward 40 min later (EVD-TXN004548 → EVD-TXN004550)
+  - EVD-TXN004557 ₹720,000 2025-05-13 22:47: Isolation Forest outlier (combination of features); ₹2,352,000 received and 92% of it split to 3 accounts within 6 h
+  - EVD-TXN004558 ₹720,000 2025-05-13 23:47: Isolation Forest outlier (combination of features); ₹2,352,000 received and 92% of it split to 3 accounts within 6 h
+  - EVD-TXN004550 ₹2,352,000 2025-05-13 20:27: ₹2,400,000 received by ORG-018 and ₹2,352,000 sent onward 40 min later (EVD-TXN004548 → EVD-TXN004550)
+  - EVD-TXN004555 ₹720,000 2025-05-13 21:47: ₹2,352,000 received and 92% of it split to 3 accounts within 6 h
+  - EVD-TXN005110 ₹120,000 2025-06-01 12:56: Isolation Forest outlier: 6 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN005124 ₹76,000 2025-06-01 15:04: Isolation Forest outlier: 7 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN004098 ₹35,000 2025-05-02 14:49: Isolation Forest outlier: 7 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN005126 ₹35,000 2025-06-01 15:13: Isolation Forest outlier: 7 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN005213 ₹12,000 2025-06-05 12:00: Isolation Forest outlier: amount ≈9× this account's median (alt.: Stated purpose 'house rent' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Vikram Singh ↔ Jaspreet Mehta: 12 contacts (2025-04-14 07:42 – 2025-05-20 12:39)
+  - Vikram Singh ↔ Jaspreet Saini: 8 contacts (2025-05-12 18:47 – 2025-05-12 22:07)
+  - Jaspreet Mehta ↔ Sachin Chopra: 6 contacts (2025-04-25 22:53 – 2025-06-07 22:05)
+  - Jaspreet Saini ↔ Sachin Chopra: 5 contacts (2025-05-08 11:05 – 2025-06-05 07:13)
+  - Vikram Singh ↔ Varun Bansal: 31 contacts (2025-04-14 18:55 – 2025-06-11 08:49)
+  - Sachin Chopra ↔ Manpreet Khanna: 30 contacts (2025-04-17 13:50 – 2025-06-12 09:44)
+  - Sachin Chopra ↔ Varun Bansal: 26 contacts (2025-04-20 17:16 – 2025-06-11 19:24)
+  - Jaspreet Saini ↔ Anjali Verma: 16 contacts (2025-04-18 20:30 – 2025-06-11 22:23)
+  Around incident: 34 contacts (baseline ≈22.2), 11 between named persons
+  * EVD-MSG003694 2025-05-12 21:42: "Please pick up vegetables on the way home." — exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG003699 2025-05-13 12:03: "Send me the photos from the wedding." — exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG003770 2025-05-14 19:24: "Happy birthday! Party at home tonight." — exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - near incident: P00036 0.01 km, 36 min (EVD-LOC009023)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Vikram Singh (P00036), recorded as accused: record within 0.01 km of the incident location within 2 h of the incident; in contact with P00202 (12 contacts), P00054 (8 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-LOC009023, EVD-MSG002871, EVD-CDR004022, EVD-CDR005173]
+  - Jaspreet Saini (P00054), recorded as principal accused: in contact with P00036 (8 contacts), P00232 (5 contacts); party to 1 flagged transaction(s) (RAPID_PASS_THROUGH). [EVD-CDR005173, EVD-CDR005175, EVD-CDR005003, EVD-MSG003570]
+  - Jaspreet Mehta (P00202), recorded as witness: in contact with P00036 (12 contacts), P00232 (6 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-MSG002871, EVD-CDR004022, EVD-CDR004502, EVD-CDR004828]
+  - Sachin Chopra (P00232), recorded as witness: in contact with P00202 (6 contacts), P00054 (5 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-CDR004502, EVD-CDR004828, EVD-CDR005003, EVD-MSG003570]
+  - Sukha (P00020), recorded as accused: party to 3 flagged transaction(s) (ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-TXN004558, EVD-TXN005126, EVD-TXN005213]
+  - Arjun Gupta (P00217), recorded as complainant: party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-TXN004098]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: timestamp — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

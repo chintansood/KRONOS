@@ -1,0 +1,33 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE940
+Generated 2026-11-21T11:55:54  |  data hash 12c94c2f7b50e983
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE940 (FIR 222/2025, PS City Faridkot) — Cheating, Fraud & Forgery registered at PS City Faridkot, Faridkot. Incident date not stated in the source at Faridkot, Punjab. FIR records 1 accused (Accused A1 · CASE940 P90057) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE940 (FIR 222/2025, PS City Faridkot) — Cheating, Fraud & Forgery registered at PS City Faridkot, Faridkot. Incident date not stated in the source at Faridkot, Punjab. FIR records 1 accused (Accused A1 · CASE940 P90057) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2025-05-31 00:00  Fir Extract FIR 222/2025, PS City Faridkot at PS City Faridkot (Faridkot): Cheating, Fraud & Forgery  [EVD-PUB000040]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90057  Accused A1 · CASE940         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000040]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90057 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

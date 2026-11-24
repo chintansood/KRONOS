@@ -1,0 +1,89 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE002
+Generated 2026-11-20T07:18:31  |  data hash b908afa9ec5db0ed
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE002 (FIR/CYBERCRIME/2025/0002) — Cyber Fraud (Online Investment Scam) registered at PS Cyber Crime CHD, Chandigarh. Incident recorded on 2025-01-24 11:45 at Manimajra Housing Complex, Chandigarh. FIR records 2 accused (Gurpreet Singh Dhillon P00023, Sukhwinder Singh P00019) and 5 named persons in total. 1014 records across 5 sources; 17 transactions flagged for review.
+
+2. NARRATIVE
+CASE002 (FIR/CYBERCRIME/2025/0002) — Cyber Fraud (Online Investment Scam) registered at PS Cyber Crime CHD, Chandigarh. Incident recorded on 2025-01-24 11:45 at Manimajra Housing Complex, Chandigarh. FIR records 2 accused (Gurpreet Singh Dhillon P00023, Sukhwinder Singh P00019) and 5 named persons in total. 1014 records across 5 sources; 17 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN000368 → EVD-TXN000369, 34.0 min), a pattern that can indicate layering and requires verification. Account KKBK-55829849330 received funds from 3 different individuals within 14 days. Note: P00019 has a record 232.2 km from the incident location 21 min before the incident (EVD-LOC000849), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-01-22 23:46  P00023 and P00248 co-located at Sector 15 Residential, Chandigarh  [EVD-LOC000774, EVD-LOC000772]
+  2025-01-24 11:45  Incident recorded at Manimajra Housing Complex, Chandigarh  []
+  2025-01-24 21:34  Fir FIR/CYBERCRIME/2025/0002 at PS Cyber Crime CHD (Chandigarh): Cyber Fraud (Online Investment Scam)  [EVD-FIR000001]
+  2025-01-25 07:52  Flagged IMPS ₹91,619 P00254 → P00023  [EVD-TXN000381]
+  2025-01-25 08:33  Flagged IMPS ₹88,871 P00023 → P00019  [EVD-TXN000383]
+  2025-01-25 14:20  Flagged IMPS ₹84,114 P00254 → P00023  [EVD-TXN000392]
+  2025-01-25 16:05  Flagged IMPS ₹96,344 P00190 → P00023  [EVD-TXN000397]
+  2025-01-25 16:22  Flagged IMPS ₹93,453 P00023 → P00019  [EVD-TXN000398]
+  2025-01-26 11:45  Flagged CASH_WITHDRAWAL ₹315,998 P00019 → P00019  [EVD-TXN000415]
+  2025-02-02 12:18  Supplementary Statement FIR/CYBERCRIME/2025/0002 at PS Cyber Crime CHD (Chandigarh): Cyber Fraud (Online Investment Scam)  [EVD-FIR000006]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00023  Gurpreet Singh Dhillon       PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000001]
+  P00019  Sukhwinder Singh             ACCUSED            via FIR_STRUCTURED  [EVD-FIR000001, EVD-FIR000006]
+  P00311  Naveen Thakur                COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000001]
+  P00049  Ravi Arora                   VICTIM             via FIR_NER  [EVD-FIR000001]
+  P00248  Rajesh Mehta                 VICTIM             via FIR_NER  [EVD-FIR000001, EVD-FIR000006]
+  P00190  Lakhwinder Singh             RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00254  Sunita Chopra                RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  195 transactions, total ₹2,007,996; 15 flagged
+  - EVD-TXN000415 ₹315,998 2025-01-26 11:45: Isolation Forest outlier: amount ≈236× this account's median; cash channel; Amount ₹315,998 exceeds upper fence ₹155,045 (Q3 + 3.0·IQR, sender's own history)
+  - EVD-TXN000381 ₹91,619 2025-01-25 07:52: Amount ₹91,619 exceeds upper fence ₹45,898 (Q3 + 3.0·IQR, sender's own history); ₹91,619 received by P00023 and ₹88,871 sent onward 41 min later (EVD-TXN000381 → EVD-TXN000383)
+  - EVD-TXN000392 ₹84,114 2025-01-25 14:20: Amount ₹84,114 exceeds upper fence ₹45,898 (Q3 + 3.0·IQR, sender's own history); ₹84,114 received by P00023 and ₹81,591 sent onward 42 min later (EVD-TXN000392 → EVD-TXN000395)
+  - EVD-TXN000397 ₹96,344 2025-01-25 16:05: ₹96,344 received by P00023 and ₹93,453 sent onward 17 min later (EVD-TXN000397 → EVD-TXN000398)
+  - EVD-TXN000398 ₹93,453 2025-01-25 16:22: ₹96,344 received by P00023 and ₹93,453 sent onward 17 min later (EVD-TXN000397 → EVD-TXN000398)
+  - EVD-TXN000383 ₹88,871 2025-01-25 08:33: ₹91,619 received by P00023 and ₹88,871 sent onward 41 min later (EVD-TXN000381 → EVD-TXN000383)
+  - EVD-TXN000368 ₹87,841 2025-01-24 16:16: ₹87,841 received by P00023 and ₹85,206 sent onward 34 min later (EVD-TXN000368 → EVD-TXN000369)
+  - EVD-TXN000369 ₹85,206 2025-01-24 16:50: ₹87,841 received by P00023 and ₹85,206 sent onward 34 min later (EVD-TXN000368 → EVD-TXN000369)
+  - EVD-TXN000395 ₹81,591 2025-01-25 15:02: ₹84,114 received by P00023 and ₹81,591 sent onward 42 min later (EVD-TXN000392 → EVD-TXN000395)
+  - EVD-TXN000149 ₹49,000 2025-01-14 14:15: Account KKBK-55829849330 received ₹226,998 from 3 different individuals within 14 days
+  - EVD-TXN000201 ₹49,000 2025-01-17 11:10: Account KKBK-55829849330 received ₹226,998 from 3 different individuals within 14 days
+  - EVD-TXN000283 ₹49,000 2025-01-21 11:09: Account KKBK-55829849330 received ₹226,998 from 3 different individuals within 14 days
+  - EVD-TXN000182 ₹30,000 2025-01-16 09:03: Account KKBK-55829849330 received ₹226,998 from 3 different individuals within 14 days
+  - EVD-TXN000177 ₹24,999 2025-01-15 22:43: Account KKBK-55829849330 received ₹226,998 from 3 different individuals within 14 days
+  - EVD-TXN000255 ₹15,000 2025-01-20 01:41: Account KKBK-55829849330 received ₹226,998 from 3 different individuals within 14 days
+
+6. COMMUNICATION
+  - Gurpreet Singh Dhillon ↔ Naveen Thakur: 5 contacts (2025-01-14 09:03 – 2025-01-23 14:03)
+  - Gurpreet Singh Dhillon ↔ Ravi Arora: 3 contacts (2025-01-16 08:43 – 2025-01-19 20:44)
+  - Gurpreet Singh Dhillon ↔ Rajesh Mehta: 3 contacts (2025-01-19 02:31 – 2025-01-21 10:49)
+  - Ravi Arora ↔ Vivek Arora: 29 contacts (2025-01-03 04:15 – 2025-02-18 10:56)
+  - Gurpreet Singh Dhillon ↔ Manisha Kaur: 24 contacts (2025-01-02 18:41 – 2025-02-22 17:25)
+  - Priya Bajwa ↔ Sunita Chopra: 21 contacts (2025-01-08 21:19 – 2025-02-21 12:44)
+  - Simran Gill ↔ Lakhwinder Singh: 20 contacts (2025-01-01 19:07 – 2025-02-20 10:14)
+  - Sunita Chopra ↔ Ankit Bajwa: 18 contacts (2025-01-04 16:22 – 2025-02-22 15:54)
+  Around incident: 46 contacts (baseline ≈31.5), 2 between named persons
+  * EVD-MSG000156 2025-01-14 09:03: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to HDF" — references an amount (₹49000); references account HDFC-58895369026 (seen in this case's transactions)
+  * EVD-MSG000161 2025-01-14 13:55: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to KKB" — references an amount (₹49000); references account KKBK-55829849330 (seen in this case's transactions)
+  * EVD-MSG000186 2025-01-15 22:23: "Your returns of 18% are credited. Add Rs 24,999 more to unlock withdrawal. Transfer to KKB" — references an amount (₹24999); references account KKBK-55829849330 (seen in this case's transactions)
+  * EVD-MSG000188 2025-01-16 08:43: "Your returns of 18% are credited. Add Rs 30,000 more to unlock withdrawal. Transfer to KKB" — references an amount (₹30000); references account KKBK-55829849330 (seen in this case's transactions)
+  * EVD-MSG000213 2025-01-17 10:50: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to KKB" — references an amount (₹49000); references account KKBK-55829849330 (seen in this case's transactions)
+  * EVD-MSG000248 2025-01-19 02:31: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to HDF" — references an amount (₹45000); references account HDFC-58895369026 (seen in this case's transactions)
+
+7. LOCATION
+  - elsewhere: P00019 at Karol Bagh Market, Delhi (232.2 km away, EVD-LOC000849)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Ravi Arora (P00049), recorded as victim: in contact with P00023 (3 contacts); party to 4 flagged transaction(s) (FAN_IN); 3 location inconsistency flag(s) (requires_air_travel). [EVD-MSG000188, EVD-MSG000213, EVD-TXN000201, EVD-TXN000182]
+  - Gurpreet Singh Dhillon (P00023), recorded as principal accused: in contact with P00311 (5 contacts), P00049 (3 contacts), P00248 (3 contacts); party to 8 flagged transaction(s) (IQR, RAPID_PASS_THROUGH). [EVD-MSG000156, EVD-MSG000161, EVD-MSG000188, EVD-MSG000213]
+  - Sukhwinder Singh (P00019), recorded as accused: record(s) 232.2 km away from the incident location within 3 h of the incident (Karol Bagh Market, Delhi); party to 5 flagged transaction(s) (IQR, ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-LOC000849, EVD-TXN000415, EVD-TXN000398, EVD-TXN000383]
+  - Naveen Thakur (P00311), recorded as complainant: in contact with P00023 (5 contacts); party to 2 flagged transaction(s) (FAN_IN). [EVD-MSG000156, EVD-MSG000161, EVD-TXN000149, EVD-TXN000177]
+  - Rajesh Mehta (P00248), recorded as victim: in contact with P00023 (3 contacts); party to 2 flagged transaction(s) (FAN_IN). [EVD-MSG000248, EVD-MSG000265, EVD-TXN000283, EVD-TXN000255]
+  - Location inconsistency P00049: REQUIRES_AIR_TRAVEL (EVD-LOC000128 → EVD-LOC000131, 1135.93 km in 145.0 min)
+  - Location inconsistency P00049: IMPOSSIBLE (EVD-LOC000550 → EVD-LOC000555, 1358.43 km in 60.0 min)
+  - Location inconsistency P00049: REQUIRES_AIR_TRAVEL (EVD-LOC000555 → EVD-CDR000303, 1359.16 km in 116.4 min)
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: call_date — timestamp invalid
+  - 2 record(s) with data-quality issue: timestamp — timestamp invalid
+  - 1 record(s) with data-quality issue: amount — invalid amount; set to NULL
+  - 1 record(s) with data-quality issue: latitude/longitude — invalid coordinate; set to NULL
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

@@ -1,0 +1,89 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE013
+Generated 2026-11-20T07:18:33  |  data hash 5744a81edb0fd63f
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE013 (FIR/KOTWALIAMR/2025/0013) — Cyber Fraud (Online Investment Scam) registered at PS Kotwali Amritsar, Amritsar. Incident recorded on 2025-03-07 17:02 at Ranjit Avenue Residential, Amritsar. FIR records 2 accused (Ram Kumar P00013, Vicky Singh P00016) and 5 named persons in total. 1307 records across 5 sources; 25 transactions flagged for review.
+
+2. NARRATIVE
+CASE013 (FIR/KOTWALIAMR/2025/0013) — Cyber Fraud (Online Investment Scam) registered at PS Kotwali Amritsar, Amritsar. Incident recorded on 2025-03-07 17:02 at Ranjit Avenue Residential, Amritsar. FIR records 2 accused (Ram Kumar P00013, Vicky Singh P00016) and 5 named persons in total. 1307 records across 5 sources; 25 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN002067 → EVD-TXN002069, 21.0 min), a pattern that can indicate layering and requires verification. 5 transfers from P00013 to P00015 each fell just below ₹50,000 (total ₹199,479). Account HDFC-42102499471 received funds from 4 different individuals within 14 days. Communication between P00013 and P00244 spiked to 4 contacts within 3 hours on 2025-03-07.
+
+3. CHRONOLOGY
+  2025-02-28 19:00  Communication burst P00013–P00326 (4 contacts in 3 h)  [EVD-MSG001461, EVD-MSG001464, EVD-CDR002028]
+  2025-03-07 17:02  Incident recorded at Ranjit Avenue Residential, Amritsar  []
+  2025-03-07 19:35  Fir FIR/KOTWALIAMR/2025/0013 at PS Kotwali Amritsar (Amritsar): Cyber Fraud (Online Investment Scam)  [EVD-FIR000022]
+  2025-03-07 21:15  Flagged IMPS ₹41,924 P00013 → P00015  [EVD-TXN002069]
+  2025-03-07 22:44  Communication burst P00013–P00244 (4 contacts in 3 h)  [EVD-CDR002402, EVD-CDR002404, EVD-CDR002405]
+  2025-03-07 23:11  Flagged IMPS ₹41,398 P00013 → P00015  [EVD-TXN002073]
+  2025-03-08 10:12  Flagged IMPS ₹39,558 P00013 → P00015  [EVD-TXN002083]
+  2025-03-08 14:36  Flagged IMPS ₹39,057 P00013 → P00015  [EVD-TXN002141]
+  2025-03-08 20:02  Flagged IMPS ₹36,882 P00013 → P00015  [EVD-TXN002157]
+  2025-03-08 20:48  Flagged IMPS ₹37,542 P00013 → P00015  [EVD-TXN002161]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00013  Ram Kumar                    PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000022]
+  P00016  Vicky Singh                  ACCUSED            via FIR_STRUCTURED  [EVD-FIR000022]
+  P00037  Ashok Verma                  COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000022]
+  P00222  Ritu Malhotra                VICTIM             via FIR_NER  [EVD-FIR000022]
+  P00432  Farhan Jain                  VICTIM             via FIR_NER  [EVD-FIR000022]
+  P00183  Sunil Yadav                  RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00244  Kuldeep Verma                RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00361  Sachin Rawat                 RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00388  Balwinder Bhatia             RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  260 transactions, total ₹2,027,634; 15 flagged
+  - EVD-TXN002141 ₹39,057 2025-03-08 14:36: Isolation Forest outlier: amount ≈27× this account's median; 8 transactions from this account within 24 h; ₹38,643 received by P00013 and ₹39,057 sent onward 336 min later (EVD-TXN002077 → EVD-TXN002141)
+  - EVD-TXN002161 ₹37,542 2025-03-08 20:48: Isolation Forest outlier: amount ≈26× this account's median; 10 transactions from this account within 24 h; ₹38,023 received by P00013 and ₹37,542 sent onward 56 min later (EVD-TXN002155 → EVD-TXN002161)
+  - EVD-TXN002069 ₹41,924 2025-03-07 21:15: ₹43,220 received by P00013 and ₹41,924 sent onward 21 min later (EVD-TXN002067 → EVD-TXN002069); 5 transfers P00013 → P00015 within 14 days, each just below ₹50,000 (total ₹199,479)
+  - EVD-TXN002073 ₹41,398 2025-03-07 23:11: ₹43,220 received by P00013 and ₹41,398 sent onward 138 min later (EVD-TXN002067 → EVD-TXN002073); 5 transfers P00013 → P00015 within 14 days, each just below ₹50,000 (total ₹199,479)
+  - EVD-TXN002083 ₹39,558 2025-03-08 10:12: ₹40,781 received by P00013 and ₹39,558 sent onward 17 min later (EVD-TXN002080 → EVD-TXN002083); 5 transfers P00013 → P00015 within 14 days, each just below ₹50,000 (total ₹199,479)
+  - EVD-TXN002157 ₹36,882 2025-03-08 20:02: Isolation Forest outlier: amount ≈26× this account's median; 9 transactions from this account within 24 h; ₹40,265 received by P00013 and ₹36,882 sent onward 351 min later (EVD-TXN002139 → EVD-TXN002157)
+  - EVD-TXN002188 ₹211,997 2025-03-09 17:02: Isolation Forest outlier: amount ≈146× this account's median; cash channel; Account HDFC-42102499471 received ₹1,126,030 from 4 different individuals within 14 days
+  - EVD-TXN002067 ₹43,220 2025-03-07 20:54: ₹43,220 received by P00013 and ₹41,924 sent onward 21 min later (EVD-TXN002067 → EVD-TXN002069); Account SBIN-22941318699 received ₹282,314 from 3 different individuals within 14 days
+  - EVD-TXN002072 ₹42,678 2025-03-07 22:26: ₹42,678 received by P00013 and ₹41,398 sent onward 45 min later (EVD-TXN002072 → EVD-TXN002073); Account SBIN-22941318699 received ₹282,314 from 3 different individuals within 14 days
+  - EVD-TXN002080 ₹40,781 2025-03-08 09:55: ₹40,781 received by P00013 and ₹39,558 sent onward 17 min later (EVD-TXN002080 → EVD-TXN002083); Account SBIN-22941318699 received ₹282,314 from 3 different individuals within 14 days
+  - EVD-TXN002139 ₹40,265 2025-03-08 14:11: ₹40,265 received by P00013 and ₹39,057 sent onward 25 min later (EVD-TXN002139 → EVD-TXN002141); Account SBIN-22941318699 received ₹282,314 from 3 different individuals within 14 days
+  - EVD-TXN002158 ₹38,703 2025-03-08 20:24: ₹38,703 received by P00013 and ₹37,542 sent onward 24 min later (EVD-TXN002158 → EVD-TXN002161); Account SBIN-22941318699 received ₹282,314 from 3 different individuals within 14 days
+  - EVD-TXN002077 ₹38,643 2025-03-08 09:00: ₹38,643 received by P00013 and ₹37,484 sent onward 29 min later (EVD-TXN002077 → EVD-TXN002078); Account SBIN-22941318699 received ₹282,314 from 3 different individuals within 14 days
+  - EVD-TXN002155 ₹38,023 2025-03-08 19:53: ₹38,023 received by P00013 and ₹36,882 sent onward 9 min later (EVD-TXN002155 → EVD-TXN002157); Account SBIN-22941318699 received ₹282,314 from 3 different individuals within 14 days
+  - EVD-TXN002078 ₹37,484 2025-03-08 09:29: ₹38,643 received by P00013 and ₹37,484 sent onward 29 min later (EVD-TXN002077 → EVD-TXN002078); Account HDFC-42102499471 received ₹1,126,030 from 4 different individuals within 14 days
+
+6. COMMUNICATION
+  - Ashok Verma ↔ Ritu Malhotra: 17 contacts (2025-02-06 19:53 – 2025-03-22 13:35)
+  - Ritu Malhotra ↔ Farhan Jain: 7 contacts (2025-02-17 20:56 – 2025-04-05 11:49)
+  - Ram Kumar ↔ Ritu Malhotra: 5 contacts (2025-02-26 07:04 – 2025-02-28 16:40)
+  - Ram Kumar ↔ Farhan Jain: 3 contacts (2025-02-24 02:07 – 2025-03-02 03:43)
+  - Ram Kumar ↔ Ashok Verma: 3 contacts (2025-02-27 19:52 – 2025-03-04 12:20)
+  - Ram Kumar ↔ Ashok Chopra: 43 contacts (2025-02-08 12:37 – 2025-04-05 22:33)
+  - Sunita Kaur ↔ Ritu Malhotra: 29 contacts (2025-02-09 15:15 – 2025-04-05 20:13)
+  - Kuldeep Verma ↔ Sunita Sidhu: 26 contacts (2025-02-06 07:57 – 2025-04-05 09:18)
+  Around incident: 48 contacts (baseline ≈35.4), 1 between named persons
+  * EVD-MSG001287 2025-02-24 02:07: "Your returns of 18% are credited. Add Rs 30,000 more to unlock withdrawal. Transfer to UTI" — references an amount (₹30000); references account UTIB-56121377306 (seen in this case's transactions)
+  * EVD-MSG001366 2025-02-26 07:04: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to UTI" — references an amount (₹45000); references account UTIB-56121377306 (seen in this case's transactions)
+  * EVD-MSG001394 2025-02-26 17:37: "Your returns of 18% are credited. Add Rs 15,000 more to unlock withdrawal. Transfer to KKB" — references an amount (₹15000); references account KKBK-25957244617 (seen in this case's transactions)
+  * EVD-MSG001403 2025-02-27 05:50: "Your returns of 18% are credited. Add Rs 30,000 more to unlock withdrawal. Transfer to SBI" — references an amount (₹30000); references account SBIN-84301922095 (seen in this case's transactions)
+  * EVD-MSG001427 2025-02-27 16:59: "Your returns of 18% are credited. Add Rs 24,999 more to unlock withdrawal. Transfer to KKB" — references an amount (₹24999); references account KKBK-25957244617 (seen in this case's transactions)
+  * EVD-MSG001429 2025-02-27 19:52: "Your returns of 18% are credited. Add Rs 9,999 more to unlock withdrawal. Transfer to SBIN" — references an amount (₹9999); references account SBIN-84301922095 (seen in this case's transactions)
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Ram Kumar (P00013), recorded as principal accused: in contact with P00222 (5 contacts), P00432 (3 contacts), P00037 (3 contacts); party to 15 flagged transaction(s) (FAN_IN, ISOLATION_FOREST, RAPID_PASS_THROUGH, STRUCTURING). [EVD-MSG001366, EVD-MSG001394, EVD-MSG001287, EVD-MSG001444]
+  - Ashok Verma (P00037), recorded as complainant: in contact with P00222 (17 contacts), P00013 (3 contacts); party to 3 flagged transaction(s) (FAN_IN). [EVD-CDR000993, EVD-CDR001377, EVD-MSG001429, EVD-MSG001493]
+  - Ritu Malhotra (P00222), recorded as victim: in contact with P00037 (17 contacts), P00432 (7 contacts), P00013 (5 contacts); party to 2 flagged transaction(s) (FAN_IN). [EVD-CDR000993, EVD-CDR001377, EVD-CDR001530, EVD-CDR002177]
+  - Farhan Jain (P00432), recorded as victim: in contact with P00222 (7 contacts), P00013 (3 contacts); party to 3 flagged transaction(s) (FAN_IN). [EVD-CDR001530, EVD-CDR002177, EVD-MSG001287, EVD-MSG001444]
+  - Vicky Singh (P00016), recorded as accused: party to 1 flagged transaction(s) (FAN_IN, ISOLATION_FOREST). [EVD-TXN002188]
+  - Location inconsistency P00361: IMPOSSIBLE (EVD-LOC006268 → EVD-LOC006270, 1310.93 km in 64.0 min)
+  - Location inconsistency P00361: REQUIRES_AIR_TRAVEL (EVD-LOC006270 → EVD-LOC006293, 1311.89 km in 257.1 min)
+
+9. MISSING INFORMATION
+  - P00016 no geolocated record within ±6 h of the incident
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: caller_number — unparseable phone number
+  - 1 record(s) with data-quality issue: timestamp — timestamp invalid
+  - 1 record(s) with data-quality issue: txn_datetime — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

@@ -1,0 +1,67 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE008
+Generated 2026-11-20T07:18:32  |  data hash c1e16786b97469c6
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE008 (FIR/CYBERCRIME/2025/0008) — Extortion & Criminal Intimidation registered at PS Cyber Crime CHD, Chandigarh. Incident recorded on 2025-02-17 10:44 at Sector 17 Plaza, Chandigarh. FIR records 1 accused (Pankaj Jain P00033) and 3 named persons in total. 553 records across 5 sources; 5 transactions flagged for review.
+
+2. NARRATIVE
+CASE008 (FIR/CYBERCRIME/2025/0008) — Extortion & Criminal Intimidation registered at PS Cyber Crime CHD, Chandigarh. Incident recorded on 2025-02-17 10:44 at Sector 17 Plaza, Chandigarh. FIR records 1 accused (Pankaj Jain P00033) and 3 named persons in total. 553 records across 5 sources; 5 transactions flagged for review. 4 transfers from P00357 to P00033 each fell just below ₹50,000 (total ₹192,000).
+
+3. CHRONOLOGY
+  2025-02-01 15:40  Flagged NEFT ₹28,000 ORG-001 → P00357  [EVD-TXN000615]
+  2025-02-17 10:44  Incident recorded at Sector 17 Plaza, Chandigarh  []
+  2025-02-18 11:05  Flagged CASH_DEPOSIT ₹45,000 P00357 → P00033  [EVD-TXN001298]
+  2025-02-19 03:07  Flagged CASH_DEPOSIT ₹49,500 P00357 → P00033  [EVD-TXN001333]
+  2025-02-19 16:07  Flagged CASH_DEPOSIT ₹49,500 P00357 → P00033  [EVD-TXN001350]
+  2025-02-20 08:26  Flagged CASH_DEPOSIT ₹48,000 P00357 → P00033  [EVD-TXN001369]
+  2025-02-20 15:02  Fir FIR/CYBERCRIME/2025/0008 at PS Cyber Crime CHD (Chandigarh): Extortion & Criminal Intimidation  [EVD-FIR000013]
+  2025-02-23 00:07  Witness Statement FIR/CYBERCRIME/2025/0008 at PS Cyber Crime CHD (Chandigarh): Extortion & Criminal Intimidation  [EVD-FIR000015]
+  2025-03-01 22:23  P00001 and P00035 co-located at Sector 70 Residential, Mohali  [EVD-LOC003577, EVD-LOC003576]
+  2025-03-08 15:32  Supplementary Statement FIR/CYBERCRIME/2025/0008 at PS Cyber Crime CHD (Chandigarh): Extortion & Criminal Intimidation  [EVD-FIR000024]
+  2025-03-10 08:06  Supplementary Statement FIR/CYBERCRIME/2025/0008 at PS Cyber Crime CHD (Chandigarh): Extortion & Criminal Intimidation  [EVD-FIR000025]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00033  Pankaj Jain                  PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000013, EVD-FIR000024, EVD-FIR000025]
+  P00357  Vikram Chopra                COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000013]
+  P00001  Amit Sharma                  WITNESS            via FIR_NER  [EVD-FIR000015]
+  P00002  Amit Sharma                  RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  110 transactions, total ₹806,887; 5 flagged
+  - EVD-TXN001333 ₹49,500 2025-02-19 03:07: Isolation Forest outlier: amount ≈36× this account's median; cash channel; unusual hour; 4 transfers P00357 → P00033 within 14 days, each just below ₹50,000 (total ₹192,000)
+  - EVD-TXN001350 ₹49,500 2025-02-19 16:07: Isolation Forest outlier: amount ≈36× this account's median; cash channel; 4 transfers P00357 → P00033 within 14 days, each just below ₹50,000 (total ₹192,000)
+  - EVD-TXN001369 ₹48,000 2025-02-20 08:26: Isolation Forest outlier: amount ≈35× this account's median; cash channel; 4 transfers P00357 → P00033 within 14 days, each just below ₹50,000 (total ₹192,000)
+  - EVD-TXN001298 ₹45,000 2025-02-18 11:05: Isolation Forest outlier: amount ≈32× this account's median; cash channel; 4 transfers P00357 → P00033 within 14 days, each just below ₹50,000 (total ₹192,000)
+  - EVD-TXN000615 ₹28,000 2025-02-01 15:40: Isolation Forest outlier: 9 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Pankaj Jain ↔ Vikram Chopra: 4 contacts (2025-02-11 08:39 – 2025-02-15 21:52)
+  - Amit Sharma ↔ Navneet Kapoor: 42 contacts (2025-01-20 20:18 – 2025-03-18 14:00)
+  - Pankaj Jain ↔ Sandeep Rawat: 18 contacts (2025-01-21 16:00 – 2025-03-07 16:05)
+  - Amit Sharma ↔ Sachin Bansal: 17 contacts (2025-01-23 08:57 – 2025-03-18 13:43)
+  - Pankaj Jain ↔ Vikram Gill: 13 contacts (2025-01-25 20:39 – 2025-03-16 18:26)
+  - Amit Sharma ↔ Varun Jain: 13 contacts (2025-02-04 16:29 – 2025-03-03 17:29)
+  - Amit Sharma ↔ Kavita Sandhu: 13 contacts (2025-02-06 21:08 – 2025-03-02 09:29)
+  - Neha Gupta ↔ Vikram Chopra: 10 contacts (2025-01-19 19:55 – 2025-03-07 19:33)
+  Around incident: 16 contacts (baseline ≈14.8), 1 between named persons
+  * EVD-MSG001018 2025-02-15 21:52: "Account: PUNB-38347359774. Small amounts only." — references account PUNB-38347359774 (seen in this case's transactions); exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - near incident: P00033 0.7 km, 0 min (EVD-LOC002504)
+  - near incident: P00357 0.02 km, 5 min (EVD-LOC002506)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Pankaj Jain (P00033), recorded as principal accused: record within 0.7 km of the incident location within 2 h of the incident; in contact with P00357 (4 contacts); party to 4 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-LOC002504, EVD-MSG000879, EVD-MSG000930, EVD-TXN001333]
+  - Vikram Chopra (P00357), recorded as complainant: record within 0.02 km of the incident location within 2 h of the incident; in contact with P00033 (4 contacts); party to 5 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-LOC002506, EVD-MSG000879, EVD-MSG000930, EVD-TXN001333]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: latitude/longitude — invalid coordinate; set to NULL
+  - 1 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+  - 1 record(s) with data-quality issue: txn_datetime — timestamp invalid
+  - Name 'Amit Sharma' in FIR text could not be linked to a unique person record
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

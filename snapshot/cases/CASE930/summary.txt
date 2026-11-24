@@ -1,0 +1,33 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE930
+Generated 2026-11-21T11:55:53  |  data hash 1b5d55d6fe8f50d0
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE930 (FIR 22/2025, PS Tibba) — Theft & Burglary registered at PS Tibba, Ludhiana. Incident date not stated in the source at Ludhiana, Punjab. FIR records 1 accused (Accused A1 · CASE930 P90045) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE930 (FIR 22/2025, PS Tibba) — Theft & Burglary registered at PS Tibba, Ludhiana. Incident date not stated in the source at Ludhiana, Punjab. FIR records 1 accused (Accused A1 · CASE930 P90045) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2025-02-10 00:00  Fir Extract FIR 22/2025, PS Tibba at PS Tibba (Ludhiana): Theft & Burglary  [EVD-PUB000030]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90045  Accused A1 · CASE930         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000030]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90045 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

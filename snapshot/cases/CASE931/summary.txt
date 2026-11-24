@@ -1,0 +1,35 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE931
+Generated 2026-11-21T11:55:53  |  data hash a61a1753053463b4
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE931 (FIR 78/2025, PS Anti Narcotics Force) — Narcotics (NDPS Act) registered at PS Anti Narcotics Force, ANTF Wing. Incident date not stated in the source at ANTF Wing, Punjab. FIR records 2 accused (Accused A1 · CASE931 P90046, Accused A2 · CASE931 P90047) and 2 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE931 (FIR 78/2025, PS Anti Narcotics Force) — Narcotics (NDPS Act) registered at PS Anti Narcotics Force, ANTF Wing. Incident date not stated in the source at ANTF Wing, Punjab. FIR records 2 accused (Accused A1 · CASE931 P90046, Accused A2 · CASE931 P90047) and 2 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2025-03-26 00:00  Fir Extract FIR 78/2025, PS Anti Narcotics Force at PS Anti Narcotics Force (ANTF Wing): Narcotics (NDPS Act)  [EVD-PUB000031]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90046  Accused A1 · CASE931         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000031]
+  P90047  Accused A2 · CASE931         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000031]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90047 no call detail records obtained
+  - P90046 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

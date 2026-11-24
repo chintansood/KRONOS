@@ -1,0 +1,85 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE007
+Generated 2026-11-20T07:18:32  |  data hash 68ec16d1870d8c2e
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE007 (FIR/KAROLBAGH/2025/0007) — Cyber Fraud (Online Investment Scam) registered at PS Karol Bagh, New Delhi. Incident recorded on 2025-02-12 19:51 at Laxmi Nagar Residential, Delhi. FIR records 1 accused (Vivek Sharma P00029) and 3 named persons in total. 867 records across 5 sources; 13 transactions flagged for review.
+
+2. NARRATIVE
+CASE007 (FIR/KAROLBAGH/2025/0007) — Cyber Fraud (Online Investment Scam) registered at PS Karol Bagh, New Delhi. Incident recorded on 2025-02-12 19:51 at Laxmi Nagar Residential, Delhi. FIR records 1 accused (Vivek Sharma P00029) and 3 named persons in total. 867 records across 5 sources; 13 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN001089 → EVD-TXN001095, 42.0 min), a pattern that can indicate layering and requires verification. 6 transfers from P00029 to P00029 each fell just below ₹50,000 (total ₹272,456). Account SBIN-22901476797 received funds from 4 different individuals within 14 days. Communication between P00009 and P00029 spiked to 4 contacts within 3 hours on 2025-02-12. Note: P00029 has a record 407.8 km from the incident location 67 min after the incident (EVD-LOC002104), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-01-23 16:43  P00029 and P00231 co-located at Hall Bazaar, Amritsar  [EVD-LOC000802, EVD-LOC000804]
+  2025-02-12 19:51  Incident recorded at Laxmi Nagar Residential, Delhi  []
+  2025-02-12 23:56  Communication burst P00009–P00029 (4 contacts in 3 h)  [EVD-CDR001266, EVD-CDR001268, EVD-CDR001269]
+  2025-02-13 10:55  Flagged IMPS ₹44,966 P00029 → P00029  [EVD-TXN001095]
+  2025-02-13 13:50  Flagged IMPS ₹46,933 P00029 → P00029  [EVD-TXN001104]
+  2025-02-13 14:15  Flagged IMPS ₹46,050 P00029 → P00029  [EVD-TXN001107]
+  2025-02-13 16:00  Flagged IMPS ₹48,148 P00029 → P00029  [EVD-TXN001116]
+  2025-02-14 00:11  Flagged IMPS ₹41,946 P00029 → P00029  [EVD-TXN001136]
+  2025-02-14 19:51  Flagged CASH_WITHDRAWAL ₹242,397 P00029 → P00029  [EVD-TXN001159]
+  2025-02-16 00:19  Fir FIR/KAROLBAGH/2025/0007 at PS Karol Bagh (New Delhi): Cyber Fraud (Online Investment Scam)  [EVD-FIR000011]
+  2025-02-18 16:50  P00027 and P00161 co-located at Focal Point Industrial Area, Ludhiana  [EVD-LOC002620, EVD-LOC002618]
+  2025-02-24 16:54  P00029 and P00355 co-located at Hall Bazaar, Amritsar  [EVD-LOC003138, EVD-LOC003139]
+  2025-03-05 15:24  P00029 and P00355 co-located at Hall Bazaar, Amritsar  [EVD-LOC003900, EVD-LOC003898]
+  2025-03-05 18:11  Supplementary Statement FIR/KAROLBAGH/2025/0007 at PS Karol Bagh (New Delhi): Cyber Fraud (Online Investment Scam)  [EVD-FIR000019]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00029  Vivek Sharma                 PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000011, EVD-FIR000019]
+  P00335  Nisha Kapoor                 COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000011, EVD-FIR000019]
+  P00272  Manisha Jain                 VICTIM             via FIR_NER  [EVD-FIR000011]
+  P00009  Neha Gupta                   RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00161  Vikram Mehta                 RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00186  Vivek Thakur                 RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  181 transactions, total ₹2,015,051; 13 flagged
+  - EVD-TXN001136 ₹41,946 2025-02-14 00:11: Isolation Forest outlier: amount ≈21× this account's median; 6 transactions from this account within 24 h; unusual hour; ₹43,244 received by P00029 and ₹41,946 sent onward 40 min later (EVD-TXN001135 → EVD-TXN001136)
+  - EVD-TXN001159 ₹242,397 2025-02-14 19:51: Isolation Forest outlier: amount ≈243× this account's median; cash channel; Amount ₹242,397 exceeds upper fence ₹125,555 (Q3 + 3.0·IQR, sender's own history)
+  - EVD-TXN001116 ₹48,148 2025-02-13 16:00: ₹48,385 received by P00029 and ₹48,148 sent onward 165 min later (EVD-TXN001101 → EVD-TXN001116); 6 transfers P00029 → P00029 within 14 days, each just below ₹50,000 (total ₹272,456)
+  - EVD-TXN001104 ₹46,933 2025-02-13 13:50: ₹46,356 received by P00029 and ₹46,933 sent onward 217 min later (EVD-TXN001089 → EVD-TXN001104); 6 transfers P00029 → P00029 within 14 days, each just below ₹50,000 (total ₹272,456)
+  - EVD-TXN001107 ₹46,050 2025-02-13 14:15: ₹46,356 received by P00029 and ₹46,050 sent onward 242 min later (EVD-TXN001089 → EVD-TXN001107); 6 transfers P00029 → P00029 within 14 days, each just below ₹50,000 (total ₹272,456)
+  - EVD-TXN001095 ₹44,966 2025-02-13 10:55: ₹46,356 received by P00029 and ₹44,966 sent onward 42 min later (EVD-TXN001089 → EVD-TXN001095); 6 transfers P00029 → P00029 within 14 days, each just below ₹50,000 (total ₹272,456)
+  - EVD-TXN001106 ₹44,414 2025-02-13 14:05: ₹46,356 received by P00029 and ₹44,414 sent onward 233 min later (EVD-TXN001089 → EVD-TXN001106); 6 transfers P00029 → P00029 within 14 days, each just below ₹50,000 (total ₹272,456)
+  - EVD-TXN001115 ₹49,637 2025-02-13 15:36: ₹49,637 received by P00029 and ₹48,148 sent onward 24 min later (EVD-TXN001115 → EVD-TXN001116); Account SBIN-22901476797 received ₹795,735 from 4 different individuals within 14 days
+  - EVD-TXN001101 ₹48,385 2025-02-13 13:15: ₹48,385 received by P00029 and ₹46,933 sent onward 35 min later (EVD-TXN001101 → EVD-TXN001104); Account SBIN-22901476797 received ₹795,735 from 4 different individuals within 14 days
+  - EVD-TXN001102 ₹47,474 2025-02-13 13:34: ₹47,474 received by P00029 and ₹46,933 sent onward 16 min later (EVD-TXN001102 → EVD-TXN001104); Account SBIN-22901476797 received ₹795,735 from 4 different individuals within 14 days
+  - EVD-TXN001089 ₹46,356 2025-02-13 10:13: ₹46,356 received by P00029 and ₹44,966 sent onward 42 min later (EVD-TXN001089 → EVD-TXN001095); Account SBIN-22901476797 received ₹795,735 from 4 different individuals within 14 days
+  - EVD-TXN001103 ₹45,787 2025-02-13 13:36: ₹45,787 received by P00029 and ₹44,414 sent onward 29 min later (EVD-TXN001103 → EVD-TXN001106); Account SBIN-22901476797 received ₹795,735 from 4 different individuals within 14 days
+  - EVD-TXN001135 ₹43,244 2025-02-13 23:31: ₹43,244 received by P00029 and ₹41,946 sent onward 40 min later (EVD-TXN001135 → EVD-TXN001136); Account SBIN-22901476797 received ₹795,735 from 4 different individuals within 14 days
+
+6. COMMUNICATION
+  - Vivek Sharma ↔ Manisha Jain: 6 contacts (2025-02-04 06:52 – 2025-02-12 15:07)
+  - Vivek Sharma ↔ Nisha Kapoor: 4 contacts (2025-02-01 07:07 – 2025-02-09 19:44)
+  - Nisha Kapoor ↔ Sanjay Bhatia: 38 contacts (2025-01-18 16:09 – 2025-03-13 14:49)
+  - Sahil Verma ↔ Nisha Kapoor: 19 contacts (2025-01-15 13:49 – 2025-03-07 03:28)
+  - Karan Bhatia ↔ Manisha Jain: 18 contacts (2025-01-15 12:07 – 2025-03-12 22:06)
+  - Vikram Mehta ↔ Amit Aggarwal: 18 contacts (2025-01-16 16:58 – 2025-03-13 12:05)
+  - Vivek Sharma ↔ Harleen Malhotra: 17 contacts (2025-01-15 13:25 – 2025-03-13 11:32)
+  - Vivek Sharma ↔ Nitin Malhotra: 13 contacts (2025-01-16 18:40 – 2025-03-02 12:07)
+  Around incident: 35 contacts (baseline ≈23.6), 1 between named persons
+  * EVD-MSG000566 2025-02-01 07:07: "Your returns of 18% are credited. Add Rs 9,999 more to unlock withdrawal. Transfer to SBIN" — references an amount (₹9999); references account SBIN-20005347491 (seen in this case's transactions)
+  * EVD-MSG000641 2025-02-04 06:52: "Your returns of 18% are credited. Add Rs 15,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹15000); references account ICIC-71434558122 (seen in this case's transactions)
+  * EVD-MSG000644 2025-02-04 11:51: "Your returns of 18% are credited. Add Rs 24,999 more to unlock withdrawal. Transfer to PUN" — references an amount (₹24999); references account PUNB-26682171955 (seen in this case's transactions)
+  * EVD-MSG000752 2025-02-07 18:50: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹45000); references account ICIC-71434558122 (seen in this case's transactions)
+  * EVD-MSG000785 2025-02-08 17:33: "Your returns of 18% are credited. Add Rs 30,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹30000); references account ICIC-71434558122 (seen in this case's transactions)
+  * EVD-MSG000795 2025-02-08 23:59: "Your returns of 18% are credited. Add Rs 24,999 more to unlock withdrawal. Transfer to ICI" — references an amount (₹24999); references account ICIC-71434558122 (seen in this case's transactions)
+
+7. LOCATION
+  - elsewhere: P00029 at Ranjit Avenue Residential, Amritsar (407.8 km away, EVD-LOC002104)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Vivek Sharma (P00029), recorded as principal accused: record(s) 407.8 km away from the incident location within 3 h of the incident (Ranjit Avenue Residential, Amritsar); in contact with P00272 (6 contacts), P00335 (4 contacts); party to 13 flagged transaction(s) (FAN_IN, IQR, ISOLATION_FOREST, RAPID_PASS_THROUGH, STRUCTURING). [EVD-LOC002104, EVD-MSG000641, EVD-MSG000752, EVD-MSG000566]
+  - Nisha Kapoor (P00335), recorded as complainant: in contact with P00029 (4 contacts). [EVD-MSG000566, EVD-MSG000644]
+  - Manisha Jain (P00272), recorded as victim: in contact with P00029 (6 contacts). [EVD-MSG000641, EVD-MSG000752]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: caller_number — unparseable phone number
+  - 1 record(s) with data-quality issue: call_date — timestamp invalid
+  - 1 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+  - 1 record(s) with data-quality issue: timestamp — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

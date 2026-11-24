@@ -1,0 +1,101 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE040
+Generated 2026-11-21T13:58:42  |  data hash abb737559023f9ab
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE040 (FIR/KOTWALIAMR/2025/0040) — Extortion & Criminal Intimidation registered at PS Kotwali Amritsar, Amritsar. Incident recorded on 2025-06-09 13:46 at Hall Bazaar, Amritsar. FIR records 2 accused (Rekha Rana P00331, Abhishek Rana P00271) and 4 named persons in total. 568 records across 5 sources; 4 transactions flagged for review.
+
+2. NARRATIVE
+**Case Narrative: CASE040**
+
+On June 9, 2025, at approximately 13:46 hours, an incident was recorded at Hall Bazaar in Amritsar (FIR/KOTWALIAMR/2025/0040). The case involves alleged extortion and criminal intimidation.
+
+**Key Parties Involved:**
+
+1. **Rekha Rana (P00331)**: Recorded as the principal accused.
+	* Co-located with P00169 on May 21, 2025 [EVD-LOC009548].
+	* In contact with multiple individuals, including P00271 and P00352.
+2. **Abhishek Rana (P00271)**: Recorded as accused.
+	* Co-located with P00359 on June 13, 2025 in Sector 35 Residential, Chandigarh [EVD-LOC010662].
+3. **Sakshi Verma (P00413)**: Recorded as complainant.
+	* Made transactions totaling ₹178,000 to Rekha Rana within a short period [EVD-TXN005357, EVD-TXN005374, EVD-TXN005379].
+
+**Financial Transactions Flagged for Review:**
+
+1. Four cash deposits were made by Sakshi Verma to Rekha Rana's account:
+	* ₹40,000 on June 10, 2025 [EVD-TXN005346]
+	* ₹48,000 on June 11, 2025 [EVD-TXN005357]
+	* ₹45,000 on June 11, 2025 [EVD-TXN005374]
+	* ₹45,000 on June 12, 2025 [EVD-TXN005379]
+
+These transactions are flagged due to potential structuring and isolation forest anomalies.
+
+**Uncertainties:**
+
+1. One record has a data-quality issue with an invalid timestamp for the call date.
+
+This narrative provides a factual account of the events surrounding CASE040. Further investigation is required
+
+3. CHRONOLOGY
+  2025-05-21 17:36  P00169 and P00331 co-located at Hall Bazaar, Amritsar  [EVD-LOC009548, EVD-LOC009547]
+  2025-06-09 13:46  Incident recorded at Hall Bazaar, Amritsar  []
+  2025-06-10 10:23  Fir FIR/KOTWALIAMR/2025/0040 at PS Kotwali Amritsar (Amritsar): Extortion & Criminal Intimidation  [EVD-FIR000081]
+  2025-06-10 15:34  Flagged CASH_DEPOSIT ₹40,000 P00413 → P00331  [EVD-TXN005346]
+  2025-06-11 06:16  Flagged CASH_DEPOSIT ₹48,000 P00413 → P00331  [EVD-TXN005357]
+  2025-06-11 22:27  Flagged CASH_DEPOSIT ₹45,000 P00413 → P00331  [EVD-TXN005374]
+  2025-06-12 06:52  Supplementary Statement FIR/KOTWALIAMR/2025/0040 at PS Kotwali Amritsar (Amritsar): Extortion & Criminal Intimidation  [EVD-FIR000085]
+  2025-06-12 12:05  Flagged CASH_DEPOSIT ₹45,000 P00413 → P00331  [EVD-TXN005379]
+  2025-06-13 07:51  P00271 and P00359 co-located at Sector 35 Residential, Chandigarh  [EVD-LOC010662, EVD-LOC010661]
+  2025-06-14 17:29  Supplementary Statement FIR/KOTWALIAMR/2025/0040 at PS Kotwali Amritsar (Amritsar): Extortion & Criminal Intimidation  [EVD-FIR000088]
+  2025-06-17 20:56  Supplementary Statement FIR/KOTWALIAMR/2025/0040 at PS Kotwali Amritsar (Amritsar): Extortion & Criminal Intimidation  [EVD-FIR000091]
+  2025-07-02 10:01  Supplementary Statement FIR/KOTWALIAMR/2025/0040 at PS Kotwali Amritsar (Amritsar): Extortion & Criminal Intimidation  [EVD-FIR000096]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00331  Rekha Rana                   PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000096, EVD-FIR000088, EVD-FIR000085, EVD-FIR000081]
+  P00271  Abhishek Rana                ACCUSED            via FIR_STRUCTURED  [EVD-FIR000091, EVD-FIR000081]
+  P00413  Sakshi Verma                 COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000088, EVD-FIR000085, EVD-FIR000081]
+  P00352  Sandeep Kapoor               WITNESS            via FIR_NER  [EVD-FIR000096, EVD-FIR000091, EVD-FIR000081]
+
+5. FINANCIAL ACTIVITY
+  104 transactions, total ₹468,140; 4 flagged
+  - EVD-TXN005357 ₹48,000 2025-06-11 06:16: Isolation Forest outlier: amount ≈28× this account's median; cash channel; Amount ₹48,000 exceeds upper fence ₹44,672 (Q3 + 3.0·IQR, sender's own history)
+  - EVD-TXN005374 ₹45,000 2025-06-11 22:27: Isolation Forest outlier: amount ≈26× this account's median; cash channel; Amount ₹45,000 exceeds upper fence ₹44,672 (Q3 + 3.0·IQR, sender's own history)
+  - EVD-TXN005379 ₹45,000 2025-06-12 12:05: Isolation Forest outlier: amount ≈26× this account's median; cash channel; Amount ₹45,000 exceeds upper fence ₹44,672 (Q3 + 3.0·IQR, sender's own history)
+  - EVD-TXN005346 ₹40,000 2025-06-10 15:34: Isolation Forest outlier: amount ≈23× this account's median; cash channel; 4 transfers P00413 → P00331 within 14 days, each just below ₹50,000 (total ₹178,000)
+
+6. COMMUNICATION
+  - Rekha Rana ↔ Sandeep Kapoor: 13 contacts (2025-05-26 14:09 – 2025-06-29 22:20)
+  - Rekha Rana ↔ Sakshi Verma: 4 contacts (2025-06-03 12:49 – 2025-06-08 00:23)
+  - Abhishek Rana ↔ Rekha Rana: 4 contacts (2025-06-09 12:37 – 2025-06-09 16:32)
+  - Karan Singh ↔ Rekha Rana: 28 contacts (2025-05-12 11:44 – 2025-06-26 19:45)
+  - Gurpreet Rana ↔ Sandeep Kapoor: 24 contacts (2025-05-13 16:06 – 2025-06-30 12:19)
+  - Aman Thakur ↔ Sakshi Verma: 17 contacts (2025-05-12 13:23 – 2025-06-23 21:04)
+  - Manpreet Rawat ↔ Sandeep Kapoor: 16 contacts (2025-05-11 20:03 – 2025-06-25 19:44)
+  - Pankaj Kumar ↔ Sakshi Verma: 16 contacts (2025-05-13 19:32 – 2025-06-27 18:28)
+  Around incident: 24 contacts (baseline ≈17.8), 5 between named persons
+  * EVD-MSG004360 2025-06-08 00:23: "Account: HDFC-77752259206. Small amounts only." — references account HDFC-77752259206 (seen in this case's transactions); exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - near incident: P00331 0.01 km, -115 min (EVD-LOC010522)
+  - near incident: P00413 0.1 km, -106 min (EVD-TXN005327)
+  - near incident: P00331 0.49 km, 0 min (EVD-LOC010526)
+  - near incident: P00413 0.01 km, 5 min (EVD-LOC010528)
+  - near incident: P00331 1.54 km, 8 min (EVD-CDR006126)
+  - elsewhere: P00271 at Sector 17 Plaza, Chandigarh (206.2 km away, EVD-LOC010524)
+  - elsewhere: P00271 at Sector 17 Plaza, Chandigarh (205.9 km away, EVD-CDR006122)
+  - elsewhere: P00271 at Sector 17 Plaza, Chandigarh (207.7 km away, EVD-CDR006127)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Sakshi Verma (P00413), recorded as complainant: record within 0.01 km of the incident location within 2 h of the incident; in contact with P00331 (4 contacts); party to 4 flagged transaction(s) (IQR, ISOLATION_FOREST, STRUCTURING); 1 location inconsistency flag(s) (requires_air_travel). [EVD-TXN005327, EVD-LOC010528, EVD-MSG004282, EVD-MSG004308]
+  - Rekha Rana (P00331), recorded as principal accused: record within 0.01 km of the incident location within 2 h of the incident; in contact with P00352 (13 contacts), P00413 (4 contacts), P00271 (4 contacts); party to 4 flagged transaction(s) (IQR, ISOLATION_FOREST, STRUCTURING). [EVD-LOC010522, EVD-LOC010526, EVD-CDR006126, EVD-CDR005736]
+  - Abhishek Rana (P00271), recorded as accused: record(s) 206.2 km away from the incident location within 3 h of the incident (Sector 17 Plaza, Chandigarh); in contact with P00331 (4 contacts). [EVD-LOC010524, EVD-CDR006122, EVD-CDR006127, EVD-CDR006122]
+  - Sandeep Kapoor (P00352), recorded as witness: in contact with P00331 (13 contacts). [EVD-CDR005736, EVD-MSG004142]
+  - Location inconsistency P00413: REQUIRES_AIR_TRAVEL (EVD-LOC009785 → EVD-LOC009789, 400.99 km in 64.0 min)
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: call_date — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

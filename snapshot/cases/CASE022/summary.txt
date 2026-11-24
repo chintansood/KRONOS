@@ -1,0 +1,75 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE022
+Generated 2026-11-20T07:18:35  |  data hash 13e6f94ab9e420ec
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE022 (FIR/KAROLBAGH/2025/0022) — Narcotics Supply (NDPS) registered at PS Karol Bagh, New Delhi. Incident recorded on 2025-04-08 10:23 at IGI Airport Terminal 3, Delhi. FIR records 3 accused (Monu Rana P00028, Gopi Dhillon P00024, Navneet Rana P00344) and 4 named persons in total. 707 records across 5 sources; 8 transactions flagged for review.
+
+2. NARRATIVE
+CASE022 (FIR/KAROLBAGH/2025/0022) — Narcotics Supply (NDPS) registered at PS Karol Bagh, New Delhi. Incident recorded on 2025-04-08 10:23 at IGI Airport Terminal 3, Delhi. FIR records 3 accused (Monu Rana P00028, Gopi Dhillon P00024, Navneet Rana P00344) and 4 named persons in total. 707 records across 5 sources; 8 transactions flagged for review. 7 transfers from P00344 to P00028 each fell just below ₹50,000 (total ₹337,500). Account KKBK-16560494519 received funds from 3 different individuals within 14 days. Note: P00344 has a record 16.5 km from the incident location 30 min before the incident (EVD-MSG002700), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-03-20 18:55  P00344 and P00392 co-located at IGI Airport Terminal 3, Delhi  [EVD-LOC005126, EVD-LOC005127]
+  2025-03-22 07:53  P00028 and P00303 co-located at Sarabha Nagar Residential, Ludhiana  [EVD-LOC005242, EVD-LOC005241]
+  2025-03-28 02:30  Flagged CASH_DEPOSIT ₹46,000 P00344 → P00028  [EVD-TXN002805]
+  2025-04-01 04:15  Flagged CASH_DEPOSIT ₹49,900 P00344 → P00028  [EVD-TXN002960]
+  2025-04-02 21:27  Flagged CASH_DEPOSIT ₹49,900 P00344 → P00028  [EVD-TXN003064]
+  2025-04-03 07:53  Flagged CASH_DEPOSIT ₹49,900 P00344 → P00028  [EVD-TXN003068]
+  2025-04-03 12:33  Flagged CASH_DEPOSIT ₹49,900 P00344 → P00028  [EVD-TXN003076]
+  2025-04-04 17:19  Flagged CASH_DEPOSIT ₹49,900 P00344 → P00028  [EVD-TXN003113]
+  2025-04-08 10:23  Incident recorded at IGI Airport Terminal 3, Delhi  []
+  2025-04-08 12:28  Fir FIR/KAROLBAGH/2025/0022 at PS Karol Bagh (New Delhi): Narcotics Supply (NDPS)  [EVD-FIR000044]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00028  Monu Rana                    PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000044]
+  P00024  Gopi Dhillon                 ACCUSED            via FIR_STRUCTURED  [EVD-FIR000044]
+  P00344  Navneet Rana                 ACCUSED            via FIR_STRUCTURED  [EVD-FIR000044]
+  P00044  Vivek Khan                   MENTIONED          via FIR_NER  [EVD-FIR000044]
+  P00092  Mohit Sandhu                 RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  139 transactions, total ₹952,955; 8 flagged
+  - EVD-TXN002960 ₹49,900 2025-04-01 04:15: Isolation Forest outlier: amount ≈25× this account's median; cash channel; unusual hour; 7 transfers P00344 → P00028 within 14 days, each just below ₹50,000 (total ₹337,500)
+  - EVD-TXN003064 ₹49,900 2025-04-02 21:27: Isolation Forest outlier: amount ≈25× this account's median; cash channel; 7 transfers P00344 → P00028 within 14 days, each just below ₹50,000 (total ₹337,500)
+  - EVD-TXN003068 ₹49,900 2025-04-03 07:53: Isolation Forest outlier: amount ≈25× this account's median; cash channel; 7 transfers P00344 → P00028 within 14 days, each just below ₹50,000 (total ₹337,500)
+  - EVD-TXN003076 ₹49,900 2025-04-03 12:33: Isolation Forest outlier: amount ≈25× this account's median; cash channel; 7 transfers P00344 → P00028 within 14 days, each just below ₹50,000 (total ₹337,500)
+  - EVD-TXN003113 ₹49,900 2025-04-04 17:19: Isolation Forest outlier: amount ≈25× this account's median; cash channel; 7 transfers P00344 → P00028 within 14 days, each just below ₹50,000 (total ₹337,500)
+  - EVD-TXN002805 ₹46,000 2025-03-28 02:30: Isolation Forest outlier: amount ≈23× this account's median; cash channel; unusual hour; 7 transfers P00344 → P00028 within 14 days, each just below ₹50,000 (total ₹337,500)
+  - EVD-TXN003092 ₹42,000 2025-04-03 22:57: Isolation Forest outlier: amount ≈21× this account's median; cash channel; 7 transfers P00344 → P00028 within 14 days, each just below ₹50,000 (total ₹337,500)
+  - EVD-TXN004201 ₹22,000 2025-05-05 12:00: Isolation Forest outlier: amount ≈16× this account's median (alt.: Stated purpose 'house rent' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Vivek Khan ↔ Navneet Rana: 14 contacts (2025-03-21 21:23 – 2025-05-04 22:43)
+  - Mohit Sandhu ↔ Nisha Arora: 42 contacts (2025-03-11 10:17 – 2025-05-07 19:30)
+  - Gopi Dhillon ↔ Ashok Bhatia: 26 contacts (2025-03-09 17:02 – 2025-05-07 17:06)
+  - Vivek Khan ↔ Lakhwinder Bajwa: 25 contacts (2025-03-10 22:34 – 2025-05-06 08:10)
+  - Gopi Dhillon ↔ Manisha Kaur: 21 contacts (2025-03-10 11:57 – 2025-05-04 08:25)
+  - Monu Rana ↔ Pankaj Singh: 17 contacts (2025-03-09 21:13 – 2025-05-05 09:47)
+  - Rohit Aggarwal ↔ Navneet Rana: 15 contacts (2025-03-11 13:23 – 2025-05-02 07:10)
+  - Vivek Khan ↔ Imran Bansal: 14 contacts (2025-03-10 13:07 – 2025-04-30 16:17)
+  Around incident: 16 contacts (baseline ≈18.2), 2 between named persons
+  * EVD-MSG002630 2025-04-05 17:00: "Reached office, will call you at lunch." — exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG002647 2025-04-06 10:23: "Will be late tonight, eat without me." — exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - near incident: P00044 0.06 km, 33 min (EVD-MSG002703)
+  - elsewhere: P00344 at nan (16.5 km away, EVD-MSG002700)
+  - elsewhere: P00028 at nan (282.9 km away, EVD-MSG002702)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Navneet Rana (P00344), recorded as accused: record(s) 16.5 km away from the incident location within 3 h of the incident (nan); in contact with P00044 (14 contacts); party to 7 flagged transaction(s) (FAN_IN, ISOLATION_FOREST, STRUCTURING). [EVD-MSG002700, EVD-CDR003027, EVD-MSG002315, EVD-TXN002960]
+  - Monu Rana (P00028), recorded as principal accused: record(s) 282.9 km away from the incident location within 3 h of the incident (nan); party to 7 flagged transaction(s) (FAN_IN, ISOLATION_FOREST, STRUCTURING). [EVD-MSG002702, EVD-TXN002960, EVD-TXN003064, EVD-TXN003068]
+  - Gopi Dhillon (P00024), recorded as accused: party to 1 flagged transaction(s) (ISOLATION_FOREST); 2 location inconsistency flag(s) (impossible). [EVD-TXN004201, EVD-LOC004583, EVD-LOC004585]
+  - Vivek Khan (P00044), recorded as mentioned: record within 0.06 km of the incident location within 2 h of the incident; in contact with P00344 (14 contacts). [EVD-MSG002703, EVD-CDR003027, EVD-MSG002315]
+  - Location inconsistency P00024: IMPOSSIBLE (EVD-LOC004583 → EVD-LOC004585, 1347.82 km in 9.4 min)
+  - Location inconsistency P00024: REQUIRES_AIR_TRAVEL (EVD-LOC004585 → EVD-MSG001931, 1351.52 km in 168.1 min)
+
+9. MISSING INFORMATION
+  - P00024 no geolocated record within ±6 h of the incident
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: caller_number — unparseable phone number
+  - 1 record(s) with data-quality issue: timestamp — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

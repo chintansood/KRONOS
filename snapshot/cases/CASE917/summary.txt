@@ -1,0 +1,39 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE917
+Generated 2026-11-21T11:55:52  |  data hash 4c8631c292ce6b62
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE917 (FIR 126/2024, PS Division-4) — Cheating, Fraud & Forgery registered at PS Division-4, Patiala. Incident recorded on 2024-10-08 00:00 at Patiala, Punjab. FIR records 2 accused (Accused A1 · CASE917 P90027, Accused A2 · CASE917 P90028) and 3 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE917 (FIR 126/2024, PS Division-4) — Cheating, Fraud & Forgery registered at PS Division-4, Patiala. Incident recorded on 2024-10-08 00:00 at Patiala, Punjab. FIR records 2 accused (Accused A1 · CASE917 P90027, Accused A2 · CASE917 P90028) and 3 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2024-10-08 00:00  Incident recorded at Patiala, Punjab  []
+  2024-10-08 00:00  Fir Extract FIR 126/2024, PS Division-4 at PS Division-4 (Patiala): Cheating, Fraud & Forgery  [EVD-PUB000017]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90027  Accused A1 · CASE917         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000017]
+  P90028  Accused A2 · CASE917         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000017]
+  P90029  Complainant C1 · CASE917     COMPLAINANT        via FIR_STRUCTURED  [EVD-PUB000017]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+  Around incident: 0 contacts (baseline ≈0.0), 0 between named persons
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90027 no geolocated record within ±6 h of the incident
+  - P90027 no call detail records obtained
+  - P90028 no geolocated record within ±6 h of the incident
+  - P90028 no call detail records obtained
+
+10. UNCERTAINTIES
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

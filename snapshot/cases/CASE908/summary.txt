@@ -1,0 +1,35 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE908
+Generated 2026-11-21T11:55:51  |  data hash 590a4f2b5d6feed6
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE908 (FIR 31/2020, PS Raja Sansi) — Cheating, Fraud & Forgery registered at PS Raja Sansi, Amritsar Rural. Incident date not stated in the source at Amritsar Rural, Punjab. FIR records 2 accused (Accused A1 · CASE908 P90011, Accused A2 · CASE908 P90012) and 2 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE908 (FIR 31/2020, PS Raja Sansi) — Cheating, Fraud & Forgery registered at PS Raja Sansi, Amritsar Rural. Incident date not stated in the source at Amritsar Rural, Punjab. FIR records 2 accused (Accused A1 · CASE908 P90011, Accused A2 · CASE908 P90012) and 2 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2020-04-11 00:00  Fir Extract FIR 31/2020, PS Raja Sansi at PS Raja Sansi (Amritsar Rural): Cheating, Fraud & Forgery  [EVD-PUB000008]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90011  Accused A1 · CASE908         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000008]
+  P90012  Accused A2 · CASE908         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000008]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90012 no call detail records obtained
+  - P90011 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

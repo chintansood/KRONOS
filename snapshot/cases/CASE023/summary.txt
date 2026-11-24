@@ -1,0 +1,74 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE023
+Generated 2026-11-20T07:18:35  |  data hash 73b35b92421c787a
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE023 (FIR/AMBALACITY/2025/0023) — Narcotics Supply (NDPS) registered at PS Ambala City, Ambala. Incident recorded on 2025-04-11 12:28 at Ambala Cantt Railway Station. FIR records 3 accused (Irfan Bhai P00018, Vicky Singh P00016, Rocky Sharma P00022) and 4 named persons in total. 679 records across 5 sources; 6 transactions flagged for review.
+
+2. NARRATIVE
+CASE023 (FIR/AMBALACITY/2025/0023) — Narcotics Supply (NDPS) registered at PS Ambala City, Ambala. Incident recorded on 2025-04-11 12:28 at Ambala Cantt Railway Station. FIR records 3 accused (Irfan Bhai P00018, Vicky Singh P00016, Rocky Sharma P00022) and 4 named persons in total. 679 records across 5 sources; 6 transactions flagged for review. 5 transfers from P00016 to P00018 each fell just below ₹50,000 (total ₹223,000). Note: P00018 has a record 206.7 km from the incident location 102 min before the incident (EVD-MSG002784), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-03-31 20:39  Flagged CASH_DEPOSIT ₹48,500 P00016 → P00018  [EVD-TXN002950]
+  2025-04-02 06:43  Flagged CASH_DEPOSIT ₹42,000 P00016 → P00018  [EVD-TXN003035]
+  2025-04-04 06:34  Flagged CASH_DEPOSIT ₹48,500 P00016 → P00018  [EVD-TXN003095]
+  2025-04-04 19:27  Flagged CASH_DEPOSIT ₹42,000 P00016 → P00018  [EVD-TXN003118]
+  2025-04-06 12:51  P00018 and P00022 co-located at Ambala Cantt Railway Station  [EVD-LOC006417, EVD-LOC006415]
+  2025-04-08 18:31  Flagged CASH_DEPOSIT ₹42,000 P00016 → P00018  [EVD-TXN003317]
+  2025-04-10 12:11  P00018 and P00022 co-located at Ambala Cantt Railway Station  [EVD-LOC006678, EVD-LOC006677]
+  2025-04-11 12:28  Incident recorded at Ambala Cantt Railway Station  []
+  2025-04-12 19:01  Fir FIR/AMBALACITY/2025/0023 at PS Ambala City (Ambala): Narcotics Supply (NDPS)  [EVD-FIR000045]
+  2025-05-05 12:00  Flagged UPI ₹15,000 P00022 → P00282  [EVD-TXN004200]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00018  Irfan Bhai                   PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000045]
+  P00016  Vicky Singh                  ACCUSED            via FIR_STRUCTURED  [EVD-FIR000045]
+  P00022  Rocky Sharma                 ACCUSED            via FIR_STRUCTURED  [EVD-FIR000045]
+  P00343  Ashok Bhatia                 MENTIONED          via FIR_NER  [EVD-FIR000045]
+  P00253  Rekha Gupta                  RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  141 transactions, total ₹1,078,077; 6 flagged
+  - EVD-TXN002950 ₹48,500 2025-03-31 20:39: Isolation Forest outlier: amount ≈33× this account's median; cash channel; 5 transfers P00016 → P00018 within 14 days, each just below ₹50,000 (total ₹223,000)
+  - EVD-TXN003095 ₹48,500 2025-04-04 06:34: Isolation Forest outlier: amount ≈33× this account's median; cash channel; 5 transfers P00016 → P00018 within 14 days, each just below ₹50,000 (total ₹223,000)
+  - EVD-TXN003035 ₹42,000 2025-04-02 06:43: Isolation Forest outlier: amount ≈29× this account's median; cash channel; 5 transfers P00016 → P00018 within 14 days, each just below ₹50,000 (total ₹223,000)
+  - EVD-TXN003118 ₹42,000 2025-04-04 19:27: Isolation Forest outlier: amount ≈29× this account's median; cash channel; 5 transfers P00016 → P00018 within 14 days, each just below ₹50,000 (total ₹223,000)
+  - EVD-TXN003317 ₹42,000 2025-04-08 18:31: Isolation Forest outlier: amount ≈29× this account's median; cash channel; 5 transfers P00016 → P00018 within 14 days, each just below ₹50,000 (total ₹223,000)
+  - EVD-TXN004200 ₹15,000 2025-05-05 12:00: Isolation Forest outlier: amount ≈8× this account's median (alt.: Stated purpose 'house rent' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Vicky Singh ↔ Ashok Bhatia: 6 contacts (2025-03-27 12:09 – 2025-05-05 16:12)
+  - Irfan Bhai ↔ Rocky Sharma: 5 contacts (2025-04-06 10:07 – 2025-04-10 10:14)
+  - Rocky Sharma ↔ Ashok Bhatia: 4 contacts (2025-03-26 22:31 – 2025-05-07 22:20)
+  - Abhishek Yadav ↔ Rekha Gupta: 25 contacts (2025-03-13 07:27 – 2025-05-11 09:14)
+  - Vivek Saini ↔ Ashok Bhatia: 14 contacts (2025-03-16 22:23 – 2025-05-11 07:30)
+  - Amit Bajwa ↔ Rekha Gupta: 13 contacts (2025-03-15 19:04 – 2025-05-02 22:55)
+  - Rocky Sharma ↔ Gurpreet Mehta: 12 contacts (2025-03-24 07:30 – 2025-05-06 20:06)
+  - Vicky Singh ↔ Rahul Saini: 11 contacts (2025-03-12 16:09 – 2025-05-06 13:39)
+  Around incident: 25 contacts (baseline ≈17.3), 5 between named persons
+  * EVD-MSG002734 2025-04-09 12:28: "Will be late tonight, eat without me." — exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - elsewhere: P00018 at nan (206.7 km away, EVD-MSG002784)
+  - elsewhere: P00018 at Cyber City Offices, Gurugram (205.9 km away, EVD-CDR003890)
+  - elsewhere: P00016 at Sector 22 Market, Chandigarh (44.2 km away, EVD-TXN003381)
+  - elsewhere: P00022 at Elante Mall, Industrial Area Chandigarh (40.0 km away, EVD-CDR003892)
+  - elsewhere: P00018 at Cyber City Offices, Gurugram (207.0 km away, EVD-CDR003893)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Irfan Bhai (P00018), recorded as principal accused: record(s) 206.7 km away from the incident location within 3 h of the incident (nan); in contact with P00022 (5 contacts); party to 5 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-MSG002784, EVD-CDR003890, EVD-CDR003893, EVD-CDR003700]
+  - Vicky Singh (P00016), recorded as accused: record(s) 44.2 km away from the incident location within 3 h of the incident (Sector 22 Market, Chandigarh); in contact with P00343 (6 contacts); party to 5 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-TXN003381, EVD-MSG002795, EVD-TXN003388, EVD-CDR003277]
+  - Rocky Sharma (P00022), recorded as accused: record(s) 40.0 km away from the incident location within 3 h of the incident (Elante Mall, Industrial Area Chandigarh); in contact with P00018 (5 contacts), P00343 (4 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-CDR003892, EVD-CDR003700, EVD-CDR003706, EVD-CDR003260]
+  - Ashok Bhatia (P00343), recorded as mentioned: record(s) 45.0 km away from the incident location within 3 h of the incident (Sector 17 Plaza, Chandigarh); in contact with P00016 (6 contacts), P00022 (4 contacts). [EVD-LOC006738, EVD-CDR003277, EVD-MSG002734, EVD-CDR003260]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 3 record(s) with data-quality issue: timestamp — timestamp invalid
+  - 1 record(s) with data-quality issue: amount — invalid amount; set to NULL
+  - 1 record(s) with data-quality issue: call_date — timestamp invalid
+  - 1 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+  - 1 record(s) with data-quality issue: txn_datetime — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

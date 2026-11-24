@@ -1,0 +1,33 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE927
+Generated 2026-11-21T11:55:52  |  data hash ab138fd274abde9c
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE927 (FIR 83/2025, PS Rampura) — Cheating, Fraud & Forgery registered at PS Rampura, Bathinda. Incident date not stated in the source at Bathinda, Punjab. FIR records 1 accused (Accused A1 · CASE927 P90041) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE927 (FIR 83/2025, PS Rampura) — Cheating, Fraud & Forgery registered at PS Rampura, Bathinda. Incident date not stated in the source at Bathinda, Punjab. FIR records 1 accused (Accused A1 · CASE927 P90041) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2025-05-29 00:00  Fir Extract FIR 83/2025, PS Rampura at PS Rampura (Bathinda): Cheating, Fraud & Forgery  [EVD-PUB000027]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90041  Accused A1 · CASE927         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000027]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90041 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

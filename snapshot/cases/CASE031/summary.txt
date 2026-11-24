@@ -1,0 +1,96 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE031
+Generated 2026-11-21T17:49:59  |  data hash c2649e097948bd6b
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE031 (FIR/CYBERCRIME/2025/0031) — Vehicle Theft registered at PS Cyber Crime Mohali, SAS Nagar. Incident recorded on 2025-05-07 19:40 at Phase 8 Industrial Area, Mohali. FIR records 1 accused (Raju P00014) and 4 named persons in total. 550 records across 5 sources; 5 transactions flagged for review.
+
+2. NARRATIVE
+**Case Narrative for Police Investigators**
+
+**Case Number:** CASE031 (FIR/CYBERCRIME/2025/0031)
+
+**Incident Location:** Phase 8 Industrial Area, Mohali, SAS Nagar
+
+**Date and Time of Incident:** 2025-05-07 19:40
+
+**Accused Person(s):**
+
+* Raju P00014, recorded as principal accused [EVD-FIR000077, EVD-FIR000059]
+
+**Named Persons:**
+
+* Karan Grewal P00057, recorded as complainant [EVD-FIR000059]
+* Rajesh Rana P00280, recorded as witness [EVD-FIR000077, EVD-FIR000059]
+* Rajesh Singh P00269, mentioned in FIR [EVD-FIR000059]
+
+**Financial Transactions Flagged for Review:**
+
+* On 2025-05-02 at 15:18, a flagged NEFT transaction of ₹28,000 from ORG-003 to P00057 [EVD-TXN004103]
+* On 2025-05-06 at 09:02, a flagged UPI transaction of ₹6,583 from P00014 to P00326 [EVD-TXN004254]
+* On 2025-05-06 at 12:00, a flagged UPI transaction of ₹22,000 from P00014 to P00326 [EVD-TXN004265]
+* On 2025-06-01 at 20:48, a supplementary statement was recorded in FIR/CYBERCRIME/2025/0031
+* On 2025-06-02 at 14:09, a flagged UPI transaction of ₹11,410 from P00014 to P00326 [EVD-TXN005150]
+
+**Uncertainties and Missing Information:**
+
+* 1 record(s) with data-quality issue: person_id – missing person_id; record kept, attributed via device/phone only
+*
+
+3. CHRONOLOGY
+  2025-04-20 07:58  P00054 and P00280 co-located at Sector 70 Residential, Mohali  [EVD-LOC007321, EVD-LOC007320]
+  2025-05-02 15:18  Flagged NEFT ₹28,000 ORG-003 → P00057  [EVD-TXN004103]
+  2025-05-06 09:02  Flagged UPI ₹6,583 P00014 → P00326  [EVD-TXN004254]
+  2025-05-06 12:00  Flagged UPI ₹22,000 P00014 → P00326  [EVD-TXN004265]
+  2025-05-07 19:40  Incident recorded at Phase 8 Industrial Area, Mohali  []
+  2025-05-08 04:55  Fir FIR/CYBERCRIME/2025/0031 at PS Cyber Crime Mohali (SAS Nagar): Vehicle Theft  [EVD-FIR000059]
+  2025-05-13 15:26  P00217 and P00269 co-located at Phase 7 Market, Mohali  [EVD-LOC009010, EVD-LOC009008]
+  2025-05-27 07:28  P00057 and P00280 co-located at Sector 70 Residential, Mohali  [EVD-LOC009892, EVD-LOC009895]
+  2025-06-01 20:48  Supplementary Statement FIR/CYBERCRIME/2025/0031 at PS Cyber Crime Mohali (SAS Nagar): Vehicle Theft  [EVD-FIR000077]
+  2025-06-02 14:09  Flagged UPI ₹11,410 P00014 → P00326  [EVD-TXN005150]
+  2025-06-05 12:00  Flagged UPI ₹12,000 P00014 → P00326  [EVD-TXN005212]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00014  Raju                         PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000077, EVD-FIR000059]
+  P00057  Karan Grewal                 COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000059]
+  P00280  Rajesh Rana                  WITNESS            via FIR_NER  [EVD-FIR000077, EVD-FIR000059]
+  P00269  Rajesh Singh                 MENTIONED          via FIR_NER  [EVD-FIR000059]
+
+5. FINANCIAL ACTIVITY
+  107 transactions, total ₹616,246; 5 flagged
+  - EVD-TXN004103 ₹28,000 2025-05-02 15:18: Isolation Forest outlier: 8 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN004265 ₹22,000 2025-05-06 12:00: Isolation Forest outlier: amount ≈15× this account's median (alt.: Stated purpose 'house rent' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN005212 ₹12,000 2025-06-05 12:00: Isolation Forest outlier: amount ≈8× this account's median (alt.: Stated purpose 'house rent' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN005150 ₹11,410 2025-06-02 14:09: Isolation Forest outlier: amount ≈8× this account's median (alt.: Stated purpose 'split bill' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN004254 ₹6,583 2025-05-06 09:02: Isolation Forest outlier: amount ≈5× this account's median
+
+6. COMMUNICATION
+  - Karan Grewal ↔ Rajesh Rana: 8 contacts (2025-04-28 11:40 – 2025-05-27 21:53)
+  - Raju ↔ Ashok Chopra: 40 contacts (2025-04-08 16:52 – 2025-06-05 10:25)
+  - Jaspreet Saini ↔ Rajesh Rana: 26 contacts (2025-04-11 14:41 – 2025-06-04 08:12)
+  - Raju ↔ Shalini Khan: 17 contacts (2025-04-22 03:37 – 2025-06-01 19:20)
+  - Rajesh Rana ↔ Manisha Sidhu: 16 contacts (2025-04-09 16:08 – 2025-06-02 09:42)
+  - Rajesh Rana ↔ Rajesh Aggarwal: 12 contacts (2025-04-12 21:26 – 2025-06-05 15:11)
+  - Karan Grewal ↔ Rahul Rawat: 12 contacts (2025-04-13 11:30 – 2025-06-04 12:46)
+  - Rajesh Singh ↔ Rajesh Malhotra: 12 contacts (2025-04-17 10:29 – 2025-06-03 12:47)
+  Around incident: 12 contacts (baseline ≈15.0), 1 between named persons
+
+7. LOCATION
+  - near incident: P00057 2.32 km, -25 min (EVD-CDR004970)
+  - near incident: P00014 0.42 km, -10 min (EVD-LOC008592)
+  - near incident: P00014 0.87 km, 14 min (EVD-CDR004975)
+  - near incident: P00057 2.44 km, 96 min (EVD-CDR004979)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Karan Grewal (P00057), recorded as complainant: record within 2.32 km of the incident location within 2 h of the incident; in contact with P00280 (8 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-CDR004970, EVD-CDR004979, EVD-MSG003261, EVD-CDR004601]
+  - Raju (P00014), recorded as principal accused: record within 0.42 km of the incident location within 2 h of the incident; party to 4 flagged transaction(s) (ISOLATION_FOREST). [EVD-LOC008592, EVD-CDR004975, EVD-TXN004265, EVD-TXN005212]
+  - Rajesh Rana (P00280), recorded as witness: in contact with P00057 (8 contacts). [EVD-MSG003261, EVD-CDR004601]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+  - 1 record(s) with data-quality issue: timestamp — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

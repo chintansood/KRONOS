@@ -1,0 +1,33 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE911
+Generated 2026-11-21T11:55:51  |  data hash f6eb59d0e747f35f
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE911 (FIR 13/2021, PS Dugri) — Cyber Fraud (IT Act) registered at PS Dugri, Ludhiana. Incident date not stated in the source at Ludhiana, Punjab. FIR records 1 accused (Accused A1 · CASE911 P90016) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE911 (FIR 13/2021, PS Dugri) — Cyber Fraud (IT Act) registered at PS Dugri, Ludhiana. Incident date not stated in the source at Ludhiana, Punjab. FIR records 1 accused (Accused A1 · CASE911 P90016) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2021-01-22 00:00  Fir Extract FIR 13/2021, PS Dugri at PS Dugri (Ludhiana): Cyber Fraud (IT Act)  [EVD-PUB000011]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90016  Accused A1 · CASE911         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000011]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90016 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

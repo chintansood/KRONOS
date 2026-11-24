@@ -1,0 +1,33 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE933
+Generated 2026-11-21T11:55:53  |  data hash 63902283d91810f9
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE933 (FIR 679/2023, PS Yamunanagar City) — Other Criminal Matter registered at PS Yamunanagar City, Yamunanagar. Incident date not stated in the source at Yamunanagar, Haryana. FIR records 1 accused (Accused A1 · CASE933 P90049) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE933 (FIR 679/2023, PS Yamunanagar City) — Other Criminal Matter registered at PS Yamunanagar City, Yamunanagar. Incident date not stated in the source at Yamunanagar, Haryana. FIR records 1 accused (Accused A1 · CASE933 P90049) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2023-08-30 00:00  Fir Extract FIR 679/2023, PS Yamunanagar City at PS Yamunanagar City (Yamunanagar): Other Criminal Matter  [EVD-PUB000033]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90049  Accused A1 · CASE933         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000033]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90049 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

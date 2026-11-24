@@ -1,0 +1,61 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE029
+Generated 2026-11-20T07:18:36  |  data hash ca30fe1019315543
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE029 (FIR/CONNAUGHTP/2025/0029) — Extortion & Criminal Intimidation registered at PS Connaught Place, New Delhi. Incident recorded on 2025-05-01 17:32 at Chandni Chowk Market, Delhi. FIR records 1 accused (Imran Gill P00167) and 3 named persons in total. 431 records across 5 sources; 5 transactions flagged for review.
+
+2. NARRATIVE
+CASE029 (FIR/CONNAUGHTP/2025/0029) — Extortion & Criminal Intimidation registered at PS Connaught Place, New Delhi. Incident recorded on 2025-05-01 17:32 at Chandni Chowk Market, Delhi. FIR records 1 accused (Imran Gill P00167) and 3 named persons in total. 431 records across 5 sources; 5 transactions flagged for review. 5 transfers from P00099 to P00167 each fell just below ₹50,000 (total ₹235,000).
+
+3. CHRONOLOGY
+  2025-04-28 14:47  P00042 and P00099 co-located at IGI Airport Terminal 3, Delhi  [EVD-LOC007922, EVD-LOC007923]
+  2025-05-01 17:32  Incident recorded at Chandni Chowk Market, Delhi  []
+  2025-05-01 20:30  Fir FIR/CONNAUGHTP/2025/0029 at PS Connaught Place (New Delhi): Extortion & Criminal Intimidation  [EVD-FIR000056]
+  2025-05-02 19:36  Flagged CASH_DEPOSIT ₹40,000 P00099 → P00167  [EVD-TXN004111]
+  2025-05-03 11:27  Flagged CASH_DEPOSIT ₹48,000 P00099 → P00167  [EVD-TXN004125]
+  2025-05-04 01:07  Flagged CASH_DEPOSIT ₹48,000 P00099 → P00167  [EVD-TXN004148]
+  2025-05-04 13:54  Flagged CASH_DEPOSIT ₹49,500 P00099 → P00167  [EVD-TXN004170]
+  2025-05-05 06:31  Flagged CASH_DEPOSIT ₹49,500 P00099 → P00167  [EVD-TXN004189]
+  2025-05-21 17:10  Supplementary Statement FIR/CONNAUGHTP/2025/0029 at PS Connaught Place (New Delhi): Extortion & Criminal Intimidation  [EVD-FIR000066]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00167  Imran Gill                   PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000056, EVD-FIR000066]
+  P00099  Sunil Bhatia                 COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000056, EVD-FIR000066]
+  P00094  Sachin Kumar                 WITNESS            via FIR_NER  [EVD-FIR000056]
+
+5. FINANCIAL ACTIVITY
+  79 transactions, total ₹517,227; 5 flagged
+  - EVD-TXN004170 ₹49,500 2025-05-04 13:54: Isolation Forest outlier: amount ≈46× this account's median; cash channel; 5 transfers P00099 → P00167 within 14 days, each just below ₹50,000 (total ₹235,000)
+  - EVD-TXN004189 ₹49,500 2025-05-05 06:31: Isolation Forest outlier: amount ≈46× this account's median; cash channel; 5 transfers P00099 → P00167 within 14 days, each just below ₹50,000 (total ₹235,000)
+  - EVD-TXN004125 ₹48,000 2025-05-03 11:27: Isolation Forest outlier: amount ≈44× this account's median; 4 transactions from this account within 24 h; cash channel; 5 transfers P00099 → P00167 within 14 days, each just below ₹50,000 (total ₹235,000)
+  - EVD-TXN004148 ₹48,000 2025-05-04 01:07: Isolation Forest outlier: amount ≈44× this account's median; cash channel; unusual hour; 5 transfers P00099 → P00167 within 14 days, each just below ₹50,000 (total ₹235,000)
+  - EVD-TXN004111 ₹40,000 2025-05-02 19:36: Isolation Forest outlier: amount ≈37× this account's median; cash channel; 5 transfers P00099 → P00167 within 14 days, each just below ₹50,000 (total ₹235,000)
+
+6. COMMUNICATION
+  - Sunil Bhatia ↔ Imran Gill: 4 contacts (2025-04-25 17:24 – 2025-04-30 05:31)
+  - Imran Bansal ↔ Imran Gill: 32 contacts (2025-04-02 07:39 – 2025-05-29 14:45)
+  - Sunil Bhatia ↔ Imran Bansal: 16 contacts (2025-04-02 22:56 – 2025-05-24 11:38)
+  - Manisha Rana ↔ Sachin Kumar: 16 contacts (2025-04-03 11:18 – 2025-05-31 08:17)
+  - Imran Gill ↔ Lakhwinder Bajwa: 15 contacts (2025-04-03 12:52 – 2025-05-22 15:01)
+  - Sunil Bhatia ↔ Ajay Kapoor: 15 contacts (2025-04-03 22:12 – 2025-05-23 19:32)
+  - Sachin Kumar ↔ Yogesh Gupta: 13 contacts (2025-04-03 21:00 – 2025-05-30 08:12)
+  - Sachin Kumar ↔ Mukesh Chopra: 13 contacts (2025-04-11 18:41 – 2025-05-29 18:48)
+  Around incident: 12 contacts (baseline ≈11.8), 1 between named persons
+  * EVD-MSG003301 2025-04-30 05:31: "Account: ICIC-38303419909. Small amounts only." — references account ICIC-38303419909 (seen in this case's transactions); exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - near incident: P00167 0.43 km, 0 min (EVD-LOC008153)
+  - near incident: P00099 0.01 km, 5 min (EVD-LOC008154)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Imran Gill (P00167), recorded as principal accused: record within 0.43 km of the incident location within 2 h of the incident; in contact with P00099 (4 contacts); party to 5 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-LOC008153, EVD-MSG003180, EVD-MSG003220, EVD-TXN004170]
+  - Sunil Bhatia (P00099), recorded as complainant: record within 0.01 km of the incident location within 2 h of the incident; in contact with P00167 (4 contacts); party to 5 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-LOC008154, EVD-MSG003180, EVD-MSG003220, EVD-TXN004170]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: call_date — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

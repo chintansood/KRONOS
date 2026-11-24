@@ -1,0 +1,55 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE019
+Generated 2026-11-20T07:18:34  |  data hash 18b42bb3a77ce4b8
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE019 (FIR/INDUSTRIAL/2025/0019) — Vehicle Theft registered at PS Industrial Area, Chandigarh. Incident recorded on 2025-03-28 10:58 at Chandigarh Railway Station. FIR records 1 accused (Gopi Dhillon P00024) and 4 named persons in total. 546 records across 5 sources; 1 transactions flagged for review.
+
+2. NARRATIVE
+CASE019 (FIR/INDUSTRIAL/2025/0019) — Vehicle Theft registered at PS Industrial Area, Chandigarh. Incident recorded on 2025-03-28 10:58 at Chandigarh Railway Station. FIR records 1 accused (Gopi Dhillon P00024) and 4 named persons in total. 546 records across 5 sources; 1 transactions flagged for review.
+
+3. CHRONOLOGY
+  2025-03-28 10:58  Incident recorded at Chandigarh Railway Station  []
+  2025-03-28 13:21  Fir FIR/INDUSTRIAL/2025/0019 at PS Industrial Area (Chandigarh): Vehicle Theft  [EVD-FIR000037]
+  2025-04-05 12:00  Flagged UPI ₹18,000 P00024 → P00343  [EVD-TXN003158]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00024  Gopi Dhillon                 PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000037]
+  P00168  Anjali Bajwa                 COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000037]
+  P00309  Meena Bajwa                  WITNESS            via FIR_NER  [EVD-FIR000037]
+  P00262  Ashok Bajwa                  MENTIONED          via FIR_NER  [EVD-FIR000037]
+
+5. FINANCIAL ACTIVITY
+  108 transactions, total ₹644,463; 1 flagged
+  - EVD-TXN003158 ₹18,000 2025-04-05 12:00: Isolation Forest outlier: amount ≈13× this account's median (alt.: Stated purpose 'house rent' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Ashok Bajwa ↔ Meena Bajwa: 9 contacts (2025-03-07 07:55 – 2025-04-24 16:57)
+  - Anjali Bajwa ↔ Vivek Saini: 26 contacts (2025-03-03 21:27 – 2025-04-22 09:46)
+  - Gopi Dhillon ↔ Ashok Bhatia: 25 contacts (2025-02-26 18:52 – 2025-04-22 17:20)
+  - Ashok Bajwa ↔ Kuldeep Kapoor: 17 contacts (2025-02-26 19:12 – 2025-04-24 22:52)
+  - Gopi Dhillon ↔ Manisha Kaur: 17 contacts (2025-02-27 20:02 – 2025-04-27 07:44)
+  - Anjali Bajwa ↔ Rahul Arora: 17 contacts (2025-02-28 08:44 – 2025-04-23 18:38)
+  - Ashok Singh ↔ Ashok Bajwa: 14 contacts (2025-02-26 16:42 – 2025-04-26 17:27)
+  - Ashok Bajwa ↔ Farhan Yadav: 9 contacts (2025-02-27 16:58 – 2025-04-25 20:44)
+  Around incident: 13 contacts (baseline ≈14.0), 0 between named persons
+
+7. LOCATION
+  - near incident: P00024 1.19 km, -10 min (EVD-LOC005737)
+  - near incident: P00024 0.73 km, 96 min (EVD-CDR003325)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Gopi Dhillon (P00024), recorded as principal accused: record within 0.73 km of the incident location within 2 h of the incident; party to 1 flagged transaction(s) (ISOLATION_FOREST); 2 location inconsistency flag(s) (impossible). [EVD-LOC005737, EVD-CDR003325, EVD-TXN003158, EVD-LOC004583]
+  - Meena Bajwa (P00309), recorded as witness: in contact with P00262 (9 contacts). [EVD-MSG001689, EVD-CDR002385]
+  - Ashok Bajwa (P00262), recorded as mentioned: in contact with P00309 (9 contacts). [EVD-MSG001689, EVD-CDR002385]
+  - Location inconsistency P00024: IMPOSSIBLE (EVD-LOC004583 → EVD-LOC004585, 1347.82 km in 9.4 min)
+  - Location inconsistency P00024: REQUIRES_AIR_TRAVEL (EVD-LOC004585 → EVD-MSG001931, 1351.52 km in 168.1 min)
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: timestamp — timestamp invalid
+  - 1 record(s) with data-quality issue: txn_datetime — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

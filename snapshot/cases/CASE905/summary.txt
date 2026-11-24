@@ -1,0 +1,36 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE905
+Generated 2026-11-21T11:55:50  |  data hash dcbbe8f6601f0d42
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE905 (FIR 228/2020, PS Sardulgarh) — Murder / Attempt to Murder registered at PS Sardulgarh. Incident date not stated in the source. FIR records 2 accused (Accused A1 · CASE905 P90006, Accused A2 · CASE905 P90007) and 3 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE905 (FIR 228/2020, PS Sardulgarh) — Murder / Attempt to Murder registered at PS Sardulgarh. Incident date not stated in the source. FIR records 2 accused (Accused A1 · CASE905 P90006, Accused A2 · CASE905 P90007) and 3 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2020-08-29 00:00  Fir Extract FIR 228/2020, PS Sardulgarh at PS Sardulgarh (): Murder / Attempt to Murder  [EVD-PUB000005]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90006  Accused A1 · CASE905         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000005]
+  P90007  Accused A2 · CASE905         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000005]
+  P90008  Complainant C1 · CASE905     COMPLAINANT        via FIR_STRUCTURED  [EVD-PUB000005]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90007 no call detail records obtained
+  - P90006 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

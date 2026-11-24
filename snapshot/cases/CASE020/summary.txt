@@ -1,0 +1,82 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE020
+Generated 2026-11-20T07:18:34  |  data hash 37c02a9a98aa7512
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE020 (FIR/KOTWALIAMR/2025/0020) — Cyber Fraud (Online Investment Scam) registered at PS Kotwali Amritsar, Amritsar. Incident recorded on 2025-03-30 11:02 at Ranjit Avenue Residential, Amritsar. FIR records 2 accused (Monu Rana P00028, Rocky Sharma P00022) and 4 named persons in total. 869 records across 5 sources; 15 transactions flagged for review.
+
+2. NARRATIVE
+CASE020 (FIR/KOTWALIAMR/2025/0020) — Cyber Fraud (Online Investment Scam) registered at PS Kotwali Amritsar, Amritsar. Incident recorded on 2025-03-30 11:02 at Ranjit Avenue Residential, Amritsar. FIR records 2 accused (Monu Rana P00028, Rocky Sharma P00022) and 4 named persons in total. 869 records across 5 sources; 15 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN002899 → EVD-TXN002902, 47.0 min), a pattern that can indicate layering and requires verification. Account KKBK-16560494519 received funds from 3 different individuals within 14 days. Note: P00022 has a record 212.4 km from the incident location 155 min after the incident (EVD-LOC005905), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-03-25 12:19  P00022 and P00131 co-located at Elante Mall, Industrial Area Chandigarh  [EVD-LOC005508, EVD-LOC005505]
+  2025-03-30 11:02  Incident recorded at Ranjit Avenue Residential, Amritsar  []
+  2025-03-30 13:41  Fir FIR/KOTWALIAMR/2025/0020 at PS Kotwali Amritsar (Amritsar): Cyber Fraud (Online Investment Scam)  [EVD-FIR000038]
+  2025-03-30 15:29  Flagged IMPS ₹75,720 P00310 → P00028  [EVD-TXN002899]
+  2025-03-30 22:31  Flagged IMPS ₹83,077 P00310 → P00028  [EVD-TXN002919]
+  2025-03-31 05:41  Flagged IMPS ₹77,936 P00066 → P00028  [EVD-TXN002923]
+  2025-03-31 10:18  Flagged IMPS ₹76,182 P00066 → P00028  [EVD-TXN002925]
+  2025-04-01 11:02  Flagged CASH_WITHDRAWAL ₹271,998 P00022 → P00022  [EVD-TXN002974]
+  2025-04-03 12:46  P00026 and P00085 co-located at Hall Bazaar, Amritsar  [EVD-LOC006191, EVD-LOC006189]
+  2025-04-10 09:42  Flagged RTGS ₹850,000 P00310 → ORG-009  [EVD-TXN003354]
+  2025-04-13 08:15  P00028 and P00405 co-located at Sarabha Nagar Residential, Ludhiana  [EVD-LOC006849, EVD-LOC006848]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00028  Monu Rana                    PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000038]
+  P00022  Rocky Sharma                 ACCUSED            via FIR_STRUCTURED  [EVD-FIR000038]
+  P00085  Ravi Jain                    COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000038]
+  P00071  Abhishek Mehta               VICTIM             via FIR_NER  [EVD-FIR000038]
+  P00066  Naveen Aggarwal              RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00310  Karan Verma                  RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  183 transactions, total ₹3,050,850; 15 flagged
+  - EVD-TXN003354 ₹850,000 2025-04-10 09:42: Isolation Forest outlier: amount ≈658× this account's median; Amount ₹850,000 exceeds upper fence ₹86,634 (Q3 + 3.0·IQR, sender's own history) (alt.: Stated purpose 'property booking - registered sale deed' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN002919 ₹83,077 2025-03-30 22:31: ₹83,077 received by P00028 and ₹80,585 sent onward 22 min later (EVD-TXN002919 → EVD-TXN002921); Account KKBK-16560494519 received ₹650,415 from 3 different individuals within 14 days
+  - EVD-TXN002923 ₹77,936 2025-03-31 05:41: ₹77,936 received by P00028 and ₹75,598 sent onward 16 min later (EVD-TXN002923 → EVD-TXN002924); Account KKBK-16560494519 received ₹650,415 from 3 different individuals within 14 days
+  - EVD-TXN002925 ₹76,182 2025-03-31 10:18: ₹76,182 received by P00028 and ₹73,897 sent onward 43 min later (EVD-TXN002925 → EVD-TXN002929); Account KKBK-16560494519 received ₹650,415 from 3 different individuals within 14 days
+  - EVD-TXN002899 ₹75,720 2025-03-30 15:29: ₹75,720 received by P00028 and ₹73,448 sent onward 47 min later (EVD-TXN002899 → EVD-TXN002902); Account KKBK-16560494519 received ₹650,415 from 3 different individuals within 14 days
+  - EVD-TXN002974 ₹271,998 2025-04-01 11:02: Isolation Forest outlier: amount ≈147× this account's median; cash channel
+  - EVD-TXN002921 ₹80,585 2025-03-30 22:53: ₹83,077 received by P00028 and ₹80,585 sent onward 22 min later (EVD-TXN002919 → EVD-TXN002921)
+  - EVD-TXN003009 ₹76,000 2025-04-01 14:57: Isolation Forest outlier: 7 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN002924 ₹75,598 2025-03-31 05:57: ₹77,936 received by P00028 and ₹75,598 sent onward 16 min later (EVD-TXN002923 → EVD-TXN002924)
+  - EVD-TXN002929 ₹73,897 2025-03-31 11:01: ₹77,936 received by P00028 and ₹73,897 sent onward 320 min later (EVD-TXN002923 → EVD-TXN002929)
+  - EVD-TXN002902 ₹73,448 2025-03-30 16:16: ₹75,720 received by P00028 and ₹73,448 sent onward 47 min later (EVD-TXN002899 → EVD-TXN002902)
+  - EVD-TXN002997 ₹28,000 2025-04-01 13:56: Isolation Forest outlier: 9 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN003089 ₹7,042 2025-04-03 19:51: Account KKBK-22923106724 received ₹87,040 from 3 different individuals within 14 days
+  - EVD-TXN003093 ₹2,741 2025-04-04 00:34: Isolation Forest outlier: unusual hour
+  - EVD-TXN002938 ₹119 2025-03-31 14:23: ₹76,182 received and 97% of it split to 2 accounts within 6 h (alt.: Stated purpose 'groceries' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Monu Rana ↔ Ravi Jain: 5 contacts (2025-03-20 04:26 – 2025-03-27 01:12)
+  - Monu Rana ↔ Abhishek Mehta: 5 contacts (2025-03-20 07:29 – 2025-03-30 02:58)
+  - Abhishek Mehta ↔ Rahul Chauhan: 26 contacts (2025-03-01 07:27 – 2025-04-28 08:46)
+  - Ravi Jain ↔ Simran Sharma: 20 contacts (2025-03-06 21:44 – 2025-04-20 18:21)
+  - Abhishek Mehta ↔ Tarun Thakur: 19 contacts (2025-03-05 08:54 – 2025-04-20 14:01)
+  - Monu Rana ↔ Pankaj Singh: 18 contacts (2025-02-28 18:53 – 2025-04-25 19:41)
+  - Rocky Sharma ↔ Ashok Bhatia: 16 contacts (2025-03-04 21:37 – 2025-04-26 16:55)
+  - Sahil Gupta ↔ Ravi Jain: 15 contacts (2025-03-01 10:36 – 2025-04-17 21:11)
+  Around incident: 40 contacts (baseline ≈23.8), 1 between named persons
+  * EVD-MSG002129 2025-03-20 04:26: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹45000); references account ICIC-87099861622 (seen in this case's transactions)
+  * EVD-MSG002130 2025-03-20 07:29: "Your returns of 18% are credited. Add Rs 9,999 more to unlock withdrawal. Transfer to UTIB" — references an amount (₹9999); references account UTIB-90069680186 (seen in this case's transactions)
+  * EVD-MSG002146 2025-03-20 13:59: "Your returns of 18% are credited. Add Rs 15,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹15000); references account ICIC-87099861622 (seen in this case's transactions)
+  * EVD-MSG002190 2025-03-22 02:26: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹49000); references account ICIC-87099861622 (seen in this case's transactions)
+  * EVD-MSG002221 2025-03-22 20:38: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to UTI" — references an amount (₹49000); references account UTIB-90069680186 (seen in this case's transactions)
+  * EVD-MSG002237 2025-03-23 16:09: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹49000); references account ICIC-87099861622 (seen in this case's transactions)
+
+7. LOCATION
+  - elsewhere: P00022 at Elante Mall, Industrial Area Chandigarh (212.4 km away, EVD-LOC005905)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Monu Rana (P00028), recorded as principal accused: in contact with P00085 (5 contacts), P00071 (5 contacts); party to 10 flagged transaction(s) (FAN_IN, ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-MSG002129, EVD-MSG002146, EVD-MSG002130, EVD-MSG002190]
+  - Rocky Sharma (P00022), recorded as accused: record(s) 212.4 km away from the incident location within 3 h of the incident (Elante Mall, Industrial Area Chandigarh); party to 7 flagged transaction(s) (ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-LOC005905, EVD-TXN002974, EVD-TXN002921, EVD-TXN003009]
+  - Ravi Jain (P00085), recorded as complainant: in contact with P00028 (5 contacts). [EVD-MSG002129, EVD-MSG002146]
+  - Abhishek Mehta (P00071), recorded as victim: in contact with P00028 (5 contacts). [EVD-MSG002130, EVD-MSG002190]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: txn_datetime — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

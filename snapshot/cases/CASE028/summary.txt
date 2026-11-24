@@ -1,0 +1,69 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE028
+Generated 2026-11-20T07:18:36  |  data hash f3bac9483fbd2987
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE028 (FIR/AMBALACANT/2025/0028) — Narcotics Supply (NDPS) registered at PS Ambala Cantt, Ambala. Incident recorded on 2025-04-27 14:38 at Ambala Cantt Railway Station. FIR records 2 accused (Manoj Chopra P00030, Santu Yadav P00026) and 3 named persons in total. 567 records across 5 sources; 6 transactions flagged for review.
+
+2. NARRATIVE
+CASE028 (FIR/AMBALACANT/2025/0028) — Narcotics Supply (NDPS) registered at PS Ambala Cantt, Ambala. Incident recorded on 2025-04-27 14:38 at Ambala Cantt Railway Station. FIR records 2 accused (Manoj Chopra P00030, Santu Yadav P00026) and 3 named persons in total. 567 records across 5 sources; 6 transactions flagged for review. 4 transfers from P00026 to P00030 each fell just below ₹50,000 (total ₹186,400). Note: P00250 has a record 236.0 km from the incident location 5 min after the incident (EVD-CDR004551), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-04-03 12:46  P00026 and P00085 co-located at Hall Bazaar, Amritsar  [EVD-LOC006191, EVD-LOC006189]
+  2025-04-05 12:00  Flagged UPI ₹12,000 P00250 → P00254  [EVD-TXN003197]
+  2025-04-16 21:16  Flagged CASH_DEPOSIT ₹42,000 P00026 → P00030  [EVD-TXN003557]
+  2025-04-19 12:03  Flagged CASH_DEPOSIT ₹46,000 P00026 → P00030  [EVD-TXN003631]
+  2025-04-20 23:29  Flagged CASH_DEPOSIT ₹48,500 P00026 → P00030  [EVD-TXN003687]
+  2025-04-27 04:33  Flagged CASH_DEPOSIT ₹49,900 P00026 → P00030  [EVD-TXN003864]
+  2025-04-27 14:38  Incident recorded at Ambala Cantt Railway Station  []
+  2025-04-29 19:29  Fir FIR/AMBALACANT/2025/0028 at PS Ambala Cantt (Ambala): Narcotics Supply (NDPS)  [EVD-FIR000053]
+  2025-05-05 12:00  Flagged UPI ₹15,000 P00250 → P00254  [EVD-TXN004220]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00030  Manoj Chopra                 PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000053]
+  P00026  Santu Yadav                  ACCUSED            via FIR_STRUCTURED  [EVD-FIR000053]
+  P00250  Ravi Kapoor                  MENTIONED          via FIR_NER  [EVD-FIR000053]
+  P00364  Nisha Thakur                 RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  109 transactions, total ₹615,261; 6 flagged
+  - EVD-TXN003864 ₹49,900 2025-04-27 04:33: Isolation Forest outlier: amount ≈30× this account's median; cash channel; unusual hour; 4 transfers P00026 → P00030 within 14 days, each just below ₹50,000 (total ₹186,400)
+  - EVD-TXN003687 ₹48,500 2025-04-20 23:29: Isolation Forest outlier: amount ≈29× this account's median; cash channel; 4 transfers P00026 → P00030 within 14 days, each just below ₹50,000 (total ₹186,400)
+  - EVD-TXN003631 ₹46,000 2025-04-19 12:03: Isolation Forest outlier: amount ≈28× this account's median; cash channel; 4 transfers P00026 → P00030 within 14 days, each just below ₹50,000 (total ₹186,400)
+  - EVD-TXN003557 ₹42,000 2025-04-16 21:16: Isolation Forest outlier: amount ≈25× this account's median; cash channel; 4 transfers P00026 → P00030 within 14 days, each just below ₹50,000 (total ₹186,400)
+  - EVD-TXN004220 ₹15,000 2025-05-05 12:00: Isolation Forest outlier: amount ≈9× this account's median (alt.: Stated purpose 'house rent' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN003197 ₹12,000 2025-04-05 12:00: Isolation Forest outlier: amount ≈8× this account's median (alt.: Stated purpose 'house rent' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Santu Yadav ↔ Ravi Kapoor: 12 contacts (2025-03-30 21:52 – 2025-05-24 19:29)
+  - Ravi Kapoor ↔ Sunita Chopra: 45 contacts (2025-03-29 15:42 – 2025-05-26 09:32)
+  - Manoj Chopra ↔ Nitin Malhotra: 22 contacts (2025-03-29 13:44 – 2025-05-26 03:03)
+  - Santu Yadav ↔ Sahil Bajwa: 18 contacts (2025-03-29 15:03 – 2025-05-23 21:45)
+  - Abhishek Thakur ↔ Nisha Thakur: 17 contacts (2025-03-29 21:38 – 2025-05-24 20:00)
+  - Santu Yadav ↔ Abhishek Mehta: 17 contacts (2025-04-03 11:10 – 2025-05-27 12:08)
+  - Manoj Chopra ↔ Harleen Malhotra: 16 contacts (2025-03-29 18:25 – 2025-05-20 11:10)
+  - Amit Bajwa ↔ Nisha Thakur: 12 contacts (2025-03-30 20:50 – 2025-05-22 13:47)
+  Around incident: 11 contacts (baseline ≈15.0), 1 between named persons
+  * EVD-MSG003167 2025-04-25 10:05: "Send me the photos from the wedding." — exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG003174 2025-04-25 14:38: "Will be late tonight, eat without me." — exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - elsewhere: P00250 at Hall Bazaar, Amritsar (236.0 km away, EVD-CDR004551)
+  - elsewhere: P00250 at Hall Bazaar, Amritsar (235.5 km away, EVD-LOC007857)
+  - elsewhere: P00026 at Hall Bazaar, Amritsar (235.4 km away, EVD-CDR004554)
+  - elsewhere: P00250 at Hall Bazaar, Amritsar (234.8 km away, EVD-LOC007863)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Santu Yadav (P00026), recorded as accused: record(s) 235.4 km away from the incident location within 3 h of the incident (Hall Bazaar, Amritsar); in contact with P00250 (12 contacts); party to 4 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-CDR004554, EVD-CDR003441, EVD-MSG002495, EVD-TXN003864]
+  - Ravi Kapoor (P00250), recorded as mentioned: record(s) 236.0 km away from the incident location within 3 h of the incident (Hall Bazaar, Amritsar); in contact with P00026 (12 contacts); party to 2 flagged transaction(s) (ISOLATION_FOREST). [EVD-CDR004551, EVD-LOC007857, EVD-LOC007863, EVD-CDR003441]
+  - Manoj Chopra (P00030), recorded as principal accused: party to 4 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-TXN003864, EVD-TXN003687, EVD-TXN003631]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: timestamp — timestamp invalid
+  - 1 record(s) with data-quality issue: latitude/longitude — invalid coordinate; set to NULL
+  - 1 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

@@ -1,0 +1,73 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE014
+Generated 2026-11-20T07:18:33  |  data hash 5e68f9b875d77650
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE014 (FIR/SOHANA/2025/0014) — Financial Fraud & Money Laundering registered at PS Sohana, SAS Nagar. Incident recorded on 2025-03-09 14:16 at Phase 7 Market, Mohali. FIR records 2 accused (Lakhwinder Khan P00324, Vivek Rawat P00286) and 5 named persons in total. 693 records across 5 sources; 5 transactions flagged for review.
+
+2. NARRATIVE
+CASE014 (FIR/SOHANA/2025/0014) — Financial Fraud & Money Laundering registered at PS Sohana, SAS Nagar. Incident recorded on 2025-03-09 14:16 at Phase 7 Market, Mohali. FIR records 2 accused (Lakhwinder Khan P00324, Vivek Rawat P00286) and 5 named persons in total. 693 records across 5 sources; 5 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN002178 → EVD-TXN002180, 40.0 min), a pattern that can indicate layering and requires verification. Communication between P00286 and P00324 spiked to 5 contacts within 3 hours on 2025-03-08.
+
+3. CHRONOLOGY
+  2025-02-12 22:00  P00291 and P00324 co-located at Sector 20 Residential, Panchkula  [EVD-LOC002110, EVD-LOC002113]
+  2025-03-04 14:16  Flagged NEFT ₹185,000 ORG-003 → P00327  [EVD-TXN001893]
+  2025-03-06 12:38  P00286 and P00324 co-located at Kharar Highway Dhaba, Mohali  [EVD-LOC003967, EVD-LOC003964]
+  2025-03-08 14:01  Communication burst P00286–P00324 (5 contacts in 3 h)  [EVD-CDR002428, EVD-CDR002429, EVD-CDR002433]
+  2025-03-09 14:16  Incident recorded at Phase 7 Market, Mohali  []
+  2025-03-09 14:16  Flagged RTGS ₹2,400,000 ORG-003 → ORG-018  [EVD-TXN002178]
+  2025-03-09 14:56  Flagged RTGS ₹2,352,000 ORG-018 → ORG-017  [EVD-TXN002180]
+  2025-03-09 16:16  Flagged NEFT ₹720,000 ORG-017 → P00324  [EVD-TXN002183]
+  2025-03-09 17:16  Flagged NEFT ₹720,000 ORG-017 → P00286  [EVD-TXN002189]
+  2025-03-12 18:41  Fir FIR/SOHANA/2025/0014 at PS Sohana (SAS Nagar): Financial Fraud & Money Laundering  [EVD-FIR000027]
+  2025-03-25 09:23  Supplementary Statement FIR/SOHANA/2025/0014 at PS Sohana (SAS Nagar): Financial Fraud & Money Laundering  [EVD-FIR000035]
+  2025-03-28 10:42  P00184 and P00379 co-located at Phase 7 Market, Mohali  [EVD-LOC005734, EVD-LOC005733]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00324  Lakhwinder Khan              PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000027]
+  P00286  Vivek Rawat                  ACCUSED            via FIR_STRUCTURED  [EVD-FIR000027, EVD-FIR000035]
+  P00184  Rahul Rawat                  COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000027]
+  P00327  Farhan Gill                  WITNESS            via FIR_NER  [EVD-FIR000027, EVD-FIR000035]
+  P00379  Sandeep Mehta                WITNESS            via FIR_NER  [EVD-FIR000027]
+
+5. FINANCIAL ACTIVITY
+  142 transactions, total ₹7,225,523; 5 flagged
+  - EVD-TXN002178 ₹2,400,000 2025-03-09 14:16: ₹2,400,000 received by ORG-018 and ₹2,352,000 sent onward 40 min later (EVD-TXN002178 → EVD-TXN002180)
+  - EVD-TXN002180 ₹2,352,000 2025-03-09 14:56: ₹2,400,000 received by ORG-018 and ₹2,352,000 sent onward 40 min later (EVD-TXN002178 → EVD-TXN002180)
+  - EVD-TXN002183 ₹720,000 2025-03-09 16:16: ₹2,352,000 received and 61% of it split to 2 accounts within 6 h
+  - EVD-TXN002189 ₹720,000 2025-03-09 17:16: ₹2,352,000 received and 61% of it split to 2 accounts within 6 h
+  - EVD-TXN001893 ₹185,000 2025-03-04 14:16: Isolation Forest outlier: 6 transactions from this account within 24 h (alt.: Stated purpose 'annual performance bonus' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Farhan Gill ↔ Sandeep Mehta: 10 contacts (2025-02-17 22:24 – 2025-04-06 08:27)
+  - Vivek Rawat ↔ Lakhwinder Khan: 8 contacts (2025-03-08 11:42 – 2025-03-08 17:14)
+  - Rahul Rawat ↔ Sandeep Mehta: 4 contacts (2025-02-24 10:11 – 2025-04-07 18:40)
+  - Rajesh Malhotra ↔ Farhan Gill: 32 contacts (2025-02-11 07:31 – 2025-04-06 18:17)
+  - Naveen Malhotra ↔ Lakhwinder Khan: 20 contacts (2025-02-12 20:12 – 2025-04-03 18:24)
+  - Imran Bajwa ↔ Farhan Gill: 18 contacts (2025-02-13 20:39 – 2025-03-27 11:30)
+  - Sunil Kumar ↔ Sandeep Mehta: 17 contacts (2025-02-13 10:06 – 2025-04-06 22:09)
+  - Meena Sidhu ↔ Lakhwinder Khan: 16 contacts (2025-02-08 09:36 – 2025-04-05 07:09)
+  Around incident: 34 contacts (baseline ≈19.1), 10 between named persons
+  * EVD-MSG001727 2025-03-08 07:30: "Call me when free." — exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG001838 2025-03-11 08:18: "Can you share the report by evening?" — exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - near incident: P00184 1.29 km, -110 min (EVD-LOC004242)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Lakhwinder Khan (P00324), recorded as principal accused: in contact with P00286 (8 contacts); party to 1 flagged transaction(s) (RAPID_PASS_THROUGH). [EVD-CDR002425, EVD-CDR002428, EVD-TXN002183]
+  - Vivek Rawat (P00286), recorded as accused: in contact with P00324 (8 contacts); party to 1 flagged transaction(s) (RAPID_PASS_THROUGH). [EVD-CDR002425, EVD-CDR002428, EVD-TXN002189]
+  - Rahul Rawat (P00184), recorded as complainant: record within 1.29 km of the incident location within 2 h of the incident; in contact with P00379 (4 contacts). [EVD-LOC004242, EVD-MSG001299, EVD-CDR002026]
+  - Farhan Gill (P00327), recorded as witness: in contact with P00379 (10 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-CDR001533, EVD-MSG001432, EVD-TXN001893]
+  - Sandeep Mehta (P00379), recorded as witness: in contact with P00327 (10 contacts), P00184 (4 contacts). [EVD-CDR001533, EVD-MSG001432, EVD-MSG001299, EVD-CDR002026]
+
+9. MISSING INFORMATION
+  - P00286 no geolocated record within ±6 h of the incident
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: call_date — timestamp invalid
+  - 1 record(s) with data-quality issue: latitude/longitude — invalid coordinate; set to NULL
+  - 1 record(s) with data-quality issue: timestamp — timestamp invalid
+  - 1 record(s) with data-quality issue: txn_datetime — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

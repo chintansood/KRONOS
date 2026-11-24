@@ -1,0 +1,33 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE938
+Generated 2026-11-21T11:55:53  |  data hash 5a2dfb2375e831d3
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE938 (FIR 84/2024, PS Sultanwind) — Cheating, Fraud & Forgery registered at PS Sultanwind, Amritsar. Incident date not stated in the source at Amritsar, Punjab. FIR records 1 accused (Accused A1 · CASE938 P90055) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE938 (FIR 84/2024, PS Sultanwind) — Cheating, Fraud & Forgery registered at PS Sultanwind, Amritsar. Incident date not stated in the source at Amritsar, Punjab. FIR records 1 accused (Accused A1 · CASE938 P90055) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2024-07-17 00:00  Fir Extract FIR 84/2024, PS Sultanwind at PS Sultanwind (Amritsar): Cheating, Fraud & Forgery  [EVD-PUB000038]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90055  Accused A1 · CASE938         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000038]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90055 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

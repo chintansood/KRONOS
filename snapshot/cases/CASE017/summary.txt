@@ -1,0 +1,66 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE017
+Generated 2026-11-20T07:18:34  |  data hash 3e292b5dfa0b0418
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE017 (FIR/AMBALACITY/2025/0017) — Extortion & Criminal Intimidation registered at PS Ambala City, Ambala. Incident recorded on 2025-03-19 16:03 at Sadar Bazaar, Ambala Cantt. FIR records 1 accused (Rekha Jain P00152) and 3 named persons in total. 567 records across 5 sources; 7 transactions flagged for review.
+
+2. NARRATIVE
+CASE017 (FIR/AMBALACITY/2025/0017) — Extortion & Criminal Intimidation registered at PS Ambala City, Ambala. Incident recorded on 2025-03-19 16:03 at Sadar Bazaar, Ambala Cantt. FIR records 1 accused (Rekha Jain P00152) and 3 named persons in total. 567 records across 5 sources; 7 transactions flagged for review. 6 transfers from P00289 to P00152 each fell just below ₹50,000 (total ₹254,500).
+
+3. CHRONOLOGY
+  2025-03-19 16:03  Incident recorded at Sadar Bazaar, Ambala Cantt  []
+  2025-03-20 12:04  Fir FIR/AMBALACITY/2025/0017 at PS Ambala City (Ambala): Extortion & Criminal Intimidation  [EVD-FIR000032]
+  2025-03-20 16:08  Flagged CASH_DEPOSIT ₹40,000 P00289 → P00152  [EVD-TXN002554]
+  2025-03-21 07:41  Flagged CASH_DEPOSIT ₹40,000 P00289 → P00152  [EVD-TXN002566]
+  2025-03-21 23:36  Flagged CASH_DEPOSIT ₹40,000 P00289 → P00152  [EVD-TXN002605]
+  2025-03-23 04:06  Flagged CASH_DEPOSIT ₹45,000 P00289 → P00152  [EVD-TXN002641]
+  2025-03-23 17:13  Flagged CASH_DEPOSIT ₹49,500 P00289 → P00152  [EVD-TXN002661]
+  2025-04-07 00:21  Supplementary Statement FIR/AMBALACITY/2025/0017 at PS Ambala City (Ambala): Extortion & Criminal Intimidation  [EVD-FIR000041]
+  2025-04-07 11:33  Flagged RTGS ₹1,250,000 P00312 → ORG-009  [EVD-TXN003277]
+  2025-04-08 08:39  Supplementary Statement FIR/AMBALACITY/2025/0017 at PS Ambala City (Ambala): Extortion & Criminal Intimidation  [EVD-FIR000042]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00152  Rekha Jain                   PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000032, EVD-FIR000041, EVD-FIR000042]
+  P00289  Nisha Kaur                   COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000032, EVD-FIR000041]
+  P00295  Arjun Yadav                  WITNESS            via FIR_NER  [EVD-FIR000032, EVD-FIR000042]
+  P00312  Gaurav Yadav                 RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  115 transactions, total ₹2,150,205; 7 flagged
+  - EVD-TXN003277 ₹1,250,000 2025-04-07 11:33: Isolation Forest outlier: amount ≈1209× this account's median; Amount ₹1,250,000 exceeds upper fence ₹65,471 (Q3 + 3.0·IQR, sender's own history) (alt.: Stated purpose 'property booking - registered sale deed' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN002661 ₹49,500 2025-03-23 17:13: Isolation Forest outlier: amount ≈22× this account's median; cash channel; 6 transfers P00289 → P00152 within 14 days, each just below ₹50,000 (total ₹254,500)
+  - EVD-TXN002641 ₹45,000 2025-03-23 04:06: Isolation Forest outlier: amount ≈20× this account's median; cash channel; unusual hour; 6 transfers P00289 → P00152 within 14 days, each just below ₹50,000 (total ₹254,500)
+  - EVD-TXN002554 ₹40,000 2025-03-20 16:08: Isolation Forest outlier: amount ≈18× this account's median; cash channel; 6 transfers P00289 → P00152 within 14 days, each just below ₹50,000 (total ₹254,500)
+  - EVD-TXN002566 ₹40,000 2025-03-21 07:41: Isolation Forest outlier: amount ≈18× this account's median; cash channel; 6 transfers P00289 → P00152 within 14 days, each just below ₹50,000 (total ₹254,500)
+  - EVD-TXN002605 ₹40,000 2025-03-21 23:36: Isolation Forest outlier: amount ≈18× this account's median; cash channel; 6 transfers P00289 → P00152 within 14 days, each just below ₹50,000 (total ₹254,500)
+  - EVD-TXN002617 ₹40,000 2025-03-22 12:22: Isolation Forest outlier: amount ≈18× this account's median; cash channel; 6 transfers P00289 → P00152 within 14 days, each just below ₹50,000 (total ₹254,500)
+
+6. COMMUNICATION
+  - Rekha Jain ↔ Arjun Yadav: 4 contacts (2025-03-06 12:06 – 2025-04-05 18:52)
+  - Rekha Jain ↔ Nisha Kaur: 4 contacts (2025-03-13 15:23 – 2025-03-18 03:14)
+  - Neha Verma ↔ Nisha Kaur: 19 contacts (2025-02-22 15:48 – 2025-04-13 13:48)
+  - Rekha Jain ↔ Rekha Gupta: 17 contacts (2025-03-01 11:46 – 2025-04-18 09:24)
+  - Gaurav Yadav ↔ Shalini Gill: 15 contacts (2025-02-21 17:46 – 2025-04-17 10:19)
+  - Arjun Yadav ↔ Dinesh Grewal: 15 contacts (2025-02-24 14:46 – 2025-04-18 08:23)
+  - Abhishek Yadav ↔ Arjun Yadav: 14 contacts (2025-02-18 14:20 – 2025-04-15 14:00)
+  - Mukesh Jain ↔ Nisha Kaur: 14 contacts (2025-02-18 15:14 – 2025-04-16 13:35)
+  Around incident: 8 contacts (baseline ≈15.2), 1 between named persons
+  * EVD-MSG002064 2025-03-18 03:14: "Account: PUNB-69156716493. Small amounts only." — references account PUNB-69156716493 (seen in this case's transactions); exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - near incident: P00152 1.01 km, -103 min (EVD-LOC005033)
+  - near incident: P00152 1.18 km, 0 min (EVD-LOC005044)
+  - near incident: P00289 0.0 km, 5 min (EVD-LOC005045)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Rekha Jain (P00152), recorded as principal accused: record within 1.01 km of the incident location within 2 h of the incident; in contact with P00295 (4 contacts), P00289 (4 contacts); party to 6 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-LOC005033, EVD-LOC005044, EVD-MSG001660, EVD-CDR003372]
+  - Nisha Kaur (P00289), recorded as complainant: record within 0.0 km of the incident location within 2 h of the incident; in contact with P00152 (4 contacts); party to 6 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-LOC005045, EVD-MSG001918, EVD-MSG001971, EVD-TXN002661]
+  - Arjun Yadav (P00295), recorded as witness: in contact with P00152 (4 contacts). [EVD-MSG001660, EVD-CDR003372]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

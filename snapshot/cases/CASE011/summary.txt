@@ -1,0 +1,82 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE011
+Generated 2026-11-20T07:18:33  |  data hash 6c3788e3130835bb
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE011 (FIR/KOTWALIAMR/2025/0011) — Cyber Fraud (Online Investment Scam) registered at PS Kotwali Amritsar, Amritsar. Incident recorded on 2025-02-28 12:26 at Ranjit Avenue Residential, Amritsar. FIR records 2 accused (Kavita Qureshi P00201, Vikramjit Singh P00015) and 4 named persons in total. 873 records across 5 sources; 14 transactions flagged for review.
+
+2. NARRATIVE
+CASE011 (FIR/KOTWALIAMR/2025/0011) — Cyber Fraud (Online Investment Scam) registered at PS Kotwali Amritsar, Amritsar. Incident recorded on 2025-02-28 12:26 at Ranjit Avenue Residential, Amritsar. FIR records 2 accused (Kavita Qureshi P00201, Vikramjit Singh P00015) and 4 named persons in total. 873 records across 5 sources; 14 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN001717 → EVD-TXN001719, 12.0 min), a pattern that can indicate layering and requires verification. Account HDFC-42102499471 received funds from 4 different individuals within 14 days.
+
+3. CHRONOLOGY
+  2025-02-22 14:45  P00201 and P00250 co-located at Hall Bazaar, Amritsar  [EVD-LOC002968, EVD-LOC002966]
+  2025-02-24 16:54  P00029 and P00355 co-located at Hall Bazaar, Amritsar  [EVD-LOC003138, EVD-LOC003139]
+  2025-02-28 12:26  Incident recorded at Ranjit Avenue Residential, Amritsar  []
+  2025-03-01 04:19  Flagged IMPS ₹71,319 P00201 → P00015  [EVD-TXN001723]
+  2025-03-01 05:08  Flagged IMPS ₹69,299 P00201 → P00015  [EVD-TXN001725]
+  2025-03-01 10:20  Flagged IMPS ₹69,856 P00201 → P00015  [EVD-TXN001733]
+  2025-03-01 16:28  Flagged IMPS ₹61,670 P00201 → P00015  [EVD-TXN001769]
+  2025-03-01 17:27  Flagged IMPS ₹67,093 P00201 → P00015  [EVD-TXN001776]
+  2025-03-02 12:26  Flagged CASH_WITHDRAWAL ₹238,398 P00015 → P00015  [EVD-TXN001797]
+  2025-03-02 17:23  Fir FIR/KOTWALIAMR/2025/0011 at PS Kotwali Amritsar (Amritsar): Cyber Fraud (Online Investment Scam)  [EVD-FIR000017]
+  2025-03-05 15:24  P00029 and P00355 co-located at Hall Bazaar, Amritsar  [EVD-LOC003900, EVD-LOC003898]
+  2025-03-11 08:37  Supplementary Statement FIR/KOTWALIAMR/2025/0011 at PS Kotwali Amritsar (Amritsar): Cyber Fraud (Online Investment Scam)  [EVD-FIR000026]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00201  Kavita Qureshi               PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000017, EVD-FIR000026]
+  P00015  Vikramjit Singh              ACCUSED            via FIR_STRUCTURED  [EVD-FIR000017]
+  P00355  Harleen Malhotra             COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000017, EVD-FIR000026]
+  P00294  Mukesh Arora                 VICTIM             via FIR_NER  [EVD-FIR000017]
+  P00062  Pooja Qureshi                RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00303  Aarti Saini                  RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  180 transactions, total ₹2,158,300; 14 flagged
+  - EVD-TXN001776 ₹67,093 2025-03-01 17:27: Isolation Forest outlier: amount ≈35× this account's median; 6 transactions from this account within 24 h; ₹69,169 received by P00201 and ₹67,093 sent onward 38 min later (EVD-TXN001771 → EVD-TXN001776)
+  - EVD-TXN001769 ₹61,670 2025-03-01 16:28: Isolation Forest outlier: amount ≈32× this account's median; 5 transactions from this account within 24 h; ₹63,578 received by P00201 and ₹61,670 sent onward 17 min later (EVD-TXN001768 → EVD-TXN001769)
+  - EVD-TXN001797 ₹238,398 2025-03-02 12:26: Isolation Forest outlier: amount ≈165× this account's median; cash channel; Account HDFC-42102499471 received ₹1,126,030 from 4 different individuals within 14 days
+  - EVD-TXN001723 ₹71,319 2025-03-01 04:19: ₹73,525 received by P00201 and ₹71,319 sent onward 13 min later (EVD-TXN001722 → EVD-TXN001723); Account HDFC-42102499471 received ₹1,126,030 from 4 different individuals within 14 days
+  - EVD-TXN001733 ₹69,856 2025-03-01 10:20: ₹71,443 received by P00201 and ₹69,856 sent onward 347 min later (EVD-TXN001724 → EVD-TXN001733); Account HDFC-42102499471 received ₹1,126,030 from 4 different individuals within 14 days
+  - EVD-TXN001725 ₹69,299 2025-03-01 05:08: ₹73,525 received by P00201 and ₹69,299 sent onward 63 min later (EVD-TXN001722 → EVD-TXN001725); Account HDFC-42102499471 received ₹1,126,030 from 4 different individuals within 14 days
+  - EVD-TXN001719 ₹62,552 2025-02-28 22:08: ₹64,487 received by P00201 and ₹62,552 sent onward 12 min later (EVD-TXN001717 → EVD-TXN001719); Account HDFC-42102499471 received ₹1,126,030 from 4 different individuals within 14 days
+  - EVD-TXN001761 ₹76,000 2025-03-01 15:00: ₹76,000 received by P00303 and ₹63,578 sent onward 71 min later (EVD-TXN001761 → EVD-TXN001768) (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN001722 ₹73,525 2025-03-01 04:06: ₹73,525 received by P00201 and ₹71,319 sent onward 13 min later (EVD-TXN001722 → EVD-TXN001723)
+  - EVD-TXN001730 ₹72,016 2025-03-01 09:48: ₹72,016 received by P00201 and ₹69,856 sent onward 32 min later (EVD-TXN001730 → EVD-TXN001733)
+  - EVD-TXN001724 ₹71,443 2025-03-01 04:32: ₹71,443 received by P00201 and ₹69,299 sent onward 36 min later (EVD-TXN001724 → EVD-TXN001725)
+  - EVD-TXN001771 ₹69,169 2025-03-01 16:49: ₹69,169 received by P00201 and ₹67,093 sent onward 38 min later (EVD-TXN001771 → EVD-TXN001776)
+  - EVD-TXN001717 ₹64,487 2025-02-28 21:56: ₹64,487 received by P00201 and ₹62,552 sent onward 12 min later (EVD-TXN001717 → EVD-TXN001719)
+  - EVD-TXN001768 ₹63,578 2025-03-01 16:11: ₹76,000 received by P00303 and ₹63,578 sent onward 71 min later (EVD-TXN001761 → EVD-TXN001768)
+
+6. COMMUNICATION
+  - Kavita Qureshi ↔ Harleen Malhotra: 5 contacts (2025-02-20 00:27 – 2025-02-25 20:30)
+  - Kavita Qureshi ↔ Mukesh Arora: 4 contacts (2025-02-20 20:20 – 2025-02-26 11:37)
+  - Kavita Qureshi ↔ Sandeep Kapoor: 29 contacts (2025-02-01 08:18 – 2025-03-27 20:08)
+  - Kavita Qureshi ↔ Priya Bajwa: 24 contacts (2025-01-31 14:01 – 2025-03-26 15:12)
+  - Aarti Saini ↔ Balwinder Verma: 24 contacts (2025-02-01 08:26 – 2025-03-24 22:50)
+  - Mukesh Arora ↔ Sandeep Kapoor: 21 contacts (2025-01-30 13:36 – 2025-03-28 20:24)
+  - Ankit Bajwa ↔ Harleen Malhotra: 17 contacts (2025-01-29 13:21 – 2025-03-26 15:42)
+  - Yogesh Malhotra ↔ Aarti Saini: 15 contacts (2025-01-31 16:33 – 2025-03-27 20:11)
+  Around incident: 27 contacts (baseline ≈23.9), 0 between named persons
+  * EVD-MSG001154 2025-02-20 00:27: "Your returns of 18% are credited. Add Rs 24,999 more to unlock withdrawal. Transfer to ICI" — references an amount (₹24999); references account ICIC-35614038453 (seen in this case's transactions)
+  * EVD-MSG001175 2025-02-20 15:51: "Your returns of 18% are credited. Add Rs 15,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹15000); references account ICIC-35614038453 (seen in this case's transactions)
+  * EVD-MSG001188 2025-02-20 20:20: "Your returns of 18% are credited. Add Rs 30,000 more to unlock withdrawal. Transfer to SBI" — references an amount (₹30000); references account SBIN-46263838065 (seen in this case's transactions)
+  * EVD-MSG001201 2025-02-21 07:21: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹49000); references account ICIC-35614038453 (seen in this case's transactions)
+  * EVD-MSG001225 2025-02-22 02:27: "Your returns of 18% are credited. Add Rs 24,999 more to unlock withdrawal. Transfer to SBI" — references an amount (₹24999); references account SBIN-46263838065 (seen in this case's transactions)
+  * EVD-MSG001288 2025-02-24 03:56: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to ICI" — references an amount (₹49000); references account ICIC-35614038453 (seen in this case's transactions)
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Kavita Qureshi (P00201), recorded as principal accused: in contact with P00355 (5 contacts), P00294 (4 contacts); party to 12 flagged transaction(s) (FAN_IN, ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-MSG001154, EVD-MSG001175, EVD-MSG001188, EVD-MSG001201]
+  - Vikramjit Singh (P00015), recorded as accused: party to 7 flagged transaction(s) (FAN_IN, ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-TXN001776, EVD-TXN001769, EVD-TXN001797]
+  - Harleen Malhotra (P00355), recorded as complainant: in contact with P00201 (5 contacts). [EVD-MSG001154, EVD-MSG001175]
+  - Mukesh Arora (P00294), recorded as victim: in contact with P00201 (4 contacts). [EVD-MSG001188, EVD-MSG001201]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+  - 1 record(s) with data-quality issue: timestamp — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

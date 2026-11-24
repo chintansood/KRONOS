@@ -1,0 +1,38 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE928
+Generated 2026-11-21T11:55:52  |  data hash 14cda8308f13d0a1
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE928 (FIR 58/2023, PS Division No.4) — Murder / Attempt to Murder registered at PS Division No.4, Ludhiana. Incident recorded on 2023-06-17 00:00 at Ludhiana, Punjab. FIR records 2 accused (Accused A1 · CASE928 P90042, Accused A2 · CASE928 P90043) and 2 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE928 (FIR 58/2023, PS Division No.4) — Murder / Attempt to Murder registered at PS Division No.4, Ludhiana. Incident recorded on 2023-06-17 00:00 at Ludhiana, Punjab. FIR records 2 accused (Accused A1 · CASE928 P90042, Accused A2 · CASE928 P90043) and 2 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2023-06-17 00:00  Incident recorded at Ludhiana, Punjab  []
+  2023-06-21 00:00  Fir Extract FIR 58/2023, PS Division No.4 at PS Division No.4 (Ludhiana): Murder / Attempt to Murder  [EVD-PUB000028]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90042  Accused A1 · CASE928         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000028]
+  P90043  Accused A2 · CASE928         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000028]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+  Around incident: 0 contacts (baseline ≈0.0), 0 between named persons
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90043 no geolocated record within ±6 h of the incident
+  - P90043 no call detail records obtained
+  - P90042 no geolocated record within ±6 h of the incident
+  - P90042 no call detail records obtained
+
+10. UNCERTAINTIES
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

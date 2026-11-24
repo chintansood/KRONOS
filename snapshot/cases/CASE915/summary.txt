@@ -1,0 +1,35 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE915
+Generated 2026-11-21T11:55:51  |  data hash f94df85a498ec9ff
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE915 (FIR 69/2024, PS Begowal) — Murder / Attempt to Murder registered at PS Begowal, Kapurthala. Incident date not stated in the source at Kapurthala, Punjab. FIR records 2 accused (Accused A1 · CASE915 P90023, Accused A2 · CASE915 P90024) and 2 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE915 (FIR 69/2024, PS Begowal) — Murder / Attempt to Murder registered at PS Begowal, Kapurthala. Incident date not stated in the source at Kapurthala, Punjab. FIR records 2 accused (Accused A1 · CASE915 P90023, Accused A2 · CASE915 P90024) and 2 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2024-11-02 00:00  Fir Extract FIR 69/2024, PS Begowal at PS Begowal (Kapurthala): Murder / Attempt to Murder  [EVD-PUB000015]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90023  Accused A1 · CASE915         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000015]
+  P90024  Accused A2 · CASE915         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000015]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90024 no call detail records obtained
+  - P90023 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

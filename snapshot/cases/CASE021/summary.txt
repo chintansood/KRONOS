@@ -1,0 +1,87 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE021
+Generated 2026-11-20T07:18:35  |  data hash 9b12025529578568
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE021 (FIR/CYBERCRIME/2025/0021) — Cyber Fraud (Online Investment Scam) registered at PS Cyber Crime CHD, Chandigarh. Incident recorded on 2025-04-04 19:36 at Sector 15 Residential, Chandigarh. FIR records 2 accused (Aman Chauhan P00350, Sukha P00020) and 4 named persons in total. 991 records across 5 sources; 21 transactions flagged for review.
+
+2. NARRATIVE
+CASE021 (FIR/CYBERCRIME/2025/0021) — Cyber Fraud (Online Investment Scam) registered at PS Cyber Crime CHD, Chandigarh. Incident recorded on 2025-04-04 19:36 at Sector 15 Residential, Chandigarh. FIR records 2 accused (Aman Chauhan P00350, Sukha P00020) and 4 named persons in total. 991 records across 5 sources; 21 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN003130 → EVD-TXN003131, 41.0 min), a pattern that can indicate layering and requires verification. 8 transfers from P00350 to P00020 each fell just below ₹50,000 (total ₹333,993). Account HDFC-25216025239 received funds from 3 different individuals within 14 days. Communication between P00107 and P00350 spiked to 4 contacts within 3 hours on 2025-04-05.
+
+3. CHRONOLOGY
+  2025-03-25 12:19  P00022 and P00131 co-located at Elante Mall, Industrial Area Chandigarh  [EVD-LOC005508, EVD-LOC005505]
+  2025-04-04 19:36  Incident recorded at Sector 15 Residential, Chandigarh  []
+  2025-04-05 00:10  Communication burst P00107–P00350 (4 contacts in 3 h)  [EVD-CDR003630, EVD-CDR003631, EVD-CDR003634]
+  2025-04-05 01:34  Communication burst P00147–P00350 (4 contacts in 3 h)  [EVD-CDR003636, EVD-CDR003639, EVD-CDR003640]
+  2025-04-05 05:27  Fir FIR/CYBERCRIME/2025/0021 at PS Cyber Crime CHD (Chandigarh): Cyber Fraud (Online Investment Scam)  [EVD-FIR000040]
+  2025-04-05 13:55  Flagged IMPS ₹43,003 P00350 → P00020  [EVD-TXN003232]
+  2025-04-05 20:16  Flagged IMPS ₹41,939 P00350 → P00020  [EVD-TXN003241]
+  2025-04-05 20:24  Flagged IMPS ₹41,641 P00350 → P00020  [EVD-TXN003242]
+  2025-04-06 00:05  Flagged IMPS ₹44,806 P00147 → P00350  [EVD-TXN003247]
+  2025-04-06 00:50  Flagged IMPS ₹43,461 P00350 → P00020  [EVD-TXN003248]
+  2025-04-06 19:36  Flagged CASH_WITHDRAWAL ₹215,197 P00020 → P00020  [EVD-TXN003271]
+  2025-04-08 12:19  Supplementary Statement FIR/CYBERCRIME/2025/0021 at PS Cyber Crime CHD (Chandigarh): Cyber Fraud (Online Investment Scam)  [EVD-FIR000043]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00350  Aman Chauhan                 PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000040, EVD-FIR000043]
+  P00020  Sukha                        ACCUSED            via FIR_STRUCTURED  [EVD-FIR000040]
+  P00131  Vivek Arora                  COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000040, EVD-FIR000043]
+  P00081  Ashok Singh                  VICTIM             via FIR_NER  [EVD-FIR000040]
+  P00107  Mukesh Dhillon               RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00147  Ajay Chopra                  RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00235  Kuldeep Malhotra             RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  216 transactions, total ₹2,636,284; 15 flagged
+  - EVD-TXN003247 ₹44,806 2025-04-06 00:05: Isolation Forest outlier: amount ≈21× this account's median; 4 transactions from this account within 24 h; unusual hour; ₹44,806 received by P00350 and ₹43,461 sent onward 45 min later (EVD-TXN003247 → EVD-TXN003248)
+  - EVD-TXN003248 ₹43,461 2025-04-06 00:50: Isolation Forest outlier: amount ≈20× this account's median; 10 transactions from this account within 24 h; unusual hour; ₹43,236 received by P00350 and ₹43,461 sent onward 320 min later (EVD-TXN003239 → EVD-TXN003248)
+  - EVD-TXN003232 ₹43,003 2025-04-05 13:55: Isolation Forest outlier: amount ≈20× this account's median; 7 transactions from this account within 24 h; ₹44,283 received by P00350 and ₹43,003 sent onward 279 min later (EVD-TXN003137 → EVD-TXN003232)
+  - EVD-TXN003241 ₹41,939 2025-04-05 20:16: Isolation Forest outlier: amount ≈19× this account's median; 8 transactions from this account within 24 h; ₹43,236 received by P00350 and ₹41,939 sent onward 46 min later (EVD-TXN003239 → EVD-TXN003241)
+  - EVD-TXN003242 ₹41,641 2025-04-05 20:24: Isolation Forest outlier: amount ≈19× this account's median; 9 transactions from this account within 24 h; ₹43,236 received by P00350 and ₹41,641 sent onward 54 min later (EVD-TXN003239 → EVD-TXN003242)
+  - EVD-TXN003271 ₹215,197 2025-04-06 19:36: Isolation Forest outlier: amount ≈161× this account's median; cash channel; Amount ₹215,197 exceeds upper fence ₹155,045 (Q3 + 3.0·IQR, sender's own history)
+  - EVD-TXN003231 ₹44,333 2025-04-05 13:24: ₹44,333 received by P00350 and ₹43,003 sent onward 31 min later (EVD-TXN003231 → EVD-TXN003232); Account HDFC-25216025239 received ₹344,322 from 3 different individuals within 14 days
+  - EVD-TXN003137 ₹44,283 2025-04-05 09:16: ₹44,283 received by P00350 and ₹42,955 sent onward 39 min later (EVD-TXN003137 → EVD-TXN003139); Account HDFC-25216025239 received ₹344,322 from 3 different individuals within 14 days
+  - EVD-TXN003239 ₹43,236 2025-04-05 19:30: ₹43,236 received by P00350 and ₹41,939 sent onward 46 min later (EVD-TXN003239 → EVD-TXN003241); Account HDFC-25216025239 received ₹344,322 from 3 different individuals within 14 days
+  - EVD-TXN003139 ₹42,955 2025-04-05 09:55: ₹42,885 received by P00350 and ₹42,955 sent onward 266 min later (EVD-TXN003130 → EVD-TXN003139); 8 transfers P00350 → P00020 within 14 days, each just below ₹50,000 (total ₹333,993)
+  - EVD-TXN003134 ₹42,930 2025-04-05 07:33: ₹42,930 received by P00350 and ₹41,642 sent onward 15 min later (EVD-TXN003134 → EVD-TXN003135); Account HDFC-25216025239 received ₹344,322 from 3 different individuals within 14 days
+  - EVD-TXN003240 ₹42,929 2025-04-05 20:11: ₹42,929 received by P00350 and ₹41,939 sent onward 5 min later (EVD-TXN003240 → EVD-TXN003241); Account HDFC-25216025239 received ₹344,322 from 3 different individuals within 14 days
+  - EVD-TXN003130 ₹42,885 2025-04-05 05:30: ₹42,885 received by P00350 and ₹41,598 sent onward 41 min later (EVD-TXN003130 → EVD-TXN003131); Account HDFC-25216025239 received ₹344,322 from 3 different individuals within 14 days
+  - EVD-TXN003135 ₹41,642 2025-04-05 07:48: ₹42,885 received by P00350 and ₹41,642 sent onward 138 min later (EVD-TXN003130 → EVD-TXN003135); 8 transfers P00350 → P00020 within 14 days, each just below ₹50,000 (total ₹333,993)
+  - EVD-TXN003131 ₹41,598 2025-04-05 06:11: ₹42,885 received by P00350 and ₹41,598 sent onward 41 min later (EVD-TXN003130 → EVD-TXN003131); 8 transfers P00350 → P00020 within 14 days, each just below ₹50,000 (total ₹333,993)
+
+6. COMMUNICATION
+  - Ashok Singh ↔ Aman Chauhan: 6 contacts (2025-03-27 12:35 – 2025-04-04 14:04)
+  - Vivek Arora ↔ Aman Chauhan: 3 contacts (2025-03-24 19:29 – 2025-04-04 05:52)
+  - Vivek Arora ↔ Harleen Khan: 19 contacts (2025-03-10 17:06 – 2025-04-30 12:29)
+  - Ajay Chopra ↔ Manisha Jain: 16 contacts (2025-03-06 22:33 – 2025-05-01 14:39)
+  - Jaspreet Khan ↔ Vivek Arora: 14 contacts (2025-03-08 22:13 – 2025-04-27 15:37)
+  - Imran Bhatia ↔ Aman Chauhan: 14 contacts (2025-03-09 13:09 – 2025-04-30 21:28)
+  - Ashok Singh ↔ Pankaj Thakur: 14 contacts (2025-03-12 12:16 – 2025-05-02 11:07)
+  - Ashok Singh ↔ Farhan Aggarwal: 13 contacts (2025-03-06 19:24 – 2025-05-02 09:44)
+  Around incident: 39 contacts (baseline ≈26.4), 3 between named persons
+  * EVD-MSG002275 2025-03-24 19:29: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to KKB" — references an amount (₹45000); references account KKBK-22923106724 (seen in this case's transactions)
+  * EVD-MSG002347 2025-03-27 12:35: "Your returns of 18% are credited. Add Rs 24,999 more to unlock withdrawal. Transfer to HDF" — references an amount (₹24999); references account HDFC-20912418621 (seen in this case's transactions)
+  * EVD-MSG002387 2025-03-29 01:04: "Your returns of 18% are credited. Add Rs 30,000 more to unlock withdrawal. Transfer to SBI" — references an amount (₹30000); references account SBIN-28639174101 (seen in this case's transactions)
+  * EVD-MSG002444 2025-03-31 00:42: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to HDF" — references an amount (₹45000); references account HDFC-20912418621 (seen in this case's transactions)
+  * EVD-MSG002480 2025-03-31 23:37: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to SBI" — references an amount (₹49000); references account SBIN-28639174101 (seen in this case's transactions)
+  * EVD-MSG002481 2025-04-01 00:38: "Your returns of 18% are credited. Add Rs 24,999 more to unlock withdrawal. Transfer to KKB" — references an amount (₹24999); references account KKBK-22923106724 (seen in this case's transactions)
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Aman Chauhan (P00350), recorded as principal accused: in contact with P00081 (6 contacts), P00131 (3 contacts); party to 16 flagged transaction(s) (FAN_IN, ISOLATION_FOREST, RAPID_PASS_THROUGH, STRUCTURING). [EVD-MSG002347, EVD-MSG002444, EVD-MSG002275, EVD-MSG002387]
+  - Vivek Arora (P00131), recorded as complainant: in contact with P00350 (3 contacts); party to 1 flagged transaction(s) (FAN_IN). [EVD-MSG002275, EVD-MSG002387, EVD-TXN002699]
+  - Ashok Singh (P00081), recorded as victim: in contact with P00350 (6 contacts); party to 3 flagged transaction(s) (FAN_IN, ISOLATION_FOREST). [EVD-MSG002347, EVD-MSG002444, EVD-TXN003019, EVD-TXN002959]
+  - Sukha (P00020), recorded as accused: party to 9 flagged transaction(s) (IQR, ISOLATION_FOREST, RAPID_PASS_THROUGH, STRUCTURING). [EVD-TXN003248, EVD-TXN003232, EVD-TXN003241]
+
+9. MISSING INFORMATION
+  - P00020 no geolocated record within ±6 h of the incident
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: latitude/longitude — invalid coordinate; set to NULL
+  - 1 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+  - 1 record(s) with data-quality issue: timestamp — timestamp invalid
+  - 1 record(s) with data-quality issue: txn_datetime — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

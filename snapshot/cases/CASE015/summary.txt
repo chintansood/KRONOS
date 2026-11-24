@@ -1,0 +1,75 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE015
+Generated 2026-11-20T07:18:33  |  data hash da30aaa84ef57de3
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE015 (FIR/SARABHANAG/2025/0015) — Narcotics Supply (NDPS) registered at PS Sarabha Nagar, Ludhiana. Incident recorded on 2025-03-13 20:42 at Kharar Highway Dhaba, Mohali. FIR records 2 accused (Santu Yadav P00026, Ravi Yadav P00012) and 4 named persons in total. 697 records across 5 sources; 9 transactions flagged for review.
+
+2. NARRATIVE
+CASE015 (FIR/SARABHANAG/2025/0015) — Narcotics Supply (NDPS) registered at PS Sarabha Nagar, Ludhiana. Incident recorded on 2025-03-13 20:42 at Kharar Highway Dhaba, Mohali. FIR records 2 accused (Santu Yadav P00026, Ravi Yadav P00012) and 4 named persons in total. 697 records across 5 sources; 9 transactions flagged for review. 6 transfers from P00012 to P00025 each fell just below ₹50,000 (total ₹278,400). Note: P00012 has a record 80.8 km from the incident location 70 min before the incident (EVD-TXN002314), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-02-27 21:00  Flagged CASH_DEPOSIT ₹49,900 P00012 → P00025  [EVD-TXN001686]
+  2025-02-28 10:11  P00011 and P00347 co-located at Sector 9 Office Complex, Chandigarh  [EVD-LOC003436, EVD-LOC003440]
+  2025-03-02 13:53  Flagged RTGS ₹850,000 P00011 → ORG-009  [EVD-TXN001799]
+  2025-03-04 13:49  Flagged CASH_DEPOSIT ₹48,500 P00012 → P00025  [EVD-TXN001892]
+  2025-03-07 15:45  Flagged CASH_DEPOSIT ₹46,000 P00012 → P00025  [EVD-TXN002056]
+  2025-03-11 08:22  Flagged CASH_DEPOSIT ₹46,000 P00012 → P00025  [EVD-TXN002227]
+  2025-03-11 18:34  Flagged CASH_DEPOSIT ₹46,000 P00012 → P00025  [EVD-TXN002249]
+  2025-03-13 20:42  Incident recorded at Kharar Highway Dhaba, Mohali  []
+  2025-03-15 03:15  Fir FIR/SARABHANAG/2025/0015 at PS Sarabha Nagar (Ludhiana): Narcotics Supply (NDPS)  [EVD-FIR000028]
+  2025-03-20 07:31  Supplementary Statement FIR/SARABHANAG/2025/0015 at PS Sarabha Nagar (Ludhiana): Narcotics Supply (NDPS)  [EVD-FIR000031]
+  2025-03-22 07:53  P00028 and P00303 co-located at Sarabha Nagar Residential, Ludhiana  [EVD-LOC005242, EVD-LOC005241]
+  2025-03-22 16:54  Witness Statement FIR/SARABHANAG/2025/0015 at PS Sarabha Nagar (Ludhiana): Narcotics Supply (NDPS)  [EVD-FIR000034]
+  2025-04-03 02:12  Supplementary Statement FIR/SARABHANAG/2025/0015 at PS Sarabha Nagar (Ludhiana): Narcotics Supply (NDPS)  [EVD-FIR000039]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00026  Santu Yadav                  PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000028]
+  P00012  Ravi Yadav                   ACCUSED            via FIR_STRUCTURED  [EVD-FIR000028, EVD-FIR000031, EVD-FIR000039]
+  P00011  Ravi Yadav                   WITNESS            via FIR_NER  [EVD-FIR000034]
+  P00303  Aarti Saini                  MENTIONED          via FIR_NER  [EVD-FIR000028]
+  P00126  Manoj Yadav                  RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  140 transactions, total ₹1,738,840; 9 flagged
+  - EVD-TXN001799 ₹850,000 2025-03-02 13:53: Isolation Forest outlier: amount ≈484× this account's median; Amount ₹850,000 exceeds upper fence ₹79,773 (Q3 + 3.0·IQR, sender's own history) (alt.: Stated purpose 'property booking - registered sale deed' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN001686 ₹49,900 2025-02-27 21:00: Isolation Forest outlier: amount ≈28× this account's median; cash channel; 6 transfers P00012 → P00025 within 14 days, each just below ₹50,000 (total ₹278,400)
+  - EVD-TXN001892 ₹48,500 2025-03-04 13:49: Isolation Forest outlier: amount ≈27× this account's median; cash channel; 6 transfers P00012 → P00025 within 14 days, each just below ₹50,000 (total ₹278,400)
+  - EVD-TXN002056 ₹46,000 2025-03-07 15:45: Isolation Forest outlier: amount ≈25× this account's median; cash channel; 6 transfers P00012 → P00025 within 14 days, each just below ₹50,000 (total ₹278,400)
+  - EVD-TXN002227 ₹46,000 2025-03-11 08:22: Isolation Forest outlier: amount ≈25× this account's median; cash channel; 6 transfers P00012 → P00025 within 14 days, each just below ₹50,000 (total ₹278,400)
+  - EVD-TXN002249 ₹46,000 2025-03-11 18:34: Isolation Forest outlier: amount ≈25× this account's median; cash channel; 6 transfers P00012 → P00025 within 14 days, each just below ₹50,000 (total ₹278,400)
+  - EVD-TXN002314 ₹42,000 2025-03-13 19:31: Isolation Forest outlier: amount ≈23× this account's median; cash channel; 6 transfers P00012 → P00025 within 14 days, each just below ₹50,000 (total ₹278,400)
+  - EVD-TXN002982 ₹28,000 2025-04-01 12:03: Isolation Forest outlier: 7 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN003352 ₹133 2025-04-10 02:29: Isolation Forest outlier: unusual hour (alt.: Stated purpose 'pharmacy' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Ravi Yadav ↔ Aarti Saini: 10 contacts (2025-02-14 12:42 – 2025-04-09 21:54)
+  - Aarti Saini ↔ Balwinder Verma: 26 contacts (2025-02-15 16:28 – 2025-04-12 10:23)
+  - Santu Yadav ↔ Sahil Bajwa: 18 contacts (2025-02-12 22:49 – 2025-04-08 08:20)
+  - Santu Yadav ↔ Abhishek Mehta: 17 contacts (2025-02-18 18:19 – 2025-04-11 19:42)
+  - Santu Yadav ↔ Ravi Kapoor: 15 contacts (2025-02-14 14:25 – 2025-04-07 17:49)
+  - Ravi Yadav ↔ Gurpreet Mehta: 14 contacts (2025-02-27 21:02 – 2025-03-20 18:56)
+  - Priya Rana ↔ Manoj Yadav: 13 contacts (2025-02-16 20:19 – 2025-04-09 06:42)
+  - Ravi Yadav ↔ Deepak Rana: 11 contacts (2025-02-28 14:50 – 2025-03-25 10:10)
+  Around incident: 22 contacts (baseline ≈18.3), 1 between named persons
+  * EVD-MSG001860 2025-03-11 20:42: "Will be late tonight, eat without me." — exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - elsewhere: P00012 at Sarabha Nagar Residential, Ludhiana (80.8 km away, EVD-TXN002314)
+  - elsewhere: P00026 at Ranjit Avenue Residential, Amritsar (197.9 km away, EVD-LOC004598)
+  - elsewhere: P00303 at nan (80.8 km away, EVD-MSG001937)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Ravi Yadav (P00012), recorded as accused: record(s) 80.8 km away from the incident location within 3 h of the incident (Sarabha Nagar Residential, Ludhiana); in contact with P00303 (10 contacts); party to 6 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-TXN002314, EVD-MSG000976, EVD-MSG001051, EVD-TXN001686]
+  - Aarti Saini (P00303), recorded as mentioned: record(s) 80.8 km away from the incident location within 3 h of the incident (nan); in contact with P00012 (10 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-MSG001937, EVD-MSG000976, EVD-MSG001051, EVD-TXN003352]
+  - Santu Yadav (P00026), recorded as principal accused: record(s) 197.9 km away from the incident location within 3 h of the incident (Ranjit Avenue Residential, Amritsar). [EVD-LOC004598]
+  - Ravi Yadav (P00011), recorded as witness: party to 1 flagged transaction(s) (IQR, ISOLATION_FOREST). [EVD-TXN001799]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: person_id — missing person_id; record kept, attributed via device/phone only
+  - Name 'Ravi Yadav' in FIR text could not be linked to a unique person record
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

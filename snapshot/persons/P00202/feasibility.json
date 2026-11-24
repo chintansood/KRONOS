@@ -1,0 +1,1 @@
+{"personId":"P00202","pairsChecked":121,"plausible":121,"requiresAirTravel":0,"impossible":0,"simultaneousDifferentPlaces":0,"flags":[],"thresholds":{"maxGroundKmh":150.0,"maxAirKmh":950.0,"minDistanceKm":5.0},"method":"Haversine distance minus both records' accuracy radii, divided by elapsed time."}

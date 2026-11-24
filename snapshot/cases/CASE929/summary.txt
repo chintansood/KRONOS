@@ -1,0 +1,33 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE929
+Generated 2026-11-21T11:55:53  |  data hash c5368e2855a33bc0
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE929 (FIR 117/2025, PS Naraingarh) — Narcotics (NDPS Act) registered at PS Naraingarh, Ambala. Incident date not stated in the source at Ambala, Haryana. FIR records 1 accused (Accused A1 · CASE929 P90044) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE929 (FIR 117/2025, PS Naraingarh) — Narcotics (NDPS Act) registered at PS Naraingarh, Ambala. Incident date not stated in the source at Ambala, Haryana. FIR records 1 accused (Accused A1 · CASE929 P90044) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2025-04-18 00:00  Fir Extract FIR 117/2025, PS Naraingarh at PS Naraingarh (Ambala): Narcotics (NDPS Act)  [EVD-PUB000029]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90044  Accused A1 · CASE929         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000029]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90044 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

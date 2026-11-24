@@ -1,0 +1,71 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE003
+Generated 2026-11-20T07:18:31  |  data hash 1e6514f4ddbcb789
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE003 (FIR/CYBERCRIME/2025/0003) — Narcotics Supply (NDPS) registered at PS Cyber Crime Mohali, SAS Nagar. Incident recorded on 2025-01-29 10:28 at Airport Road, Mohali. FIR records 3 accused (Manoj Kumar Rana P00027, Varun Bansal P00261, Kuldeep Sandhu P00265) and 4 named persons in total. 677 records across 5 sources; 6 transactions flagged for review.
+
+2. NARRATIVE
+CASE003 (FIR/CYBERCRIME/2025/0003) — Narcotics Supply (NDPS) registered at PS Cyber Crime Mohali, SAS Nagar. Incident recorded on 2025-01-29 10:28 at Airport Road, Mohali. FIR records 3 accused (Manoj Kumar Rana P00027, Varun Bansal P00261, Kuldeep Sandhu P00265) and 4 named persons in total. 677 records across 5 sources; 6 transactions flagged for review. 6 transfers from P00265 to P00027 each fell just below ₹50,000 (total ₹270,400).
+
+3. CHRONOLOGY
+  2025-01-07 06:18  P00008 and P00261 co-located at Sector 70 Residential, Mohali  [EVD-LOC000122, EVD-LOC000121]
+  2025-01-19 06:13  Flagged CASH_DEPOSIT ₹48,500 P00265 → P00027  [EVD-TXN000237]
+  2025-01-19 08:46  Flagged CASH_DEPOSIT ₹42,000 P00265 → P00027  [EVD-TXN000238]
+  2025-01-20 03:29  Flagged CASH_DEPOSIT ₹49,900 P00265 → P00027  [EVD-TXN000257]
+  2025-01-20 11:48  P00027 and P00261 co-located at Airport Road, Mohali  [EVD-LOC000636, EVD-LOC000637]
+  2025-01-23 01:07  Flagged CASH_DEPOSIT ₹42,000 P00265 → P00027  [EVD-TXN000318]
+  2025-01-24 08:52  P00008 and P00261 co-located at Airport Road, Mohali  [EVD-LOC000841, EVD-LOC000838]
+  2025-01-24 09:04  P00027 and P00261 co-located at Airport Road, Mohali  [EVD-LOC000843, EVD-LOC000838]
+  2025-01-27 04:06  Flagged CASH_DEPOSIT ₹42,000 P00265 → P00027  [EVD-TXN000435]
+  2025-01-28 09:14  P00027 and P00261 co-located at Airport Road, Mohali  [EVD-LOC001060, EVD-LOC001061]
+  2025-01-28 09:24  P00008 and P00261 co-located at Airport Road, Mohali  [EVD-LOC001062, EVD-LOC001061]
+  2025-01-28 15:51  Flagged CASH_DEPOSIT ₹46,000 P00265 → P00027  [EVD-TXN000479]
+  2025-01-29 10:28  Incident recorded at Airport Road, Mohali  []
+  2025-01-29 12:46  Fir FIR/CYBERCRIME/2025/0003 at PS Cyber Crime Mohali (SAS Nagar): Narcotics Supply (NDPS)  [EVD-FIR000005]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00027  Manoj Kumar Rana             PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000005]
+  P00261  Varun Bansal                 ACCUSED            via FIR_STRUCTURED  [EVD-FIR000005]
+  P00265  Kuldeep Sandhu               ACCUSED            via FIR_STRUCTURED  [EVD-FIR000005]
+  P00308  Rohit Kapoor                 MENTIONED          via FIR_NER  [EVD-FIR000005]
+  P00008  Sunil Kumar                  RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  133 transactions, total ₹976,045; 6 flagged
+  - EVD-TXN000257 ₹49,900 2025-01-20 03:29: Isolation Forest outlier: amount ≈30× this account's median; cash channel; unusual hour; 6 transfers P00265 → P00027 within 14 days, each just below ₹50,000 (total ₹270,400)
+  - EVD-TXN000237 ₹48,500 2025-01-19 06:13: Isolation Forest outlier: amount ≈29× this account's median; cash channel; 6 transfers P00265 → P00027 within 14 days, each just below ₹50,000 (total ₹270,400)
+  - EVD-TXN000479 ₹46,000 2025-01-28 15:51: Isolation Forest outlier: amount ≈27× this account's median; cash channel; 6 transfers P00265 → P00027 within 14 days, each just below ₹50,000 (total ₹270,400)
+  - EVD-TXN000238 ₹42,000 2025-01-19 08:46: Isolation Forest outlier: amount ≈25× this account's median; cash channel; 6 transfers P00265 → P00027 within 14 days, each just below ₹50,000 (total ₹270,400)
+  - EVD-TXN000318 ₹42,000 2025-01-23 01:07: Isolation Forest outlier: amount ≈25× this account's median; cash channel; unusual hour; 6 transfers P00265 → P00027 within 14 days, each just below ₹50,000 (total ₹270,400)
+  - EVD-TXN000435 ₹42,000 2025-01-27 04:06: Isolation Forest outlier: amount ≈25× this account's median; cash channel; unusual hour; 6 transfers P00265 → P00027 within 14 days, each just below ₹50,000 (total ₹270,400)
+
+6. COMMUNICATION
+  - Kuldeep Sandhu ↔ Rohit Kapoor: 12 contacts (2025-01-08 20:23 – 2025-02-27 22:00)
+  - Manoj Kumar Rana ↔ Varun Bansal: 7 contacts (2025-01-20 08:34 – 2025-01-28 07:22)
+  - Manpreet Bajwa ↔ Rohit Kapoor: 14 contacts (2025-01-01 13:23 – 2025-02-18 22:10)
+  - Varun Bansal ↔ Farhan Gill: 14 contacts (2025-01-02 22:53 – 2025-02-27 09:34)
+  - Manoj Kumar Rana ↔ Simran Grewal: 14 contacts (2025-01-06 12:29 – 2025-02-26 10:08)
+  - Vivek Rawat ↔ Rohit Kapoor: 13 contacts (2025-01-01 17:18 – 2025-02-23 21:17)
+  - Kuldeep Sandhu ↔ Kuldeep Jain: 13 contacts (2025-01-02 07:44 – 2025-02-24 07:47)
+  - Sunil Kumar ↔ Varun Bansal: 13 contacts (2025-01-02 18:45 – 2025-02-25 11:28)
+  Around incident: 20 contacts (baseline ≈18.8), 4 between named persons
+  * EVD-MSG000438 2025-01-27 10:28: "Will be late tonight, eat without me." — exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG000458 2025-01-28 06:14: "Parcel ready. Same place, same time." — exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Manoj Kumar Rana (P00027), recorded as principal accused: in contact with P00261 (7 contacts); party to 6 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-MSG000269, EVD-MSG000368, EVD-TXN000257, EVD-TXN000237]
+  - Kuldeep Sandhu (P00265), recorded as accused: in contact with P00308 (12 contacts); party to 6 flagged transaction(s) (ISOLATION_FOREST, STRUCTURING). [EVD-CDR000103, EVD-MSG000081, EVD-TXN000257, EVD-TXN000237]
+  - Varun Bansal (P00261), recorded as accused: in contact with P00027 (7 contacts). [EVD-MSG000269, EVD-MSG000368]
+  - Rohit Kapoor (P00308), recorded as mentioned: in contact with P00265 (12 contacts). [EVD-CDR000103, EVD-MSG000081]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 1 record(s) with data-quality issue: caller_number — unparseable phone number
+  - 1 record(s) with data-quality issue: txn_datetime — timestamp invalid
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

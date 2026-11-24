@@ -1,0 +1,76 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE035
+Generated 2026-11-20T07:18:37  |  data hash 57309baf904e580c
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE035 (FIR/IFSOCYBERC/2025/0035) — Cyber Fraud (Online Investment Scam) registered at PS IFSO Cyber Cell, New Delhi. Incident recorded on 2025-05-23 20:33 at Dwarka Sector 10 Residential, Delhi. FIR records 1 accused (Varun Khanna P00112) and 3 named persons in total. 718 records across 5 sources; 10 transactions flagged for review.
+
+2. NARRATIVE
+CASE035 (FIR/IFSOCYBERC/2025/0035) — Cyber Fraud (Online Investment Scam) registered at PS IFSO Cyber Cell, New Delhi. Incident recorded on 2025-05-23 20:33 at Dwarka Sector 10 Residential, Delhi. FIR records 1 accused (Varun Khanna P00112) and 3 named persons in total. 718 records across 5 sources; 10 transactions flagged for review. Money-flow records show funds received and forwarded within minutes (e.g. EVD-TXN004893 → EVD-TXN004894, 37.0 min), a pattern that can indicate layering and requires verification. Account SBIN-63254310742 received funds from 3 different individuals within 14 days.
+
+3. CHRONOLOGY
+  2025-04-28 14:47  P00042 and P00099 co-located at IGI Airport Terminal 3, Delhi  [EVD-LOC007922, EVD-LOC007923]
+  2025-05-12 15:54  P00112 and P00217 co-located at Phase 7 Market, Mohali  [EVD-LOC008927, EVD-LOC008931]
+  2025-05-23 16:06  P00112 and P00305 co-located at Phase 7 Market, Mohali  [EVD-LOC009660, EVD-LOC009662]
+  2025-05-23 20:33  Incident recorded at Dwarka Sector 10 Residential, Delhi  []
+  2025-05-23 23:32  Flagged IMPS ₹59,146 P00172 → P00112  [EVD-TXN004893]
+  2025-05-24 00:38  Flagged IMPS ₹61,060 P00305 → P00112  [EVD-TXN004895]
+  2025-05-24 01:12  Flagged IMPS ₹59,229 P00112 → P00112  [EVD-TXN004896]
+  2025-05-24 03:45  Flagged IMPS ₹57,422 P00305 → P00112  [EVD-TXN004897]
+  2025-05-24 18:48  Flagged IMPS ₹57,742 P00172 → P00112  [EVD-TXN004917]
+  2025-05-25 20:33  Flagged CASH_WITHDRAWAL ₹210,398 P00112 → P00112  [EVD-TXN004951]
+  2025-05-25 23:11  P00036 and P00305 co-located at Sector 70 Residential, Mohali  [EVD-LOC009823, EVD-LOC009822]
+  2025-05-28 10:44  Fir FIR/IFSOCYBERC/2025/0035 at PS IFSO Cyber Cell (New Delhi): Cyber Fraud (Online Investment Scam)  [EVD-FIR000073]
+  2025-06-01 18:40  Supplementary Statement FIR/IFSOCYBERC/2025/0035 at PS IFSO Cyber Cell (New Delhi): Cyber Fraud (Online Investment Scam)  [EVD-FIR000076]
+  2025-06-11 04:54  Supplementary Statement FIR/IFSOCYBERC/2025/0035 at PS IFSO Cyber Cell (New Delhi): Cyber Fraud (Online Investment Scam)  [EVD-FIR000083]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00112  Varun Khanna                 PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000073, EVD-FIR000076, EVD-FIR000083]
+  P00042  Sunita Sandhu                COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000073]
+  P00060  Sahil Bhatia                 VICTIM             via FIR_NER  [EVD-FIR000073, EVD-FIR000076, EVD-FIR000083]
+  P00172  Arjun Sandhu                 RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00305  Manisha Sidhu                RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  149 transactions, total ₹1,614,114; 10 flagged
+  - EVD-TXN004951 ₹210,398 2025-05-25 20:33: Isolation Forest outlier: amount ≈113× this account's median; cash channel; Account SBIN-63254310742 received ₹674,076 from 3 different individuals within 14 days
+  - EVD-TXN004895 ₹61,060 2025-05-24 00:38: ₹61,060 received by P00112 and ₹59,229 sent onward 34 min later (EVD-TXN004895 → EVD-TXN004896); Account SBIN-63254310742 received ₹674,076 from 3 different individuals within 14 days
+  - EVD-TXN004896 ₹59,229 2025-05-24 01:12: ₹59,146 received by P00112 and ₹59,229 sent onward 100 min later (EVD-TXN004893 → EVD-TXN004896); Account SBIN-63254310742 received ₹674,076 from 3 different individuals within 14 days
+  - EVD-TXN004893 ₹59,146 2025-05-23 23:32: ₹59,146 received by P00112 and ₹57,371 sent onward 37 min later (EVD-TXN004893 → EVD-TXN004894); Account SBIN-63254310742 received ₹674,076 from 3 different individuals within 14 days
+  - EVD-TXN004917 ₹57,742 2025-05-24 18:48: ₹57,742 received by P00112 and ₹56,010 sent onward 30 min later (EVD-TXN004917 → EVD-TXN004918); Account SBIN-63254310742 received ₹674,076 from 3 different individuals within 14 days
+  - EVD-TXN004897 ₹57,422 2025-05-24 03:45: ₹57,422 received by P00112 and ₹55,699 sent onward 36 min later (EVD-TXN004897 → EVD-TXN004898); Account SBIN-63254310742 received ₹674,076 from 3 different individuals within 14 days
+  - EVD-TXN004894 ₹57,371 2025-05-24 00:09: ₹59,146 received by P00112 and ₹57,371 sent onward 37 min later (EVD-TXN004893 → EVD-TXN004894); Account SBIN-63254310742 received ₹674,076 from 3 different individuals within 14 days
+  - EVD-TXN004918 ₹56,010 2025-05-24 19:18: ₹57,742 received by P00112 and ₹56,010 sent onward 30 min later (EVD-TXN004917 → EVD-TXN004918); Account SBIN-63254310742 received ₹674,076 from 3 different individuals within 14 days
+  - EVD-TXN004898 ₹55,699 2025-05-24 04:21: ₹59,146 received by P00112 and ₹55,699 sent onward 289 min later (EVD-TXN004893 → EVD-TXN004898); Account SBIN-63254310742 received ₹674,076 from 3 different individuals within 14 days
+  - EVD-TXN004104 ₹52,000 2025-05-02 15:31: Isolation Forest outlier: 7 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Sunita Sandhu ↔ Varun Khanna: 4 contacts (2025-05-12 04:14 – 2025-05-23 05:36)
+  - Sahil Bhatia ↔ Varun Khanna: 4 contacts (2025-05-15 00:17 – 2025-05-22 19:59)
+  - Sahil Bhatia ↔ Pankaj Arora: 25 contacts (2025-04-24 14:25 – 2025-06-19 17:43)
+  - Rekha Yadav ↔ Varun Khanna: 23 contacts (2025-04-24 08:31 – 2025-06-21 10:49)
+  - Sunita Sandhu ↔ Sunil Bhatia: 17 contacts (2025-04-29 22:07 – 2025-06-22 08:50)
+  - Sunita Sandhu ↔ Rohit Aggarwal: 15 contacts (2025-04-30 22:19 – 2025-06-22 09:13)
+  - Sunita Sandhu ↔ Pankaj Sharma: 13 contacts (2025-04-24 07:41 – 2025-06-19 22:28)
+  - Varun Khanna ↔ Balwinder Sharma: 13 contacts (2025-04-24 22:13 – 2025-06-21 14:05)
+  Around incident: 31 contacts (baseline ≈19.2), 3 between named persons
+  * EVD-MSG003659 2025-05-12 04:14: "Your returns of 18% are credited. Add Rs 24,999 more to unlock withdrawal. Transfer to KKB" — references an amount (₹24999); references account KKBK-82419962642 (seen in this case's transactions)
+  * EVD-MSG003776 2025-05-15 00:17: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to KKB" — references an amount (₹49000); references account KKBK-62658263128 (seen in this case's transactions)
+  * EVD-MSG003833 2025-05-16 21:02: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to KKB" — references an amount (₹45000); references account KKBK-82419962642 (seen in this case's transactions)
+  * EVD-MSG003837 2025-05-17 01:20: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to KKB" — references an amount (₹45000); references account KKBK-62658263128 (seen in this case's transactions)
+  * EVD-MSG003953 2025-05-21 13:31: "Your returns of 18% are credited. Add Rs 9,999 more to unlock withdrawal. Transfer to KKBK" — references an amount (₹9999); references account KKBK-62658263128 (seen in this case's transactions); exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG003997 2025-05-22 19:59: "Your returns of 18% are credited. Add Rs 9,999 more to unlock withdrawal. Transfer to KKBK" — references an amount (₹9999); references account KKBK-62658263128 (seen in this case's transactions); exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Varun Khanna (P00112), recorded as principal accused: in contact with P00042 (4 contacts), P00060 (4 contacts); party to 9 flagged transaction(s) (FAN_IN, ISOLATION_FOREST, RAPID_PASS_THROUGH). [EVD-MSG003659, EVD-MSG003953, EVD-MSG003776, EVD-MSG003833]
+  - Sahil Bhatia (P00060), recorded as victim: in contact with P00112 (4 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-MSG003776, EVD-MSG003833, EVD-TXN004104]
+  - Sunita Sandhu (P00042), recorded as complainant: in contact with P00112 (4 contacts). [EVD-MSG003659, EVD-MSG003953]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

@@ -1,0 +1,33 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE937
+Generated 2026-11-21T11:55:53  |  data hash 0d9558a337749577
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE937 (FIR 85/2025, PS Mullanpur) — Narcotics (NDPS Act) registered at PS Mullanpur, SAS Nagar. Incident date not stated in the source at SAS Nagar, Punjab. FIR records 1 accused (Accused A1 · CASE937 P90054) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE937 (FIR 85/2025, PS Mullanpur) — Narcotics (NDPS Act) registered at PS Mullanpur, SAS Nagar. Incident date not stated in the source at SAS Nagar, Punjab. FIR records 1 accused (Accused A1 · CASE937 P90054) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2025-05-23 00:00  Fir Extract FIR 85/2025, PS Mullanpur at PS Mullanpur (SAS Nagar): Narcotics (NDPS Act)  [EVD-PUB000037]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90054  Accused A1 · CASE937         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000037]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90054 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

@@ -1,0 +1,33 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE920
+Generated 2026-11-21T11:55:52  |  data hash 48f67a6094cc2ab2
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE920 (FIR 62/2023, PS Bhikhiwind) — Hurt, Rioting & Intimidation registered at PS Bhikhiwind, Tarn Taran. Incident date not stated in the source at Tarn Taran, Punjab. FIR records 1 accused (Accused A1 · CASE920 P90033) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE920 (FIR 62/2023, PS Bhikhiwind) — Hurt, Rioting & Intimidation registered at PS Bhikhiwind, Tarn Taran. Incident date not stated in the source at Tarn Taran, Punjab. FIR records 1 accused (Accused A1 · CASE920 P90033) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2023-05-11 00:00  Fir Extract FIR 62/2023, PS Bhikhiwind at PS Bhikhiwind (Tarn Taran): Hurt, Rioting & Intimidation  [EVD-PUB000020]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90033  Accused A1 · CASE920         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000020]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90033 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

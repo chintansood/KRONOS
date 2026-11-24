@@ -1,0 +1,59 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE010
+Generated 2026-11-20T07:18:32  |  data hash edce87f7b9b3ec41
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE010 (FIR/INDUSTRIAL/2025/0010) — Cheating (Disputed Complaint) registered at PS Industrial Area, Chandigarh. Incident recorded on 2025-02-23 17:58 at Elante Mall, Industrial Area Chandigarh. FIR records 1 accused (Ashok Aggarwal P00347) and 2 named persons in total. 292 records across 5 sources; 1 transactions flagged for review.
+
+2. NARRATIVE
+CASE010 (FIR/INDUSTRIAL/2025/0010) — Cheating (Disputed Complaint) registered at PS Industrial Area, Chandigarh. Incident recorded on 2025-02-23 17:58 at Elante Mall, Industrial Area Chandigarh. FIR records 1 accused (Ashok Aggarwal P00347) and 2 named persons in total. 292 records across 5 sources; 1 transactions flagged for review. Note: P00347 has a record 41.5 km from the incident location 180 min before the incident (EVD-LOC003051), which may be exculpatory and needs verification.
+
+3. CHRONOLOGY
+  2025-02-01 15:21  Flagged NEFT ₹120,000 ORG-001 → P00347  [EVD-TXN000614]
+  2025-02-23 17:58  Incident recorded at Elante Mall, Industrial Area Chandigarh  []
+  2025-02-28 08:57  Fir FIR/INDUSTRIAL/2025/0010 at PS Industrial Area (Chandigarh): Cheating (Disputed Complaint)  [EVD-FIR000016]
+  2025-02-28 10:11  P00011 and P00347 co-located at Sector 9 Office Complex, Chandigarh  [EVD-LOC003436, EVD-LOC003440]
+  2025-03-08 10:52  Supplementary Statement FIR/INDUSTRIAL/2025/0010 at PS Industrial Area (Chandigarh): Cheating (Disputed Complaint)  [EVD-FIR000023]
+  2025-03-16 20:37  Supplementary Statement FIR/INDUSTRIAL/2025/0010 at PS Industrial Area (Chandigarh): Cheating (Disputed Complaint)  [EVD-FIR000029]
+  2025-03-22 08:25  Supplementary Statement FIR/INDUSTRIAL/2025/0010 at PS Industrial Area (Chandigarh): Cheating (Disputed Complaint)  [EVD-FIR000033]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00347  Ashok Aggarwal               PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000016, EVD-FIR000023, EVD-FIR000029, EVD-FIR000033]
+  P00088  Kuldeep Saini                COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000016, EVD-FIR000023, EVD-FIR000029, EVD-FIR000033]
+
+5. FINANCIAL ACTIVITY
+  54 transactions, total ₹384,272; 1 flagged
+  - EVD-TXN000614 ₹120,000 2025-02-01 15:21: Isolation Forest outlier: 8 transactions from this account within 24 h (alt.: Stated purpose 'salary' may be a legitimate explanation; verify supporting documents.)
+
+6. COMMUNICATION
+  - Kuldeep Saini ↔ Ashok Aggarwal: 18 contacts (2025-01-26 19:39 – 2025-03-22 22:06)
+  - Kuldeep Saini ↔ Ajay Malhotra: 46 contacts (2025-01-25 22:40 – 2025-03-23 21:35)
+  - Kuldeep Saini ↔ Gurpreet Thakur: 13 contacts (2025-01-26 09:53 – 2025-03-11 17:09)
+  - Rajesh Mehta ↔ Ashok Aggarwal: 12 contacts (2025-01-25 14:30 – 2025-03-24 16:56)
+  - Ashok Singh ↔ Ashok Aggarwal: 9 contacts (2025-01-28 12:09 – 2025-03-25 11:31)
+  - Vikram Verma ↔ Ashok Aggarwal: 6 contacts (2025-01-27 19:55 – 2025-03-03 14:26)
+  - Ravi Yadav ↔ Ashok Aggarwal: 5 contacts (2025-02-01 03:41 – 2025-03-11 15:22)
+  - Ashok Aggarwal ↔ Aman Chauhan: 2 contacts (2025-02-03 13:56 – 2025-02-11 12:24)
+  Around incident: 6 contacts (baseline ≈7.5), 1 between named persons
+  * EVD-MSG001296 2025-02-24 08:23: "Mummy is asking when you will come for dinner." — exchanged between FIR-named persons within 72 h of the incident
+  * EVD-MSG001353 2025-02-25 19:33: "Happy birthday! Party at home tonight." — exchanged between FIR-named persons within 72 h of the incident
+
+7. LOCATION
+  - elsewhere: P00347 at Sadar Bazaar, Ambala Cantt (41.5 km away, EVD-LOC003051)
+  - elsewhere: P00347 at Sadar Bazaar, Ambala Cantt (41.5 km away, EVD-LOC003058)
+  - elsewhere: P00347 at Sadar Bazaar, Ambala Cantt (41.7 km away, EVD-TXN001533)
+  - elsewhere: P00347 at Sadar Bazaar, Ambala Cantt (41.4 km away, EVD-LOC003065)
+  - elsewhere: P00347 at Sadar Bazaar, Ambala Cantt (41.5 km away, EVD-LOC003077)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Ashok Aggarwal (P00347), recorded as principal accused: record(s) 41.5 km away from the incident location within 3 h of the incident (Sadar Bazaar, Ambala Cantt); in contact with P00088 (18 contacts); party to 1 flagged transaction(s) (ISOLATION_FOREST). [EVD-LOC003051, EVD-LOC003058, EVD-TXN001533, EVD-CDR000585]
+  - Kuldeep Saini (P00088), recorded as complainant: in contact with P00347 (18 contacts). [EVD-CDR000585, EVD-CDR000650]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: timestamp — timestamp invalid
+  - 1 record(s) with data-quality issue: caller_number — unparseable phone number
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

@@ -1,0 +1,33 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE939
+Generated 2026-11-21T11:55:53  |  data hash fd74fd22be3be60f
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE939 (FIR 29/2023, PS Mamdot) — Narcotics (NDPS Act) registered at PS Mamdot, Ferozepur. Incident date not stated in the source at Ferozepur, Punjab. FIR records 1 accused (Accused A1 · CASE939 P90056) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+2. NARRATIVE
+CASE939 (FIR 29/2023, PS Mamdot) — Narcotics (NDPS Act) registered at PS Mamdot, Ferozepur. Incident date not stated in the source at Ferozepur, Punjab. FIR records 1 accused (Accused A1 · CASE939 P90056) and 1 named persons in total. 1 records across 1 sources; 0 transactions flagged for review.
+
+3. CHRONOLOGY
+  2023-02-24 00:00  Fir Extract FIR 29/2023, PS Mamdot at PS Mamdot (Ferozepur): Narcotics (NDPS Act)  [EVD-PUB000039]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P90056  Accused A1 · CASE939         ACCUSED            via FIR_STRUCTURED  [EVD-PUB000039]
+
+5. FINANCIAL ACTIVITY
+  0 transactions, total ₹0; 0 flagged
+
+6. COMMUNICATION
+
+7. LOCATION
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+
+9. MISSING INFORMATION
+  - P90056 no call detail records obtained
+
+10. UNCERTAINTIES
+  - 2 record(s) with data-quality issue: incident_datetime — timestamp missing
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.

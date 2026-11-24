@@ -1,0 +1,116 @@
+==============================================================================
+KRONOS CASE SUMMARY — CASE006
+Generated 2026-11-21T20:47:57  |  data hash 6cb0c9be5c8279c4
+==============================================================================
+
+1. CONCISE SUMMARY
+CASE006 (FIR/KAROLBAGH/2025/0006) — Cyber Fraud (Online Investment Scam) registered at PS Karol Bagh, New Delhi. Incident recorded on 2025-02-08 12:36 at Dwarka Sector 10 Residential, Delhi. FIR records 2 accused (Sandeep Rawat P00330, Manoj Bhatia P00371) and 5 named persons in total. 1159 records across 5 sources; 28 transactions flagged for review.
+
+2. NARRATIVE
+**Case Narrative: Cyber Fraud (Online Investment Scam)**
+
+**Incident Details**
+
+* Incident recorded on 2025-02-08 at Dwarka Sector 10 Residential, Delhi.
+* FIR registered as CASE006 (FIR/KAROLBAGH/2025/0006) at PS Karol Bagh, New Delhi.
+
+**Accused and Named Persons**
+
+* Sandeep Rawat (P00330), recorded as principal accused
+* Manoj Bhatia (P00371), recorded as accused
+* Pooja Singh (P00005), recorded as complainant
+* Harleen Sandhu (P00142) and Naveen Khanna (P00156), recorded as victims
+
+**Chronology of Events**
+
+* On 2025-01-15, Vivek Gupta (P00293) and P00415 were co-located at Ranjit Avenue Residential, Amritsar.
+* On 2025-02-03, a flagged RTGS transaction of ₹2,100,000 was made from ORG-009 to P00404 [EVD-TXN000678].
+* On 2025-02-08, the incident was recorded at Dwarka Sector 10 Residential, Delhi.
+* Between 2025-02-09 and 2025-02-11, several IMPS transactions were flagged for review involving Sandeep Rawat (P00330), Manoj Bhatia (P00371), Harleen Sandhu (P00142), Naveen Khanna (P00156), and Pooja Singh (P00005).
+
+**Financial Transactions**
+
+* Several transactions were flagged as suspicious due to unusual patterns or amounts:
+	+ ₹49,302.01 sent from P00330 to P00371 on 2025-02-09 [EVD-TXN000954]
+	+ ₹46,625 sent from P00330 to P00371 on 2025-02-09 [EVD-TXN000957]
+
+3. CHRONOLOGY
+  2025-01-15 19:28  P00293 and P00415 co-located at Ranjit Avenue Residential, Amritsar  [EVD-LOC000437, EVD-LOC000436]
+  2025-02-03 14:58  Flagged RTGS ₹2,100,000 P00404 → ORG-009  [EVD-TXN000678]
+  2025-02-08 12:36  Incident recorded at Dwarka Sector 10 Residential, Delhi  []
+  2025-02-09 03:09  Flagged IMPS ₹51,778 P00342 → P00330  [EVD-TXN000921]
+  2025-02-09 15:02  Flagged IMPS ₹43,683 P00330 → P00371  [EVD-TXN000947]
+  2025-02-09 18:26  Flagged IMPS ₹49,302 P00330 → P00371  [EVD-TXN000954]
+  2025-02-09 18:38  Flagged IMPS ₹46,625 P00330 → P00371  [EVD-TXN000957]
+  2025-02-10 12:36  Flagged CASH_WITHDRAWAL ₹249,598 P00371 → P00371  [EVD-TXN000979]
+  2025-02-11 17:22  Fir FIR/KAROLBAGH/2025/0006 at PS Karol Bagh (New Delhi): Cyber Fraud (Online Investment Scam)  [EVD-FIR000009]
+  2025-02-15 16:33  P00293 and P00415 co-located at Hall Bazaar, Amritsar  [EVD-LOC002361, EVD-LOC002364]
+  2025-03-06 00:02  Supplementary Statement FIR/KAROLBAGH/2025/0006 at PS Karol Bagh (New Delhi): Cyber Fraud (Online Investment Scam)  [EVD-FIR000020]
+  2025-03-06 13:35  Supplementary Statement FIR/KAROLBAGH/2025/0006 at PS Karol Bagh (New Delhi): Cyber Fraud (Online Investment Scam)  [EVD-FIR000021]
+
+4. PEOPLE (recorded roles — not findings of guilt)
+  P00330  Sandeep Rawat                PRINCIPAL_ACCUSED  via FIR_STRUCTURED  [EVD-FIR000020, EVD-FIR000009]
+  P00371  Manoj Bhatia                 ACCUSED            via FIR_STRUCTURED  [EVD-FIR000021, EVD-FIR000009]
+  P00005  Pooja Singh                  COMPLAINANT        via FIR_STRUCTURED  [EVD-FIR000021, EVD-FIR000009]
+  P00142  Harleen Sandhu               VICTIM             via FIR_NER  [EVD-FIR000009]
+  P00156  Naveen Khanna                VICTIM             via FIR_NER  [EVD-FIR000020, EVD-FIR000009]
+  P00293  Vivek Gupta                  RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00342  Sakshi Gupta                 RECORD_SUBJECT     via RECORD_SUBJECT  []
+  P00404  Harleen Khan                 RECORD_SUBJECT     via RECORD_SUBJECT  []
+
+5. FINANCIAL ACTIVITY
+  243 transactions, total ₹5,798,955; 15 flagged
+  - EVD-TXN000954 ₹49,302 2025-02-09 18:26: Isolation Forest outlier: amount ≈21× this account's median; 7 transactions from this account within 24 h; ₹50,827 received by P00330 and ₹49,302 sent onward 25 min later (EVD-TXN000951 → EVD-TXN000954)
+  - EVD-TXN000957 ₹46,625 2025-02-09 18:38: Isolation Forest outlier: amount ≈20× this account's median; 8 transactions from this account within 24 h; ₹50,827 received by P00330 and ₹46,625 sent onward 37 min later (EVD-TXN000951 → EVD-TXN000957)
+  - EVD-TXN000947 ₹43,683 2025-02-09 15:02: Isolation Forest outlier: amount ≈19× this account's median; 7 transactions from this account within 24 h; ₹44,599 received by P00330 and ₹43,683 sent onward 314 min later (EVD-TXN000928 → EVD-TXN000947)
+  - EVD-TXN000678 ₹2,100,000 2025-02-03 14:58: Isolation Forest outlier: amount ≈1055× this account's median; Amount ₹2,100,000 exceeds upper fence ₹856,011 (Q3 + 3.0·IQR, sender's own history) (alt.: Stated purpose 'property booking - registered sale deed' may be a legitimate explanation; verify supporting documents.)
+  - EVD-TXN000979 ₹249,598 2025-02-10 12:36: Isolation Forest outlier: amount ≈173× this account's median; cash channel; Amount ₹249,598 exceeds upper fence ₹74,950 (Q3 + 3.0·IQR, sender's own history)
+  - EVD-TXN000921 ₹51,778 2025-02-09 03:09: ₹51,778 received by P00330 and ₹50,224 sent onward 14 min later (EVD-TXN000921 → EVD-TXN000923); Account SBIN-54221626549 received ₹384,514 from 3 different individuals within 14 days
+  - EVD-TXN000951 ₹50,827 2025-02-09 18:01: ₹50,827 received by P00330 and ₹49,302 sent onward 25 min later (EVD-TXN000951 → EVD-TXN000954); Account SBIN-54221626549 received ₹384,514 from 3 different individuals within 14 days
+  - EVD-TXN000916 ₹50,439 2025-02-08 20:55: ₹50,439 received by P00330 and ₹48,926 sent onward 33 min later (EVD-TXN000916 → EVD-TXN000918); Account SBIN-54221626549 received ₹384,514 from 3 different individuals within 14 days
+  - EVD-TXN000918 ₹48,926 2025-02-08 21:28: ₹48,159 received by P00330 and ₹48,926 sent onward 247 min later (EVD-TXN000907 → EVD-TXN000918); 7 transfers P00330 → P00371 within 14 days, each just below ₹50,000 (total ₹322,754)
+  - EVD-TXN000907 ₹48,159 2025-02-08 17:22: ₹48,159 received by P00330 and ₹46,714 sent onward 22 min later (EVD-TXN000907 → EVD-TXN000909); Account SBIN-54221626549 received ₹384,514 from 3 different individuals within 14 days
+  - EVD-TXN000953 ₹48,067 2025-02-09 18:15: ₹48,067 received by P00330 and ₹46,625 sent onward 23 min later (EVD-TXN000953 → EVD-TXN000957); Account SBIN-54221626549 received ₹384,514 from 3 different individuals within 14 days
+  - EVD-TXN000909 ₹46,714 2025-02-08 17:44: ₹48,159 received by P00330 and ₹46,714 sent onward 22 min later (EVD-TXN000907 → EVD-TXN000909); 7 transfers P00330 → P00371 within 14 days, each just below ₹50,000 (total ₹322,754)
+  - EVD-TXN000926 ₹45,612 2025-02-09 06:53: ₹45,612 received by P00330 and ₹44,243 sent onward 36 min later (EVD-TXN000926 → EVD-TXN000927); Account SBIN-54221626549 received ₹384,514 from 3 different individuals within 14 days
+  - EVD-TXN000944 ₹45,034 2025-02-09 14:19: ₹45,034 received by P00330 and ₹43,683 sent onward 43 min later (EVD-TXN000944 → EVD-TXN000947); Account SBIN-54221626549 received ₹384,514 from 3 different individuals within 14 days
+  - EVD-TXN000928 ₹44,599 2025-02-09 09:48: ₹44,599 received by P00330 and ₹43,261 sent onward 38 min later (EVD-TXN000928 → EVD-TXN000932); Account SBIN-54221626549 received ₹384,514 from 3 different individuals within 14 days
+
+6. COMMUNICATION
+  - Harleen Sandhu ↔ Sandeep Rawat: 5 contacts (2025-01-30 00:36 – 2025-02-08 00:13)
+  - Naveen Khanna ↔ Sandeep Rawat: 3 contacts (2025-01-29 10:06 – 2025-02-06 11:49)
+  - Pooja Singh ↔ Sandeep Rawat: 3 contacts (2025-02-01 21:23 – 2025-02-05 09:39)
+  - Sahil Bhatia ↔ Sandeep Rawat: 34 contacts (2025-01-11 20:35 – 2025-03-07 08:39)
+  - Neha Singh ↔ Manoj Bhatia: 22 contacts (2025-01-15 15:29 – 2025-03-03 14:59)
+  - Vivek Gupta ↔ Imran Khanna: 19 contacts (2025-01-21 12:33 – 2025-03-07 13:45)
+  - Pooja Singh ↔ Rohit Aggarwal: 18 contacts (2025-01-10 08:14 – 2025-03-08 20:26)
+  - Rahul Arora ↔ Harleen Khan: 18 contacts (2025-01-16 11:54 – 2025-03-04 22:33)
+  Around incident: 46 contacts (baseline ≈30.9), 1 between named persons
+  * EVD-MSG000481 2025-01-29 10:06: "Your returns of 18% are credited. Add Rs 15,000 more to unlock withdrawal. Transfer to UTI" — references an amount (₹15000); references account UTIB-22224005392 (seen in this case's transactions)
+  * EVD-MSG000505 2025-01-30 00:36: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to UTI" — references an amount (₹49000); references account UTIB-22224005392 (seen in this case's transactions)
+  * EVD-MSG000544 2025-01-31 11:02: "Your returns of 18% are credited. Add Rs 15,000 more to unlock withdrawal. Transfer to UTI" — references an amount (₹15000); references account UTIB-22224005392 (seen in this case's transactions)
+  * EVD-MSG000585 2025-02-01 21:23: "Your returns of 18% are credited. Add Rs 45,000 more to unlock withdrawal. Transfer to PUN" — references an amount (₹45000); references account PUNB-69841661237 (seen in this case's transactions)
+  * EVD-MSG000587 2025-02-01 22:35: "Your returns of 18% are credited. Add Rs 9,999 more to unlock withdrawal. Transfer to UTIB" — references an amount (₹9999); references account UTIB-22224005392 (seen in this case's transactions)
+  * EVD-MSG000598 2025-02-02 11:07: "Your returns of 18% are credited. Add Rs 49,000 more to unlock withdrawal. Transfer to UTI" — references an amount (₹49000); references account UTIB-22224005392 (seen in this case's transactions)
+
+7. LOCATION
+  - elsewhere: P00156 at Chandni Chowk Market, Delhi (18.7 km away, EVD-TXN000891)
+  - elsewhere: P00330 at nan (15.2 km away, EVD-MSG000773)
+  - elsewhere: P00371 at Focal Point Industrial Area, Ludhiana (278.5 km away, EVD-LOC001773)
+  - elsewhere: P00005 at nan (16.7 km away, EVD-MSG000775)
+  - elsewhere: P00142 at Chandni Chowk Market, Delhi (17.3 km away, EVD-CDR001052)
+
+8. OBSERVATIONS REQUIRING VERIFICATION
+  - Sandeep Rawat (P00330), recorded as principal accused: record(s) 15.2 km away from the incident location within 3 h of the incident (nan); in contact with P00142 (5 contacts), P00156 (3 contacts), P00005 (3 contacts); party to 17 flagged transaction(s) (FAN_IN, ISOLATION_FOREST, RAPID_PASS_THROUGH, STRUCTURING). [EVD-MSG000773, EVD-MSG000505, EVD-MSG000587, EVD-MSG000481]
+  - Pooja Singh (P00005), recorded as complainant: record(s) 16.7 km away from the incident location within 3 h of the incident (nan); in contact with P00330 (3 contacts); party to 2 flagged transaction(s) (FAN_IN, ISOLATION_FOREST). [EVD-MSG000775, EVD-MSG000585, EVD-MSG000629, EVD-TXN001552]
+  - Harleen Sandhu (P00142), recorded as victim: record(s) 17.3 km away from the incident location within 3 h of the incident (Chandni Chowk Market, Delhi); in contact with P00330 (5 contacts); party to 4 flagged transaction(s) (FAN_IN). [EVD-CDR001052, EVD-MSG000505, EVD-MSG000587, EVD-TXN000514]
+  - Naveen Khanna (P00156), recorded as victim: record(s) 18.7 km away from the incident location within 3 h of the incident (Chandni Chowk Market, Delhi); in contact with P00330 (3 contacts); party to 3 flagged transaction(s) (FAN_IN). [EVD-TXN000891, EVD-MSG000481, EVD-MSG000544, EVD-TXN000822]
+  - Manoj Bhatia (P00371), recorded as accused: record(s) 278.5 km away from the incident location within 3 h of the incident (Focal Point Industrial Area, Ludhiana); party to 9 flagged transaction(s) (IQR, ISOLATION_FOREST, RAPID_PASS_THROUGH, STRUCTURING). [EVD-LOC001773, EVD-TXN000954, EVD-TXN000957, EVD-TXN000947]
+
+9. MISSING INFORMATION
+
+10. UNCERTAINTIES
+  - 4 record(s) with data-quality issue: timestamp — timestamp invalid
+  - 1 record(s) with data-quality issue: caller_number — unparseable phone number
+
+Recorded roles and analytical flags are investigative aids, not findings of guilt.
