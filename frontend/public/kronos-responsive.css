@@ -42,11 +42,23 @@ nav .demo{white-space:nowrap}
   nav .links{gap:16px!important;font-size:11px}
   .kr-case{padding:14px 16px 80px!important}
 }
-/* laptops: a tighter link bar; below 1180px the menu button takes over */
-@media (max-width:1365px){
-  nav{grid-template-columns:auto minmax(0,1fr) auto!important;column-gap:20px}
-  nav .links{gap:18px!important;letter-spacing:.1em;justify-content:center}
+/* desktop: logo | links (centred, one line) | workspace + icons. The links never wrap: when they do not fit
+   (narrow window, wider system fonts), kronos-responsive.js sets .kr-nav-collapse and the menu button takes over. */
+@media (min-width:801px){
+  nav{display:grid!important;grid-template-columns:auto minmax(0,1fr) auto;column-gap:28px}
+  nav .links{justify-content:center;min-width:0;overflow:hidden;white-space:nowrap}
+  nav .links a{flex:none}
 }
+@media (max-width:1560px){
+  nav{column-gap:20px}
+  nav .links{gap:20px!important;letter-spacing:.11em}
+}
+@media (max-width:1365px){
+  nav .links{gap:16px!important;letter-spacing:.08em;font-size:11.5px}
+}
+.kr-nav-collapse nav .links{display:none!important}
+.kr-nav-collapse .kr-burger{display:flex}
+.kr-nav-collapse nav{grid-template-columns:auto 1fr auto}
 @media (max-width:1180px){
   nav .links{display:none!important}
   .kr-burger{display:flex}

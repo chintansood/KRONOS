@@ -22,7 +22,7 @@
     const seen = new Set();
     sheet.innerHTML = links.filter(a => !seen.has(a.textContent) && seen.add(a.textContent)).map(a =>
       `<a role="menuitem" href="${a.getAttribute("href")}" class="${a.dataset.n === v ? "on" : ""}">${a.textContent}</a>`).join("") +
-      (nav.querySelector(".demo") ? `<div class="kr-mstatus">${nav.querySelector(".demo").textContent}</div>` : "");
+      (document.body.classList.contains("kr-live") && typeof CASES !== "undefined" ? `<div class="kr-mstatus">LIVE BACKEND • ${CASES.length} CASES</div>` : "");
   }
   function open(on) {
     if (on) build();
@@ -36,6 +36,21 @@
   addEventListener("keydown", e => { if (e.key === "Escape" && sheet.classList.contains("open")) { open(false); btn.focus(); } });
   addEventListener("hashchange", () => open(false));
   matchMedia("(min-width:801px)").addEventListener("change", m => { if (m.matches) open(false); });
+
+  // ---- desktop link bar: if the links do not fit on one line, collapse them into the menu button (measured, so it also
+  //      holds for Windows/Linux fonts that render wider than the Mac ones)
+  const links = nav.querySelector(".links"), root = document.documentElement;
+  function fit() {
+    root.classList.remove("kr-nav-collapse");
+    if (!links || getComputedStyle(links).display === "none") return;   // phones and small tablets: CSS already uses the menu
+    if (links.scrollWidth > links.clientWidth + 1) root.classList.add("kr-nav-collapse");
+    else if (sheet.classList.contains("open")) open(false);
+  }
+  let fitQ = 0;
+  addEventListener("resize", () => { cancelAnimationFrame(fitQ); fitQ = requestAnimationFrame(fit); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  addEventListener("load", fit);
+  fit();
 
   // ---- case tabs on phones: keep the active tab in view inside the horizontal strip
   const app = document.getElementById("app");

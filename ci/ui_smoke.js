@@ -57,6 +57,20 @@ const check = async (name, fn) => {
     }
   });
   await check("3D network graph", () => go("#graph/P00023", ".graph-view canvas", 120000));
+  await check("header: temporal engine page", async () => {
+    await p.evaluate(() => document.querySelector("nav a[data-n=temporal]").click());   // works whether the links or the menu are showing
+    await p.waitForSelector(".kt-page .kt-dot", { timeout: 120000 });
+    return await p.evaluate(() => location.hash);
+  });
+  await check("header: workspace menu opens the active case", async () => {
+    await go("#p/P00023", ".dos", 240000);
+    await p.click("#kr-ws"); await p.waitForSelector(".kr-wsp.open .kr-wsp-title", { timeout: 10000 });
+    const cid = (await p.textContent("#kr-ws-c")).trim();
+    if (!cid) throw new Error("no active case on the workspace button");
+    await p.click(".kr-wsp [data-tab=nbe]");
+    await p.waitForFunction(c => location.hash === `#case/${c}`, cid, { timeout: 20000 });
+    return `active case ${cid}`;
+  });
   await check("Copilot opens and runs a command", async () => {
     await p.click("#copilot-btn"); await p.fill("#c-input", "open investigations"); await p.click("#c-send-btn");
     await p.waitForFunction(() => location.hash === "#dash", null, { timeout: 20000 });
@@ -68,9 +82,10 @@ const check = async (name, fn) => {
     await p.waitForFunction(() => /STEP 1 OF 10/.test(document.getElementById("c-stream").innerText), null, { timeout: 30000 });
     await p.fill("#c-input", "cancel"); await p.click("#c-send-btn");
   });
-  await check("case-intake form opens with options", async () => {
-    await p.evaluate(() => { document.getElementById("copilot-panel").classList.remove("open"); KRintake.open(1); });
+  await check("header NEW CASE opens the intake form", async () => {
+    const at = await p.evaluate(() => { document.getElementById("copilot-panel").classList.remove("open"); document.querySelector('nav a[href="#new"]').click(); return location.hash; });
     await p.waitForSelector(".kri-modal [data-k='registration.policeStation']", { timeout: 30000 });
+    if (await p.evaluate(() => location.hash) !== at) throw new Error("NEW CASE navigated away instead of opening the form in place");
     const n = await p.evaluate(() => document.querySelectorAll("#kri-stations option").length);
     if (!n) throw new Error("no stations in the form");
     await p.evaluate(() => KRintake.close(true));

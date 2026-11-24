@@ -113,7 +113,7 @@ def intake():
 
 check("case intake: check → register → withdraw", intake)
 check("website (index + scripts)", lambda: (S.__setitem__("ix", call("/")), [need(x in S["ix"], f"{x} missing from index.html") for x in
-      ("kronos-live.js", "kronos-intake.js", "kronos-responsive.js", "kronos-temporal.js")], need(call("/kronos-intake.js"), "script not served"), "ok")[-1])
+      ("kronos-live.js", "kronos-intake.js", "kronos-workspace.js", "kronos-responsive.js", "kronos-temporal.js")], need(call("/kronos-intake.js"), "script not served"), "ok")[-1])
 
 if LLM:
     check("local AI: search with embeddings", lambda: f"{len(call('/api/search?q=who%20received%20money%20from%20the%20accused&caseId=CASE002').get('results', []))} hits")

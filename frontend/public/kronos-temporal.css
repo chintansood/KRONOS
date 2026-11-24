@@ -91,3 +91,10 @@
   .kt-river{min-width:780px}
   .kt-panel{padding:16px 14px}
 }
+
+/* the TEMPORAL ENGINE page (#temporal): the same section, on its own page under the header */
+.kt-page{padding-top:64px}
+.kt-page .story.kt{padding:3vh 4vw 64px!important;min-height:auto}
+.kt-page .kt-blk{margin:0 auto}
+.kt-page .story.kt h2{font-size:clamp(28px,3.4vw,46px)}
+@media (max-width:800px){.kt-page .story.kt{padding:18px 14px 96px!important}}

@@ -607,8 +607,7 @@
     const topP = PERS[0] && PERS[0].id, topC = (CASES.slice().sort((a, b) => (b._api.flaggedFindings || 0) - (a._api.flaggedFindings || 0))[0] || {}).id;
     document.querySelectorAll('a[href*="P-JS01"]').forEach(a => a.setAttribute("href", `#p/${topP}`));
     document.querySelectorAll('a[href*="KRONOS-2024-001"]').forEach(a => a.setAttribute("href", `#case/${topC}`));
-    const demo = document.querySelector("nav .demo");
-    if (demo) demo.textContent = `LIVE BACKEND • ${CASES.length} CASES`;
+    dispatchEvent(new Event("kr:data"));   // the header workspace menu refreshes its counts and case names
   }
 
   /* ------------------------------------------------------------------ Copilot command router (online AND offline) */
@@ -620,6 +619,7 @@
     ["back", /^(go )?back$|^पीछे|^પાછા|^ਪਿੱਛੇ/i, null, { en: "Back", hi: "पीछे", gu: "પાછા", pa: "ਪਿੱਛੇ" }],
     ["home", /\b(home( ?page)?|landing( page)?|start page|main page)\b|होम|मुख्य पृष्ठ|હોમ|ਹੋਮ/i, null, { en: "Home", hi: "होम", gu: "હોમ", pa: "ਹੋਮ" }],
     ["graph", /\b(graph|network|topology|relationship (map|graph)|3d)\b|ग्राफ|नेटवर्क|ગ્રાફ|નેટવર્ક|ਗ੍ਰਾਫ|ਨੈੱਟਵਰਕ/i, null, { en: "3D network graph", hi: "3D नेटवर्क ग्राफ", gu: "3D નેટવર્ક ગ્રાફ", pa: "3D ਨੈੱਟਵਰਕ ਗ੍ਰਾਫ" }],
+    ["temporal", /\b(temporal engine|time ?river|travel feasibility)\b|टेम्पोरल इंजन|ટેમ્પોરલ એન્જિન|ਟੈਂਪੋਰਲ ਇੰਜਣ/i, null, { en: "Temporal engine", hi: "टेम्पोरल इंजन", gu: "ટેમ્પોરલ એન્જિન", pa: "ਟੈਂਪੋਰਲ ਇੰਜਣ" }],
     ["timeline", /\b(timeline|temporal|chronolog\w*|activity log)\b|टाइमलाइन|समयरेखा|ટાઇમલાઇન|ਟਾਈਮਲਾਈਨ/i, null, { en: "Timeline", hi: "टाइमलाइन", gu: "ટાઇમલાઇન", pa: "ਟਾਈਮਲਾਈਨ" }],
     ["dossier", /\b(dossier|profile|intelligence|suspect page)\b|डोजियर|डोज़ियर|प्रोफाइल|પ્રોફાઇલ|ડોઝિયર|ਪ੍ਰੋਫਾਈਲ/i, null, { en: "Dossier", hi: "डोजियर", gu: "ડોઝિયર", pa: "ਡੋਜ਼ੀਅਰ" }],
     ["diary", /\b(case diary|diary|draft report|case report|report)\b|डायरी|रिपोर्ट|ડાયરી|અહેવાલ|ਡਾਇਰੀ|ਰਿਪੋਰਟ/i, "diary", { en: "Case diary & draft report", hi: "केस डायरी और रिपोर्ट", gu: "કેસ ડાયરી અને અહેવાલ", pa: "ਕੇਸ ਡਾਇਰੀ ਅਤੇ ਰਿਪੋਰਟ" }],
@@ -717,6 +717,11 @@
         if (f) steps.push(`Graph focus: ${f}`);
         target = f ? `graph/${f}` : "graph"; label = lab(c.dest); break;
       }
+      case "temporal": {   // the TEMPORAL ENGINE page, for the named or open person when there is one
+        const pid = c.per.person ? c.per.person.id : cur.person;
+        if (pid) steps.push(`Person: ${pid}`);
+        target = pid ? `temporal/${pid}` : "temporal"; label = lab(c.dest) + (pid ? ` — ${pid}` : ""); break;
+      }
       case "timeline": case "dossier": case "person": {
         const pid = pickPerson(); target = `p/${pid}`;
         const P = PERS.find(x => x.id === pid);
@@ -778,8 +783,7 @@
       CASES.splice(0, CASES.length, ...cs.map(mapCase));
       PERS.splice(0, PERS.length, ...ps.map(mapPerson));
       st.cases.clear(); st.persons.clear(); st.caseData = {}; st.personData = {}; st.graphFocus = undefined;
-      const demo = document.querySelector("nav .demo");
-      if (demo) demo.textContent = `LIVE BACKEND • ${CASES.length} CASES`;
+      dispatchEvent(new Event("kr:data"));
       if (window._krCopilotRefresh) window._krCopilotRefresh();
     },
     withdraw: async cid => {

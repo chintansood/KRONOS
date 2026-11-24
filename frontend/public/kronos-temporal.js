@@ -64,12 +64,12 @@
       </div></div>`;
   }
 
-  function init(sec) {
+  function init(sec, want) {
     const $ = s => sec.querySelector(s);
     const S = { pid: null, ev: [], times: [], feas: null, t0: 0, t1: 1, sel: -1, raf: 0, playT: null, day: null, flags: [], full: [0, 1], dayTimer: 0 };
     const X = t => PADL + (t - S.t0) / (S.t1 - S.t0) * (W - PADL - PADR);
     const Y = lane => TOP + lane * LH + LH / 2;
-    const live = window.KR && window.KR.live;
+    const live = window.KR && window.KR.live, page = !!sec.closest(".kt-page");
     if (!live) {
       $(".kt-panel").innerHTML = `<p class="kt-muted" style="padding:28px">The temporal engine needs the KRONOS backend (it is offline right now). Open any person dossier to see the offline demo timeline.</p>`;
       return;
@@ -90,8 +90,8 @@
       $("#kt-chips").innerHTML = `<span class="kt-muted">Suggested:</span>` + chips.map(c =>
         `<button type="button" class="kt-chip${c.hot ? " hot" : ""}" data-p="${esc(c.id)}"><b>${esc(c.n)}</b> ${esc(c.id)} <em>${esc(c.tag)}</em></button>`).join("");
       $("#kt-chips").querySelectorAll("[data-p]").forEach(b => b.onclick = () => load(b.dataset.p));
-      load((h.travel[0] || h.active[0] || {}).personId || (persons()[0] || {}).id);
-    }).catch(() => { $("#kt-chips").innerHTML = ""; if (persons()[0]) load(persons()[0].id); });
+      load(want || (h.travel[0] || h.active[0] || {}).personId || (persons()[0] || {}).id);
+    }).catch(() => { $("#kt-chips").innerHTML = ""; if (want || persons()[0]) load(want || persons()[0].id); });
 
     function toastMsg(m) { if (typeof toast === "function") toast(m); }
 
@@ -99,6 +99,7 @@
       if (!pid) return;
       stop();
       S.pid = pid; S.sel = -1;
+      if (page && location.hash !== `#temporal/${pid}`) history.replaceState(null, "", `#temporal/${pid}`);   // the page URL names the person shown
       sec.querySelectorAll(".kt-chip").forEach(b => b.classList.toggle("on", b.dataset.p === pid));
       const P = persons().find(p => p.id === pid);
       $("#kt-q").value = P ? `${P.id} · ${P.n}` : pid;
@@ -321,6 +322,17 @@
     obs.observe(document.getElementById("app") || document.body, { childList: true, subtree: true });
   }
 
+  // the TEMPORAL ENGINE page in the header (#temporal, or #temporal/P00049 for one person): the same engine, on its own page
+  window.temporalV = function (el, pid) {
+    el.classList.add("kt-page");
+    const sec = document.createElement("section");
+    sec.id = "kt"; sec.className = "story kt"; sec.setAttribute("aria-label", "Temporal engine");
+    sec.innerHTML = sectionHTML().replace('<small class="no">04 TEMPORAL ENGINE</small>', '<small class="no">TEMPORAL ENGINE</small>');
+    el.append(sec);
+    const want = pid ? decodeURIComponent(pid).toUpperCase() : null;
+    (window.KR && window.KR.ready ? window.KR.ready : Promise.resolve()).finally(() => { if (sec.isConnected) init(sec, want); });
+  };
+
   function scan() {
     const v = document.querySelector(".view.hero");
     if (v && v.querySelector(".story") && !v.querySelector("#kt")) {
@@ -336,4 +348,5 @@
   }
   new MutationObserver(scan).observe(document.getElementById("app") || document.body, { childList: true, subtree: true });
   scan();
+  if (/^#temporal/.test(location.hash) && typeof route === "function" && !document.querySelector(".kt-page")) route();
 })();

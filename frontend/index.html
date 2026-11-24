@@ -828,10 +828,11 @@ body[data-v="p"] .copilot-btn {
 <link rel="stylesheet" href="/kronos-premium.css">
 <link rel="stylesheet" href="/kronos-temporal.css">
 <link rel="stylesheet" href="/kronos-intake.css">
+<link rel="stylesheet" href="/kronos-workspace.css">
 <link rel="stylesheet" href="/kronos-responsive.css"></head>
 <body>
 <div id="kp-loader" role="status" aria-label="Loading KRONOS"><div class="kp-mark">KR<svg viewBox="0 0 100 100" fill="none" stroke="#A86F45"><circle cx="50" cy="50" r="46" stroke-width="3"/><circle cx="50" cy="50" r="38" stroke-width="1"/><path d="M50 2v96M2 50h96" stroke-width="1.2"/><circle cx="50" cy="50" r="3" fill="#B96D50" stroke="none"/></svg>NOS</div><div class="kp-bar"><i></i></div><div class="kp-meta"><span>CONNECTING EVIDENCE</span><span class="kp-num">000</span></div></div>
-<nav><span class="wm">KRONOS</span><div class="links"><a href="#home" data-n="home">HOME</a><a href="#dash" data-n="dash">INVESTIGATIONS</a><a href="#p/P-JS01" data-n="p">INTELLIGENCE</a><a href="#graph" data-n="graph">NETWORK GRAPH</a><a href="#case/KRONOS-2024-001" data-n="case">EVIDENCE</a><a href="#p/P-JS01">TIMELINE</a></div><div class="rt"><a href="#case/KRONOS-2024-001" class="demo" style="background:rgba(185,109,80,0.15);color:var(--terra);border-color:rgba(185,109,80,0.3);text-decoration:none;cursor:pointer">CASE DEMO • KRONOS-2024-001</a><button class="ib" id="bell" aria-label="Notifications">&#128276;</button><button class="ib av" id="av" aria-label="Profile and settings">&#9679;</button></div></nav>
+<nav><span class="wm">KRONOS</span><div class="links"><a href="#home" data-n="home">HOME</a><a href="#dash" data-n="dash">INVESTIGATIONS</a><a href="#p/P-JS01" data-n="p">INTELLIGENCE</a><a href="#graph" data-n="graph">NETWORK GRAPH</a><a href="#case/KRONOS-2024-001" data-n="case">EVIDENCE</a><a href="#temporal" data-n="temporal">TEMPORAL ENGINE</a><a href="#new" data-n="new" class="nav-new">NEW CASE</a></div><div class="rt"><button type="button" class="kr-ws" id="kr-ws" aria-haspopup="dialog" aria-expanded="false" aria-controls="kr-wsp"><span class="kr-ws-l">WORKSPACE</span><span class="kr-ws-c" id="kr-ws-c"></span></button><button class="ib" id="bell" aria-label="Notifications">&#128276;</button><button class="ib av" id="av" aria-label="Profile and settings">&#9679;</button></div></nav>
 <div id="app"></div><aside class="dr" id="dr" aria-label="Evidence"></aside>
 
 <!-- KRONOS UNIVERSAL INVESTIGATOR COPILOT -->
@@ -1019,10 +1020,12 @@ window.openEv = function(id, scroll){
 function openEv(id, scroll){ return window.openEv(id, scroll); }
 
 function toast(m){const t=document.createElement("div");t.className="toast";t.textContent=m;document.body.append(t);setTimeout(()=>t.remove(),1800)}
-function route(){const h=location.hash.slice(1)||"home";const [v,a]=h.split("/");
+function route(){let h=location.hash.slice(1)||"home";
+ if(h==="new"){history.replaceState(null,"","#dash");h="dash";(function o(){window.KRintake?KRintake.open(1):setTimeout(o,150)})()}   /* #new opens the case-intake form over the dashboard */
+ const [v,a]=h.split("/");
  $$("nav a").forEach(x=>x.classList.toggle("on",x.dataset.n===v));closeDr();
  if(window.cleanup){window.cleanup();window.cleanup=null}document.body.dataset.v=v;document.body.dataset.s=0;app.innerHTML="";const el=document.createElement("div");el.className="view";app.append(el);
- ({home:homeV,dash:dashV,p:profV,graph:graphV,case:caseV}[v]||homeV)(el,a);
+ ({home:homeV,dash:dashV,p:profV,graph:graphV,case:caseV,temporal:(e,x)=>(window.temporalV||homeV)(e,x),}[v]||homeV)(el,a);
  if(v!="home"&&window.gsap&&!matchMedia("(prefers-reduced-motion:reduce)").matches)gsap.from(el.children,{opacity:0,y:18,duration:.7,stagger:.1,ease:"power2.out"})}
 addEventListener("hashchange",route);
 /* HERO */
@@ -3097,4 +3100,5 @@ You can ask about "Summarise Jaffer Sadiq drug cartel investigation", "50kg seiz
 <script src="/kronos-temporal.js"></script>
 <script src="/kronos-graph2d.js"></script>
 <script src="/kronos-intake.js"></script>
+<script src="/kronos-workspace.js"></script>
 <script src="/kronos-responsive.js"></script></body></html>
