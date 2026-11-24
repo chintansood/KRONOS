@@ -117,10 +117,16 @@ check("website (index + scripts)", lambda: (S.__setitem__("ix", call("/")), [nee
 
 if LLM:
     check("local AI: search with embeddings", lambda: f"{len(call('/api/search?q=who%20received%20money%20from%20the%20accused&caseId=CASE002').get('results', []))} hits")
+    # Grounded = answered by the local model (not the no-AI fallback) and tied to real records: cited inline, or, when the model
+    # did not cite inline, listed by KRONOS as the records the answer rests on (the website shows them as "Grounding records").
     check("local AI: grounded answer (CPU may take minutes)", lambda: (S.__setitem__("a", call("/api/assistant/query", "POST",
           {"query": "Why may P00019 not have been involved in CASE002?", "caseId": "CASE002", "personId": "P00019"}, timeout=1500)),
-          need(S["a"].get("text") and "EVD-" in S["a"]["text"], S["a"].get("text", "")[:200]),
-          f"{S['a']['meta'].get('latencyMs', 0) / 1000:.0f}s, model {S['a']['meta'].get('model')}")[-1])
+          need(S["a"].get("text"), "empty answer"),
+          need(S["a"]["meta"].get("model"), "answered by the deterministic fallback, not the local AI: " + S["a"]["text"][:160]),
+          need("EVD-" in S["a"]["text"] or any(i.startswith("EVD-") for i in S["a"].get("referencedEvidenceIds") or []),
+               "no evidence cited or listed: " + S["a"]["text"][:160]),
+          f"{S['a']['meta'].get('latencyMs', 0) / 1000:.0f}s, model {S['a']['meta'].get('model')}, "
+          f"{'cites evidence inline' if 'EVD-' in S['a']['text'] else 'grounding records listed'}")[-1])
 
 bad = [r for r in results if not r[0]]
 print(f"\n{len(results) - len(bad)}/{len(results)} checks passed")
