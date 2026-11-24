@@ -8,7 +8,11 @@ KRONOS brings FIRs, call records, location data, financial transactions, social-
 time-ordered evidence base. It analyses them with explainable engines and answers investigators' questions with a
 **local** AI (Llama 3.1 8B), so no investigation data leaves the machine. Every statement it makes cites the evidence it rests on.
 
-### ▶ [Watch the demo video](https://youtu.be/o1BP-umvR6c)
+### ▶ [Watch the demo video](https://youtu.be/o1BP-umvR6c) · [Try the online prototype](https://chintansood.github.io/KRONOS/)
+
+The online prototype is a read-only snapshot of the real KRONOS data: every case, dossier, hypothesis, time river, network
+graph and evidence-ledger proof (Merkle proofs and agency signatures are re-checked in your browser). The local AI and case
+registration run only in the full install below.
 
 [![KRONOS home — click to watch the demo](backend/docs/screenshots/after/premium_home_3d.png)](https://youtu.be/o1BP-umvR6c)
 
@@ -164,6 +168,11 @@ brew install cloudflared
 cd backend && ./scripts/host.sh      # prints a public https link and an access code;  ./scripts/stop_host.sh  ends it
 ```
 Visitors need the access code. The Mac must stay on and online. See [`backend/docs/HOSTING.md`](backend/docs/HOSTING.md).
+
+**Rebuild the online prototype** (static site for GitHub Pages, from your local data):
+```bash
+cd backend && .venv/bin/python scripts/make_prototype.py --out ../prototype   # then publish ../prototype on the gh-pages branch
+```
 
 **Troubleshooting:**
 - **Port 8000 is busy:** use `KRONOS_PORT=8080 ./run.sh`.

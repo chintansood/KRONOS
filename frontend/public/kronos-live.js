@@ -17,6 +17,7 @@
   const inr = n => "₹" + Number(n || 0).toLocaleString("en-IN", { maximumFractionDigits: 0 });
 
   async function j(path, opt = {}, timeout = 60000) {   // generous: right after new data, engines recompute on slower machines
+    if (window.KRstatic) return window.KRstatic.get(path, opt);   // online prototype: answered from the snapshot
     const ctl = new AbortController();
     const t = setTimeout(() => ctl.abort(), timeout);
     try {
@@ -253,7 +254,9 @@
       (el.querySelector(".dos .gbtn") || panel).before(extra);
     }
   }
+  const readOnly = () => { if (!window.KRstatic) return false; toast(window.KRstatic.READ_ONLY); return true; };   // online prototype
   async function reviewHistory(linkId, decision, pid) {
+    if (readOnly()) return;
     const note = prompt(`Reason for ${decision === "CONFIRMED" ? "confirming" : "rejecting"} this prior-record link (audited):`, "");
     if (note === null) return;
     try {
@@ -263,6 +266,7 @@
     } catch (e) { toast("Review failed"); }
   }
   async function review(cid, decision, pid) {
+    if (readOnly()) return;
     const note = prompt(`Reason for marking this identity match as ${decision} (recorded in audit trail):`, "") ;
     if (note === null) return;
     try {
@@ -439,6 +443,7 @@
       if (!text) { toast("Entry text is required"); return; }
       const ts = document.getElementById("kr-d-ts").value;
       const evIds = (document.getElementById("kr-d-ev").value || "").split(/[ ,]+/).filter(Boolean);
+      if (readOnly()) return;
       try {
         await j(`/cases/${C.id}/diary/entries`, { method: "POST", body: JSON.stringify({ text, entryTs: ts || null,
           place: document.getElementById("kr-d-place").value || null, evidenceIds: evIds }) });
@@ -760,9 +765,12 @@
          "40,000 ਤੋਂ ਵੱਧ ਨਕਦ ਜਮ੍ਹਾਂ ਦੇ ਸਬੂਤ ਦਿਖਾਓ", "ਕੇਸ ਡਾਇਰੀ ਅਤੇ ਰਿਪੋਰਟ ਖੋਲ੍ਹੋ"],
   };
   const chips = l => CHIPS[l] || CHIPS.en;
-  const welcome = () => `<b>Welcome to KRONOS Copilot — connected to the live backend (${CASES.length} cases, ${PERS.length} persons).</b><br>` +
+  const welcome = () => (window.KRstatic
+      ? `<b>Welcome to the KRONOS online prototype — a read-only snapshot of ${CASES.length} cases and ${PERS.length} persons.</b><br>The local AI runs only in the full install, so here questions get a short note instead of an answer. Commands work: ` +
+        "<i>open investigations</i>, <i>open CASE005</i>, <i>open temporal engine for P00024</i>, <i>show evidence of cash deposits above 40,000</i> or <i>open case diary</i>." :
+      `<b>Welcome to KRONOS Copilot — connected to the live backend (${CASES.length} cases, ${PERS.length} persons).</b><br>`) + (window.KRstatic ? "" :
     "Ask questions about the evidence in English, हिंदी, ગુજરાતી or ਪੰਜਾਬੀ, or give commands such as <i>open investigations</i>, " +
-    "<i>open timeline</i>, <i>open CASE005</i>, <i>show evidence of cash deposits above 40,000</i> or <i>open case diary</i>.";
+    "<i>open timeline</i>, <i>open CASE005</i>, <i>show evidence of cash deposits above 40,000</i> or <i>open case diary</i>.");
 
   const style = document.createElement("style");
   style.textContent = "a.kr-a{color:var(--terra);text-decoration:none;font-weight:600}a.kr-a:hover{text-decoration:underline}body.kr-live .dos{overflow-y:auto}";
@@ -770,9 +778,9 @@
 
   window.KR = {
     get live() { return st.live; }, st, ask, fetchEvidence, recordBadge, verify, review, proof, custody, reviewHistory, lang, toHistory,
-    runFed: async btn => { btn.textContent = "Training across agency nodes…"; try { await j("/federated/run", { method: "POST", body: JSON.stringify({ rounds: 25 }) }, 120000); st.platform = null; toast("Federated rounds complete"); route(); } catch (e) { btn.textContent = "Federated run failed"; } },
+    runFed: async btn => { if (readOnly()) return; btn.textContent = "Training across agency nodes…"; try { await j("/federated/run", { method: "POST", body: JSON.stringify({ rounds: 25 }) }, 120000); st.platform = null; toast("Federated rounds complete"); route(); } catch (e) { btn.textContent = "Federated run failed"; } },
     alerts: () => j("/alerts"),
-    setNbe: (cid, rid, status) => j(`/cases/${cid}/next-evidence/${rid}`, { method: "PATCH", body: JSON.stringify({ status }) }).then(() => toast("Status saved")).catch(() => toast("Could not save status")),
+    setNbe: (cid, rid, status) => readOnly() ? Promise.resolve() : j(`/cases/${cid}/next-evidence/${rid}`, { method: "PATCH", body: JSON.stringify({ status }) }).then(() => toast("Status saved")).catch(() => toast("Could not save status")),
     verifyChain: async btn => { btn.textContent = "verifying…"; try { const r = await j("/ledger/verify", {}, 60000); btn.textContent = r.valid ? `Ledger valid · ${r.blocks} blocks` : `INVALID blocks: ${r.invalidBlocks.join(",")}`; } catch (e) { btn.textContent = "unavailable"; } },
     llmSummary: async (cid, btn) => { btn.textContent = "Writing with local Llama 3.1 (≈30–60 s)…"; btn.disabled = true;
       try { const s = await j(`/cases/${cid}/summary?llm=true&regenerate=true`, {}, 240000); st.caseData[cid].summary = s; route(); } catch (e) { btn.textContent = "LLM unavailable"; } },

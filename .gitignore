@@ -33,3 +33,6 @@ frontend/node_modules/
 frontend/dist/
 frontend/.vite/
 .DS_Store
+
+# the online prototype is built into ./prototype and published on the gh-pages branch, not on main
+prototype/

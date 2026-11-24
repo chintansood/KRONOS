@@ -7,6 +7,7 @@
   const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const j = (p, ms = 45000) => {
+    if (window.KRstatic) return window.KRstatic.get(p);   // online prototype
     const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), ms);
     return fetch(API + p, { signal: ctl.signal }).then(r => { clearTimeout(t); if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); });
   };

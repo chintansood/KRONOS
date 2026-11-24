@@ -91,7 +91,7 @@
         <a href="#temporal${C && C.prim && C.prim[0] ? `/${esc(C.prim[0])}` : ""}">Temporal engine</a>
         <a href="#graph${C && C.prim && C.prim[0] ? `/${esc(C.prim[0])}` : ""}">Network graph</a>
       </div>
-      <div class="kr-wsp-f${L ? " on" : ""}">${L ? `Live backend · ${cases().length} cases · ${pers().length} persons · local AI ${llm ? "ready" : "offline"}`
+      <div class="kr-wsp-f${L ? " on" : ""}">${window.KRstatic ? `Online prototype · read-only snapshot (${esc(window.KRstatic.built || "")}) · ${cases().length} cases · ${pers().length} persons · AI in the full install` : L ? `Live backend · ${cases().length} cases · ${pers().length} persons · local AI ${llm ? "ready" : "offline"}`
         : "Offline demonstration data · the live backend is not connected"}</div>`;
     panel.querySelector(".kr-wsp-x").onclick = () => open(false);
     panel.querySelectorAll("[data-tab]").forEach(b => b.onclick = () => {

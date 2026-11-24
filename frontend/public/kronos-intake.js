@@ -9,6 +9,7 @@
   const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const pad = n => String(n).padStart(2, "0");
   async function api(path, opt = {}, ms = 120000) {
+    if (window.KRstatic) return window.KRstatic.api(path, opt);   // online prototype: read-only
     const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), ms);
     try {
       const r = await fetch(API + path, { ...opt, signal: ctl.signal, headers: { "content-type": "application/json" } });
@@ -17,6 +18,8 @@
     } finally { clearTimeout(t); }
   }
   const live = () => !!(window.KR && window.KR.live);
+  const PROTO_MSG = "This is the read-only online prototype, so it cannot check or register the case. In the full install (GitHub README) this step " +
+    "shows people already on record and identifiers seen in other cases, then registers the FIR on the evidence ledger.";
 
   /* ------------------------------------------------------------------ draft + options */
   const nowLocal = () => { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`; };
@@ -288,7 +291,7 @@
   async function reviewChat(ch, note) {
     const d = S.draft;
     const r = await api("/intake/check", { method: "POST", body: JSON.stringify(payload(d, ch)) }, 60000);
-    if (!r.ok) return `${note ? `<div class="kri-note">${note}</div>` : ""}Couldn't run the intake checks (${r.status}).`;
+    if (!r.ok) return `${note ? `<div class="kri-note">${note}</div>` : ""}${window.KRstatic ? PROTO_MSG : `Couldn't run the intake checks (${r.status}).`}`;
     S.review = r.data; save();
     return `${note ? `<div class="kri-note">${note}</div>` : ""}${bar(10)}<div class="kri-q"><b>Review before registering</b> — this becomes <b>${esc(r.data.caseIdPreview)}</b>.</div>
       ${summaryHTML(d)}${checkHTML(d, r.data, ch)}
@@ -429,7 +432,7 @@
   async function review() {
     const box = ov.querySelector("#kri-review");
     const r = await api("/intake/check", { method: "POST", body: JSON.stringify(payload(S.draft, "form")) }, 60000).catch(() => null);
-    if (!r || !r.ok) { box.innerHTML = `<div class="kri-box bad">Couldn't run the checks — is the backend running?</div>`; return; }
+    if (!r || !r.ok) { box.innerHTML = `<div class="kri-box bad">${window.KRstatic ? PROTO_MSG : "Couldn't run the checks — is the backend running?"}</div>`; return; }
     S.review = r.data; save();
     const d = S.draft;
     box.innerHTML = `<div class="kri-q">This becomes <b>${esc(r.data.caseIdPreview)}</b>.</div>${summaryHTML(d)}` + checkHTML(d, r.data, null) +

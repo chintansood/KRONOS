@@ -22,7 +22,7 @@
     const seen = new Set();
     sheet.innerHTML = links.filter(a => !seen.has(a.textContent) && seen.add(a.textContent)).map(a =>
       `<a role="menuitem" href="${a.getAttribute("href")}" class="${a.dataset.n === v ? "on" : ""}">${a.textContent}</a>`).join("") +
-      (document.body.classList.contains("kr-live") && typeof CASES !== "undefined" ? `<div class="kr-mstatus">LIVE BACKEND • ${CASES.length} CASES</div>` : "");
+      (document.body.classList.contains("kr-live") && typeof CASES !== "undefined" ? `<div class="kr-mstatus">${window.KRstatic ? "ONLINE PROTOTYPE" : "LIVE BACKEND"} • ${CASES.length} CASES</div>` : "");
   }
   function open(on) {
     if (on) build();
