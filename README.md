@@ -74,7 +74,7 @@ flowchart TB
 ```
 
 **When a record comes in** (setup, or a new case through intake):
-1. A loader reads it, checks the schema and converts every timestamp to one time zone.
+1. A loader reads it, checks the schema and converts every timestamp into one time zone.
 2. Names, phones, accounts and vehicles are extracted from the text (NER).
 3. The record is stored with its SHA-256 hash, and the hash is added to the evidence ledger, which signs it.
 4. The engines run: timelines and travel feasibility, identity candidates, graph links, financial anomalies, hypotheses and
