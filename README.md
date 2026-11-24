@@ -8,7 +8,12 @@ KRONOS brings FIRs, call records, location data, financial transactions, social-
 time-ordered evidence base. It analyses them with explainable engines and answers investigators' questions with a
 **local** AI (Llama 3.1 8B), so no investigation data leaves the machine. Every statement it makes cites the evidence it rests on.
 
-![KRONOS home](backend/docs/screenshots/after/premium_home_3d.png)
+### ▶ [Watch the demo video](https://youtu.be/o1BP-umvR6c)
+
+[![KRONOS home — click to watch the demo](backend/docs/screenshots/after/premium_home_3d.png)](https://youtu.be/o1BP-umvR6c)
+
+**Contents:** [What it does](#what-it-does) · [Architecture](#architecture) · [Tech stack](#tech-stack) · [Run it](#run-it) ·
+[Using KRONOS](#using-kronos) · [Data and privacy](#data-and-privacy) · [Results](#results-honest) · [Repository layout](#repository-layout)
 
 ## What it does
 
@@ -29,7 +34,8 @@ time-ordered evidence base. It analyses them with explainable engines and answer
 - **Criminal-history linkage:** prior records are shown as context only.
 
 **Also included:**
-- A **Temporal Engine** on the home page: replay anyone's recorded activity and check the feasibility of every move.
+- A **Temporal Engine** (in the header, and on the home page): replay anyone's recorded activity and check the feasibility of every move.
+- A **Workspace** menu (top right): the case you are working on, its tabs and people, what you opened recently, and shortcuts.
 - A **3D network graph** with a GNN (GraphSAGE).
 - **40 real High Court cases** (pseudonymised).
 - A locally **fine-tuned** model (an experiment; results below).
@@ -37,6 +43,68 @@ time-ordered evidence base. It analyses them with explainable engines and answer
 | Temporal engine | Case workspace | 3D network graph |
 |---|---|---|
 | ![temporal](backend/docs/screenshots/after/home_temporal_impossible_travel.png) | ![case](backend/docs/screenshots/after/premium_case.png) | ![graph](backend/docs/screenshots/after/premium_graph.png) |
+
+## Architecture
+
+KRONOS is one Python service: it serves the website and the `/api` from a single address, stores everything in PostgreSQL,
+and calls a local AI through Ollama. Nothing needs a cloud service.
+
+```mermaid
+flowchart TB
+  SRC["<b>Sources</b><br/>FIRs · call records · location · bank transactions<br/>social media · criminal history · High Court orders (pseudonymised)"]
+  NEW["<b>Case intake</b><br/>form or Copilot conversation"]
+  ING["<b>Ingestion</b><br/>loaders · schema checks · time normalisation<br/>NER · SHA-256 hash of every record"]
+  DB[("<b>PostgreSQL + pgvector</b><br/>cases · persons · evidence · embeddings")]
+  LED["<b>Evidence ledger</b><br/>hash chain · Merkle proofs<br/>Ed25519 signatures, 3 of 4 agencies"]
+  ENG["<b>Analysis engines</b><br/>Temporal: timelines, impossible travel<br/>Identity: fuzzy matching, criminal-history links<br/>Graph: NetworkX + GraphSAGE GNN<br/>Multimodal: financial, calls, messages, location<br/>Intelligence: priority, hypotheses, alternates, next best evidence<br/>Federated learning: FedAvg across 4 agencies"]
+  RAG["<b>Retrieval</b><br/>full-text + vector search"]
+  LLM["<b>Local AI</b><br/>Llama 3.1 8B via Ollama<br/>citations + grounding check"]
+  API["<b>FastAPI</b> · /api"]
+  WEB["<b>Website</b><br/>workspace · dossier · 3D graph · temporal engine · Copilot"]
+  SRC --> ING
+  NEW --> ING
+  ING --> DB
+  ING --> LED
+  DB --> ENG
+  DB --> RAG --> LLM
+  ENG --> API
+  LLM --> API
+  LED --> API
+  API --> WEB
+```
+
+**When a record comes in** (setup, or a new case through intake):
+1. A loader reads it, checks the schema and converts every timestamp to one time zone.
+2. Names, phones, accounts and vehicles are extracted from the text (NER).
+3. The record is stored with its SHA-256 hash, and the hash is added to the evidence ledger, which signs it.
+4. The engines run: timelines and travel feasibility, identity candidates, graph links, financial anomalies, hypotheses and
+   next best evidence. Results are cached until the data changes.
+5. The text is indexed for full-text search, and embedded for vector search when the AI is available.
+
+**When an investigator asks a question** (Copilot or home chat):
+1. Commands such as *open CASE002* or *add a new case* are recognised and carried out directly.
+2. For a question, KRONOS retrieves the relevant records (full-text + vector), adds the engines' findings, and asks the local
+   model to answer **only** from them.
+3. The answer is checked: evidence IDs the model invented are removed, and every point must cite a real record.
+   Each citation opens the exhibit, which can be verified against the ledger.
+
+**Design rules:** the local AI only; every output cites evidence; flags are leads for human review, never findings of guilt;
+records are never merged automatically; the ledger makes any later change to evidence detectable.
+
+## Tech stack
+
+| Layer | Technology |
+|---|---|
+| Website | Single-page app in plain JavaScript, Three.js (3D graph and hero), GSAP (motion), built with Vite. A 2D canvas graph is used where WebGL is unavailable |
+| API | Python 3.12, FastAPI, Uvicorn, Pydantic |
+| Database | PostgreSQL 16+ with pgvector (vector search) and built-in full-text search |
+| AI | Ollama: Llama 3.1 8B for answers and summaries, nomic-embed-text for embeddings. QLoRA fine-tuning as an experiment |
+| Analytics | pandas, NumPy, scikit-learn (Isolation Forest, logistic regression), NetworkX, PyTorch (GraphSAGE), RapidFuzz |
+| Evidence integrity | SHA-256 hash chain, Merkle proofs, Ed25519 signatures (`cryptography`), HMAC-signed federated updates |
+| Real records | pyarrow, pypdf, pseudonymisation and a PII audit |
+| Delivery | `setup.sh` / `run.sh`, Docker Compose (pgvector, Ollama, app), GitHub Actions on Ubuntu, macOS and Docker, Playwright browser tests |
+
+Full list with versions: [`requirements.txt`](requirements.txt) and [`backend/requirements.txt`](backend/requirements.txt).
 
 ## Run it
 
@@ -85,9 +153,17 @@ docker compose up --build        # → http://localhost:8000
 
 ### Check an installation
 ```bash
-python3 ci/smoke.py http://localhost:8000            # 17 end-to-end checks of the API (add --llm to include the AI)
-cd backend && .venv/bin/python -m pytest -q tests    # 30 tests (setup.sh route)
+python3 ci/smoke.py http://localhost:8000              # 17 end-to-end checks of the API (add --llm to include the AI)
+(cd backend && .venv/bin/python -m pytest -q tests)    # 30 tests (setup.sh route)
+(cd ci && npm install --no-save playwright@1 && npx playwright install --with-deps chromium && node ui_smoke.js http://localhost:8000)   # 16 browser checks
 ```
+
+**Share a live link from a Mac** (after `./setup.sh`):
+```bash
+brew install cloudflared
+cd backend && ./scripts/host.sh      # prints a public https link and an access code;  ./scripts/stop_host.sh  ends it
+```
+Visitors need the access code. The Mac must stay on and online. See [`backend/docs/HOSTING.md`](backend/docs/HOSTING.md).
 
 **Troubleshooting:**
 - **Port 8000 is busy:** use `KRONOS_PORT=8080 ./run.sh`.
@@ -100,16 +176,18 @@ criminal history), runs every engine, loads the real court cases and builds the 
 
 ## Using KRONOS
 
-Open **http://localhost:8000**. The badge at the top right reads **LIVE BACKEND • 80 CASES** when everything is connected.
+Open **http://localhost:8000**. When everything is connected, the dot on the **WORKSPACE** button (top right) turns terracotta and its menu ends with **Live backend · 80 cases**. The menu also shows the case you are working on (with its tabs), what you opened recently and shortcuts. **TEMPORAL ENGINE** in the header opens the time river for any person, and **+ NEW CASE** opens the case-intake form.
 
 | Where | What to do |
 |---|---|
 | **Home** | Scroll the story. In **04 Temporal engine**, pick a person (try *Gopi Dhillon*), press **Replay**, and read *Travel feasibility*: impossible moves are flagged. In **05 Case intake**, register a case. The chat bar at the bottom answers questions and runs commands. |
 | **Investigations** | Search and filter cases and people, open a **workspace** or a **dossier**, or press **+ New case**. |
+| **Temporal engine** (header) | The time river for any person: search or pick a suggestion, **Replay**, zoom to a day, and check every move in *Travel feasibility*. The link (`#temporal/P00024`) opens that person directly. |
+| **Workspace** (top right) | The case you are working on, with buttons for its Summary, Hypotheses, Evidence and Diary tabs, its main people, what you opened recently, shortcuts, and the backend status. |
 | **Case workspace** (try `CASE002`) | 1 · Summary & chronology, with evidence IDs you can open. 2 · Next best evidence & hypotheses: priority (never a guilt score), each **line of inquiry vs alternate hypotheses**, and value-scored next steps. 3 · Evidence & provenance ledger: plain-language search; per exhibit, **Verify integrity**, **Merkle proof** and **Chain of custody**. 4 · Federated learning & ledger status. 5 · Case diary & draft report (printable, multilingual). |
 | **Dossier** (try `P00023`) | Recorded activity timeline (replayable), possible same person (**Confirm / Reject / Defer**, never merged automatically), prior records (context only), next best evidence, and alternate hypotheses for the person. |
 | **Network graph** | People, phones, accounts and cases in 3D. Filter by type, search, click a node, open its dossier. |
-| **Copilot** (button at the bottom right, or ⌘K / Ctrl+K) | Ask in English, हिंदी, ગુજરાતી or ਪੰਜਾਬੀ. **Facts** mode answers only from recorded evidence; **Detective** mode adds hypotheses. Every point cites evidence IDs, which open the exhibit. It also runs commands: *open CASE002*, *open timeline*, *show 3D network graph*, *open case diary*. |
+| **Copilot** (button at the bottom right, or ⌘K / Ctrl+K) | Ask in English, हिंदी, ગુજરાતી or ਪੰਜਾਬੀ. **Facts** mode answers only from recorded evidence; **Detective** mode adds hypotheses. Every point cites evidence IDs, which open the exhibit. It also runs commands: *open CASE002*, *open temporal engine for P00024*, *show 3D network graph*, *open case diary*, *add a new case*. |
 | **Case intake** | Form or conversation (*"add a new case"* in the Copilot or home chat). In the conversation, `skip`, `back`, `form` and `cancel` work at every step. The review shows people already on record (you choose *same person* or *keep as new*) and identifiers already seen in other cases. Registered cases can be **withdrawn** from their workspace; the ledger keeps the record. |
 | **Settings** (avatar) | Interface language. |
 
@@ -170,7 +248,7 @@ The base model stays the default; see `backend/docs/FINETUNING.md`.
 ## Repository layout
 
 ```
-frontend/   the KRONOS website (single-page app; kronos-live.js connects it to the API; premium + temporal layers)
+frontend/   the KRONOS website (single-page app; kronos-live.js connects it to the API; premium, temporal, intake and workspace layers)
 backend/    FastAPI + PostgreSQL/pgvector + engines (ingestion, temporal, graph/GNN, identity, intelligence, LLM, ledger,
             federated, real-records pipeline, fine-tuning)  ·  docs/ has the details and screenshots
 setup.sh    one-command setup        run.sh    start on http://localhost:8000

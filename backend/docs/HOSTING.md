@@ -1,7 +1,7 @@
 # Hosting KRONOS from this Mac
 
 ```bash
-cd kronos-backend
+cd backend                # in the GitHub repo (kronos-backend in the working folders)
 ./scripts/host.sh        # builds the site, starts API + site behind an access code, opens a public tunnel
 ./scripts/stop_host.sh   # closes the tunnel, returns the API to local development mode
 ```
@@ -11,7 +11,7 @@ cd kronos-backend
 `KRONOS_ACCESS_CODE=YOUR-CODE ./scripts/host.sh`.
 
 How it works:
-- **One server for everything.** The Vite build (`kronos-app/dist`) is served by the FastAPI app itself (`KRONOS_STATIC_DIR`), so the site and `/api` share one address.
+- **One server for everything.** The Vite build (`frontend/dist`, or `kronos-app/dist` in the working folders) is served by the FastAPI app itself (`KRONOS_STATIC_DIR`), so the site and `/api` share one address.
 - **Access code.** Every path — website, API, `/docs` — needs the code (`KRONOS_ACCESS_CODE`). Visitors see a KRONOS login page. API calls without the code get `401`. The cookie stores a hash of the code (30 days, HttpOnly, Secure over https). Wrong codes are slowed down.
 - **Public link.** A Cloudflare quick tunnel (`cloudflared`, free, no account) carries the public https link to `127.0.0.1:8000`. The Mac never opens a port to the internet.
 - **Stays awake.** `caffeinate` keeps the Mac awake while the API runs.
